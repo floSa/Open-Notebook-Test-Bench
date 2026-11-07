@@ -1,0 +1,46 @@
+{
+  "graine": 20251108,
+  "entreprise": "Vélanor SAS (fictive)",
+  "documents": [
+    {
+      "fichier": "contrat-batterix-scan.pdf",
+      "octets": 765238,
+      "sha256": "b5a6ff44008e1b43743aac10fd069891c1e6b9b912b748b94c1ca275b4f3f5c9"
+    },
+    {
+      "fichier": "cse-2025-10-14.md",
+      "octets": 548,
+      "sha256": "a859ac733fea5a22ba83e47154c0370f9693c15272cb7fbe36dc4c49db415367"
+    },
+    {
+      "fichier": "faq-sav.html",
+      "octets": 810,
+      "sha256": "d0172381ef5f77f79d4c3a1e18974c1291dd99e634e58917f8e39c1321198c38"
+    },
+    {
+      "fichier": "procedure-batteries.docx",
+      "octets": 37272,
+      "sha256": "96f432b9189b4de8b13b5fa5168c9fc22e07c6abccba5429439ec0341881768d"
+    },
+    {
+      "fichier": "rapport-annuel-2025.pdf",
+      "octets": 53745,
+      "sha256": "292f04ccc1df2dfbe8903590dab3f66e5aa6d28e0390c98b3dc320f44ee95d36"
+    },
+    {
+      "fichier": "stocks-octobre-2025.xlsx",
+      "octets": 5858,
+      "sha256": "40e4b5b289a4c8ba83b56ef97c77ec107c0cef197f63e4bfe3d028a3973ae1d6"
+    },
+    {
+      "fichier": "strategie-2026.pptx",
+      "octets": 32021,
+      "sha256": "7653167a2a356f02495e092848b7fe03da47d54366196f573a768fd9caa1f3dc"
+    },
+    {
+      "fichier": "supplier-audit-batterix-en.pdf",
+      "octets": 43948,
+      "sha256": "43d2ed534ca3fb16b92ce55dce92ccacbf3c282304a3bc53f2af398634d6b208"
+    }
+  ]
+}
