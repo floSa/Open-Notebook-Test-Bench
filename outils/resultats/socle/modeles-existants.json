@@ -1,0 +1,164 @@
+{
+  "dossiers_cherches": [
+    "/home/florianhorellou/.cache/huggingface/hub",
+    "/mnt/c/Users/FlorianHorellou/.cache/huggingface/hub",
+    "/mnt/c/Users/FlorianHorellou/.lmstudio/models",
+    "/home/florianhorellou/.ollama/models"
+  ],
+  "modeles": [
+    {
+      "nom": "Systran/faster-whisper-small",
+      "source": "/home/florianhorellou/.cache/huggingface/hub/models--Systran--faster-whisper-small",
+      "format": "autre",
+      "taille_mo": 972,
+      "type": "stt"
+    },
+    {
+      "nom": "adefossez/HTDemucs",
+      "source": "/home/florianhorellou/.cache/huggingface/hub/models--adefossez--HTDemucs",
+      "format": "safetensors",
+      "taille_mo": 168,
+      "type": "audio"
+    },
+    {
+      "nom": "sentence-transformers/all-MiniLM-L6-v2",
+      "source": "/home/florianhorellou/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2",
+      "format": "safetensors",
+      "taille_mo": 183,
+      "type": "embedding"
+    },
+    {
+      "nom": "Qwen/Qwen2.5-1.5B-Instruct",
+      "source": "/mnt/c/Users/FlorianHorellou/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct",
+      "format": "safetensors",
+      "taille_mo": 6197,
+      "type": "chat"
+    },
+    {
+      "nom": "handy-computer/whisper-large-v3-turbo-gguf",
+      "source": "/mnt/c/Users/FlorianHorellou/.cache/huggingface/hub/models--handy-computer--whisper-large-v3-turbo-gguf",
+      "format": "gguf",
+      "taille_mo": 886,
+      "type": "stt"
+    },
+    {
+      "nom": "gemma-4-12B-it-QAT-Q4_0.gguf",
+      "source": "/mnt/c/Users/FlorianHorellou/.lmstudio/models/lmstudio-community/gemma-4-12B-it-QAT-GGUF/gemma-4-12B-it-QAT-Q4_0.gguf",
+      "format": "gguf",
+      "taille_mo": 6975,
+      "type": "chat"
+    },
+    {
+      "nom": "mmproj-gemma-4-12B-it-QAT-BF16.gguf",
+      "source": "/mnt/c/Users/FlorianHorellou/.lmstudio/models/lmstudio-community/gemma-4-12B-it-QAT-GGUF/mmproj-gemma-4-12B-it-QAT-BF16.gguf",
+      "format": "gguf",
+      "taille_mo": 175,
+      "type": "projecteur-vision"
+    },
+    {
+      "nom": "gemma-4-E4B-it-Q4_K_M.gguf",
+      "source": "/mnt/c/Users/FlorianHorellou/.lmstudio/models/lmstudio-community/gemma-4-E4B-it-GGUF/gemma-4-E4B-it-Q4_K_M.gguf",
+      "format": "gguf",
+      "taille_mo": 5335,
+      "type": "chat"
+    },
+    {
+      "nom": "mmproj-gemma-4-E4B-it-BF16.gguf",
+      "source": "/mnt/c/Users/FlorianHorellou/.lmstudio/models/lmstudio-community/gemma-4-E4B-it-GGUF/mmproj-gemma-4-E4B-it-BF16.gguf",
+      "format": "gguf",
+      "taille_mo": 991,
+      "type": "projecteur-vision"
+    },
+    {
+      "nom": "granite4.1:3b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/granite4.1/3b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 2099,
+      "type": "chat"
+    },
+    {
+      "nom": "hermes-cpu:latest",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/hermes-cpu/latest",
+      "format": "gguf (Ollama)",
+      "taille_mo": 3389,
+      "type": "chat"
+    },
+    {
+      "nom": "llama3.2:3b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/llama3.2/3b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 2019,
+      "type": "chat"
+    },
+    {
+      "nom": "ministral-3:3b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/ministral-3/3b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 2953,
+      "type": "chat"
+    },
+    {
+      "nom": "nomic-embed-text:latest",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/nomic-embed-text/latest",
+      "format": "gguf (Ollama)",
+      "taille_mo": 274,
+      "type": "embedding"
+    },
+    {
+      "nom": "phi4-mini:3.8b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/phi4-mini/3.8b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 2491,
+      "type": "chat"
+    },
+    {
+      "nom": "qwen2.5-coder:7b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5-coder/7b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 4683,
+      "type": "chat"
+    },
+    {
+      "nom": "qwen3.5-demo:4b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/qwen3.5-demo/4b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 3389,
+      "type": "chat"
+    },
+    {
+      "nom": "qwen3.5:2b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/qwen3.5/2b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 2741,
+      "type": "chat"
+    },
+    {
+      "nom": "qwen3.5:4b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/qwen3.5/4b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 3389,
+      "type": "chat"
+    },
+    {
+      "nom": "qwen3:4b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/qwen3/4b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 2497,
+      "type": "chat"
+    },
+    {
+      "nom": "qwen3:4b-instruct",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/qwen3/4b-instruct",
+      "format": "gguf (Ollama)",
+      "taille_mo": 2497,
+      "type": "chat"
+    },
+    {
+      "nom": "qwen3:8b",
+      "source": "/home/florianhorellou/.ollama/models/manifests/registry.ollama.ai/library/qwen3/8b",
+      "format": "gguf (Ollama)",
+      "taille_mo": 5225,
+      "type": "chat"
+    }
+  ]
+}
