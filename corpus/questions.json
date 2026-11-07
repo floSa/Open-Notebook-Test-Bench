@@ -1,0 +1,504 @@
+{
+  "version": 1,
+  "regle": "une réponse est exacte si chaque élément de 'attendu' est présent (alternatives séparées par |), après normalisation des espaces et des séparateurs décimaux ; pour un piège, la réponse doit signaler l'absence d'information",
+  "questions": [
+    {
+      "id": "Q01",
+      "question": "Quel est le chiffre d'affaires 2025 de Vélanor ?",
+      "attendu": [
+        "48,6"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 3
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q02",
+      "question": "En quelle année Vélanor a-t-elle été fondée ?",
+      "attendu": [
+        "2014"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 2
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q03",
+      "question": "Qui est la présidente de Vélanor ?",
+      "attendu": [
+        "Marchais"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 2
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q04",
+      "question": "Quelle est l'adresse du siège de Vélanor ?",
+      "attendu": [
+        "quai de la Fosse"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 2
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q05",
+      "question": "Combien de salariés compte Vélanor au 31 décembre 2025 ?",
+      "attendu": [
+        "412"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 3
+        },
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 6
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q06",
+      "question": "Quel a été le chiffre d'affaires du troisième trimestre 2025 ?",
+      "attendu": [
+        "14,2"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 4
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q07",
+      "question": "Combien d'unités du modèle Sèvre Trail ont été produites en 2025 ?",
+      "attendu": [
+        "15 400"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 5
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q08",
+      "question": "Quel est le prix public du modèle Erdre Cargo ?",
+      "attendu": [
+        "4 290"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 5
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q09",
+      "question": "Combien de salariés travaillent sur le site de Cholet ?",
+      "attendu": [
+        "97"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 6
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q10",
+      "question": "Quelle est la part d'aluminium recyclé dans les cadres ?",
+      "attendu": [
+        "82"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 7
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q11",
+      "question": "Quel est le taux de recyclage des batteries usagées ?",
+      "attendu": [
+        "96"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 7
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q12",
+      "question": "Quel fournisseur livre les moteurs et dans quel pays est-il installé ?",
+      "attendu": [
+        "Motodrive",
+        "Taïwan|Taiwan"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 8
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q13",
+      "question": "Quel résultat net Vélanor a-t-elle dégagé en 2025 ?",
+      "attendu": [
+        "3,1"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 3
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q14",
+      "question": "Quel est le taux de retour sous garantie ?",
+      "attendu": [
+        "1,8"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 3
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q15",
+      "question": "Quel est le prix unitaire des batteries prévu par le contrat avec Batterix ?",
+      "attendu": [
+        "212"
+      ],
+      "sources": [
+        {
+          "document": "contrat-batterix-scan.pdf",
+          "page": 1
+        }
+      ],
+      "type": "scan"
+    },
+    {
+      "id": "Q16",
+      "question": "Quel est le délai de livraison prévu par le contrat Batterix ?",
+      "attendu": [
+        "21"
+      ],
+      "sources": [
+        {
+          "document": "contrat-batterix-scan.pdf",
+          "page": 2
+        }
+      ],
+      "type": "scan"
+    },
+    {
+      "id": "Q17",
+      "question": "Quel est le plafond des pénalités de retard du contrat Batterix ?",
+      "attendu": [
+        "8"
+      ],
+      "sources": [
+        {
+          "document": "contrat-batterix-scan.pdf",
+          "page": 2
+        }
+      ],
+      "type": "scan"
+    },
+    {
+      "id": "Q18",
+      "question": "Quel volume minimal annuel de batteries le contrat Batterix prévoit-il ?",
+      "attendu": [
+        "40 000"
+      ],
+      "sources": [
+        {
+          "document": "contrat-batterix-scan.pdf",
+          "page": 1
+        }
+      ],
+      "type": "scan"
+    },
+    {
+      "id": "Q19",
+      "question": "À quelle température les batteries doivent-elles être stockées ?",
+      "attendu": [
+        "10",
+        "25"
+      ],
+      "sources": [
+        {
+          "document": "procedure-batteries.docx",
+          "page": 1
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q20",
+      "question": "Qui est responsable de la procédure de charge et de stockage des batteries ?",
+      "attendu": [
+        "Benali"
+      ],
+      "sources": [
+        {
+          "document": "procedure-batteries.docx",
+          "page": 1
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q21",
+      "question": "À quelle fréquence le local B2 est-il inspecté ?",
+      "attendu": [
+        "premier lundi"
+      ],
+      "sources": [
+        {
+          "document": "procedure-batteries.docx",
+          "page": 1
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q22",
+      "question": "Quel est le prix du Vilaine Compact ?",
+      "attendu": [
+        "2 490"
+      ],
+      "sources": [
+        {
+          "document": "strategie-2026.pptx",
+          "page": 3
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q23",
+      "question": "Quelle est la capacité prévue de l'usine de Saint-Nazaire ?",
+      "attendu": [
+        "25 000"
+      ],
+      "sources": [
+        {
+          "document": "strategie-2026.pptx",
+          "page": 4
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q24",
+      "question": "Quel stock de batteries BAT-48V-14Ah reste-t-il et est-il sous le seuil d'alerte ?",
+      "attendu": [
+        "1 240|1240",
+        "1 500|1500"
+      ],
+      "sources": [
+        {
+          "document": "stocks-octobre-2025.xlsx",
+          "page": 1
+        }
+      ],
+      "type": "tableau"
+    },
+    {
+      "id": "Q25",
+      "question": "Quelle est la durée de garantie du cadre ?",
+      "attendu": [
+        "7 ans"
+      ],
+      "sources": [
+        {
+          "document": "faq-sav.html",
+          "page": 1
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q26",
+      "question": "Quel est le numéro de téléphone du service après-vente ?",
+      "attendu": [
+        "02 40 00 12 34"
+      ],
+      "sources": [
+        {
+          "document": "faq-sav.html",
+          "page": 1
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q27",
+      "question": "Quel est le montant de la prime d'intéressement 2025 ?",
+      "attendu": [
+        "1 150|1150"
+      ],
+      "sources": [
+        {
+          "document": "cse-2025-10-14.md",
+          "page": 1
+        }
+      ],
+      "type": "fait simple"
+    },
+    {
+      "id": "Q28",
+      "question": "What overall score did Batterix obtain at the supplier audit?",
+      "attendu": [
+        "87"
+      ],
+      "sources": [
+        {
+          "document": "supplier-audit-batterix-en.pdf",
+          "page": 1
+        }
+      ],
+      "type": "anglais"
+    },
+    {
+      "id": "Q29",
+      "question": "Quel est le taux de cellules défectueuses mesuré chez Batterix lors de l'audit ?",
+      "attendu": [
+        "0.3|0,3"
+      ],
+      "sources": [
+        {
+          "document": "supplier-audit-batterix-en.pdf",
+          "page": 1
+        }
+      ],
+      "type": "anglais"
+    },
+    {
+      "id": "Q30",
+      "question": "Quel est le délai de livraison contractuel de Batterix et quel délai moyen est réellement constaté ?",
+      "attendu": [
+        "21",
+        "24"
+      ],
+      "sources": [
+        {
+          "document": "contrat-batterix-scan.pdf",
+          "page": 2
+        },
+        {
+          "document": "stocks-octobre-2025.xlsx",
+          "page": 2
+        }
+      ],
+      "type": "multi-documents"
+    },
+    {
+      "id": "Q31",
+      "question": "Quel score Batterix a-t-il obtenu à l'audit, et quel prix unitaire le contrat fixe-t-il ?",
+      "attendu": [
+        "87",
+        "212"
+      ],
+      "sources": [
+        {
+          "document": "supplier-audit-batterix-en.pdf",
+          "page": 1
+        },
+        {
+          "document": "contrat-batterix-scan.pdf",
+          "page": 1
+        }
+      ],
+      "type": "multi-documents"
+    },
+    {
+      "id": "Q32",
+      "question": "Quel chiffre d'affaires Vélanor vise-t-elle en 2026 et combien d'embauches sont prévues à Saint-Nazaire ?",
+      "attendu": [
+        "55",
+        "70"
+      ],
+      "sources": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": 10
+        },
+        {
+          "document": "strategie-2026.pptx",
+          "page": 2
+        }
+      ],
+      "type": "multi-documents"
+    },
+    {
+      "id": "Q33",
+      "question": "Quel était le chiffre d'affaires de Vélanor en 2022 ?",
+      "attendu": [],
+      "sources": [],
+      "type": "piège"
+    },
+    {
+      "id": "Q34",
+      "question": "Qui est le directeur financier de Vélanor ?",
+      "attendu": [],
+      "sources": [],
+      "type": "piège"
+    },
+    {
+      "id": "Q35",
+      "question": "Combien de trottinettes électriques Vélanor a-t-elle vendues en 2025 ?",
+      "attendu": [],
+      "sources": [],
+      "type": "piège"
+    },
+    {
+      "id": "Q36",
+      "question": "Quel est le salaire de Karim Benali ?",
+      "attendu": [],
+      "sources": [],
+      "type": "piège"
+    }
+  ]
+}
