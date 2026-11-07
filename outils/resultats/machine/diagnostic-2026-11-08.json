@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-08T13:12:21+01:00",
+  "windows": "Microsoft Windows [version 10.0.26300.9711]",
+  "wsl_version": "Version WSL : 2.7.14.0\nVersion du noyau : 6.18.33.2-2\nVersion WSLg : 1.0.73.2\nVersion MSRDC : 1.2.7214\nVersion direct3D : 1.611.1-81528511\nVersion de DXCore : 10.0.26100.1-240331-1435.ge-release\nVersion de Windows : 10.0.26300.9711",
+  "distribution": "Ubuntu 24.04.5 LTS",
+  "noyau": "6.18.33.2-microsoft-standard-WSL2",
+  "cpu": "Intel(R) Core(TM) Ultra 7 255H",
+  "coeurs_logiques": 16,
+  "ram_wsl_mo": 15687,
+  "swap_wsl_mo": 4096,
+  "disque_libre_depot_go": 619,
+  "docker_root": "/var/lib/docker",
+  "docker_df": "Images=57.51GB;Containers=1.074GB;Local Volumes=34.55GB;Build Cache=30.77GB",
+  "nvidia_smi_wsl": "bash: line 1: nvidia-smi: command not found",
+  "gpu_dans_conteneur": "docker: Error response from daemon: failed to discover GPU vendor from CDI: no known GPU vendor found\n\nRun 'docker run --help' for more information",
+  "cartes_video_windows": "Intel(R) Arc(TM) 140T GPU (16GB)",
+  "docker": "29.9.2",
+  "compose": "5.6.1",
+  "acces_http": {
+    "docker_hub": "401",
+    "ghcr": "401",
+    "pypi": "200",
+    "ollama_com": "200",
+    "huggingface": "200"
+  },
+  "port_127_0_0_1_depuis_wsl": "200"
+}
