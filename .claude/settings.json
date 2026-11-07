@@ -1,0 +1,30 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "Bash(docker compose *)",
+      "Bash(docker ps *)",
+      "Bash(docker logs *)",
+      "Bash(docker inspect *)",
+      "Bash(docker exec rag-ollama ollama *)",
+      "Bash(nvidia-smi)",
+      "Bash(nvidia-smi *)",
+      "Bash(git status *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git log *)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Bash(sudo *)",
+      "Bash(git push *)",
+      "Bash(docker system prune *)",
+      "Bash(docker volume prune *)",
+      "Bash(docker image prune *)",
+      "Read(~/.ssh/**)"
+    ]
+  }
+}

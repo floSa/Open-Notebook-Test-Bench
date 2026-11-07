@@ -1,0 +1,8 @@
+donnees/
+.venv/
+node_modules/
+__pycache__/
+*.gguf
+*.safetensors
+*.zip
+*:Zone.Identifier
