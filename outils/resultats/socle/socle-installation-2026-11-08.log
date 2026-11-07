@@ -1,0 +1,12 @@
+copie ministral-3/3b sha256-43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1
+copie ministral-3/3b sha256-fd2243c50b66fcccd64ba66f4d42e6abb4eb1179b426022bb44d2a3db8a1afa3
+4e0dea5d725ca2bb4471f408c2b8a0dff07e60c2e03b6ce9fce84ce01006f013
+{"version":"0.30.7"}
+writing manifest 
+success 
+NAME                 ID              SIZE      MODIFIED               
+bge-m3:latest        790764642607    1.2 GB    Less than a second ago    
+ministral-3:3b       696e35e0fa67    3.0 GB    28 seconds ago            
+qwen3:4b-instruct    a117f98fcf01    2.5 GB    33 seconds ago            
+téléchargé : bge-m3 (1,2 Go)
+durée totale : 33,4 s
