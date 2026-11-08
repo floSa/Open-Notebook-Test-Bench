@@ -50,14 +50,14 @@ Réglages locaux de LLM-Service, propres à ce portable et non commités dans so
 
 ## 5. Lancer RAGFlow dans un nouveau dossier
 
-Le corpus, le banc et les outils communs doivent être identiques d'une solution à l'autre : on les copie depuis ce dépôt.
+Ce dossier sera renommé `Open-Notebook-Test-Bench` ; les chemins ci-dessous l'utilisent. Le corpus, le banc et les outils communs doivent être identiques d'une solution à l'autre : on les copie depuis ce dépôt.
 
 ```bash
-mkdir -p ~/Projets/Tutoriels/RAGFlow && cd ~/Projets/Tutoriels/RAGFlow
+mkdir -p ~/Projets/Tutoriels/RAGFlow-Test-Bench && cd ~/Projets/Tutoriels/RAGFlow-Test-Bench
 ```
 
 ```bash
-cp -r ~/Projets/Tutoriels/NotebookLM_Like/{kit,corpus,CLAUDE.md,.claude,.gitignore} . && mkdir -p outils && cp -r ~/Projets/Tutoriels/NotebookLM_Like/outils/communs outils/
+cp -r ~/Projets/Tutoriels/Open-Notebook-Test-Bench/{kit,corpus,CLAUDE.md,.claude,.gitignore,LICENSE} . && mkdir -p outils && cp -r ~/Projets/Tutoriels/Open-Notebook-Test-Bench/outils/communs outils/
 ```
 
 ```bash
@@ -75,6 +75,7 @@ Déjà dans le kit :
 - les modèles viennent de LLM-Service : aucune solution n'embarque son propre serveur de modèles ;
 - même taille de contexte (16 384 jetons) pour toutes les applications et pour le juge du banc ;
 - une page `docs/<solution>/presentation.md` au format de celle d'Open Notebook ;
+- un `README.md` au format des autres bancs d'essai de `~/Projets/Tutoriels`, et un fichier `LICENSE` ;
 - deux configurations minimales, sans et avec GPU, en langage courant.
 
 Points à surveiller pour RAGFlow : 16 Go de RAM conseillés pour lui seul (il ne restera qu'environ 3 Go pour le modèle sur ce portable) ; Elasticsearch peut demander un réglage système (`vm.max_map_count`) que l'agent n'a pas le droit de faire (`sysctl` interdit) : prévoir le moteur Infinity, ou faire ce réglage soi-même.
