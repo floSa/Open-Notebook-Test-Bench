@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-08T23:46:13",
+  "composants": [
+    {
+      "depot": "lfnovo/open-notebook",
+      "derniere_stable": "v1.15.1",
+      "publiee_le": "2026-11-04",
+      "utilisee": "v1.15.1",
+      "a_jour": true,
+      "raison": null
+    },
+    {
+      "depot": "ollama/ollama",
+      "derniere_stable": "v0.40.15",
+      "publiee_le": "2026-11-03",
+      "utilisee": "v0.40.15",
+      "a_jour": true,
+      "raison": null
+    },
+    {
+      "depot": "surrealdb/surrealdb",
+      "derniere_stable": "v4.0.0",
+      "publiee_le": "2026-11-03",
+      "utilisee": "v2.7.0",
+      "a_jour": false,
+      "raison": "Open Notebook 1.15.1 impose la branche 2 (compose officiel : surrealdb/surrealdb:v2) ; v2.7.0 est la dernière 2.x"
+    },
+    {
+      "depot": "speaches-ai/speaches",
+      "derniere_stable": "v0.8.3",
+      "publiee_le": "2025-09-19",
+      "utilisee": "v0.8.3",
+      "a_jour": true,
+      "raison": null
+    }
+  ]
+}
