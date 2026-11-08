@@ -8,8 +8,9 @@ Version 1.15.1, essayée le 8 novembre 2026 sur Windows 11 (WSL2), avec des mod�
 2. [Pour qui](#2-pour-qui)
 3. [Le projet](#3-le-projet)
 4. [Fonctions](#4-fonctions)
-5. [Résultats mesurés](#5-résultats-mesurés)
-6. [Pour aller plus loin](#6-pour-aller-plus-loin)
+5. [Matériel nécessaire](#5-matériel-nécessaire)
+6. [Résultats mesurés](#6-résultats-mesurés)
+7. [Pour aller plus loin](#7-pour-aller-plus-loin)
 
 ## 1. Ce que c'est
 
@@ -110,7 +111,45 @@ Réponses : **Oui**, **Non**, ou **Partiel** avec la limite en une phrase.
 | Envoi de statistiques d'usage | Non |
 | Sauvegarde et restauration | Oui, par copie des dossiers de données |
 
-## 5. Résultats mesurés
+## 5. Matériel nécessaire
+
+### Sans carte graphique : configuration minimale, mesurée
+
+| Élément | Minimum |
+|---|---|
+| Processeur | 8 cœurs récents (instructions AVX2) |
+| Mémoire vive | 16 Go |
+| Disque libre | 20 Go : application 2,5 Go, module Docling 6 Go, modèles 4 Go, voix 1,3 Go, images Docker |
+| Modèle de réponse | qwen3:4b-instruct : 4 milliards de paramètres, 2,5 Go |
+| Modèle d'embedding | bge-m3 : 1,2 Go, multilingue |
+| Taille de contexte | 16 384 jetons |
+
+Mémoire utilisée : 5,5 Go pour les modèles, 1 Go pour l'application (4 Go avec Docling), 0,5 à 2,4 Go pour la voix. Le total reste sous 12 Go, ce qui laisse de la marge sur 16 Go.
+
+**Combien de documents par conversation.** La conversation transmet au modèle tous les documents cochés, en entier. Sans carte graphique, c'est leur volume qui fixe le temps d'attente de la première question :
+
+| Volume coché | Équivalent | Première question | Questions suivantes |
+|---|---|---|---|
+| 12 000 caractères | 5 pages de texte | 1 min 30 | 10 à 25 s |
+| 28 000 caractères | 10 pages | 5 min | 10 à 25 s |
+| 45 000 caractères | 15 pages, la limite d'un contexte de 16 384 jetons | 6 à 10 min (estimé) | 10 à 25 s |
+
+Au-delà, la question échoue avec un message d'erreur. Un carnet peut contenir beaucoup plus de documents : seuls ceux cochés en « Contenu complet » comptent.
+
+**Modèles plus légers.** ministral-3:3b donne autant de bonnes réponses que qwen3:4b-instruct, mais met deux fois plus de temps sur les réponses longues. Les modèles de moins de 3 milliards de paramètres n'ont pas été essayés.
+
+### Avec une carte graphique NVIDIA : configuration minimale, estimée
+
+| Élément | Minimum |
+|---|---|
+| Carte graphique | 8 Go de mémoire |
+| Modèle de réponse | le même modèle de 4 milliards de paramètres, en version 4 bits pour vLLM |
+| Taille de contexte | 32 768 jetons |
+| Effet attendu | première question en quelques secondes au lieu de plusieurs minutes ; deux fois plus de pages par conversation ; mode « Demander » utilisable |
+
+Cette configuration n'a pas encore été mesurée.
+
+## 6. Résultats mesurés
 
 Test sur 38 questions dont la réponse est connue, posées à 9 documents d'une entreprise fictive. Modèle qwen3:4b-instruct, sur un ordinateur portable sans carte graphique dédiée.
 
@@ -124,7 +163,7 @@ Test sur 38 questions dont la réponse est connue, posées à 9 documents d'une 
 
 Détail : [Qualité et performances](10-qualite-performances.md).
 
-## 6. Pour aller plus loin
+## 7. Pour aller plus loin
 
 | Pour | Lire |
 |---|---|

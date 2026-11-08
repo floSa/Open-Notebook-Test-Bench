@@ -134,11 +134,13 @@ Le dépassement volontaire a été provoqué deux fois : par l'API `/api/generat
 | Open Notebook | Docling actif, `OPEN_NOTEBOOK_WORKER_MAX_TASKS=1`, `ESPERANTO_LLM_TIMEOUT=900` | 28/34 exactes, 4/4 refus, médiane 9,1 s, p95 23,8 s |
 | Mémoire totale en pointe | application 3,8 Go + Ollama 8,3 à 10 Go | tient dans 15,3 Go |
 
+**Configuration minimale sans GPU** déduite du profil A [Vérifié] ([mesures du socle](../../outils/resultats/socle/mesures-2026-11-08-passe1.log), [migration](../../outils/resultats/socle/migration-llm-service-2026-11-08.txt)) : 16 Go de RAM, 8 cœurs, qwen3:4b-instruct et bge-m3, `num_ctx` 16384, `OLLAMA_NUM_PARALLEL=1`, 8 fils de calcul. RAM d'Ollama à 16384 et une requête : 5,5 Go. Lecture du prompt : 36 à 39 jetons/s ; un prompt de 8 192 jetons demande 290 s avant le premier mot. Volume de documents en « Contenu complet » par conversation : 3,5 caractères par jeton sur le corpus (10 677 caractères pour 3 084 jetons) ; au plus environ 13 000 jetons de documents, soit 45 000 caractères, une fois retirés les consignes (environ 1 150 jetons), la réponse et l'historique [Estimation] ; 4 000 jetons (12 000 caractères) pour une première réponse en 1 min 30 [Vérifié]. Modèles de moins de 3 milliards de paramètres : [À tester].
+
 **Profil B** (Ryzen 5 9600X, RTX 4060 Ti 16 Go) — non disponible pendant les essais, tout est [Estimation] :
 
 | Élément | Réglage proposé | Calcul |
 |---|---|---|
-| Serveur de modèles | vLLM, deux conteneurs `rag-vllm-chat`, `rag-vllm-embed` | socle de référence de la série ; le reranker du socle ne sert pas, Open Notebook 1.15.1 n'en utilise pas |
+| Serveur de modèles | LLM-Service, branche `service-vllm` : deux conteneurs `vllm-central` (chat) et `vllm-embed` (embedding), un modèle par serveur vLLM | socle de référence de la série ; le reranker du socle ne sert pas, Open Notebook 1.15.1 n'en utilise pas |
 | Chat | Qwen3-4B-Instruct en AWQ 4 bits (environ 2,7 Go), ou un modèle de 8 milliards de paramètres en AWQ (environ 5,5 Go) | 16 Go de VRAM permettent jusqu'à 14 milliards de paramètres en 4 bits |
 | `--gpu-memory-utilization` | chat 0,55 ; embedding 0,15 (somme 0,70 < 0,95) | 0,55 × 16 Go = 8,8 Go pour le chat |
 | `--max-model-len` | 32768 | mémoire de contexte de Qwen3-4B : 36 couches × 8 têtes × 128 × 2 (K et V) × 2 octets = 144 Kio par jeton, soit 4,7 Go pour 32 768 jetons ; 2,7 + 4,7 = 7,4 Go < 8,8 Go |
@@ -148,7 +150,7 @@ Le dépassement volontaire a été provoqué deux fois : par l'API `/api/generat
 
 ### Pour aller plus loin
 
-Fournisseur à déclarer dans Open Notebook pour vLLM : « OpenAI Compatible », Base URL `http://rag-vllm-chat:8000/v1` pour le langage, `http://rag-vllm-embed:8001/v1` pour l'embedding [À tester].
+Fournisseur à déclarer dans Open Notebook pour vLLM : « OpenAI Compatible », Base URL `http://vllm-central:8000/v1` pour le langage, `http://vllm-embed:8000/v1` pour l'embedding (réseau `llm-net`) [À tester].
 
 ## Dépannage
 
