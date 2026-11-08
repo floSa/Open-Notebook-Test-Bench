@@ -41,8 +41,9 @@ EOF
   chmod 600 "$ID"
 fi
 
-# 3. socle (Ollama) puis démarrage
+# 3. socle (Ollama, Speaches) puis démarrage
 outils/communs/socle.sh >/dev/null
+outils/communs/voix.sh >/dev/null   # Speaches : TTS et STT locaux (podcasts, sources audio)
 docker compose --env-file "$D/.env" -f "$OFF" -f outils/open-notebook/compose.override.yml up -d
 for i in $(seq 120); do curl -sf http://127.0.0.1:5055/health >/dev/null && break; sleep 2; done
 curl -s http://127.0.0.1:5055/health; echo
@@ -50,7 +51,7 @@ for i in $(seq 60); do curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8
 echo "interface : HTTP $(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8502/)"
 
 # 4. branchement au socle
-python3 outils/open-notebook/configurer.py "${@}"
+python3 outils/open-notebook/configurer.py --voix "${@}"
 
 # ports : uniquement 127.0.0.1
 docker ps --filter name=rag-open-notebook --format '{{.Names}} {{.Ports}}'

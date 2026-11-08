@@ -18,6 +18,11 @@
       "sha256": "d0172381ef5f77f79d4c3a1e18974c1291dd99e634e58917f8e39c1321198c38"
     },
     {
+      "fichier": "message-vocal-production.mp3",
+      "octets": 147888,
+      "sha256": "5d540c715f0237e11c49b4740650d66278daac1cfe1fe4e0dfb0cd3ab4d9c42a"
+    },
+    {
       "fichier": "procedure-batteries.docx",
       "octets": 37272,
       "sha256": "96f432b9189b4de8b13b5fa5168c9fc22e07c6abccba5429439ec0341881768d"

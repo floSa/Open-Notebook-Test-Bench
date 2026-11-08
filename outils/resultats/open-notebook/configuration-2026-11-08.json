@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-08T13:53:41",
+  "date": "2026-11-08T13:55:46",
   "credential": {
     "id": "credential:1e0lofv7mmrxxf6axu90",
     "name": "ollama-socle",
@@ -21,7 +21,7 @@
     "num_ctx": 16384,
     "has_api_key": false,
     "created": "2026-11-08 12:52:08+00:00",
-    "updated": "2026-11-08 12:53:41.541390+00:00",
+    "updated": "2026-11-08 12:55:46.694833+00:00",
     "model_count": 3,
     "decryption_error": null
   },
@@ -57,16 +57,23 @@
   "modeles": {
     "qwen3:4b-instruct": "model:y1y42teep0qdu0n4cudi",
     "ministral-3:3b": "model:20uhlaxe99or023agrzm",
-    "bge-m3": "model:v5da2tew3pwl1ax9sh8s"
+    "bge-m3": "model:v5da2tew3pwl1ax9sh8s",
+    "speaches-ai/Kokoro-82M-v1.0-ONNX": "model:ee6x111oa9rh8a93lbgx",
+    "Systran/faster-whisper-small": "model:p4uduio9stknet9gm8bi"
   },
   "defauts": {
     "default_chat_model": "model:y1y42teep0qdu0n4cudi",
     "default_transformation_model": "model:y1y42teep0qdu0n4cudi",
     "large_context_model": "model:y1y42teep0qdu0n4cudi",
-    "default_text_to_speech_model": null,
-    "default_speech_to_text_model": null,
+    "default_text_to_speech_model": "model:ee6x111oa9rh8a93lbgx",
+    "default_speech_to_text_model": "model:p4uduio9stknet9gm8bi",
     "default_embedding_model": "model:v5da2tew3pwl1ax9sh8s",
     "default_tools_model": "model:y1y42teep0qdu0n4cudi"
+  },
+  "voix_test": {
+    "provider": "openai_compatible",
+    "success": true,
+    "message": "Connected. 2 models available: speaches-ai/Kokoro-82M-v1.0-ONNX, Systran/faster-whisper-small"
   },
   "reglages_avant": {
     "default_content_processing_engine_doc": "auto",

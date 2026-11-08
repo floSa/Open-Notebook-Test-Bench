@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "regle": "une réponse est exacte si chaque élément de 'attendu' est présent (alternatives séparées par |), après normalisation des espaces et des séparateurs décimaux ; pour un piège, la réponse doit signaler l'absence d'information",
   "questions": [
     {
@@ -473,28 +473,57 @@
       "type": "multi-documents"
     },
     {
-      "id": "Q33",
+      "question": "Quelle ligne d'assemblage sera arrêtée pour maintenance en mars 2026, et jusqu'à quelle date ?",
+      "attendu": [
+        "3",
+        "6 mars"
+      ],
+      "sources": [
+        {
+          "document": "message-vocal-production.mp3",
+          "page": null
+        }
+      ],
+      "type": "audio",
+      "id": "Q33"
+    },
+    {
+      "question": "Qui est le directeur de production de Vélanor ?",
+      "attendu": [
+        "Moreau"
+      ],
+      "sources": [
+        {
+          "document": "message-vocal-production.mp3",
+          "page": null
+        }
+      ],
+      "type": "audio",
+      "id": "Q34"
+    },
+    {
+      "id": "Q35",
       "question": "Quel était le chiffre d'affaires de Vélanor en 2022 ?",
       "attendu": [],
       "sources": [],
       "type": "piège"
     },
     {
-      "id": "Q34",
+      "id": "Q36",
       "question": "Qui est le directeur financier de Vélanor ?",
       "attendu": [],
       "sources": [],
       "type": "piège"
     },
     {
-      "id": "Q35",
+      "id": "Q37",
       "question": "Combien de trottinettes électriques Vélanor a-t-elle vendues en 2025 ?",
       "attendu": [],
       "sources": [],
       "type": "piège"
     },
     {
-      "id": "Q36",
+      "id": "Q38",
       "question": "Quel est le salaire de Karim Benali ?",
       "attendu": [],
       "sources": [],

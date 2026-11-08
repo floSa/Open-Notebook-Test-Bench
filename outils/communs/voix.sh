@@ -25,4 +25,6 @@ docker start rag-speaches >/dev/null
 for i in $(seq 90); do curl -sf http://127.0.0.1:8969/health >/dev/null && break; sleep 2; done
 curl -s http://127.0.0.1:8969/v1/models | python3 -c "import json,sys;print('modèles :',[m['id'] for m in json.load(sys.stdin)['data']])"
 curl -s http://127.0.0.1:8969/v1/models | grep -q "Kokoro" || { curl -s -X POST "http://127.0.0.1:8969/v1/models/$TTS"; echo; }
+# le cache copié n'a pas la fiche du modèle : Speaches ne télécharge que les fichiers manquants (quelques Ko)
+curl -s http://127.0.0.1:8969/v1/models | grep -q "faster-whisper-small" || { curl -s -X POST "http://127.0.0.1:8969/v1/models/Systran/faster-whisper-small"; echo; }
 curl -s http://127.0.0.1:8969/v1/models | python3 -c "import json,sys;print('modèles :',[m['id'] for m in json.load(sys.stdin)['data']])"
