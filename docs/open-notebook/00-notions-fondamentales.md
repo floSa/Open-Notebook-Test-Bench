@@ -49,7 +49,7 @@ La qualité finale dépend surtout des deux premières étapes : un texte mal ex
 
 ### Pour aller plus loin
 
-Le **budget de contexte** limite tout le reste : consignes, passages, historique et réponse doivent tenir dans la taille de contexte du modèle (`num_ctx` dans Ollama). Sur la machine d'essai, sans GPU, la lecture du prompt est lente : environ 53 à 67 jetons par seconde avec qwen3:4b-instruct [Vérifié] ([mesures du socle](../../outils/resultats/socle/)). Un prompt de 4 000 jetons demande donc plus d'une minute avant le premier mot de la réponse.
+Le **budget de contexte** limite tout le reste : consignes, passages, historique et réponse doivent tenir dans la taille de contexte du modèle (`num_ctx` dans Ollama). Sur la machine d'essai, sans GPU, la lecture du prompt est lente : de 24 à 67 jetons par seconde avec qwen3:4b-instruct selon `num_ctx` (36 jetons par seconde au réglage retenu, 16384) [Vérifié] ([mesures du socle](../../outils/resultats/socle/)). Un prompt de 4 000 jetons demande donc une à deux minutes avant le premier mot de la réponse.
 
 ## 3. Ce qu'Open Notebook fait autrement
 
@@ -63,7 +63,7 @@ Open Notebook reprend le principe de NotebookLM : des **carnets** (notebooks) qu
 
 ### Pour aller plus loin
 
-Conséquence pratique : avec beaucoup de sources en « full content », le prompt dépasse vite le contexte du modèle. Ollama tronque alors le début du prompt sans erreur visible ; le comportement est mesuré dans [Chat et citations](04-chat-et-citations.md) et dans [Qualité et performances](10-qualite-performances.md).
+Conséquence pratique : avec beaucoup de sources en « full content », le prompt dépasse vite le contexte du modèle. Dans le chat d'Open Notebook, la question échoue alors avec une erreur explicite (« exceeds the available context size ») [Vérifié] ([banc à 4096](../../outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent-ctx4096.json)), alors qu'un appel direct à Ollama tronque le prompt sans erreur ; le comportement est mesuré dans [Chat et citations](04-chat-et-citations.md) et dans [Qualité et performances](10-qualite-performances.md).
 
 Il n'y a ni reranker ni recherche hybride réglable dans Open Notebook 1.15.1 [Source] ([synthèse du code](../../outils/resultats/open-notebook/cadrage-source.md)).
 
@@ -105,17 +105,18 @@ Le socle prévu par la série est vLLM sur GPU NVIDIA. La machine d'essai n'en a
 
 ### Essentiel
 
-L'interface est en anglais par défaut ; les libellés sont cités tels qu'affichés. Les termes sont définis dans le [glossaire](../glossaire.md).
+L'interface suit la langue du navigateur (bouton **Langue** en bas à gauche) ; elle est en français sur la machine d'essai et les libellés sont cités tels qu'affichés, avec le libellé anglais entre parenthèses [Vérifié]. Les termes sont définis dans le [glossaire](../glossaire.md).
 
 | Libellé | Sens |
 |---|---|
-| Notebooks | carnets |
-| Sources | documents, pages web, textes ajoutés |
-| Notes | notes manuelles ou issues du chat |
-| Chat | conversation dans un carnet |
-| Transformations | consignes appliquées à une source (résumé, points clés) |
-| Podcasts | épisodes audio générés |
-| Models | fournisseurs et modèles |
+| Carnets (Notebooks) | carnets |
+| Sources (Sources) | documents, pages web, textes ajoutés |
+| Notes (Notes) | notes manuelles ou issues du chat |
+| DISCUTER AVEC LE CARNET (Chat) | conversation dans un carnet |
+| Transformations (Transformations) | consignes appliquées à une source (résumé, points clés) |
+| Podcasts (Podcasts) | épisodes audio générés |
+| Modèles (Models) | fournisseurs et modèles |
+| Demander et rechercher | recherche et questions sur toutes les sources |
 
 ### Pour aller plus loin
 
@@ -125,7 +126,7 @@ Les libellés exacts relevés sur la version 1.15.1 figurent dans les captures d
 
 | Symptôme | Cause probable | Action |
 |---|---|---|
-| Réponse qui ignore une partie des sources | prompt plus long que `num_ctx`, tronqué par Ollama | réduire les sources en « full content » ou augmenter `num_ctx` ([04](04-chat-et-citations.md)) |
+| « AI service error … exceeds the available context size » | prompt plus long que `num_ctx` | réduire les sources en « full content » ou augmenter `num_ctx` ([04](04-chat-et-citations.md)) |
 | Citation sans page | comportement normal : Open Notebook cite la source, pas la page | ouvrir la source citée |
 
 ## Sources
