@@ -1,0 +1,2079 @@
+# Extrait du journal de rag-socle-ollama (docker logs), filtré : chargements de modèle, cache de préfixe, requêtes /api/chat. Relevé le 2026-11-08T18:39:16+01:00.
+[GIN] 2026/11/08 - 12:14:17 | 200 |   36.216079ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:14:17 | 200 |   48.557482ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 12:14:31 | 200 |   50.828997ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:14:31 | 200 |   38.977762ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 12:14:53 | 200 | 12.349701459s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  1 | task 65 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 65 | cached n_tokens = 26, memory_seq_rm [26, end)
+[GIN] 2026/11/08 - 12:15:04 | 200 |  7.634652936s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 194 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 2621
+slot update_slots: id  0 | task 194 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+[GIN] 2026/11/08 - 12:15:48 | 200 | 41.525554892s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 227 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  0 | task 227 | cached n_tokens = 3, memory_seq_rm [3, end)
+slot update_slots: id  1 | task 226 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 226 | cached n_tokens = 26, memory_seq_rm [26, end)
+[GIN] 2026/11/08 - 12:15:57 | 200 |  8.601219868s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:15:57 | 200 |  8.601545465s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:15:58 | 200 |   39.717368ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:15:58 | 200 |  155.558433ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 12:16:29 | 200 |  14.54021447s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  1 | task 65 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 65 | cached n_tokens = 26, memory_seq_rm [26, end)
+[GIN] 2026/11/08 - 12:16:37 | 200 |  8.093156274s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 194 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 5225
+slot update_slots: id  0 | task 194 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 5120, memory_seq_rm [5120, end)
+[GIN] 2026/11/08 - 12:18:28 | 200 |         1m41s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 230 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  0 | task 230 | cached n_tokens = 3, memory_seq_rm [3, end)
+slot update_slots: id  1 | task 229 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 229 | cached n_tokens = 26, memory_seq_rm [26, end)
+[GIN] 2026/11/08 - 12:18:41 | 200 |  9.140152752s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:18:41 | 200 |  9.141567072s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:18:42 | 200 |   35.477317ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:18:42 | 200 |  200.972299ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 12:19:18 | 200 |  21.24583047s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  1 | task 65 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 65 | cached n_tokens = 26, memory_seq_rm [26, end)
+[GIN] 2026/11/08 - 12:19:27 | 200 |  8.957717283s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 194 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 10433
+slot update_slots: id  0 | task 194 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 5120, memory_seq_rm [5120, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 6144, memory_seq_rm [6144, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 7168, memory_seq_rm [7168, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 8192, memory_seq_rm [8192, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 9216, memory_seq_rm [9216, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 10240, memory_seq_rm [10240, end)
+[GIN] 2026/11/08 - 12:24:51 | 200 |         4m56s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 235 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  0 | task 235 | cached n_tokens = 3, memory_seq_rm [3, end)
+slot update_slots: id  1 | task 234 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 234 | cached n_tokens = 26, memory_seq_rm [26, end)
+[GIN] 2026/11/08 - 12:25:01 | 200 |  9.547089666s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:25:01 | 200 |  9.548969983s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:25:05 | 200 |   46.501042ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:25:05 | 200 |  320.956878ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 32768
+[GIN] 2026/11/08 - 12:25:41 | 499 | 20.446608415s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:26:05 | 200 |   27.196476ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:26:05 | 200 |   48.107648ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 12:26:20 | 200 |   42.777457ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:26:20 | 200 |   50.114483ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 572
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 12:26:55 | 200 | 21.119746143s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  1 | task 65 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 572
+slot update_slots: id  1 | task 65 | cached n_tokens = 571, memory_seq_rm [571, end)
+[GIN] 2026/11/08 - 12:27:02 | 200 |  7.279491409s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  1 | task 194 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 2609
+slot update_slots: id  1 | task 194 | cached n_tokens = 551, memory_seq_rm [551, end)
+slot update_slots: id  1 | task 194 | cached n_tokens = 1575, memory_seq_rm [1575, end)
+slot update_slots: id  1 | task 194 | cached n_tokens = 2599, memory_seq_rm [2599, end)
+[GIN] 2026/11/08 - 12:27:37 | 200 | 31.801376787s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 262 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 572
+slot update_slots: id  0 | task 262 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 261 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 572
+slot update_slots: id  1 | task 261 | cached n_tokens = 551, memory_seq_rm [551, end)
+[GIN] 2026/11/08 - 12:27:51 | 200 | 14.369155038s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:27:51 | 200 | 14.369486589s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:27:52 | 200 |   49.221116ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:27:52 | 200 |   48.206224ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 572
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 12:28:25 | 200 | 17.916063913s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  1 | task 65 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 572
+slot update_slots: id  1 | task 65 | cached n_tokens = 571, memory_seq_rm [571, end)
+[GIN] 2026/11/08 - 12:28:33 | 200 |  7.724258007s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  1 | task 194 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 4655
+slot update_slots: id  1 | task 194 | cached n_tokens = 551, memory_seq_rm [551, end)
+slot update_slots: id  1 | task 194 | cached n_tokens = 1575, memory_seq_rm [1575, end)
+slot update_slots: id  1 | task 194 | cached n_tokens = 2599, memory_seq_rm [2599, end)
+slot update_slots: id  1 | task 194 | cached n_tokens = 3623, memory_seq_rm [3623, end)
+slot update_slots: id  1 | task 194 | cached n_tokens = 4647, memory_seq_rm [4647, end)
+[GIN] 2026/11/08 - 12:30:04 | 200 |         1m21s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 264 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 572
+slot update_slots: id  0 | task 264 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 263 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 572
+slot update_slots: id  1 | task 263 | cached n_tokens = 551, memory_seq_rm [551, end)
+[GIN] 2026/11/08 - 12:30:23 | 200 | 15.773719439s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:30:23 | 200 | 15.773727547s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:30:24 | 200 |   41.815495ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:30:24 | 200 |    43.48805ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 32768
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 32768, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 12:31:02 | 200 | 26.094290528s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  1 | task 65 | new prompt, n_ctx_slot = 32768, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 65 | cached n_tokens = 26, memory_seq_rm [26, end)
+[GIN] 2026/11/08 - 12:31:10 | 200 |  7.495624027s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 194 | new prompt, n_ctx_slot = 32768, n_keep = 4, task.n_tokens = 20849
+slot update_slots: id  0 | task 194 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 6144, memory_seq_rm [6144, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 8192, memory_seq_rm [8192, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 10240, memory_seq_rm [10240, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 12288, memory_seq_rm [12288, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 14336, memory_seq_rm [14336, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 16384, memory_seq_rm [16384, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 18432, memory_seq_rm [18432, end)
+slot update_slots: id  0 | task 194 | cached n_tokens = 20480, memory_seq_rm [20480, end)
+[GIN] 2026/11/08 - 12:47:25 | 200 |        14m49s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  1 | task 234 | new prompt, n_ctx_slot = 32768, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  1 | task 234 | cached n_tokens = 26, memory_seq_rm [26, end)
+slot update_slots: id  0 | task 236 | new prompt, n_ctx_slot = 32768, n_keep = 4, task.n_tokens = 27
+slot update_slots: id  0 | task 236 | cached n_tokens = 3, memory_seq_rm [3, end)
+[GIN] 2026/11/08 - 12:47:39 | 200 |  10.65951962s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:47:39 | 200 | 10.734097192s |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:47:40 | 200 |   28.425687ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:47:40 | 200 |  555.195931ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 2 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 2 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 4 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 4 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 6 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 6 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 8 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 8 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 10 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 10 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 12 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 12 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 14 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 14 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 16 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 16 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 18 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 18 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 20 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 20 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 22 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 22 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 24 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 24 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 26 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 26 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 28 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 28 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 30 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 462
+slot update_slots: id  0 | task 30 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 12:48:45 | 200 |   38.509373ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 12:48:45 | 200 |   38.198191ms |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 32 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 3
+slot update_slots: id  0 | task 32 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 2048
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 2048, n_keep = 4, task.n_tokens = 2047
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 512, memory_seq_rm [512, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1536, memory_seq_rm [1536, end)
+[GIN] 2026/11/08 - 12:49:27 | 200 | 34.681231139s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 144
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 926
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 907, memory_seq_rm [907, end)
+[GIN] 2026/11/08 - 12:53:33 | 200 | 24.303234277s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 2 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 143
+slot update_slots: id  0 | task 2 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 4 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 144
+slot update_slots: id  0 | task 4 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 6 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 154
+slot update_slots: id  0 | task 6 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 8 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 321
+slot update_slots: id  0 | task 8 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 10 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 175
+slot update_slots: id  0 | task 10 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 12 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 333
+slot update_slots: id  0 | task 12 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 14 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 350
+slot update_slots: id  0 | task 14 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 16 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 394
+slot update_slots: id  0 | task 16 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 18 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 321
+slot update_slots: id  0 | task 18 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 20 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 153
+slot update_slots: id  0 | task 20 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 22 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 122
+slot update_slots: id  0 | task 22 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 35 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4354
+slot update_slots: id  0 | task 35 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 35 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  0 | task 35 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  0 | task 35 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  0 | task 35 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  0 | task 35 | cached n_tokens = 4326, memory_seq_rm [4326, end)
+[GIN] 2026/11/08 - 12:59:30 | 200 |         1m26s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 87 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 141
+slot update_slots: id  1 | task 87 | cached n_tokens = 1, memory_seq_rm [1, end)
+[GIN] 2026/11/08 - 12:59:33 | 200 |   2.60235173s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 91 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4349
+slot update_slots: id  0 | task 91 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 12:59:40 | 200 |   5.90836625s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 124 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 122
+slot update_slots: id  1 | task 124 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 12:59:42 | 200 |  2.110869593s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 128 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4345
+slot update_slots: id  0 | task 128 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 12:59:48 | 200 |  4.514405792s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 160 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 114
+slot update_slots: id  1 | task 160 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 12:59:50 | 200 |  1.927476087s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 163 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4349
+slot update_slots: id  0 | task 163 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:00:01 | 200 |  6.437928505s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 209 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 137
+slot update_slots: id  1 | task 209 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:00:03 | 200 |  2.148994955s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 213 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4355
+slot update_slots: id  0 | task 213 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:00:11 | 200 |  7.152841422s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 253 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 134
+slot update_slots: id  1 | task 253 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:00:14 | 200 |  2.305891546s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 257 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4356
+slot update_slots: id  0 | task 257 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:00:22 | 200 |  8.069480932s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 303 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 142
+slot update_slots: id  1 | task 303 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:00:25 | 200 |  2.415356294s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 307 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4357
+slot update_slots: id  0 | task 307 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:00:41 | 200 | 12.041276407s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 380 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 172
+slot update_slots: id  1 | task 380 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:00:44 | 200 |  2.420645588s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 384 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4346
+slot update_slots: id  0 | task 384 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:00:50 | 200 |  5.080004372s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 421 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 124
+slot update_slots: id  1 | task 421 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:00:52 | 200 |  2.096529044s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 425 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4349
+slot update_slots: id  0 | task 425 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:01:00 | 200 |  7.103319132s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 468 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 130
+slot update_slots: id  1 | task 468 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:01:05 | 200 |  2.116283694s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 472 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4349
+slot update_slots: id  0 | task 472 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:01:12 | 200 |  5.274867986s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 510 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 125
+slot update_slots: id  1 | task 510 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:01:14 | 200 |  1.884169996s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 514 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4349
+slot update_slots: id  0 | task 514 | cached n_tokens = 4330, memory_seq_rm [4330, end)
+[GIN] 2026/11/08 - 13:01:22 | 200 |  6.757748399s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 567 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 140
+slot update_slots: id  1 | task 567 | cached n_tokens = 6, memory_seq_rm [6, end)
+[GIN] 2026/11/08 - 13:01:24 | 200 |  1.953866242s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 571 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4351
+slot update_slots: id  0 | task 571 | cached n_tokens = 4331, memory_seq_rm [4331, end)
+[GIN] 2026/11/08 - 13:01:31 | 200 |  5.404904068s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 610 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 135
+slot update_slots: id  1 | task 610 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:01:33 | 200 |  1.965364386s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 614 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4357
+slot update_slots: id  0 | task 614 | cached n_tokens = 4331, memory_seq_rm [4331, end)
+[GIN] 2026/11/08 - 13:01:44 | 200 |  6.429710714s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 657 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 139
+slot update_slots: id  1 | task 657 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:01:47 | 200 |  2.180452107s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 661 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4346
+slot update_slots: id  0 | task 661 | cached n_tokens = 4331, memory_seq_rm [4331, end)
+[GIN] 2026/11/08 - 13:01:54 | 200 |  5.465921995s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 703 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 127
+slot update_slots: id  1 | task 703 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:01:56 | 200 |  1.956044269s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 707 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4351
+slot update_slots: id  0 | task 707 | cached n_tokens = 4333, memory_seq_rm [4333, end)
+[GIN] 2026/11/08 - 13:02:19 | 200 | 18.865828753s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 877 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 260
+slot update_slots: id  1 | task 877 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:02:23 | 200 |  3.609747343s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 881 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4349
+slot update_slots: id  0 | task 881 | cached n_tokens = 4333, memory_seq_rm [4333, end)
+[GIN] 2026/11/08 - 13:02:42 | 200 | 17.907690313s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1046 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 252
+slot update_slots: id  1 | task 1046 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:02:46 | 200 |  3.358694219s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1049 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4353
+slot update_slots: id  0 | task 1049 | cached n_tokens = 4333, memory_seq_rm [4333, end)
+[GIN] 2026/11/08 - 13:03:06 | 200 | 15.142235958s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1178 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 219
+slot update_slots: id  1 | task 1178 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:03:09 | 200 |  3.126890419s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1182 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4351
+slot update_slots: id  0 | task 1182 | cached n_tokens = 4331, memory_seq_rm [4331, end)
+[GIN] 2026/11/08 - 13:03:32 | 200 | 18.385603286s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1348 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 258
+slot update_slots: id  1 | task 1348 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:03:36 | 200 |  3.793657829s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1351 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4348
+slot update_slots: id  0 | task 1351 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:03:42 | 200 |  5.005679243s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1388 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 127
+slot update_slots: id  1 | task 1388 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:03:44 | 200 |  1.914948496s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1392 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4351
+slot update_slots: id  0 | task 1392 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:03:51 | 200 |  5.795250102s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1434 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 130
+slot update_slots: id  1 | task 1434 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:03:53 | 200 |  1.935428357s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1438 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4348
+slot update_slots: id  0 | task 1438 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:04:08 | 200 |   9.55869841s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1517 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 165
+slot update_slots: id  1 | task 1517 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:04:11 | 200 |  2.381499107s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1520 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4344
+slot update_slots: id  0 | task 1520 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:04:20 | 200 |  8.136111337s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1589 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 154
+slot update_slots: id  1 | task 1589 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:04:22 | 200 |  2.174963878s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1593 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4352
+slot update_slots: id  0 | task 1593 | cached n_tokens = 4330, memory_seq_rm [4330, end)
+[GIN] 2026/11/08 - 13:04:30 | 200 |  6.336304724s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1640 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 141
+slot update_slots: id  1 | task 1640 | cached n_tokens = 6, memory_seq_rm [6, end)
+[GIN] 2026/11/08 - 13:04:32 | 200 |  2.063442812s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1644 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4363
+slot update_slots: id  0 | task 1644 | cached n_tokens = 4330, memory_seq_rm [4330, end)
+[GIN] 2026/11/08 - 13:04:51 | 200 | 14.306071339s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1758 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 235
+slot update_slots: id  1 | task 1758 | cached n_tokens = 6, memory_seq_rm [6, end)
+[GIN] 2026/11/08 - 13:04:55 | 200 |  3.237263654s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1762 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4345
+slot update_slots: id  0 | task 1762 | cached n_tokens = 4330, memory_seq_rm [4330, end)
+[GIN] 2026/11/08 - 13:05:02 | 200 |  6.221999174s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1811 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 132
+slot update_slots: id  1 | task 1811 | cached n_tokens = 6, memory_seq_rm [6, end)
+[GIN] 2026/11/08 - 13:05:05 | 200 |  1.998493336s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1815 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4348
+slot update_slots: id  0 | task 1815 | cached n_tokens = 4330, memory_seq_rm [4330, end)
+[GIN] 2026/11/08 - 13:05:15 | 200 |  6.001584534s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1861 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 144
+slot update_slots: id  1 | task 1861 | cached n_tokens = 6, memory_seq_rm [6, end)
+[GIN] 2026/11/08 - 13:05:17 | 200 |   2.16356907s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1865 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4354
+slot update_slots: id  0 | task 1865 | cached n_tokens = 4333, memory_seq_rm [4333, end)
+[GIN] 2026/11/08 - 13:05:25 | 200 |  6.306034346s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1911 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 146
+slot update_slots: id  1 | task 1911 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:05:27 | 200 |  2.198799005s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1915 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4346
+slot update_slots: id  0 | task 1915 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:05:34 | 200 |  5.231044919s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1956 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 124
+slot update_slots: id  1 | task 1956 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:05:36 | 200 |  1.816884573s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 1960 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4359
+slot update_slots: id  0 | task 1960 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:05:49 | 200 |   8.92291704s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2025 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 167
+slot update_slots: id  1 | task 2025 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:05:52 | 200 |  2.472900965s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2029 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4359
+slot update_slots: id  0 | task 2029 | cached n_tokens = 4333, memory_seq_rm [4333, end)
+[GIN] 2026/11/08 - 13:06:05 | 200 | 12.120568564s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2126 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 199
+slot update_slots: id  1 | task 2126 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:06:08 | 200 |  2.782802491s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2130 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4361
+slot update_slots: id  0 | task 2130 | cached n_tokens = 4331, memory_seq_rm [4331, end)
+[GIN] 2026/11/08 - 13:06:35 | 200 | 22.677438331s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2322 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 296
+slot update_slots: id  1 | task 2322 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:06:40 | 200 |  4.005418125s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2325 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4374
+slot update_slots: id  0 | task 2325 | cached n_tokens = 4331, memory_seq_rm [4331, end)
+[GIN] 2026/11/08 - 13:06:54 | 200 | 13.227598067s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2422 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 213
+slot update_slots: id  1 | task 2422 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:07:00 | 200 |    3.0365295s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2426 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4362
+slot update_slots: id  0 | task 2426 | cached n_tokens = 4330, memory_seq_rm [4330, end)
+[GIN] 2026/11/08 - 13:07:24 | 200 | 22.309405587s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2616 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 293
+slot update_slots: id  1 | task 2616 | cached n_tokens = 6, memory_seq_rm [6, end)
+[GIN] 2026/11/08 - 13:07:29 | 200 |  4.244204753s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2620 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4347
+slot update_slots: id  0 | task 2620 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:07:45 | 200 | 11.757757494s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2721 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 185
+slot update_slots: id  1 | task 2721 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:07:48 | 200 |  2.587442568s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2724 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4355
+slot update_slots: id  0 | task 2724 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:08:01 | 200 | 12.017876607s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2820 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 192
+slot update_slots: id  1 | task 2820 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:08:04 | 200 |  2.804963779s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2824 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4346
+slot update_slots: id  0 | task 2824 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:08:21 | 200 | 12.461608371s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2932 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 195
+slot update_slots: id  1 | task 2932 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:08:24 | 200 |  2.875284395s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2936 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4361
+slot update_slots: id  0 | task 2936 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:08:39 | 200 | 13.165833174s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3039 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 205
+slot update_slots: id  1 | task 3039 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:08:42 | 200 |  2.984345531s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3043 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4346
+slot update_slots: id  0 | task 3043 | cached n_tokens = 4329, memory_seq_rm [4329, end)
+[GIN] 2026/11/08 - 13:08:55 | 200 |  8.846557027s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3116 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 160
+slot update_slots: id  1 | task 3116 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:08:58 | 200 |  2.408788832s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 24 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 143
+slot update_slots: id  0 | task 24 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 26 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 144
+slot update_slots: id  0 | task 26 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 28 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 99
+slot update_slots: id  0 | task 28 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 30 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 268
+slot update_slots: id  0 | task 30 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 32 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 89
+slot update_slots: id  0 | task 32 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 34 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 81
+slot update_slots: id  0 | task 34 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 36 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 161
+slot update_slots: id  0 | task 36 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 38 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 114
+slot update_slots: id  0 | task 38 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 40 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 94
+slot update_slots: id  0 | task 40 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 42 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 74
+slot update_slots: id  0 | task 42 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 44 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 128
+slot update_slots: id  0 | task 44 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 46 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 146
+slot update_slots: id  0 | task 46 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 48 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 157
+slot update_slots: id  0 | task 48 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 50 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 137
+slot update_slots: id  0 | task 50 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 52 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 312
+slot update_slots: id  0 | task 52 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 54 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 151
+slot update_slots: id  0 | task 54 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 56 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 111
+slot update_slots: id  0 | task 56 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 3120 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4007
+slot update_slots: id  0 | task 3120 | cached n_tokens = 198, memory_seq_rm [198, end)
+slot update_slots: id  0 | task 3120 | cached n_tokens = 1222, memory_seq_rm [1222, end)
+slot update_slots: id  0 | task 3120 | cached n_tokens = 2246, memory_seq_rm [2246, end)
+slot update_slots: id  0 | task 3120 | cached n_tokens = 3270, memory_seq_rm [3270, end)
+slot update_slots: id  0 | task 3120 | cached n_tokens = 3979, memory_seq_rm [3979, end)
+[GIN] 2026/11/08 - 13:13:47 | 200 |         1m11s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3173 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 143
+slot update_slots: id  1 | task 3173 | cached n_tokens = 61, memory_seq_rm [61, end)
+[GIN] 2026/11/08 - 13:13:48 | 200 |  1.385079566s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3177 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4002
+slot update_slots: id  0 | task 3177 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:13:54 | 200 |  4.599976201s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3211 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 123
+slot update_slots: id  1 | task 3211 | cached n_tokens = 52, memory_seq_rm [52, end)
+[GIN] 2026/11/08 - 13:13:56 | 200 |  1.271367144s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3215 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3998
+slot update_slots: id  0 | task 3215 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:14:01 | 200 |  4.109778729s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3249 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 116
+slot update_slots: id  1 | task 3249 | cached n_tokens = 47, memory_seq_rm [47, end)
+[GIN] 2026/11/08 - 13:14:06 | 200 |  1.120669105s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3252 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4002
+slot update_slots: id  0 | task 3252 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:14:13 | 200 |  5.720435463s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3300 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 139
+slot update_slots: id  1 | task 3300 | cached n_tokens = 70, memory_seq_rm [70, end)
+[GIN] 2026/11/08 - 13:14:14 | 200 |  1.293256763s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3304 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4008
+slot update_slots: id  0 | task 3304 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:14:21 | 200 |  5.578050194s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3345 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 135
+slot update_slots: id  1 | task 3345 | cached n_tokens = 43, memory_seq_rm [43, end)
+[GIN] 2026/11/08 - 13:14:23 | 200 |   1.50297846s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3349 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4009
+slot update_slots: id  0 | task 3349 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:14:30 | 200 |  6.251605466s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3396 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 143
+slot update_slots: id  1 | task 3396 | cached n_tokens = 72, memory_seq_rm [72, end)
+[GIN] 2026/11/08 - 13:14:32 | 200 |  1.325368342s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3400 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4010
+slot update_slots: id  0 | task 3400 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:14:46 | 200 |  9.213499099s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3475 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 174
+slot update_slots: id  1 | task 3475 | cached n_tokens = 75, memory_seq_rm [75, end)
+[GIN] 2026/11/08 - 13:14:47 | 200 |  1.615383763s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3479 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3999
+slot update_slots: id  0 | task 3479 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:14:54 | 200 |  4.795890267s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3518 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 126
+slot update_slots: id  1 | task 3518 | cached n_tokens = 57, memory_seq_rm [57, end)
+[GIN] 2026/11/08 - 13:14:55 | 200 |  1.210417494s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3522 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4002
+slot update_slots: id  0 | task 3522 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:15:02 | 200 |   5.15641135s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3563 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 128
+slot update_slots: id  1 | task 3563 | cached n_tokens = 57, memory_seq_rm [57, end)
+[GIN] 2026/11/08 - 13:15:03 | 200 |  1.264579441s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3567 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4002
+slot update_slots: id  0 | task 3567 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:15:09 | 200 |  4.983960008s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3607 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 127
+slot update_slots: id  1 | task 3607 | cached n_tokens = 58, memory_seq_rm [58, end)
+[GIN] 2026/11/08 - 13:15:11 | 200 |  1.253960097s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3611 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4002
+slot update_slots: id  0 | task 3611 | cached n_tokens = 3983, memory_seq_rm [3983, end)
+[GIN] 2026/11/08 - 13:15:22 | 200 |  6.250047995s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3666 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 142
+slot update_slots: id  1 | task 3666 | cached n_tokens = 73, memory_seq_rm [73, end)
+[GIN] 2026/11/08 - 13:15:23 | 200 |  1.167654746s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3670 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4004
+slot update_slots: id  0 | task 3670 | cached n_tokens = 3984, memory_seq_rm [3984, end)
+[GIN] 2026/11/08 - 13:15:29 | 200 |  4.933172818s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3710 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 136
+slot update_slots: id  1 | task 3710 | cached n_tokens = 45, memory_seq_rm [45, end)
+[GIN] 2026/11/08 - 13:15:31 | 200 |  1.520484029s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3714 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4010
+slot update_slots: id  0 | task 3714 | cached n_tokens = 3984, memory_seq_rm [3984, end)
+[GIN] 2026/11/08 - 13:15:38 | 200 |  5.719903251s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3759 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 141
+slot update_slots: id  1 | task 3759 | cached n_tokens = 72, memory_seq_rm [72, end)
+[GIN] 2026/11/08 - 13:15:39 | 200 |  1.193942135s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3763 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3999
+slot update_slots: id  0 | task 3763 | cached n_tokens = 3984, memory_seq_rm [3984, end)
+[GIN] 2026/11/08 - 13:15:46 | 200 |  5.108366993s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3807 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 129
+slot update_slots: id  1 | task 3807 | cached n_tokens = 60, memory_seq_rm [60, end)
+[GIN] 2026/11/08 - 13:15:47 | 200 |  1.242502638s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3811 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4004
+slot update_slots: id  0 | task 3811 | cached n_tokens = 3986, memory_seq_rm [3986, end)
+[GIN] 2026/11/08 - 13:16:05 | 200 | 13.030636425s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 3937 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 216
+slot update_slots: id  1 | task 3937 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:16:08 | 200 |  3.008735979s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3941 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4002
+slot update_slots: id  0 | task 3941 | cached n_tokens = 3986, memory_seq_rm [3986, end)
+[GIN] 2026/11/08 - 13:16:30 | 200 | 17.398102912s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 4110 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 256
+slot update_slots: id  1 | task 4110 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:16:33 | 200 |  3.487567089s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 4114 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4006
+slot update_slots: id  0 | task 4114 | cached n_tokens = 3986, memory_seq_rm [3986, end)
+[GIN] 2026/11/08 - 13:16:53 | 200 | 18.620246412s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 4297 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 273
+slot update_slots: id  1 | task 4297 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:16:57 | 200 |  3.852888315s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 4301 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4004
+slot update_slots: id  0 | task 4301 | cached n_tokens = 3984, memory_seq_rm [3984, end)
+[GIN] 2026/11/08 - 13:17:25 | 200 | 23.506496644s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 4533 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 324
+slot update_slots: id  1 | task 4533 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:17:30 | 200 |   4.28208348s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 4536 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4001
+slot update_slots: id  0 | task 4536 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:17:39 | 200 |  4.476363655s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 4572 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 126
+slot update_slots: id  1 | task 4572 | cached n_tokens = 60, memory_seq_rm [60, end)
+[GIN] 2026/11/08 - 13:17:40 | 200 |   1.16607295s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 4576 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4004
+slot update_slots: id  0 | task 4576 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:17:48 | 200 |  6.231985448s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 4629 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 141
+slot update_slots: id  1 | task 4629 | cached n_tokens = 41, memory_seq_rm [41, end)
+[GIN] 2026/11/08 - 13:17:49 | 200 |  1.560686367s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 4633 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4001
+slot update_slots: id  0 | task 4633 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:17:55 | 200 |  4.082979106s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 4665 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 118
+slot update_slots: id  1 | task 4665 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:17:57 | 200 |   1.68308842s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 4669 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3997
+slot update_slots: id  0 | task 4669 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:18:16 | 200 | 14.856406016s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 4814 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 230
+slot update_slots: id  1 | task 4814 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:18:19 | 200 |  3.101973492s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 4818 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4005
+slot update_slots: id  0 | task 4818 | cached n_tokens = 3983, memory_seq_rm [3983, end)
+[GIN] 2026/11/08 - 13:18:26 | 200 |  5.663516024s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 4865 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 141
+slot update_slots: id  1 | task 4865 | cached n_tokens = 73, memory_seq_rm [73, end)
+[GIN] 2026/11/08 - 13:18:28 | 200 |  1.211924638s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 4869 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4016
+slot update_slots: id  0 | task 4869 | cached n_tokens = 3983, memory_seq_rm [3983, end)
+[GIN] 2026/11/08 - 13:18:46 | 200 | 16.966447795s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5023 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 275
+slot update_slots: id  1 | task 5023 | cached n_tokens = 87, memory_seq_rm [87, end)
+[GIN] 2026/11/08 - 13:18:52 | 200 |  2.721719873s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5027 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3998
+slot update_slots: id  0 | task 5027 | cached n_tokens = 3983, memory_seq_rm [3983, end)
+[GIN] 2026/11/08 - 13:18:59 | 200 |  5.284104123s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5074 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 130
+slot update_slots: id  1 | task 5074 | cached n_tokens = 52, memory_seq_rm [52, end)
+[GIN] 2026/11/08 - 13:19:00 | 200 |  1.355326839s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5078 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4001
+slot update_slots: id  0 | task 5078 | cached n_tokens = 3983, memory_seq_rm [3983, end)
+[GIN] 2026/11/08 - 13:19:07 | 200 |  5.478015086s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5126 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 146
+slot update_slots: id  1 | task 5126 | cached n_tokens = 58, memory_seq_rm [58, end)
+[GIN] 2026/11/08 - 13:19:08 | 200 |  1.435247273s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5130 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4007
+slot update_slots: id  0 | task 5130 | cached n_tokens = 3986, memory_seq_rm [3986, end)
+[GIN] 2026/11/08 - 13:19:15 | 200 |  5.654657268s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5175 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 145
+slot update_slots: id  1 | task 5175 | cached n_tokens = 61, memory_seq_rm [61, end)
+[GIN] 2026/11/08 - 13:19:17 | 200 |  1.419854806s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5179 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3999
+slot update_slots: id  0 | task 5179 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:19:26 | 200 |  4.805783072s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5220 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 124
+slot update_slots: id  1 | task 5220 | cached n_tokens = 56, memory_seq_rm [56, end)
+[GIN] 2026/11/08 - 13:19:27 | 200 |  1.199972859s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5224 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4012
+slot update_slots: id  0 | task 5224 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:19:36 | 200 |  7.774325294s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5288 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 166
+slot update_slots: id  1 | task 5288 | cached n_tokens = 79, memory_seq_rm [79, end)
+[GIN] 2026/11/08 - 13:19:38 | 200 |  1.405444633s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5292 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4012
+slot update_slots: id  0 | task 5292 | cached n_tokens = 3986, memory_seq_rm [3986, end)
+[GIN] 2026/11/08 - 13:19:50 | 200 | 10.431671372s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5386 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 196
+slot update_slots: id  1 | task 5386 | cached n_tokens = 77, memory_seq_rm [77, end)
+[GIN] 2026/11/08 - 13:19:52 | 200 |   1.78515388s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5390 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4014
+slot update_slots: id  0 | task 5390 | cached n_tokens = 3984, memory_seq_rm [3984, end)
+[GIN] 2026/11/08 - 13:20:14 | 200 | 17.699009553s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5551 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 265
+slot update_slots: id  1 | task 5551 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:20:18 | 200 |  3.507364898s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5554 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4027
+slot update_slots: id  0 | task 5554 | cached n_tokens = 3984, memory_seq_rm [3984, end)
+[GIN] 2026/11/08 - 13:20:31 | 200 | 11.950211331s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5652 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 214
+slot update_slots: id  1 | task 5652 | cached n_tokens = 91, memory_seq_rm [91, end)
+[GIN] 2026/11/08 - 13:20:36 | 200 |  1.942112157s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5656 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4015
+slot update_slots: id  0 | task 5656 | cached n_tokens = 3983, memory_seq_rm [3983, end)
+[GIN] 2026/11/08 - 13:20:48 | 200 | 10.408007719s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5746 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 193
+slot update_slots: id  1 | task 5746 | cached n_tokens = 6, memory_seq_rm [6, end)
+[GIN] 2026/11/08 - 13:20:51 | 200 |  2.660910563s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5750 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4000
+slot update_slots: id  0 | task 5750 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:21:00 | 200 |  7.418375318s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5818 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 152
+slot update_slots: id  1 | task 5818 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:21:02 | 200 |  2.335876662s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5822 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4008
+slot update_slots: id  0 | task 5822 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:21:17 | 200 | 11.033384738s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 5920 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 194
+slot update_slots: id  1 | task 5920 | cached n_tokens = 74, memory_seq_rm [74, end)
+[GIN] 2026/11/08 - 13:21:19 | 200 |  1.856002108s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 5924 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3999
+slot update_slots: id  0 | task 5924 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:21:43 | 200 | 22.357099231s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 6147 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 310
+slot update_slots: id  1 | task 6147 | cached n_tokens = 58, memory_seq_rm [58, end)
+[GIN] 2026/11/08 - 13:21:50 | 200 |  3.550391311s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 6151 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4014
+slot update_slots: id  0 | task 6151 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:22:06 | 200 | 14.684684648s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 6287 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 238
+slot update_slots: id  1 | task 6287 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:22:10 | 200 |  3.305231937s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 6291 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3999
+slot update_slots: id  0 | task 6291 | cached n_tokens = 3982, memory_seq_rm [3982, end)
+[GIN] 2026/11/08 - 13:22:19 | 200 |  7.363689009s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 6360 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 156
+slot update_slots: id  1 | task 6360 | cached n_tokens = 83, memory_seq_rm [83, end)
+[GIN] 2026/11/08 - 13:22:23 | 200 |  1.266795007s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 58 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 8
+slot update_slots: id  0 | task 58 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 60 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 4
+slot update_slots: id  0 | task 60 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 62 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 7
+slot update_slots: id  0 | task 62 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 64 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 17
+slot update_slots: id  0 | task 64 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 66 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 13
+slot update_slots: id  0 | task 66 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 68 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 16
+slot update_slots: id  0 | task 68 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 70 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 6
+slot update_slots: id  0 | task 70 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 72 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 13
+slot update_slots: id  0 | task 72 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 74 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 9
+slot update_slots: id  0 | task 74 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 76 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 6
+slot update_slots: id  0 | task 76 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 6364 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 320
+slot update_slots: id  0 | task 6364 | cached n_tokens = 6, memory_seq_rm [6, end)
+slot update_slots: id  0 | task 6364 | cached n_tokens = 130, memory_seq_rm [130, end)
+[GIN] 2026/11/08 - 13:23:09 | 200 | 12.149647778s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 78 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 107
+slot update_slots: id  0 | task 78 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 6489 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 1477
+slot update_slots: id  1 | task 6489 | cached n_tokens = 1, memory_seq_rm [1, end)
+slot update_slots: id  1 | task 6489 | cached n_tokens = 104, memory_seq_rm [104, end)
+slot update_slots: id  1 | task 6489 | cached n_tokens = 1128, memory_seq_rm [1128, end)
+[GIN] 2026/11/08 - 13:23:50 | 200 | 33.896810413s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 80 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 25
+slot update_slots: id  0 | task 80 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 6663 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4238
+slot update_slots: id  0 | task 6663 | cached n_tokens = 6, memory_seq_rm [6, end)
+slot update_slots: id  0 | task 82 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 107
+slot update_slots: id  0 | task 82 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 6663 | cached n_tokens = 1030, memory_seq_rm [1030, end)
+slot update_slots: id  0 | task 6663 | cached n_tokens = 2054, memory_seq_rm [2054, end)
+slot update_slots: id  0 | task 6663 | cached n_tokens = 3078, memory_seq_rm [3078, end)
+slot update_slots: id  0 | task 6663 | cached n_tokens = 4102, memory_seq_rm [4102, end)
+slot update_slots: id  0 | task 6663 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 13:25:31 | 200 |         1m29s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 6719 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 145
+slot update_slots: id  1 | task 6719 | cached n_tokens = 70, memory_seq_rm [70, end)
+[GIN] 2026/11/08 - 13:25:33 | 200 |  1.593919752s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 6723 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  0 | task 6723 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:25:39 | 200 |  4.761025652s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 6758 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 124
+slot update_slots: id  1 | task 6758 | cached n_tokens = 52, memory_seq_rm [52, end)
+[GIN] 2026/11/08 - 13:25:40 | 200 |  1.285334763s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 6762 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4229
+slot update_slots: id  0 | task 6762 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:25:46 | 200 |  4.456545212s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 84 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 13
+slot update_slots: id  0 | task 84 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 6796 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 116
+slot update_slots: id  1 | task 6796 | cached n_tokens = 115, memory_seq_rm [115, end)
+[GIN] 2026/11/08 - 13:25:52 | 200 |  5.353821277s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 6799 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  0 | task 6799 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:26:03 | 200 |  6.375202712s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 6847 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 139
+slot update_slots: id  1 | task 6847 | cached n_tokens = 52, memory_seq_rm [52, end)
+[GIN] 2026/11/08 - 13:26:05 | 200 |  1.368419725s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 6851 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4239
+slot update_slots: id  0 | task 6851 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:26:12 | 200 |  6.060540289s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 6892 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 135
+slot update_slots: id  1 | task 6892 | cached n_tokens = 134, memory_seq_rm [134, end)
+[GIN] 2026/11/08 - 13:26:13 | 200 |  395.601574ms |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 6896 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4240
+slot update_slots: id  0 | task 6896 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:26:21 | 200 |  6.694719986s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 6943 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 143
+slot update_slots: id  1 | task 6943 | cached n_tokens = 142, memory_seq_rm [142, end)
+[GIN] 2026/11/08 - 13:26:21 | 200 |  406.069472ms |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 6947 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4241
+slot update_slots: id  0 | task 6947 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:26:36 | 200 |  9.498773236s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7019 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 171
+slot update_slots: id  1 | task 7019 | cached n_tokens = 75, memory_seq_rm [75, end)
+[GIN] 2026/11/08 - 13:26:37 | 200 |  1.604219201s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7023 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  0 | task 7023 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:26:44 | 200 |  5.058556047s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7062 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 126
+slot update_slots: id  1 | task 7062 | cached n_tokens = 125, memory_seq_rm [125, end)
+[GIN] 2026/11/08 - 13:26:45 | 200 |  476.751092ms |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7066 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  0 | task 7066 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:26:51 | 200 |  5.467951657s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7107 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 128
+slot update_slots: id  1 | task 7107 | cached n_tokens = 59, memory_seq_rm [59, end)
+[GIN] 2026/11/08 - 13:26:53 | 200 |  1.282049225s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7111 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  0 | task 7111 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:27:00 | 200 |  5.181549475s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7151 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 127
+slot update_slots: id  1 | task 7151 | cached n_tokens = 126, memory_seq_rm [126, end)
+[GIN] 2026/11/08 - 13:27:00 | 200 |  433.470453ms |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7155 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  0 | task 7155 | cached n_tokens = 4214, memory_seq_rm [4214, end)
+[GIN] 2026/11/08 - 13:27:12 | 200 |  6.739886966s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7210 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 142
+slot update_slots: id  1 | task 7210 | cached n_tokens = 141, memory_seq_rm [141, end)
+[GIN] 2026/11/08 - 13:27:12 | 200 |  395.767612ms |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7214 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4235
+slot update_slots: id  0 | task 7214 | cached n_tokens = 4215, memory_seq_rm [4215, end)
+[GIN] 2026/11/08 - 13:27:19 | 200 |  5.243128868s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7254 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 136
+slot update_slots: id  1 | task 7254 | cached n_tokens = 67, memory_seq_rm [67, end)
+[GIN] 2026/11/08 - 13:27:20 | 200 |  1.139499111s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7258 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4241
+slot update_slots: id  0 | task 7258 | cached n_tokens = 4215, memory_seq_rm [4215, end)
+[GIN] 2026/11/08 - 13:27:28 | 200 |  6.167258586s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7304 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 142
+slot update_slots: id  1 | task 7304 | cached n_tokens = 45, memory_seq_rm [45, end)
+[GIN] 2026/11/08 - 13:27:29 | 200 |  1.533387787s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7308 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  0 | task 7308 | cached n_tokens = 4215, memory_seq_rm [4215, end)
+[GIN] 2026/11/08 - 13:27:36 | 200 |  5.109510141s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7351 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 128
+slot update_slots: id  1 | task 7351 | cached n_tokens = 57, memory_seq_rm [57, end)
+[GIN] 2026/11/08 - 13:27:37 | 200 |  1.110409938s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7355 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4235
+slot update_slots: id  0 | task 7355 | cached n_tokens = 4217, memory_seq_rm [4217, end)
+[GIN] 2026/11/08 - 13:27:59 | 200 | 17.457526869s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7520 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 255
+slot update_slots: id  1 | task 7520 | cached n_tokens = 62, memory_seq_rm [62, end)
+[GIN] 2026/11/08 - 13:28:02 | 200 |  2.774584794s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7524 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  0 | task 7524 | cached n_tokens = 4217, memory_seq_rm [4217, end)
+[GIN] 2026/11/08 - 13:28:28 | 200 | 21.895548044s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7737 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 300
+slot update_slots: id  1 | task 7737 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:28:33 | 200 |  4.083540035s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7741 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4237
+slot update_slots: id  0 | task 7741 | cached n_tokens = 4217, memory_seq_rm [4217, end)
+[GIN] 2026/11/08 - 13:28:46 | 200 | 11.840397405s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 7850 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 199
+slot update_slots: id  1 | task 7850 | cached n_tokens = 9, memory_seq_rm [9, end)
+[GIN] 2026/11/08 - 13:28:49 | 200 |  2.717342465s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 7854 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4235
+slot update_slots: id  0 | task 7854 | cached n_tokens = 4215, memory_seq_rm [4215, end)
+[GIN] 2026/11/08 - 13:29:45 | 200 | 48.122478874s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8312 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 551
+slot update_slots: id  1 | task 8312 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:29:52 | 200 |   7.24152423s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8315 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4232
+slot update_slots: id  0 | task 8315 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:29:58 | 200 |  4.735709972s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8351 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 126
+slot update_slots: id  1 | task 8351 | cached n_tokens = 125, memory_seq_rm [125, end)
+[GIN] 2026/11/08 - 13:29:58 | 200 |  476.302664ms |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8355 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4235
+slot update_slots: id  0 | task 8355 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:30:09 | 200 |  5.533426584s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8396 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 129
+slot update_slots: id  1 | task 8396 | cached n_tokens = 41, memory_seq_rm [41, end)
+[GIN] 2026/11/08 - 13:30:10 | 200 |  1.369853691s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8400 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4232
+slot update_slots: id  0 | task 8400 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:30:16 | 200 |  4.345583319s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8432 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 118
+slot update_slots: id  1 | task 8432 | cached n_tokens = 117, memory_seq_rm [117, end)
+[GIN] 2026/11/08 - 13:30:17 | 200 |  449.695773ms |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8436 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4228
+slot update_slots: id  0 | task 8436 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:30:24 | 200 |  5.799749343s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8485 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 134
+slot update_slots: id  1 | task 8485 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:30:26 | 200 |  1.775363063s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8489 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4236
+slot update_slots: id  0 | task 8489 | cached n_tokens = 4214, memory_seq_rm [4214, end)
+[GIN] 2026/11/08 - 13:30:41 | 200 | 11.273424962s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8589 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 194
+slot update_slots: id  1 | task 8589 | cached n_tokens = 71, memory_seq_rm [71, end)
+[GIN] 2026/11/08 - 13:30:43 | 200 |  1.876403966s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8593 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4247
+slot update_slots: id  0 | task 8593 | cached n_tokens = 4214, memory_seq_rm [4214, end)
+[GIN] 2026/11/08 - 13:30:56 | 200 | 11.327221808s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8687 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 215
+slot update_slots: id  1 | task 8687 | cached n_tokens = 87, memory_seq_rm [87, end)
+[GIN] 2026/11/08 - 13:30:58 | 200 |  1.840349887s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8690 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4229
+slot update_slots: id  0 | task 8690 | cached n_tokens = 4214, memory_seq_rm [4214, end)
+[GIN] 2026/11/08 - 13:31:04 | 200 |  4.174801405s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8723 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 116
+slot update_slots: id  1 | task 8723 | cached n_tokens = 45, memory_seq_rm [45, end)
+[GIN] 2026/11/08 - 13:31:05 | 200 |  1.194212395s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8727 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4232
+slot update_slots: id  0 | task 8727 | cached n_tokens = 4214, memory_seq_rm [4214, end)
+[GIN] 2026/11/08 - 13:31:17 | 200 |  7.349519605s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8791 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 162
+slot update_slots: id  1 | task 8791 | cached n_tokens = 58, memory_seq_rm [58, end)
+[GIN] 2026/11/08 - 13:31:19 | 200 |  1.621770121s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8795 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4238
+slot update_slots: id  0 | task 8795 | cached n_tokens = 4217, memory_seq_rm [4217, end)
+[GIN] 2026/11/08 - 13:31:28 | 200 |  7.469016111s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8859 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 164
+slot update_slots: id  1 | task 8859 | cached n_tokens = 61, memory_seq_rm [61, end)
+[GIN] 2026/11/08 - 13:31:29 | 200 |  1.605430122s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8863 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  0 | task 8863 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:31:36 | 200 |  5.031542574s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8904 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 124
+slot update_slots: id  1 | task 8904 | cached n_tokens = 123, memory_seq_rm [123, end)
+[GIN] 2026/11/08 - 13:31:36 | 200 |  459.393322ms |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8908 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4243
+slot update_slots: id  0 | task 8908 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:31:46 | 200 |   8.46729894s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 8974 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 168
+slot update_slots: id  1 | task 8974 | cached n_tokens = 86, memory_seq_rm [86, end)
+[GIN] 2026/11/08 - 13:31:48 | 200 |  1.399787768s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 8978 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4243
+slot update_slots: id  0 | task 8978 | cached n_tokens = 4217, memory_seq_rm [4217, end)
+[GIN] 2026/11/08 - 13:32:14 | 200 | 21.260548118s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 9175 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 298
+slot update_slots: id  1 | task 9175 | cached n_tokens = 51, memory_seq_rm [51, end)
+[GIN] 2026/11/08 - 13:32:17 | 200 |  3.541167152s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 9179 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4245
+slot update_slots: id  0 | task 9179 | cached n_tokens = 4215, memory_seq_rm [4215, end)
+[GIN] 2026/11/08 - 13:32:40 | 200 | 17.704686112s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 9339 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 264
+slot update_slots: id  1 | task 9339 | cached n_tokens = 7, memory_seq_rm [7, end)
+[GIN] 2026/11/08 - 13:32:43 | 200 |  3.477460683s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 9342 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4258
+slot update_slots: id  0 | task 9342 | cached n_tokens = 4215, memory_seq_rm [4215, end)
+[GIN] 2026/11/08 - 13:32:57 | 200 | 12.700483388s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 9440 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 214
+slot update_slots: id  1 | task 9440 | cached n_tokens = 106, memory_seq_rm [106, end)
+[GIN] 2026/11/08 - 13:33:02 | 200 |  1.743727655s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 9444 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4246
+slot update_slots: id  0 | task 9444 | cached n_tokens = 4214, memory_seq_rm [4214, end)
+[GIN] 2026/11/08 - 13:33:47 | 200 | 39.859252249s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 9815 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 474
+slot update_slots: id  1 | task 9815 | cached n_tokens = 59, memory_seq_rm [59, end)
+[GIN] 2026/11/08 - 13:33:53 | 200 |  5.756102901s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 9819 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4231
+slot update_slots: id  0 | task 9819 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:33:59 | 200 |  4.687852049s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 9855 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 120
+slot update_slots: id  1 | task 9855 | cached n_tokens = 47, memory_seq_rm [47, end)
+[GIN] 2026/11/08 - 13:34:00 | 200 |  1.289947174s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 9859 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4239
+slot update_slots: id  0 | task 9859 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:34:17 | 200 | 12.213393167s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 9966 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 203
+slot update_slots: id  1 | task 9966 | cached n_tokens = 74, memory_seq_rm [74, end)
+[GIN] 2026/11/08 - 13:34:19 | 200 |  1.891957341s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 9970 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  0 | task 9970 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:34:40 | 200 | 19.662181353s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 10159 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 276
+slot update_slots: id  1 | task 10159 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:34:44 | 200 |  3.700062189s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 10163 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4245
+slot update_slots: id  0 | task 10163 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:35:07 | 200 |  18.65020103s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 10332 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 271
+slot update_slots: id  1 | task 10332 | cached n_tokens = 5, memory_seq_rm [5, end)
+[GIN] 2026/11/08 - 13:35:11 | 200 |  3.753640497s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 10336 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  0 | task 10336 | cached n_tokens = 4213, memory_seq_rm [4213, end)
+[GIN] 2026/11/08 - 13:35:20 | 200 |  7.807541285s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 10406 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 157
+slot update_slots: id  1 | task 10406 | cached n_tokens = 63, memory_seq_rm [63, end)
+[GIN] 2026/11/08 - 13:35:25 | 200 |  1.510299638s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4238
+[GIN] 2026/11/08 - 13:35:37 | 400 |  8.368537562s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 97
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:35:49 | 200 | 12.423053811s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4233
+[GIN] 2026/11/08 - 13:36:01 | 400 |  6.641930978s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 92
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:36:12 | 200 | 11.648852107s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4229
+[GIN] 2026/11/08 - 13:36:20 | 400 |  5.971192539s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 85
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:36:31 | 200 | 11.001071444s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4233
+[GIN] 2026/11/08 - 13:36:41 | 400 |  6.291463673s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 94
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:36:53 | 200 | 11.242784509s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4239
+[GIN] 2026/11/08 - 13:37:00 | 400 |  6.134895269s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 97
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:37:15 | 200 | 11.425663041s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4240
+[GIN] 2026/11/08 - 13:37:22 | 400 |  6.191779638s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 99
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:37:33 | 200 | 10.831013302s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4241
+[GIN] 2026/11/08 - 13:37:41 | 400 |  6.245693221s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 102
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:37:55 | 200 | 11.259214836s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4230
+[GIN] 2026/11/08 - 13:38:03 | 400 |  5.695906077s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 90
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:38:13 | 200 |  10.59721665s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4233
+[GIN] 2026/11/08 - 13:38:24 | 400 |  5.584221314s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 90
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:38:34 | 200 | 10.389411724s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4233
+[GIN] 2026/11/08 - 13:38:40 | 400 |  4.639120771s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 90
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:38:50 | 200 | 10.138882847s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4233
+[GIN] 2026/11/08 - 13:39:00 | 400 |  4.961748501s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 90
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:39:09 | 200 |  9.782517538s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4235
+[GIN] 2026/11/08 - 13:39:16 | 400 |  5.235470367s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 99
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:39:26 | 200 | 10.485709866s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4241
+[GIN] 2026/11/08 - 13:39:37 | 400 |  5.866212628s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 99
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:39:48 | 200 | 10.914918329s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4230
+[GIN] 2026/11/08 - 13:39:55 | 400 |  5.510555718s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 88
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:40:09 | 200 | 10.577886762s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4235
+[GIN] 2026/11/08 - 13:40:16 | 400 |  5.574224875s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 93
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:40:28 | 200 | 12.102963624s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4233
+[GIN] 2026/11/08 - 13:40:36 | 400 |  6.226939594s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 90
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:40:51 | 200 | 12.101091942s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4237
+[GIN] 2026/11/08 - 13:40:59 | 400 |  6.618452236s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 93
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:41:09 | 200 | 10.293565503s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4235
+[GIN] 2026/11/08 - 13:41:15 | 400 |  4.812097998s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 96
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:41:30 | 200 |  11.71930996s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4232
+[GIN] 2026/11/08 - 13:41:37 | 400 |  5.827738213s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 93
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:41:47 | 200 | 10.190337273s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4235
+[GIN] 2026/11/08 - 13:41:54 | 400 |  5.428950232s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 91
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:42:05 | 200 | 10.393521603s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4232
+[GIN] 2026/11/08 - 13:42:16 | 400 |  5.465542002s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 89
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:42:26 | 200 | 10.577596855s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4228
+[GIN] 2026/11/08 - 13:42:33 | 400 |  5.203998235s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 88
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:42:47 | 200 | 10.733529001s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4236
+[GIN] 2026/11/08 - 13:42:54 | 400 |  5.634221973s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 97
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:43:05 | 200 | 10.845886379s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4247
+[GIN] 2026/11/08 - 13:43:12 | 400 |  5.238130002s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 124
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:43:26 | 200 | 10.643126059s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4229
+[GIN] 2026/11/08 - 13:43:33 | 400 |  6.139485519s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 86
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:43:44 | 200 | 11.080988452s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4232
+[GIN] 2026/11/08 - 13:43:51 | 400 |  5.511075349s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 101
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:44:05 | 200 | 10.262432711s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4238
+[GIN] 2026/11/08 - 13:44:12 | 400 |   5.88263697s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 103
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:44:23 | 200 | 10.654045638s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4230
+[GIN] 2026/11/08 - 13:44:30 | 400 |  5.504906427s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 87
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:44:43 | 200 | 10.155443061s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4243
+[GIN] 2026/11/08 - 13:44:51 | 400 |  6.294148929s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 105
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:45:00 | 200 |   9.90999214s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4243
+[GIN] 2026/11/08 - 13:45:10 | 400 |   5.37618619s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 104
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:45:21 | 200 | 10.482930758s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4245
+[GIN] 2026/11/08 - 13:45:27 | 400 |  5.210775763s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 107
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:45:37 | 200 |  9.734155785s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4258
+[GIN] 2026/11/08 - 13:45:47 | 400 |  5.323287232s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 119
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:45:57 | 200 | 10.052894947s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4246
+[GIN] 2026/11/08 - 13:46:03 | 400 |   4.91530583s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 106
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:46:13 | 200 |  9.562603644s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4231
+[GIN] 2026/11/08 - 13:46:23 | 400 |  4.983160791s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 87
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:46:32 | 200 |  9.252685275s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4239
+[GIN] 2026/11/08 - 13:46:38 | 400 |  4.585294788s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 99
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:46:49 | 200 | 10.527394627s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4230
+[GIN] 2026/11/08 - 13:46:57 | 400 |  4.665466918s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 90
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:47:07 | 200 |  9.657918161s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4245
+[GIN] 2026/11/08 - 13:47:14 | 400 |  5.553044725s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 105
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:47:23 | 200 |  9.337175334s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 4096
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 4096, n_keep = 4, task.n_tokens = 4230
+[GIN] 2026/11/08 - 13:47:33 | 400 |  4.827846113s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 90
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:47:42 | 200 |  9.290740551s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 642
+slot update_slots: id  0 | task 3 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 86 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 143
+slot update_slots: id  0 | task 86 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 125 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 927
+slot update_slots: id  1 | task 125 | cached n_tokens = 1, memory_seq_rm [1, end)
+slot update_slots: id  1 | task 125 | cached n_tokens = 904, memory_seq_rm [904, end)
+[GIN] 2026/11/08 - 13:48:29 | 200 | 16.674109939s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 229 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 1294
+slot update_slots: id  1 | task 229 | cached n_tokens = 159, memory_seq_rm [159, end)
+slot update_slots: id  1 | task 229 | cached n_tokens = 1182, memory_seq_rm [1182, end)
+slot update_slots: id  1 | task 229 | cached n_tokens = 1258, memory_seq_rm [1258, end)
+slot update_slots: id  0 | task 88 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 7
+slot update_slots: id  0 | task 88 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 13:49:20 | 200 |         1m23s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 90 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 8
+slot update_slots: id  0 | task 90 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 92 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 8
+slot update_slots: id  0 | task 92 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 409 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3225
+slot update_slots: id  0 | task 409 | cached n_tokens = 10, memory_seq_rm [10, end)
+slot update_slots: id  0 | task 94 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 9
+slot update_slots: id  0 | task 94 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 96 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 8
+slot update_slots: id  0 | task 96 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 98 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 11
+slot update_slots: id  0 | task 98 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 409 | cached n_tokens = 1033, memory_seq_rm [1033, end)
+slot update_slots: id  0 | task 409 | cached n_tokens = 2056, memory_seq_rm [2056, end)
+slot update_slots: id  0 | task 409 | cached n_tokens = 3079, memory_seq_rm [3079, end)
+[GIN] 2026/11/08 - 13:50:40 | 200 |         1m54s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 423 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3200
+slot update_slots: id  1 | task 423 | cached n_tokens = 1, memory_seq_rm [1, end)
+slot update_slots: id  1 | task 423 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 423 | cached n_tokens = 2047, memory_seq_rm [2047, end)
+slot update_slots: id  1 | task 423 | cached n_tokens = 3070, memory_seq_rm [3070, end)
+[GIN] 2026/11/08 - 13:52:24 | 200 |         2m34s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 711 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3229
+slot update_slots: id  1 | task 711 | cached n_tokens = 89, memory_seq_rm [89, end)
+slot update_slots: id  1 | task 711 | cached n_tokens = 1112, memory_seq_rm [1112, end)
+slot update_slots: id  1 | task 711 | cached n_tokens = 2135, memory_seq_rm [2135, end)
+slot update_slots: id  1 | task 711 | cached n_tokens = 3158, memory_seq_rm [3158, end)
+[GIN] 2026/11/08 - 13:53:45 | 200 |         3m54s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 872 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3223
+slot update_slots: id  0 | task 872 | cached n_tokens = 89, memory_seq_rm [89, end)
+slot update_slots: id  0 | task 872 | cached n_tokens = 1112, memory_seq_rm [1112, end)
+slot update_slots: id  0 | task 872 | cached n_tokens = 2135, memory_seq_rm [2135, end)
+slot update_slots: id  0 | task 872 | cached n_tokens = 3158, memory_seq_rm [3158, end)
+[GIN] 2026/11/08 - 13:55:14 | 200 |          5m1s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1070 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3209
+slot update_slots: id  1 | task 1070 | cached n_tokens = 89, memory_seq_rm [89, end)
+slot update_slots: id  1 | task 1070 | cached n_tokens = 1112, memory_seq_rm [1112, end)
+slot update_slots: id  1 | task 1070 | cached n_tokens = 2135, memory_seq_rm [2135, end)
+slot update_slots: id  1 | task 1070 | cached n_tokens = 3158, memory_seq_rm [3158, end)
+[GIN] 2026/11/08 - 13:56:32 | 200 |          6m7s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 1209 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4246
+slot update_slots: id  0 | task 1209 | cached n_tokens = 1, memory_seq_rm [1, end)
+slot update_slots: id  0 | task 1209 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  0 | task 1209 | cached n_tokens = 2047, memory_seq_rm [2047, end)
+slot update_slots: id  0 | task 1209 | cached n_tokens = 3070, memory_seq_rm [3070, end)
+slot update_slots: id  0 | task 1209 | cached n_tokens = 4093, memory_seq_rm [4093, end)
+slot update_slots: id  0 | task 1209 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 13:58:26 | 200 |          7m1s |      172.28.0.4 | POST     "/api/chat"
+[GIN] 2026/11/08 - 13:58:30 | 200 |         7m50s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 1427 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 2612
+slot update_slots: id  0 | task 1427 | cached n_tokens = 1, memory_seq_rm [1, end)
+llama_context: n_ctx_seq     = 16384
+[GIN] 2026/11/08 - 13:58:38 | 500 |  7.429067535s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4248
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+[GIN] 2026/11/08 - 14:04:38 | 200 |         5m38s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+[GIN] 2026/11/08 - 14:22:51 | 500 |        16m49s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 97
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 14:23:11 | 200 | 19.336934429s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 3 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 637
+slot update_slots: id  0 | task 3 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 14:23:48 | 200 | 34.299351428s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 8
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 2 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 7
+slot update_slots: id  0 | task 2 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 368 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3061
+slot update_slots: id  1 | task 368 | cached n_tokens = 3, memory_seq_rm [3, end)
+slot update_slots: id  0 | task 4 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 7
+slot update_slots: id  0 | task 4 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 6 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 8
+slot update_slots: id  0 | task 6 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 8 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 6
+slot update_slots: id  0 | task 8 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 370 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3056
+slot update_slots: id  0 | task 370 | cached n_tokens = 10, memory_seq_rm [10, end)
+slot update_slots: id  0 | task 370 | cached n_tokens = 1034, memory_seq_rm [1034, end)
+slot update_slots: id  0 | task 370 | cached n_tokens = 2058, memory_seq_rm [2058, end)
+slot update_slots: id  1 | task 368 | cached n_tokens = 1027, memory_seq_rm [1027, end)
+slot update_slots: id  1 | task 368 | cached n_tokens = 1053, memory_seq_rm [1053, end)
+slot update_slots: id  1 | task 368 | cached n_tokens = 2076, memory_seq_rm [2076, end)
+[GIN] 2026/11/08 - 14:26:09 | 200 |         1m59s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 410 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3062
+slot update_slots: id  0 | task 410 | cached n_tokens = 84, memory_seq_rm [84, end)
+slot update_slots: id  0 | task 410 | cached n_tokens = 1107, memory_seq_rm [1107, end)
+slot update_slots: id  0 | task 410 | cached n_tokens = 2130, memory_seq_rm [2130, end)
+[GIN] 2026/11/08 - 14:26:43 | 200 |         2m37s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 414 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3085
+slot update_slots: id  1 | task 414 | cached n_tokens = 84, memory_seq_rm [84, end)
+slot update_slots: id  1 | task 414 | cached n_tokens = 1107, memory_seq_rm [1107, end)
+slot update_slots: id  1 | task 414 | cached n_tokens = 2130, memory_seq_rm [2130, end)
+[GIN] 2026/11/08 - 14:27:57 | 200 |         3m38s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 451 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3089
+slot update_slots: id  0 | task 451 | cached n_tokens = 84, memory_seq_rm [84, end)
+slot update_slots: id  0 | task 451 | cached n_tokens = 1107, memory_seq_rm [1107, end)
+slot update_slots: id  0 | task 451 | cached n_tokens = 2130, memory_seq_rm [2130, end)
+[GIN] 2026/11/08 - 14:28:55 | 200 |         4m21s |      172.28.0.4 | POST     "/api/chat"
+[GIN] 2026/11/08 - 14:29:13 | 200 |         4m45s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 680 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 1169
+slot update_slots: id  0 | task 680 | cached n_tokens = 10, memory_seq_rm [10, end)
+slot update_slots: id  0 | task 680 | cached n_tokens = 1034, memory_seq_rm [1034, end)
+[GIN] 2026/11/08 - 14:29:54 | 200 |    40.226967s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 977 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 385
+slot update_slots: id  1 | task 977 | cached n_tokens = 3, memory_seq_rm [3, end)
+[GIN] 2026/11/08 - 14:30:02 | 200 |  5.985625837s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 981 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 639
+slot update_slots: id  0 | task 981 | cached n_tokens = 613, memory_seq_rm [613, end)
+[GIN] 2026/11/08 - 14:30:19 | 200 | 16.926541188s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 10 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 8
+slot update_slots: id  0 | task 10 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 12 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 7
+slot update_slots: id  0 | task 12 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 1199 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3808
+slot update_slots: id  1 | task 1199 | cached n_tokens = 3, memory_seq_rm [3, end)
+slot update_slots: id  0 | task 14 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 6
+slot update_slots: id  0 | task 14 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 1201 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3716
+slot update_slots: id  0 | task 1201 | cached n_tokens = 10, memory_seq_rm [10, end)
+slot update_slots: id  0 | task 1201 | cached n_tokens = 1034, memory_seq_rm [1034, end)
+slot update_slots: id  0 | task 1201 | cached n_tokens = 2058, memory_seq_rm [2058, end)
+slot update_slots: id  0 | task 1201 | cached n_tokens = 3082, memory_seq_rm [3082, end)
+slot update_slots: id  1 | task 1199 | cached n_tokens = 1027, memory_seq_rm [1027, end)
+slot update_slots: id  1 | task 1199 | cached n_tokens = 1417, memory_seq_rm [1417, end)
+slot update_slots: id  1 | task 1199 | cached n_tokens = 2440, memory_seq_rm [2440, end)
+slot update_slots: id  1 | task 1199 | cached n_tokens = 3463, memory_seq_rm [3463, end)
+[GIN] 2026/11/08 - 14:34:00 | 200 |         3m28s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 1549 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3710
+slot update_slots: id  1 | task 1549 | cached n_tokens = 82, memory_seq_rm [82, end)
+slot update_slots: id  1 | task 1549 | cached n_tokens = 1105, memory_seq_rm [1105, end)
+slot update_slots: id  1 | task 1549 | cached n_tokens = 2128, memory_seq_rm [2128, end)
+slot update_slots: id  1 | task 1549 | cached n_tokens = 3151, memory_seq_rm [3151, end)
+[GIN] 2026/11/08 - 14:35:05 | 200 |         4m24s |      172.28.0.4 | POST     "/api/chat"
+[GIN] 2026/11/08 - 14:35:38 | 200 |         4m48s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 1864 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 1672
+slot update_slots: id  0 | task 1864 | cached n_tokens = 10, memory_seq_rm [10, end)
+slot update_slots: id  0 | task 1864 | cached n_tokens = 1034, memory_seq_rm [1034, end)
+[GIN] 2026/11/08 - 14:36:31 | 200 | 51.705201976s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2184 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 409
+slot update_slots: id  1 | task 2184 | cached n_tokens = 3, memory_seq_rm [3, end)
+[GIN] 2026/11/08 - 14:36:39 | 200 |  6.647667027s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2188 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 636
+slot update_slots: id  0 | task 2188 | cached n_tokens = 613, memory_seq_rm [613, end)
+[GIN] 2026/11/08 - 14:36:59 | 200 | 19.777963805s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 16 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 8
+slot update_slots: id  0 | task 16 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 18 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 11
+slot update_slots: id  0 | task 18 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 2453 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3776
+slot update_slots: id  1 | task 2453 | cached n_tokens = 3, memory_seq_rm [3, end)
+slot update_slots: id  0 | task 20 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 11
+slot update_slots: id  0 | task 20 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 22 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 8
+slot update_slots: id  0 | task 22 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 24 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 11
+slot update_slots: id  0 | task 24 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 2455 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3782
+slot update_slots: id  0 | task 2455 | cached n_tokens = 10, memory_seq_rm [10, end)
+slot update_slots: id  0 | task 2455 | cached n_tokens = 1034, memory_seq_rm [1034, end)
+slot update_slots: id  0 | task 2455 | cached n_tokens = 2058, memory_seq_rm [2058, end)
+slot update_slots: id  0 | task 2455 | cached n_tokens = 3082, memory_seq_rm [3082, end)
+slot update_slots: id  1 | task 2453 | cached n_tokens = 1027, memory_seq_rm [1027, end)
+slot update_slots: id  1 | task 2453 | cached n_tokens = 1351, memory_seq_rm [1351, end)
+slot update_slots: id  1 | task 2453 | cached n_tokens = 2374, memory_seq_rm [2374, end)
+slot update_slots: id  1 | task 2453 | cached n_tokens = 3397, memory_seq_rm [3397, end)
+[GIN] 2026/11/08 - 14:39:48 | 200 |         2m35s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 2544 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3751
+slot update_slots: id  0 | task 2544 | cached n_tokens = 79, memory_seq_rm [79, end)
+slot update_slots: id  0 | task 2544 | cached n_tokens = 1102, memory_seq_rm [1102, end)
+slot update_slots: id  0 | task 2544 | cached n_tokens = 2125, memory_seq_rm [2125, end)
+slot update_slots: id  0 | task 2544 | cached n_tokens = 3148, memory_seq_rm [3148, end)
+[GIN] 2026/11/08 - 14:41:04 | 200 |         3m54s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2589 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 3711
+slot update_slots: id  1 | task 2589 | cached n_tokens = 79, memory_seq_rm [79, end)
+slot update_slots: id  1 | task 2589 | cached n_tokens = 1102, memory_seq_rm [1102, end)
+slot update_slots: id  1 | task 2589 | cached n_tokens = 2125, memory_seq_rm [2125, end)
+slot update_slots: id  1 | task 2589 | cached n_tokens = 3148, memory_seq_rm [3148, end)
+[GIN] 2026/11/08 - 14:53:15 | 500 |        15m27s |      172.28.0.4 | POST     "/api/chat"
+[GIN] 2026/11/08 - 14:55:14 | 500 |        17m17s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 2643 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 104
+slot update_slots: id  1 | task 2643 | cached n_tokens = 3, memory_seq_rm [3, end)
+[GIN] 2026/11/08 - 15:08:16 | 200 |        30m31s |      172.28.0.4 | POST     "/api/chat"
+[GIN] 2026/11/08 - 15:08:16 | 200 | 35.965621112s |      172.28.0.1 | POST     "/api/generate"
+slot update_slots: id  0 | task 2647 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 650
+slot update_slots: id  0 | task 2647 | cached n_tokens = 613, memory_seq_rm [613, end)
+[GIN] 2026/11/08 - 15:08:37 | 200 |   50.815676ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 15:08:37 | 200 |   38.359443ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 15:08:37 | 200 |   37.032248ms |      172.28.0.1 | POST     "/api/generate"
+[GIN] 2026/11/08 - 15:10:14 | 200 |         1m56s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 1274
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+[GIN] 2026/11/08 - 16:14:14 | 200 |         1m44s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 869 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 1597
+slot update_slots: id  0 | task 869 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 869 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+[GIN] 2026/11/08 - 16:15:06 | 200 |   52.0269527s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 1226 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 1708
+slot update_slots: id  0 | task 1226 | cached n_tokens = 712, memory_seq_rm [712, end)
+[GIN] 2026/11/08 - 16:15:58 | 200 | 51.251204685s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 1663 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 1945
+slot update_slots: id  0 | task 1663 | cached n_tokens = 816, memory_seq_rm [816, end)
+slot update_slots: id  0 | task 1663 | cached n_tokens = 1840, memory_seq_rm [1840, end)
+[GIN] 2026/11/08 - 16:17:01 | 200 |          1m2s |      172.28.0.4 | POST     "/api/chat"
+[GIN] 2026/11/08 - 16:22:55 | 200 |   35.003097ms |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 8192
+slot update_slots: id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 143
+slot update_slots: id  0 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 2 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 144
+slot update_slots: id  0 | task 2 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 4 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 99
+slot update_slots: id  0 | task 4 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 6 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 268
+slot update_slots: id  0 | task 6 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 8 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 137
+slot update_slots: id  0 | task 8 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 10 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 114
+slot update_slots: id  0 | task 10 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 12 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 157
+slot update_slots: id  0 | task 12 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 14 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 146
+slot update_slots: id  0 | task 14 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 16 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 161
+slot update_slots: id  0 | task 16 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 18 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 128
+slot update_slots: id  0 | task 18 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 20 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 94
+slot update_slots: id  0 | task 20 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 22 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 74
+slot update_slots: id  0 | task 22 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 24 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 89
+slot update_slots: id  0 | task 24 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 26 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 81
+slot update_slots: id  0 | task 26 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 28 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 312
+slot update_slots: id  0 | task 28 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 30 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 151
+slot update_slots: id  0 | task 30 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 32 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 111
+slot update_slots: id  0 | task 32 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4026
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3994, memory_seq_rm [3994, end)
+[GIN] 2026/11/08 - 16:26:27 | 200 |         1m39s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 141 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4186
+slot update_slots: id  1 | task 141 | cached n_tokens = 4161, memory_seq_rm [4161, end)
+slot update_slots: id  1 | task 141 | cached n_tokens = 4163, memory_seq_rm [4163, end)
+[GIN] 2026/11/08 - 16:26:40 | 200 | 11.401800951s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 233 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4027
+slot update_slots: id  1 | task 233 | cached n_tokens = 3997, memory_seq_rm [3997, end)
+[GIN] 2026/11/08 - 16:27:09 | 200 | 27.816613921s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 487 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4307
+slot update_slots: id  1 | task 487 | cached n_tokens = 4279, memory_seq_rm [4279, end)
+slot update_slots: id  1 | task 487 | cached n_tokens = 4281, memory_seq_rm [4281, end)
+[GIN] 2026/11/08 - 16:27:35 | 200 | 24.126732708s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  1 | task 697 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 4030
+slot update_slots: id  1 | task 697 | cached n_tokens = 3997, memory_seq_rm [3997, end)
+[GIN] 2026/11/08 - 16:28:04 | 200 | 27.999669115s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 948 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 1477
+slot update_slots: id  0 | task 948 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 948 | cached n_tokens = 104, memory_seq_rm [104, end)
+slot update_slots: id  0 | task 948 | cached n_tokens = 1128, memory_seq_rm [1128, end)
+[GIN] 2026/11/08 - 16:28:38 | 200 | 32.856958939s |      172.28.0.4 | POST     "/api/chat"
+slot update_slots: id  0 | task 34 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 103
+slot update_slots: id  0 | task 34 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 36 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 221
+slot update_slots: id  0 | task 36 | cached n_tokens = 0, memory_seq_rm [0, end)
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4238
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:31:38 | 200 |         1m31s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 145
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:31:50 | 200 | 11.478266178s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:33:19 | 200 |         1m27s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 124
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:33:30 | 200 | 10.866847468s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4229
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:34:59 | 200 |         1m27s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 116
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:35:10 | 200 | 11.520405752s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:36:42 | 200 |         1m30s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 139
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:36:53 | 200 | 10.756320187s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4239
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:38:21 | 200 |         1m26s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 135
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:38:32 | 200 | 10.759952583s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4240
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:40:04 | 200 |         1m31s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 170
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:40:15 | 200 | 10.531996411s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4241
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:41:46 | 200 |         1m30s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 168
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:41:57 | 200 | 10.824230388s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:43:25 | 200 |         1m25s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 126
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:43:35 | 200 | 10.073277434s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:45:03 | 200 |         1m26s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 128
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:45:14 | 200 | 11.137010805s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:46:42 | 200 |         1m26s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 127
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:46:52 | 200 | 10.155876748s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:48:22 | 200 |         1m28s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 142
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:48:33 | 200 | 10.259090827s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4235
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:50:00 | 200 |         1m26s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 138
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:50:12 | 200 | 11.798350221s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4241
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:51:42 | 200 |         1m27s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 142
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:51:53 | 200 | 11.298569817s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:53:21 | 200 |         1m26s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 128
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:53:31 | 200 |  9.842561314s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4235
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:55:20 | 200 |         1m48s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 333
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:55:34 | 200 |  13.33332998s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4233
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:57:21 | 200 |         1m45s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 292
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:57:33 | 200 | 12.049447527s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4237
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 16:59:15 | 200 |         1m40s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 263
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 16:59:28 | 200 | 13.084706456s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4235
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:01:22 | 200 |         1m53s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 372
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:01:36 | 200 | 13.347388911s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4232
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:03:03 | 200 |         1m26s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 126
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:03:14 | 200 |  10.16722642s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4235
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:04:42 | 200 |         1m27s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 129
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:04:53 | 200 | 10.689603383s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4232
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:06:20 | 200 |         1m25s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 118
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:06:30 | 200 | 10.418492804s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4228
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:08:00 | 200 |         1m28s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 152
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:08:11 | 200 | 10.986599337s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4236
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:09:41 | 200 |         1m29s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 161
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:09:52 | 200 |   10.8020092s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4247
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:11:35 | 200 |         1m41s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 287
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:11:47 | 200 |  11.86312462s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4229
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:13:15 | 200 |         1m27s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 130
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:13:27 | 200 | 11.469669534s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4232
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:14:57 | 200 |         1m28s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 162
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:15:08 | 200 | 10.602382642s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4238
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:16:35 | 200 |         1m25s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 145
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:16:45 | 200 | 10.232121556s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:18:20 | 200 |         1m33s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 124
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:18:31 | 200 | 11.165523005s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4243
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:20:05 | 200 |         1m32s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 168
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:20:20 | 200 | 14.699520579s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4243
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:22:14 | 200 |         1m52s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 259
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:22:27 | 200 | 13.160794072s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4245
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:24:15 | 200 |         1m47s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 189
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:24:28 | 200 | 12.683292947s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4258
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:26:12 | 200 |         1m42s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 214
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:26:26 | 200 | 13.863164196s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4246
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:28:53 | 200 |         2m26s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 476
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:29:10 | 200 | 16.886623872s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4231
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:30:50 | 200 |         1m38s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 152
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:31:05 | 200 | 14.438715597s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4239
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:32:49 | 200 |         1m42s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 195
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:33:01 | 200 | 12.375220949s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:34:47 | 200 |         1m45s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 277
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:35:00 | 200 | 12.423350058s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4245
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:36:41 | 200 |         1m39s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 188
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:36:55 | 200 | 13.761884021s |      172.28.0.1 | POST     "/api/generate"
+llama_context: n_ctx_seq     = 6144
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 6144, n_keep = 4, task.n_tokens = 4230
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 2048, memory_seq_rm [2048, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 3072, memory_seq_rm [3072, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4096, memory_seq_rm [4096, end)
+slot update_slots: id  1 | task 0 | cached n_tokens = 4210, memory_seq_rm [4210, end)
+[GIN] 2026/11/08 - 17:38:32 | 200 |         1m36s |      172.28.0.4 | POST     "/api/chat"
+llama_context: n_ctx_seq     = 16384
+slot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 173
+slot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)
+[GIN] 2026/11/08 - 17:38:47 | 200 | 14.943469804s |      172.28.0.1 | POST     "/api/generate"
