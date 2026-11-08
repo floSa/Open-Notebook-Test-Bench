@@ -17,7 +17,7 @@
 
 Relevé du 7 novembre 2026, à revérifier au cadrage.
 
-- Images : `lite`, `full` (formats DOCX et autres via Unstructured) et `ollama` (Ollama inclus). Prendre **`full`** et utiliser le socle vLLM, pas l'Ollama de l'image.
+- Images : `lite`, `full` (formats DOCX et autres via Unstructured) et `ollama` (Ollama inclus). Prendre **`full`** et utiliser LLM-Service, pas l'Ollama de l'image.
 - Identifiants par défaut `admin` / `admin` : les changer dès le premier démarrage et le documenter comme risque en tête du manuel d'installation.
 - Le fichier `.env` ne sert qu'au premier lancement (il remplit la base) ; les changements suivants se font dans l'interface (Resources, LLMs and Embeddings).
 - Lecteurs de documents : Docling et PaddleOCR (locaux), Azure Document Intelligence et Adobe (API payantes, hors périmètre). Réglage dans Settings, Retrieval Settings, File loader.
@@ -25,13 +25,13 @@ Relevé du 7 novembre 2026, à revérifier au cadrage.
 - Activité ralentie (327 commits, plus de 200 issues ouvertes) : le noter dans les limites.
 - Fonctions à couvrir : collections privées et publiques, citations dans la visionneuse PDF avec surlignage et score de pertinence, alerte de faible pertinence, recherche hybride et reranking, QA multimodale (figures, tableaux), décomposition de questions, agents ReAct et ReWOO, GraphRAG, réglages de l'interface et des prompts, multi-utilisateur.
 
-## Branchement au socle
+## Branchement à LLM-Service
 
-- Joindre les services au réseau `rag-local`.
-- Chat : `http://rag-vllm-chat:8000/v1`. Embedding : `http://rag-vllm-embed:8001/v1`. Reranker, s'il existe : `http://rag-vllm-rerank:8002`.
+- Réseau externe `llm-net` (modèles) ; `rag-local` pour la voix. Aucun serveur de modèles dans la pile de la solution.
+- Sans GPU (`service-ollama`) : `http://ollama-central:11434` (fournisseur Ollama) ou `http://ollama-central:11434/v1` (compatible OpenAI), modèles qwen3:4b-instruct et bge-m3, contexte 16 384 jetons. Avec GPU (`service-vllm`) : `http://vllm-central:8000/v1` (chat), `http://vllm-embed:8000/v1` (embedding). Voir `kit/PROMPT.md`, phase B.
 - Dans Resources : type OpenAI pour le LLM et pour les embeddings, clé fictive.
-- Régler découpage, top-k et historique pour rester dans le budget de contexte du socle.
-- Repli seulement si vLLM échoue : Ollama, `http://rag-ollama:11434`.
+- Régler découpage, top-k et historique pour rester dans 16 384 jetons de contexte.
+- Reranker : Ollama n'en sert pas ; reranker intégré à la solution s'il existe, sinon [À tester].
 
 ## Thèmes des manuels 03 et suivants
 
@@ -56,5 +56,5 @@ Pas d'API REST : piloter l'interface Gradio avec Playwright (dans le conteneur d
 Coller dans Claude Code, à la racine du dépôt :
 
 ```text
-/goal Exécuter kit/PROMPT.md pour la fiche kit/fiches/03-kotaemon.md, en autonomie complète, sans jamais attendre de réponse. J'autorise explicitement, pour cette mission : docker pull, docker compose et docker run des images officielles citées dans la fiche et dans kit/PROMPT.md ; l'installation de nano-graphrag et LightRAG dans le conteneur de Kotaemon ; lecture seule des modèles déjà présents sur la machine, dans les dossiers usuels et dans MODELES_EXISTANTS=<chemin facultatif> ; téléchargement de modèles Hugging Face seulement s'ils manquent, dans la limite de 30 Go ; un téléchargement total (images et modèles) de 100 Go au plus ; la création d'environnements Python dans .venv du dépôt et l'installation de paquets PyPI dedans ; la création de comptes locaux fictifs dans l'outil testé ; git add et git commit locaux. Interdit : sudo, git push, port publié hors de 127.0.0.1, compte en ligne, dépense, curl | bash, docker prune, suppression hors du dépôt et des ressources Docker préfixées rag-. Objectif atteint quand, preuves affichées dans la conversation : RAPPORT-kotaemon.md existe et couvre les rubriques de la phase H ; python3 outils/communs/verifier_docs.py affiche 0 point ; exemples/kotaemon/sorties_verifiees.txt couvre chaque exemple ; un fichier outils/resultats/kotaemon/banc-*.json existe ; curl sur http://127.0.0.1:7860 répond ; git status est propre après le commit final. Sinon, arrêt après 300 tours avec JOURNAL.md et RAPPORT-kotaemon.md à jour.
+/goal Exécuter kit/PROMPT.md pour la fiche kit/fiches/03-kotaemon.md, en autonomie complète, sans jamais attendre de réponse. J'autorise explicitement, pour cette mission : docker pull, docker compose et docker run des images officielles citées dans la fiche et dans kit/PROMPT.md ; l'installation de nano-graphrag et LightRAG dans le conteneur de Kotaemon ; lecture seule des modèles déjà présents sur la machine ; le démarrage du service de modèles commun LLM-Service (~/Projets/Projet-IA/LLM-Service, outils/communs/llm_service.sh) et l'ajout de modèles dedans par ollama pull, sans modifier ses fichiers suivis par git ; téléchargement de modèles seulement s'ils manquent, dans la limite de 30 Go ; un téléchargement total (images et modèles) de 100 Go au plus ; la création d'environnements Python dans .venv du dépôt et l'installation de paquets PyPI dedans ; la création de comptes locaux fictifs dans l'outil testé ; git add et git commit locaux. Interdit : sudo, sysctl, pkill -f, git push, port publié hors de 127.0.0.1, compte en ligne, dépense, curl | bash, docker prune, suppression hors du dépôt et des ressources Docker préfixées rag-. Objectif atteint quand, preuves affichées dans la conversation : RAPPORT-kotaemon.md existe et couvre les rubriques de la phase H ; python3 outils/communs/verifier_docs.py affiche 0 point ; exemples/kotaemon/sorties_verifiees.txt couvre chaque exemple ; un fichier outils/resultats/kotaemon/banc-*.json existe ; curl sur http://127.0.0.1:7860 répond ; docker ps montre chaque port lié à 127.0.0.1 ; README.md, LICENSE, docs/kotaemon/presentation.md (avec les configurations minimales sans et avec GPU) et les fichiers outils/resultats/kotaemon/versions-*.json existent ; git status est propre après le commit final. Sinon, arrêt après 300 tours avec JOURNAL.md et RAPPORT-kotaemon.md à jour.
 ```
