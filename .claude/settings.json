@@ -9,14 +9,17 @@
       "Bash(docker ps *)",
       "Bash(docker logs *)",
       "Bash(docker inspect *)",
-      "Bash(docker exec rag-ollama ollama *)",
+      "Bash(docker exec ollama-central ollama *)",
       "Bash(nvidia-smi)",
       "Bash(nvidia-smi *)",
       "Bash(git status *)",
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git log *)",
-      "Bash(git diff *)"
+      "Bash(git diff *)",
+      "Bash(/usr/libexec/docker/cli-plugins/docker-compose *)",
+      "Bash(docker stop *)",
+      "Bash(docker start *)"
     ],
     "deny": [
       "Bash(sudo *)",
@@ -24,7 +27,10 @@
       "Bash(docker system prune *)",
       "Bash(docker volume prune *)",
       "Bash(docker image prune *)",
-      "Read(~/.ssh/**)"
+      "Read(~/.ssh/**)",
+      "Bash(sysctl *)",
+      "Bash(pkill *)",
+      "Bash(killall *)"
     ]
   }
 }

@@ -53,19 +53,11 @@ Réglages locaux de LLM-Service, propres à ce portable et non commités dans so
 Ce dossier sera renommé `Open-Notebook-Test-Bench` ; les chemins ci-dessous l'utilisent. Le corpus, le banc et les outils communs doivent être identiques d'une solution à l'autre : on les copie depuis ce dépôt.
 
 ```bash
-mkdir -p ~/Projets/Tutoriels/RAGFlow-Test-Bench && cd ~/Projets/Tutoriels/RAGFlow-Test-Bench
+~/Projets/Tutoriels/Open-Notebook-Test-Bench/outils/communs/nouvelle_solution.sh ~/Projets/Tutoriels/RAGFlow-Test-Bench
 ```
 
 ```bash
-cp -r ~/Projets/Tutoriels/Open-Notebook-Test-Bench/{kit,corpus,CLAUDE.md,.claude,.gitignore,LICENSE} . && mkdir -p outils && cp -r ~/Projets/Tutoriels/Open-Notebook-Test-Bench/outils/communs outils/
-```
-
-```bash
-git init -q && git add -A && git commit -qm "Kit : prompt, fiches, outils communs et corpus repris d'Open Notebook"
-```
-
-```bash
-claude --permission-mode auto
+cd ~/Projets/Tutoriels/RAGFlow-Test-Bench && claude --permission-mode auto
 ```
 
 Puis coller le bloc `/goal` de la section « Lancement » de `kit/fiches/02-ragflow.md`.
