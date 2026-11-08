@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-08T18:55:39",
+  "depot": "https://github.com/lfnovo/open-notebook",
+  "description": "An Open Source implementation of Notebook LM with more flexibility and features",
+  "site": "https://www.open-notebook.ai",
+  "etoiles": 41764,
+  "forks": 4798,
+  "licence": "MIT",
+  "langage": "TypeScript",
+  "cree_le": "2024-10-21T17:58:46Z",
+  "dernier_push": "2026-11-08T13:51:25Z",
+  "archive": false,
+  "issues_et_pr_ouvertes": 184,
+  "commits_total_branche_defaut": 1043,
+  "commits_90_derniers_jours": 114,
+  "contributeurs": 98,
+  "versions_recentes": [
+    {
+      "tag": "v1.15.1",
+      "date": "2026-11-04",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.15.0",
+      "date": "2026-10-04",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.14.0",
+      "date": "2026-07-21",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.13.0",
+      "date": "2026-07-14",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.12.0",
+      "date": "2026-07-12",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.11.0",
+      "date": "2026-07-11",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.10.0",
+      "date": "2026-06-18",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.9.0",
+      "date": "2026-06-02",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.8.5",
+      "date": "2026-04-19",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.8.4",
+      "date": "2026-04-09",
+      "prerelease": false
+    }
+  ]
+}

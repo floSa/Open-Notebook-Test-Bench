@@ -4,7 +4,7 @@
 
 | Solution | Version décrite | Date des essais | Machine de test | Langue de l'interface | Manuels |
 |---|---|---|---|---|---|
-| Open Notebook | 1.15.1 | 2026-11-08 | Intel Core Ultra 7 255H, 15,3 Go de RAM (WSL), sans GPU NVIDIA ; socle Ollama sur CPU | français (langue du navigateur) | [index](open-notebook/README.md) |
+| Open Notebook | 1.15.1 | 2026-11-08 | Intel Core Ultra 7 255H, 15,3 Go de RAM (WSL), sans GPU NVIDIA ; socle Ollama sur CPU | français (langue du navigateur) | [présentation](open-notebook/presentation.md), [index](open-notebook/README.md) |
 
 ## Comparatif du banc
 

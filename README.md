@@ -2,7 +2,7 @@
 
 Série de manuels pratiques, en français, pour installer et utiliser sous Windows 11 et WSL2 des alternatives locales à NotebookLM. Chaque affirmation a été vérifiée sur une machine réelle : commandes exécutées, mesures, captures.
 
-Solution traitée à ce jour : **Open Notebook 1.15.1** ([index des manuels](docs/open-notebook/README.md), [rapport de mission](RAPPORT-open-notebook.md)).
+Solution traitée à ce jour : **Open Notebook 1.15.1** : [présentation en cinq minutes](docs/open-notebook/presentation.md), [index des manuels](docs/open-notebook/README.md), [rapport de mission](RAPPORT-open-notebook.md).
 
 ## Ce qu'on y apprend
 
@@ -16,6 +16,7 @@ Solution traitée à ce jour : **Open Notebook 1.15.1** ([index des manuels](doc
 
 | Objectif | Lire |
 |---|---|
+| Découvrir ce que fait Open Notebook | [présentation](docs/open-notebook/presentation.md) |
 | Choisir une solution | [docs/README.md](docs/README.md) (comparatif du banc) |
 | Installer Open Notebook | [01. Installation](docs/open-notebook/01-installation.md) |
 | Prendre en main | [02. Prise en main](docs/open-notebook/02-prise-en-main.md) |

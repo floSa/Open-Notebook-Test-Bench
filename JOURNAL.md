@@ -63,3 +63,9 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 - Résultat : `verifier_docs.py` à 0 point ; solution en marche (`num_ctx` 16384), interface sur http://127.0.0.1:8502 (307 vers `/notebooks`) ; carnet « Démo Vélanor » et un épisode de podcast gardés.
 - Incident : `nettoyer_essais.py` s'est arrêté sur une limite de l'API (`limit` ≤ 100) après avoir supprimé les carnets ; corrigé et relancé, consigné dans `nettoyage-2026-11-08.txt`.
 - Suite : décisions D1 à D4 à trancher par l'utilisateur ; solution suivante proposée : RAGFlow (fiche 02).
+
+### 2026-11-08 19:05 — Fiche de présentation
+
+- Demande de l'utilisateur : une page d'entrée qui dit ce que fait la solution et la situe face aux concurrentes (dépôt, étoiles, licence, activité, moteurs, embeddings, reranking, formats, OCR, web, audio, connecteurs, recherche, citations, stockage, RAG avancé, carnets…), sur le modèle de son comparatif HTML du 7 novembre.
+- Fait : `docs/open-notebook/presentation.md` (en une minute, identité GitHub relevée par `outils/communs/identite_github.py`, fonctions, grille de 30 critères avec statut et écart au comparatif, résultats) ; liens en tête du README racine, de l'index général, de l'index de la solution et du plan.
+- Résultat : deux cases « non documenté » du comparatif tranchées (reranking : non ; OCR : non en l'état) ; « 100 % local » nuancé (vérification de version vers GitHub). 41 764 étoiles, MIT, 114 commits sur 90 jours.
