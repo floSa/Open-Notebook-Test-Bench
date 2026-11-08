@@ -1,0 +1,6 @@
+ministral-3:3b       ctx=  4096 chaud=18.28 j/s prompt=95.6 j/s 1er jeton (demi-ctx)=27.44 s RAM=6292 Mo charge=3252 Mo
+ministral-3:3b       ctx=  8192 chaud=17.25 j/s prompt=61.8 j/s 1er jeton (demi-ctx)=75.52 s RAM=9333 Mo charge=4133 Mo
+qwen3:4b-instruct    ctx= 32768 chaud=17.92 j/s prompt=23.9 j/s 1er jeton (demi-ctx)=873.12 s RAM=13896 Mo charge=12626 Mo
+embedding {'modele': 'bge-m3', 'dimension': 1024, 'lot': 16, 'jetons_par_texte_approx': 440, 'duree_lot_s': 53.1, 'ram_conteneur_mo': 2877}
+dépassement {'num_ctx': 2048, 'jetons_envoyes_approx': 8800, 'prompt_eval_count': 2047, 'reponse': 'La ville citée dans le texte est **Nantes**.', 'duree_s': 37.85}
+-> outils/resultats/socle/mesures-2026-11-08-passe2.json

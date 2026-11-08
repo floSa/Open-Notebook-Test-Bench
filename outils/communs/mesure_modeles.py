@@ -51,34 +51,59 @@ def generer(modele, ctx, prompt, n=128):
     }
 
 
+def arg(nom, defaut):
+    return sys.argv[sys.argv.index(nom) + 1] if nom in sys.argv else defaut
+
+
 def main():
     rapide = "--rapide" in sys.argv
+    paires = [tuple(x.split("@")) for x in arg("--paires", "").split(",") if x]  # ex. qwen3:4b-instruct@32768
+    sortie = RACINE / f"outils/resultats/socle/mesures-{datetime.date.today()}-{arg('--suffixe', 'complet')}.json"
     res = {"date": datetime.datetime.now().isoformat(timespec="seconds"), "serveur": "ollama 0.30.7 (CPU)",
            "version": json.loads(urllib.request.urlopen(URL + "/api/version").read()), "mesures": []}
     court = "Explique en trois phrases ce qu'est la recherche augmentée par récupération (RAG)."
     decharger(); ram_vide = ram_conteneur(); res["ram_conteneur_vide_mo"] = ram_vide
-    for modele in CHATS:
-        for ctx in (CONTEXTES[:2] if rapide else CONTEXTES):
-            decharger()
-            froid = generer(modele, ctx, court, 64)  # inclut le chargement
-            chaud = generer(modele, ctx, court, 128)
-            # prompt long : remplit environ la moitié du contexte
-            long_ = (PHRASE * (ctx // 2 // 22)) + "\nRésume ce texte en une phrase."
-            plein = generer(modele, ctx, long_, 64)
-            # deux requêtes simultanées
-            t0 = time.time()
-            with cf.ThreadPoolExecutor(2) as ex:
-                deux = list(ex.map(lambda _: generer(modele, ctx, court, 96), range(2)))
-            ram = ram_conteneur()
-            ps = post("/api/ps", {}) if False else json.loads(urllib.request.urlopen(URL + "/api/ps").read())
-            taille = next((m["size"] for m in ps["models"] if m["name"] == modele), None)
-            ligne = {"modele": modele, "num_ctx": ctx, "froid": froid, "chaud": chaud, "prompt_demi_contexte": plein,
-                     "deux_simultanees": deux, "deux_simultanees_duree_s": round(time.time() - t0, 2),
-                     "ram_conteneur_mo": ram, "taille_modele_charge_mo": taille // 10**6 if taille else None}
-            res["mesures"].append(ligne)
-            print(f"{modele:20} ctx={ctx:6} chaud={chaud['debit_generation_jetons_s']} j/s "
-                  f"prompt={plein['debit_prompt_jetons_s']} j/s 1er jeton (demi-ctx)={plein['premier_jeton_s']} s "
-                  f"RAM={ram} Mo charge={ligne['taille_modele_charge_mo']} Mo", flush=True)
+    if not paires:
+        paires = [(m, str(c)) for m in CHATS for c in (CONTEXTES[:2] if rapide else CONTEXTES)]
+    for modele, ctx in paires:
+        ctx = int(ctx)
+        decharger()
+        try:
+            ligne = mesurer(modele, ctx, court)
+        except Exception as e:  # manque de mémoire, délai dépassé : consigné tel quel
+            ligne = {"modele": modele, "num_ctx": ctx, "erreur": repr(e)[:500],
+                     "logs": subprocess.run(["docker", "logs", "--since", "3m", CONTENEUR], capture_output=True, text=True).stderr[-2000:]}
+            print(f"{modele:20} ctx={ctx:6} ERREUR {ligne['erreur']}", flush=True)
+        res["mesures"].append(ligne)
+        sortie.write_text(json.dumps(res, ensure_ascii=False, indent=2))
+    if "--sans-annexes" in sys.argv:
+        print("->", sortie.relative_to(RACINE)); return
+    annexes(res, sortie)
+
+
+def mesurer(modele, ctx, court):
+    froid = generer(modele, ctx, court, 64)  # inclut le chargement
+    chaud = generer(modele, ctx, court, 128)
+    # prompt long : remplit environ la moitié du contexte
+    long_ = (PHRASE * (ctx // 2 // 22)) + "\nRésume ce texte en une phrase."
+    plein = generer(modele, ctx, long_, 64)
+    # deux requêtes simultanées
+    t0 = time.time()
+    with cf.ThreadPoolExecutor(2) as ex:
+        deux = list(ex.map(lambda _: generer(modele, ctx, court, 96), range(2)))
+    ram = ram_conteneur()
+    ps = json.loads(urllib.request.urlopen(URL + "/api/ps").read())
+    taille = next((m["size"] for m in ps["models"] if m["name"] == modele), None)
+    ligne = {"modele": modele, "num_ctx": ctx, "froid": froid, "chaud": chaud, "prompt_demi_contexte": plein,
+             "deux_simultanees": deux, "deux_simultanees_duree_s": round(time.time() - t0, 2),
+             "ram_conteneur_mo": ram, "taille_modele_charge_mo": taille // 10**6 if taille else None}
+    print(f"{modele:20} ctx={ctx:6} chaud={chaud['debit_generation_jetons_s']} j/s "
+          f"prompt={plein['debit_prompt_jetons_s']} j/s 1er jeton (demi-ctx)={plein['premier_jeton_s']} s "
+          f"RAM={ram} Mo charge={ligne['taille_modele_charge_mo']} Mo", flush=True)
+    return ligne
+
+
+def annexes(res, sortie):
     # embedding
     decharger()
     textes = [PHRASE * 20] * 16
@@ -96,7 +121,6 @@ def main():
                           "reponse": r["response"][:200], "duree_s": round(time.time() - t0, 2),
                           "logs": subprocess.run(["docker", "logs", "--since", "2m", CONTENEUR], capture_output=True, text=True).stderr[-3000:]}
     print("dépassement", {k: v for k, v in res["depassement"].items() if k != "logs"}, flush=True)
-    sortie = RACINE / f"outils/resultats/socle/mesures-{datetime.date.today()}.json"
     sortie.write_text(json.dumps(res, ensure_ascii=False, indent=2))
     print("->", sortie.relative_to(RACINE))
 

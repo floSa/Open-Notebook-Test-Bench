@@ -19,7 +19,7 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 - Fichiers : `outils/communs/diagnostic.sh`, `outils/resultats/machine/diagnostic-2026-11-08.json`, `JOURNAL.md`, `.gitignore`.
 - Suite : phase B, socle CPU (inventaire des modèles, Ollama, corpus, banc).
 
-### 2026-11-08 14:10 — Phase B (en cours) et phase C, cadrage
+### 2026-11-08 13:20 — Phase B (en cours) et phase C, cadrage
 
 - Fait : socle Ollama CPU (`outils/communs/socle.sh`), inventaire de 22 modèles présents, choix qwen3:4b-instruct (chat), ministral-3:3b (second modèle), bge-m3 (embedding, seul téléchargement, 1,2 Go) ; corpus Vélanor reproductible à l'octet (8 documents, `corpus/MANIFEST.json`) ; 36 questions de référence ; banc commun et son auto-contrôle ; `verifier_docs.py` ; `nettoyer.sh`. Cadrage d'Open Notebook 1.15.1 par sous-agent (`outils/resultats/open-notebook/cadrage-source.md`), relecture consignée (`relecture.md`), compose officiel copié et override écrit, scripts installer/démarrer/arrêter/état, plan des manuels.
 - Résultat : Ollama CPU, 16 à 17 jetons/s en génération, 53 à 67 jetons/s en lecture de prompt (mesures en cours). Constats de cadrage : chat de carnet sans top-k (sources injectées en entier), citations seulement `[source:id]` dans le texte, OCR des scans seulement avec Docling.

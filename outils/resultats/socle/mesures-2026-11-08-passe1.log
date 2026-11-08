@@ -1,2 +1,4 @@
 qwen3:4b-instruct    ctx=  4096 chaud=17.34 j/s prompt=67.4 j/s 1er jeton (demi-ctx)=39.07 s RAM=7303 Mo charge=3876 Mo
 qwen3:4b-instruct    ctx=  8192 chaud=16.25 j/s prompt=53.2 j/s 1er jeton (demi-ctx)=98.38 s RAM=9201 Mo charge=5093 Mo
+qwen3:4b-instruct    ctx= 16384 chaud=14.72 j/s prompt=36.0 j/s 1er jeton (demi-ctx)=289.59 s RAM=11356 Mo charge=7525 Mo
+(passe 1 arrêtée volontairement pendant le palier 32768 de qwen3:4b-instruct, à 13:26 ; suite en passe 2)

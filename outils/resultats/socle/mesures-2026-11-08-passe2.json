@@ -1,0 +1,188 @@
+{
+  "date": "2026-11-08T13:26:05",
+  "serveur": "ollama 0.30.7 (CPU)",
+  "version": {
+    "version": "0.30.7"
+  },
+  "mesures": [
+    {
+      "modele": "ministral-3:3b",
+      "num_ctx": 4096,
+      "froid": {
+        "duree_s": 24.06,
+        "jetons_prompt": 572,
+        "jetons_generes": 64,
+        "debit_generation_jetons_s": 17.56,
+        "debit_prompt_jetons_s": 90.4,
+        "premier_jeton_s": 17.46,
+        "debut_reponse": "La **recherche augmentée par récupération (RAG)** est une méthode d’intelligence"
+      },
+      "chaud": {
+        "duree_s": 7.28,
+        "jetons_prompt": 572,
+        "jetons_generes": 128,
+        "debit_generation_jetons_s": 18.28,
+        "debit_prompt_jetons_s": 9556.6,
+        "premier_jeton_s": 0.27,
+        "debut_reponse": "La **recherche augmentée par récupération (RAG)** est une technique d’intelligen"
+      },
+      "prompt_demi_contexte": {
+        "duree_s": 34.71,
+        "jetons_prompt": 2609,
+        "jetons_generes": 64,
+        "debit_generation_jetons_s": 14.76,
+        "debit_prompt_jetons_s": 95.6,
+        "premier_jeton_s": 27.44,
+        "debut_reponse": "Le texte décrit de manière répétitive que **la société Vélanor, basée à Nantes, "
+      },
+      "deux_simultanees": [
+        {
+          "duree_s": 14.37,
+          "jetons_prompt": 572,
+          "jetons_generes": 96,
+          "debit_generation_jetons_s": 13.74,
+          "debit_prompt_jetons_s": 82.8,
+          "premier_jeton_s": 7.08,
+          "debut_reponse": "La **recherche augmentée par récupération (RAG)** est une méthode d’intelligence"
+        },
+        {
+          "duree_s": 14.37,
+          "jetons_prompt": 572,
+          "jetons_generes": 96,
+          "debit_generation_jetons_s": 13.74,
+          "debit_prompt_jetons_s": 82.8,
+          "premier_jeton_s": 7.1,
+          "debut_reponse": "La **recherche augmentée par récupération (RAG)** est une technique d’intelligen"
+        }
+      ],
+      "deux_simultanees_duree_s": 15.42,
+      "ram_conteneur_mo": 6292,
+      "taille_modele_charge_mo": 3252
+    },
+    {
+      "modele": "ministral-3:3b",
+      "num_ctx": 8192,
+      "froid": {
+        "duree_s": 17.92,
+        "jetons_prompt": 572,
+        "jetons_generes": 64,
+        "debit_generation_jetons_s": 19.02,
+        "debit_prompt_jetons_s": 110.6,
+        "premier_jeton_s": 14.54,
+        "debut_reponse": "La **recherche augmentée par récupération (RAG)** est une méthode d’intelligence"
+      },
+      "chaud": {
+        "duree_s": 7.73,
+        "jetons_prompt": 572,
+        "jetons_generes": 128,
+        "debit_generation_jetons_s": 17.25,
+        "debit_prompt_jetons_s": 7867.6,
+        "premier_jeton_s": 0.29,
+        "debut_reponse": "La **recherche augmentée par récupération (RAG)** est une technique d’intelligen"
+      },
+      "prompt_demi_contexte": {
+        "duree_s": 91.06,
+        "jetons_prompt": 4655,
+        "jetons_generes": 64,
+        "debit_generation_jetons_s": 10.37,
+        "debit_prompt_jetons_s": 61.8,
+        "premier_jeton_s": 75.52,
+        "debut_reponse": "Ce texte répétitif décrit simplement que la société **Vélanor**, basée à Nantes,"
+      },
+      "deux_simultanees": [
+        {
+          "duree_s": 19.07,
+          "jetons_prompt": 572,
+          "jetons_generes": 96,
+          "debit_generation_jetons_s": 13.38,
+          "debit_prompt_jetons_s": 72.0,
+          "premier_jeton_s": 8.13,
+          "debut_reponse": "La **recherche augmentée par récupération (RAG)** est une technique d’intelligen"
+        },
+        {
+          "duree_s": 19.07,
+          "jetons_prompt": 572,
+          "jetons_generes": 96,
+          "debit_generation_jetons_s": 13.38,
+          "debit_prompt_jetons_s": 72.0,
+          "premier_jeton_s": 8.13,
+          "debut_reponse": "La **recherche augmentée par récupération (RAG)** est une méthode d’intelligence"
+        }
+      ],
+      "deux_simultanees_duree_s": 20.11,
+      "ram_conteneur_mo": 9333,
+      "taille_modele_charge_mo": 4133
+    },
+    {
+      "modele": "qwen3:4b-instruct",
+      "num_ctx": 32768,
+      "froid": {
+        "duree_s": 29.2,
+        "jetons_prompt": 27,
+        "jetons_generes": 64,
+        "debit_generation_jetons_s": 17.55,
+        "debit_prompt_jetons_s": 64.9,
+        "premier_jeton_s": 22.27,
+        "debut_reponse": "La recherche augmentée par récupération (RAG) est une technique qui permet à un "
+      },
+      "chaud": {
+        "duree_s": 7.5,
+        "jetons_prompt": 27,
+        "jetons_generes": 128,
+        "debit_generation_jetons_s": 17.92,
+        "debit_prompt_jetons_s": 266.2,
+        "premier_jeton_s": 0.25,
+        "debut_reponse": "La recherche augmentée par récupération (RAG) est une technique qui permet à un "
+      },
+      "prompt_demi_contexte": {
+        "duree_s": 975.06,
+        "jetons_prompt": 20849,
+        "jetons_generes": 29,
+        "debit_generation_jetons_s": 1.81,
+        "debit_prompt_jetons_s": 23.9,
+        "premier_jeton_s": 873.12,
+        "debut_reponse": "La société Vélanor fabrique des vélos électriques à Nantes et publie chaque anné"
+      },
+      "deux_simultanees": [
+        {
+          "duree_s": 13.82,
+          "jetons_prompt": 27,
+          "jetons_generes": 96,
+          "debit_generation_jetons_s": 14.78,
+          "debit_prompt_jetons_s": 66.9,
+          "premier_jeton_s": 0.59,
+          "debut_reponse": "La recherche augmentée par récupération (RAG) est une technique qui permet à un "
+        },
+        {
+          "duree_s": 13.75,
+          "jetons_prompt": 27,
+          "jetons_generes": 96,
+          "debit_generation_jetons_s": 9.23,
+          "debit_prompt_jetons_s": 409.3,
+          "premier_jeton_s": 0.22,
+          "debut_reponse": "La recherche augmentée par récupération (RAG) est une technique qui permet à un "
+        }
+      ],
+      "deux_simultanees_duree_s": 14.94,
+      "ram_conteneur_mo": 13896,
+      "taille_modele_charge_mo": 12626
+    }
+  ],
+  "ram_conteneur_vide_mo": 1069,
+  "embedding": {
+    "modele": "bge-m3",
+    "dimension": 1024,
+    "lot": 16,
+    "jetons_par_texte_approx": 440,
+    "duree_lot_s": 53.1,
+    "ram_conteneur_mo": 2877
+  },
+  "depassement": {
+    "num_ctx": 2048,
+    "jetons_envoyes_approx": 8800,
+    "prompt_eval_count": 2047,
+    "reponse": "La ville citée dans le texte est **Nantes**.",
+    "duree_s": 37.85,
+    "logs": "tokenize 127.0.0.1 200\nsrv  log_server_r: done request: POST /tokenize 127.0.0.1 200\ntime=2026-11-08T12:48:56.739Z level=WARN source=llama_server.go:296 msg=\"truncating input prompt\" limit=2048 prompt=11216 keep=4 new=2047\nslot get_availabl: id  1 | task -1 | selected slot by LRU, t_last = -1\nsrv  get_availabl: updating prompt cache\nsrv          load:  - looking for better prompt, base f_keep = -1.000, sim = 0.000\nsrv        update:  - cache state: 0 prompts, 0.000 MiB (limits: 8192.000 MiB, 4096 tokens, 8589934592 est)\nsrv  get_availabl: prompt cache update took 0.02 ms\nslot launch_slot_: id  1 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist \nslot launch_slot_: id  1 | task -1 | sampler params: \n\trepeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000\n\tdry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 2048\n\ttop_k = 20, top_p = 0.800, min_p = 0.000, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000\n\tmirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900\nslot launch_slot_: id  1 | task 0 | processing task, is_child = 0\nslot update_slots: id  1 | task 0 | new prompt, n_ctx_slot = 2048, n_keep = 4, task.n_tokens = 2047\nslot update_slots: id  1 | task 0 | cached n_tokens = 0, memory_seq_rm [0, end)\nsrv  log_server_r: done request: POST /completion 127.0.0.1 200\nslot print_timing: id  1 | task 0 | prompt processing, n_tokens =    512, progress = 0.25, t =   5.49 s / 93.26 tokens per second\nslot update_slots: id  1 | task 0 | cached n_tokens = 512, memory_seq_rm [512, end)\nslot print_timing: id  1 | task 0 | prompt processing, n_tokens =   1024, progress = 0.50, t =  11.87 s / 86.28 tokens per second\nslot update_slots: id  1 | task 0 | cached n_tokens = 1024, memory_seq_rm [1024, end)\nslot print_timing: id  1 | task 0 | prompt processing, n_tokens =   1536, progress = 0.75, t =  19.22 s / 79.92 tokens per second\nslot update_slots: id  1 | task 0 | cached n_tokens = 1536, memory_seq_rm [1536, end)\nslot init_sampler: id  1 | task 0 | init sampler, took 0.20 ms, tokens: text = 2047, total = 2047\nslot update_slots: id  1 | task 0 | slot context shift, n_keep = 4, n_left = 2043, n_discard = 1021\nslot print_timing: id  1 | task 0 | prompt eval time =   27071.63 ms /  2047 tokens (   13.23 ms per token,    75.61 tokens per second)\nslot print_timing: id  1 | task 0 |        eval time =     999.41 ms /    14 tokens (   71.39 ms per token,    14.01 tokens per second)\nslot print_timing: id  1 | task 0 |       total time =   28071.04 ms /  2061 tokens\nslot print_timing: id  1 | task 0 |    graphs reused =         13\nslot      release: id  1 | task 0 | stop processing: n_tokens = 1039, truncated = 1\nsrv  update_slots: all slots are idle\nsrv  log_server_r: done request: POST /tokenize 127.0.0.1 200\n"
+  }
+}

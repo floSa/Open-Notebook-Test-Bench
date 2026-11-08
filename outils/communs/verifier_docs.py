@@ -53,7 +53,7 @@ def ancres(fichier, cache={}):
 
 def pictogramme(c):
     o = ord(c)
-    return unicodedata.category(c) == "So" or 0x1F000 <= o <= 0x1FAFF or 0x2600 <= o <= 0x27BF or o == 0xFE0F
+    return (o >= 0x2100 and unicodedata.category(c) == "So") or 0x1F000 <= o <= 0x1FAFF or 0x2600 <= o <= 0x27BF or o == 0xFE0F
 
 
 def main():
