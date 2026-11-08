@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Branche Open Notebook au socle Ollama par l'API (idempotent).
+"""Branche Open Notebook au service de modèles LLM-Service par l'API (idempotent).
 
 Équivalent de l'interface : Models > Add Configuration (fournisseur Ollama, Base URL), ajout des modèles,
 puis modèles par défaut (PUT explicite plutôt que « Auto-assign », qui choisit par ordre alphabétique).
 Usage : python3 outils/open-notebook/configurer.py [--num-ctx 16384] [--chat qwen3:4b-instruct]
 """
-import argparse, datetime, json, sys
+import argparse, datetime, json, os, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -23,9 +23,10 @@ on = OpenNotebook()
 on.attendre_sante()
 journal = {"date": datetime.datetime.now().isoformat(timespec="seconds")}
 
-cred = next((c for c in on.get("/api/credentials") if c["name"] == "ollama-socle"), None)
-corps = {"name": "ollama-socle", "provider": "ollama", "modalities": ["language", "embedding"],
-         "base_url": "http://rag-ollama:11434", "num_ctx": a.num_ctx}
+# Modèles servis par LLM-Service (ollama-central, réseau llm-net) ; « ollama-socle » : ancien nom, repris s'il existe.
+cred = next((c for c in on.get("/api/credentials") if c["name"] in ("llm-service", "ollama-socle")), None)
+corps = {"name": "llm-service", "provider": "ollama", "modalities": ["language", "embedding"],
+         "base_url": os.environ.get("LLM_SERVICE_URL", "http://ollama-central:11434"), "num_ctx": a.num_ctx}
 cred = on.put(f"/api/credentials/{cred['id']}", corps) if cred else on.post("/api/credentials", corps)
 journal["credential"] = cred
 journal["test_connexion"] = on.post(f"/api/credentials/{cred['id']}/test")
@@ -65,7 +66,7 @@ if "default_content_processing_engine_url" in reglages:
     reglages["default_content_processing_engine_url"] = "simple"
     journal["reglages_apres"] = on.put("/api/settings", reglages)
 
-sortie = RACINE / f"outils/resultats/open-notebook/configuration-{datetime.date.today()}.json"
+sortie = RACINE / f"outils/resultats/open-notebook/configuration-{datetime.date.today()}{os.environ.get('RESULTAT_SUFFIXE', '')}.json"
 sortie.write_text(json.dumps(journal, ensure_ascii=False, indent=2))
 print(json.dumps({k: journal[k] for k in ("test_connexion", "voix_test", "modeles") if k in journal}, ensure_ascii=False))
 print("défauts :", {k: v for k, v in journal["defauts"].items() if v})

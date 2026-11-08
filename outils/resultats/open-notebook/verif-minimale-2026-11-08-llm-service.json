@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-08T21:27:38",
+  "sans_mot_de_passe": "401 {\"detail\":\"Missing authorization header\"}",
+  "ram_repos_mo": {
+    "rag-open-notebook": 3825,
+    "rag-open-notebook-surrealdb": 89,
+    "ollama-central": 5468
+  },
+  "indexation": {
+    "status": "completed",
+    "embedded_chunks": 1,
+    "caracteres": 594,
+    "duree_s": 12.0
+  },
+  "ram_pic_indexation_mo": {
+    "rag-open-notebook": 3827,
+    "rag-open-notebook-surrealdb": 94,
+    "ollama-central": 5489
+  },
+  "question": {
+    "question": "Quelle est la durée de garantie du cadre ?",
+    "reponse": "La durée de garantie du cadre est de 7 ans [source:xvsxovflm2mss97rxxx].",
+    "duree_s": 137.6,
+    "jetons_contexte": 205,
+    "citation_presente": false,
+    "source_id": "source:xvsxovflm2mss97rxxxv"
+  },
+  "carnet": "notebook:t3a4zzgd1cd8glian6vn"
+}

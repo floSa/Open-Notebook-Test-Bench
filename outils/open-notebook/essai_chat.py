@@ -38,7 +38,7 @@ res["question"] = Q
 res["essais"] = [poser("insights"), poser("full content")]
 mods = {m["name"]: m["id"] for m in on.get("/api/models")}
 if "qwen3:4b" not in mods:  # modèle de raisonnement déjà présent dans ~/.ollama, copié dans le socle
-    cred = next(c for c in on.get("/api/credentials") if c["name"] == "ollama-socle")
+    cred = next(c for c in on.get("/api/credentials") if c["name"] == "llm-service")
     mods["qwen3:4b"] = on.post("/api/models", {"name": "qwen3:4b", "provider": "ollama", "type": "language", "credential": cred["id"]})["id"]
 try:
     res["essais"].append(poser("full content", mods["qwen3:4b"]))

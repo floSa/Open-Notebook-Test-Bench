@@ -2,7 +2,7 @@
 # Projet compose : rag-open-notebook. Variables lues dans donnees/open-notebook/.env (généré par installer.sh).
 # - versions figées par empreinte, pas de re-téléchargement à chaque démarrage ;
 # - ports publiés sur 127.0.0.1 seulement ; SurrealDB non publié (inutile hors du réseau Docker) ;
-# - données dans donnees/open-notebook/ ; réseau externe rag-local (socle Ollama joignable sous le nom rag-ollama) ;
+# - données dans donnees/open-notebook/ ; réseaux externes llm-net (modèles : LLM-Service, http://ollama-central:11434) et rag-local (voix : rag-speaches) ;
 # - secrets générés localement (clé de chiffrement, mot de passe, identifiants SurrealDB).
 name: rag-open-notebook
 
@@ -51,8 +51,10 @@ services:
       - ESPERANTO_TTS_TIMEOUT=600
     volumes: !override
       - ${DONNEES}/notebook_data:/app/data
-    networks: [rag-local]
+    networks: [rag-local, llm-net]
 
 networks:
   rag-local:
+    external: true
+  llm-net:
     external: true

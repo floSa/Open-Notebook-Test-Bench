@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Vérification fonctionnelle minimale après installation, avec mesure de la RAM de l'application.
 
-1. mot de passe exigé (401 sans en-tête) ; 2. RAM au repos ; 3. carnet + import d'un document avec embedding,
+1. mot de passe exigé (401 sans en-tête) ; 2. RAM au repos ; 3. carnet + import os, d'un document avec embedding,
 RAM échantillonnée pendant l'indexation ; 4. une question, citation [source:…] attendue.
 Sortie : outils/resultats/open-notebook/verif-minimale-<date>.json
 """
-import datetime, json, sys, time, urllib.error, urllib.request
+import datetime, json, os, sys, time, urllib.error, urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -22,14 +22,14 @@ except urllib.error.HTTPError as e:
     res["sans_mot_de_passe"] = f"{e.code} {e.read().decode()[:80]}"
 print("sans mot de passe :", res["sans_mot_de_passe"])
 
-repos = Echantillonneur(APP + ["rag-socle-ollama"], pas=2); repos.start(); time.sleep(6); repos.stop.set(); repos.join()
+repos = Echantillonneur(APP + ["ollama-central"], pas=2); repos.start(); time.sleep(6); repos.stop.set(); repos.join()
 res["ram_repos_mo"] = repos.pics
 print("RAM au repos :", repos.pics)
 
 on = OpenNotebook()
 nb = on.post("/api/notebooks", {"name": "Essai installation", "description": "vérification minimale"})
 doc = RACINE / "corpus/documents/faq-sav.html"
-ech = Echantillonneur(APP + ["rag-socle-ollama"], pas=2); ech.start()
+ech = Echantillonneur(APP + ["ollama-central"], pas=2); ech.start()
 t0 = time.time()
 src = on.ajouter_fichier(doc, nb["id"])
 etat = on.attendre_source(src["id"])
@@ -45,6 +45,6 @@ res["question"] = {"question": q, "reponse": rep, "duree_s": round(time.time() -
                    "citation_presente": src["id"] in rep, "source_id": src["id"]}
 print("réponse :", rep[:300], "\ncitation présente :", src["id"] in rep, f"({res['question']['duree_s']} s)")
 res["carnet"] = nb["id"]
-s = RACINE / f"outils/resultats/open-notebook/verif-minimale-{datetime.date.today()}.json"
+s = RACINE / f"outils/resultats/open-notebook/verif-minimale-{datetime.date.today()}{os.environ.get('RESULTAT_SUFFIXE', '')}.json"
 s.write_text(json.dumps(res, ensure_ascii=False, indent=2))
 print("->", s.relative_to(RACINE))

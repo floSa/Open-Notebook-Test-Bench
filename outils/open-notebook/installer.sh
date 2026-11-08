@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installation rejouable et idempotente d'Open Notebook 1.15.1, branché au socle Ollama.
+# Installation rejouable et idempotente d'Open Notebook 1.15.1, branché au service de modèles LLM-Service.
 # Journal : outils/resultats/open-notebook/installation-<date>.log
 set -euo pipefail
 cd "$(dirname "$0")/../.."
@@ -42,7 +42,7 @@ EOF
 fi
 
 # 3. socle (Ollama, Speaches) puis démarrage
-outils/communs/socle.sh >/dev/null
+outils/communs/llm_service.sh >/dev/null
 outils/communs/voix.sh >/dev/null   # Speaches : TTS et STT locaux (podcasts, sources audio)
 docker compose --env-file "$D/.env" -f "$OFF" -f outils/open-notebook/compose.override.yml up -d
 for i in $(seq 120); do curl -sf http://127.0.0.1:5055/health >/dev/null && break; sleep 2; done

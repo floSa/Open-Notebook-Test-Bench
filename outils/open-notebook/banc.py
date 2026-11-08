@@ -39,7 +39,7 @@ class Adaptateur:
 
     def config(self):
         env = dict(l.split("=", 1) for l in (RACINE / "donnees/open-notebook/.env").read_text().splitlines() if "=" in l)
-        cred = next(c for c in self.on.get("/api/credentials") if c["name"] == "ollama-socle")
+        cred = next(c for c in self.on.get("/api/credentials") if c["name"] == "llm-service")
         return {"mode": self.mode, "modele": self.modele, "contexte_sources": self.contexte if self.mode == "chat" else None,
                 "num_ctx": cred.get("num_ctx"), "chunk_size": env.get("OPEN_NOTEBOOK_CHUNK_SIZE", "400 (défaut)"),
                 "docling": env.get("OPEN_NOTEBOOK_ENABLE_DOCLING", "false"), "version": "1.15.1"}
@@ -90,7 +90,7 @@ def main():
     p.add_argument("--ids", help="sous-ensemble de questions, ex. Q01,Q15,Q21")
     a = p.parse_args()
     ad = Adaptateur(a.mode, a.modele, a.contexte)
-    res = commun.lancer(ad, a.etiquette, ["rag-open-notebook", "rag-open-notebook-surrealdb"], ["rag-socle-ollama"],
+    res = commun.lancer(ad, a.etiquette, ["rag-open-notebook", "rag-open-notebook-surrealdb"], ["ollama-central"],
                         indexer=a.reindexer or not ad.nb, juge=not a.sans_juge, limite=a.limite,
                         ids=a.ids.split(",") if a.ids else None)
     commun.ecrire(res, RACINE / "outils/resultats/open-notebook")
