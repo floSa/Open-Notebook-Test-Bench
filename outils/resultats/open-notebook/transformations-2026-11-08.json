@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-08T14:22:53",
+  "fournies": [
+    {
+      "name": "Analyze Paper",
+      "title": "Paper Analysis",
+      "apply_default": false
+    },
+    {
+      "name": "Dense Summary",
+      "title": "Dense Summary",
+      "apply_default": true
+    },
+    {
+      "name": "Key Insights",
+      "title": "Key Insights",
+      "apply_default": false
+    },
+    {
+      "name": "Reflections",
+      "title": "Reflection Questions",
+      "apply_default": false
+    },
+    {
+      "name": "Simple Summary",
+      "title": "Simple Summary",
+      "apply_default": false
+    },
+    {
+      "name": "Table of Contents",
+      "title": "Table of Contents",
+      "apply_default": false
+    }
+  ],
+  "simple_summary_faq": {
+    "reponse_api": {
+      "status": "pending",
+      "message": "Insight generation started",
+      "source_id": "source:isk9tfd7hwf4jfq39qhs",
+      "transformation_id": "transformation:1dsjlbwimic3ko7wxx46",
+      "command_id": "command:sghc9nn2uh8h0zf3n1wv"
+    },
+    "duree_s": 18.8,
+    "insights": [
+      {
+        "id": "source_insight:kcmxn3ls40w58fco5l7f",
+        "source_id": "source:isk9tfd7hwf4jfq39qhs",
+        "insight_type": "Simple Summary",
+        "content": "$$\n\\text{Garantie : 7 ans (cadre), 2 ans (batterie et moteur)} \\\\\n\\text{Délai de réparation : 10 jours ouvrés (diagnostic gratuit)} \\\\\n\\text{Contact : 02 40 00 12 34 (lun-vend, 9–18 h) ou formulaire du site} \\\\\n\\text{Remplacement de la batterie : possible avec clé fournie, uniquement celle d'origine Vélanor couverte}\n$$",
+        "created": "2026-11-08T13:23:09.924761+00:00",
+        "updated": "2026-11-08T13:23:09.924779+00:00"
+      }
+    ]
+  },
+  "perso_rapport": {
+    "transformation": "transformation:e96zrlm7syjfkpggjgq2",
+    "duree_s": 37.6,
+    "sortie": "- 48,6 M€ – Chiffre d'affaires annuel (en millions d'euros)  \n- 3,1 M€ – Résultat net (en millions d'euros)  \n- 61 800 – Vélos produits au cours de l'année 2025  \n- 412 – Effectif total au 31/12/2025  \n- 27 % – Part de l'export du chiffre d'affaires  \n- 1,8 % – Taux de retour sous garantie des vélos vendus  \n- 3,4 GWh – Consommation électrique des sites en 2025  \n- 96 % – Taux de recyclage des batteries usagées collectées"
+  },
+  "note_manuelle": {
+    "id": "note:568kko9tfjsmp6xvvpna",
+    "title": "Points à vérifier",
+    "content": "Comparer le délai contractuel Batterix (21 jours) au délai constaté dans le classeur des stocks.",
+    "note_type": "human",
+    "created": "2026-11-08 13:23:50.392554+00:00",
+    "updated": "2026-11-08 13:23:50.392580+00:00",
+    "command_id": "command:xe1vvz36u4w9zdhlzip2"
+  },
+  "insight_vers_note": {
+    "id": "note:4umw3qqcx02xnif7khrw",
+    "title": "Simple Summary from source faq-sav.html",
+    "content": "$$\n\\text{Garantie : 7 ans (cadre), 2 ans (batterie et moteur)} \\\\\n\\text{Délai de réparation : 10 jours ouvrés (diagnostic gratuit)} \\\\\n\\text{Contact : 02 40 00 12 34 (lun-vend, 9–18 h) ou formulaire du site} \\\\\n\\text{Remplacement de la batterie : possible avec clé fournie, uniquement celle d'origine Vélanor couverte}\n$$",
+    "note_type": null,
+    "created": "2026-11-08 13:23:50.770834+00:00",
+    "updated": "2026-11-08 13:23:50.770854+00:00",
+    "command_id": null
+  },
+  "notes_du_carnet": [
+    {
+      "title": "Simple Summary from source faq-sav.html",
+      "note_type": null
+    },
+    {
+      "title": "Points à vérifier",
+      "note_type": "human"
+    }
+  ]
+}

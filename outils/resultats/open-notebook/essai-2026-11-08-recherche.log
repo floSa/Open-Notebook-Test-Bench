@@ -1,0 +1,11 @@
+référence exacte       texte: rang 1 (1 rés.)  vecteur: rang 1 (5 rés., [0.607, 0.435, 0.424])  BAT-48V-14Ah
+nom propre             texte: rang 2 (2 rés.)  vecteur: rang 2 (6 rés., [0.421, 0.407, 0.349])  Motodrive
+mots exacts            texte: rang 1 (1 rés.)  vecteur: rang 1 (5 rés., [0.57, 0.372, 0.362])  prime d'intéressement
+reformulation          texte: rang None (0 rés.)  vecteur: rang 1 (6 rés., [0.596, 0.51, 0.432])  Combien de temps le cadre est-il couvert en cas de défaut ?
+synonyme               texte: rang None (0 rés.)  vecteur: rang 1 (6 rés., [0.581, 0.398, 0.395])  Où ranger les accumulateurs et à quelle température ?
+paraphrase             texte: rang None (0 rés.)  vecteur: rang 3 (5 rés., [0.491, 0.47, 0.409])  nouvelle usine près de l'estuaire de la Loire
+anglais                texte: rang None (0 rés.)  vecteur: rang 1 (6 rés., [0.695, 0.537, 0.484])  battery supplier audit score
+français vers anglais  texte: rang None (0 rés.)  vecteur: rang 1 (6 rés., [0.675, 0.544, 0.536])  score de l'audit du fournisseur de batteries
+thème                  texte: rang 1 (1 rés.)  vecteur: rang 1 (4 rés., [0.676, 0.466, 0.438])  chiffre d'affaires par trimestre
+absent du corpus       texte: rang None (0 rés.)  vecteur: rang None (6 rés., [0.463, 0.456, 0.455])  trottinette électrique
+-> outils/resultats/open-notebook/recherche-2026-11-08.json

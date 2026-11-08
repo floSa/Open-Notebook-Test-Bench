@@ -1,0 +1,16 @@
+fournies : ['Analyze Paper', 'Dense Summary', 'Key Insights', 'Reflections', 'Simple Summary', 'Table of Contents']
+Simple Summary : 18.8 s -> $$
+\text{Garantie : 7 ans (cadre), 2 ans (batterie et moteur)} \\
+\text{Délai de réparation : 10 jours ouvrés (diagnostic gratuit)} \\
+\text{Contact : 02 40 00 12 34 (lun-vend, 9–18 h) ou formulaire du site} \\
+\text{Remplacement de la batterie : possible avec clé fournie, uniquement celle d'origine
+personnalisée : 37.6 s -> - 48,6 M€ – Chiffre d'affaires annuel (en millions d'euros)  
+- 3,1 M€ – Résultat net (en millions d'euros)  
+- 61 800 – Vélos produits au cours de l'année 2025  
+- 412 – Effectif total au 31/12/2025  
+- 27 % – Part de l'export du chiffre d'affaires  
+- 1,8 % – Taux de retour sous garantie des vélos vendus  
+- 3,4 GWh – Consommation électrique des sites en 2025  
+- 96 % – Taux de recyclage des bat
+notes : [{'title': 'Simple Summary from source faq-sav.html', 'note_type': None}, {'title': 'Points à vérifier', 'note_type': 'human'}]
+-> outils/resultats/open-notebook/transformations-2026-11-08.json

@@ -1,0 +1,352 @@
+{
+  "date": "2026-11-08T14:22:24",
+  "carnet": "notebook:9dxx4q5q52j0tu828m1p",
+  "lignes": [
+    {
+      "requete": "BAT-48V-14Ah",
+      "attendu": "stocks-octobre-2025.xlsx",
+      "nature": "référence exacte",
+      "text": {
+        "rang": 1,
+        "resultats": 1,
+        "premier": "stocks-octobre-2025.xlsx",
+        "scores": [
+          17.117
+        ],
+        "titres": [
+          "stocks-octobre-2025.xlsx"
+        ],
+        "duree_s": 0.11
+      },
+      "vector": {
+        "rang": 1,
+        "resultats": 5,
+        "premier": "stocks-octobre-2025.xlsx",
+        "scores": [
+          0.607,
+          0.435,
+          0.424,
+          0.41,
+          0.374
+        ],
+        "titres": [
+          "stocks-octobre-2025.xlsx",
+          "procedure-batteries.docx",
+          "rapport-annuel-2025.pdf",
+          "supplier-audit-batterix-en.pdf",
+          "faq-sav.html"
+        ],
+        "duree_s": 2.82
+      }
+    },
+    {
+      "requete": "Motodrive",
+      "attendu": "rapport-annuel-2025.pdf",
+      "nature": "nom propre",
+      "text": {
+        "rang": 2,
+        "resultats": 2,
+        "premier": "stocks-octobre-2025.xlsx",
+        "scores": [
+          1.661,
+          2.631
+        ],
+        "titres": [
+          "stocks-octobre-2025.xlsx",
+          "rapport-annuel-2025.pdf"
+        ],
+        "duree_s": 0.09
+      },
+      "vector": {
+        "rang": 2,
+        "resultats": 6,
+        "premier": "stocks-octobre-2025.xlsx",
+        "scores": [
+          0.421,
+          0.407,
+          0.349,
+          0.318,
+          0.318
+        ],
+        "titres": [
+          "stocks-octobre-2025.xlsx",
+          "rapport-annuel-2025.pdf",
+          "strategie-2026.pptx",
+          "supplier-audit-batterix-en.pdf",
+          "faq-sav.html"
+        ],
+        "duree_s": 2.8
+      }
+    },
+    {
+      "requete": "prime d'intéressement",
+      "attendu": "cse-2025-10-14.md",
+      "nature": "mots exacts",
+      "text": {
+        "rang": 1,
+        "resultats": 1,
+        "premier": "cse-2025-10-14.md",
+        "scores": [
+          8.106
+        ],
+        "titres": [
+          "cse-2025-10-14.md"
+        ],
+        "duree_s": 0.12
+      },
+      "vector": {
+        "rang": 1,
+        "resultats": 5,
+        "premier": "cse-2025-10-14.md",
+        "scores": [
+          0.57,
+          0.372,
+          0.362,
+          0.337,
+          0.307
+        ],
+        "titres": [
+          "cse-2025-10-14.md",
+          "stocks-octobre-2025.xlsx",
+          "rapport-annuel-2025.pdf",
+          "procedure-batteries.docx",
+          "message-vocal-production.mp3"
+        ],
+        "duree_s": 2.9
+      }
+    },
+    {
+      "requete": "Combien de temps le cadre est-il couvert en cas de défaut ?",
+      "attendu": "faq-sav.html",
+      "nature": "reformulation",
+      "text": {
+        "rang": null,
+        "resultats": 0,
+        "premier": null,
+        "scores": [],
+        "titres": [],
+        "duree_s": 0.08
+      },
+      "vector": {
+        "rang": 1,
+        "resultats": 6,
+        "premier": "faq-sav.html",
+        "scores": [
+          0.596,
+          0.51,
+          0.432,
+          0.43,
+          0.414
+        ],
+        "titres": [
+          "faq-sav.html",
+          "supplier-audit-batterix-en.pdf",
+          "rapport-annuel-2025.pdf",
+          "stocks-octobre-2025.xlsx",
+          "procedure-batteries.docx"
+        ],
+        "duree_s": 2.98
+      }
+    },
+    {
+      "requete": "Où ranger les accumulateurs et à quelle température ?",
+      "attendu": "procedure-batteries.docx",
+      "nature": "synonyme",
+      "text": {
+        "rang": null,
+        "resultats": 0,
+        "premier": null,
+        "scores": [],
+        "titres": [],
+        "duree_s": 0.08
+      },
+      "vector": {
+        "rang": 1,
+        "resultats": 6,
+        "premier": "procedure-batteries.docx",
+        "scores": [
+          0.581,
+          0.398,
+          0.395,
+          0.378,
+          0.358
+        ],
+        "titres": [
+          "procedure-batteries.docx",
+          "rapport-annuel-2025.pdf",
+          "stocks-octobre-2025.xlsx",
+          "message-vocal-production.mp3",
+          "supplier-audit-batterix-en.pdf"
+        ],
+        "duree_s": 2.71
+      }
+    },
+    {
+      "requete": "nouvelle usine près de l'estuaire de la Loire",
+      "attendu": "strategie-2026.pptx",
+      "nature": "paraphrase",
+      "text": {
+        "rang": null,
+        "resultats": 0,
+        "premier": null,
+        "scores": [],
+        "titres": [],
+        "duree_s": 0.12
+      },
+      "vector": {
+        "rang": 3,
+        "resultats": 5,
+        "premier": "message-vocal-production.mp3",
+        "scores": [
+          0.491,
+          0.47,
+          0.409,
+          0.335,
+          0.328
+        ],
+        "titres": [
+          "message-vocal-production.mp3",
+          "rapport-annuel-2025.pdf",
+          "strategie-2026.pptx",
+          "supplier-audit-batterix-en.pdf",
+          "cse-2025-10-14.md"
+        ],
+        "duree_s": 2.73
+      }
+    },
+    {
+      "requete": "battery supplier audit score",
+      "attendu": "supplier-audit-batterix-en.pdf",
+      "nature": "anglais",
+      "text": {
+        "rang": null,
+        "resultats": 0,
+        "premier": null,
+        "scores": [],
+        "titres": [],
+        "duree_s": 0.1
+      },
+      "vector": {
+        "rang": 1,
+        "resultats": 6,
+        "premier": "supplier-audit-batterix-en.pdf",
+        "scores": [
+          0.695,
+          0.537,
+          0.484,
+          0.462,
+          0.399
+        ],
+        "titres": [
+          "supplier-audit-batterix-en.pdf",
+          "procedure-batteries.docx",
+          "stocks-octobre-2025.xlsx",
+          "rapport-annuel-2025.pdf",
+          "faq-sav.html"
+        ],
+        "duree_s": 3.3
+      }
+    },
+    {
+      "requete": "score de l'audit du fournisseur de batteries",
+      "attendu": "supplier-audit-batterix-en.pdf",
+      "nature": "français vers anglais",
+      "text": {
+        "rang": null,
+        "resultats": 0,
+        "premier": null,
+        "scores": [],
+        "titres": [],
+        "duree_s": 0.08
+      },
+      "vector": {
+        "rang": 1,
+        "resultats": 6,
+        "premier": "supplier-audit-batterix-en.pdf",
+        "scores": [
+          0.675,
+          0.544,
+          0.536,
+          0.513,
+          0.451
+        ],
+        "titres": [
+          "supplier-audit-batterix-en.pdf",
+          "procedure-batteries.docx",
+          "stocks-octobre-2025.xlsx",
+          "rapport-annuel-2025.pdf",
+          "faq-sav.html"
+        ],
+        "duree_s": 2.67
+      }
+    },
+    {
+      "requete": "chiffre d'affaires par trimestre",
+      "attendu": "rapport-annuel-2025.pdf",
+      "nature": "thème",
+      "text": {
+        "rang": 1,
+        "resultats": 1,
+        "premier": "rapport-annuel-2025.pdf",
+        "scores": [
+          10.144
+        ],
+        "titres": [
+          "rapport-annuel-2025.pdf"
+        ],
+        "duree_s": 0.08
+      },
+      "vector": {
+        "rang": 1,
+        "resultats": 4,
+        "premier": "rapport-annuel-2025.pdf",
+        "scores": [
+          0.676,
+          0.466,
+          0.438,
+          0.412
+        ],
+        "titres": [
+          "rapport-annuel-2025.pdf",
+          "cse-2025-10-14.md",
+          "strategie-2026.pptx",
+          "supplier-audit-batterix-en.pdf"
+        ],
+        "duree_s": 2.51
+      }
+    },
+    {
+      "requete": "trottinette électrique",
+      "attendu": null,
+      "nature": "absent du corpus",
+      "text": {
+        "rang": null,
+        "resultats": 0,
+        "premier": null,
+        "scores": [],
+        "titres": [],
+        "duree_s": 0.1
+      },
+      "vector": {
+        "rang": null,
+        "resultats": 6,
+        "premier": "strategie-2026.pptx",
+        "scores": [
+          0.463,
+          0.456,
+          0.455,
+          0.385,
+          0.374
+        ],
+        "titres": [
+          "strategie-2026.pptx",
+          "stocks-octobre-2025.xlsx",
+          "rapport-annuel-2025.pdf",
+          "cse-2025-10-14.md",
+          "procedure-batteries.docx"
+        ],
+        "duree_s": 3.03
+      }
+    }
+  ]
+}
