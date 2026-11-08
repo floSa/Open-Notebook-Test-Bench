@@ -7,6 +7,9 @@ assert exacte("taux de 0,3 %", ["0.3|0,3"])
 assert exacte("stock 1240 sous le seuil de 1500", ["1 240|1240", "1 500|1500"])
 assert not exacte("environ 48 M€", ["48,6"])
 assert not exacte("21 jours", ["21", "24"])
+assert not exacte("score de 87 sur 100", ["8"])
+assert exacte("plafonnées à 8 % du montant", ["8"])
+assert not exacte("prix de 212 euros", ["21"])
 assert REFUS.search("Les documents ne mentionnent pas de directeur financier.")
 assert REFUS.search("Je ne trouve aucune information sur 2022.")
 assert not REFUS.search("Le chiffre d'affaires est de 48,6 M€.")
@@ -15,4 +18,4 @@ assert citation_correcte([{"document": "rapport-annuel-2025.pdf", "page": 3}], s
 assert citation_correcte([{"document": "rapport-annuel-2025.pdf", "page": None}], s) == {"document": True, "page": None}
 assert citation_correcte([{"document": "faq-sav.html"}], s) == {"document": False, "page": None}
 assert citation_correcte([], []) is None
-print("notation du banc : 13 contrôles OK")
+print("notation du banc : 16 contrôles OK")

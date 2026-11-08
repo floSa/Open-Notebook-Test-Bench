@@ -27,9 +27,14 @@ def normaliser(t):
     return re.sub(r"\s+", " ", t)
 
 
+def present(alt, r):
+    """alt présent dans r, sans être collé à un chiffre ou une lettre (« 8 » ne doit pas valider « 87 »)."""
+    return re.search(r"(?<![0-9a-z])" + re.escape(normaliser(alt)) + r"(?![0-9])", r) is not None
+
+
 def exacte(reponse, attendu):
     r = normaliser(reponse)
-    return all(any(normaliser(alt) in r for alt in el.split("|")) for el in attendu)
+    return all(any(present(alt, r) for alt in el.split("|")) for el in attendu)
 
 
 def citation_correcte(citations, sources):
@@ -44,12 +49,13 @@ def citation_correcte(citations, sources):
 
 
 def juge_llm(question, attendu, reponse, modele="qwen3:4b-instruct"):
+    # num_ctx identique à celui de la solution testée : un num_ctx différent force Ollama à recharger le modèle
     """Jugement complémentaire par LLM local (signalé comme tel dans les résultats)."""
     consigne = (f"Question : {question}\nÉléments attendus : {', '.join(attendu) or 'aucune réponse dans les documents'}\n"
                 f"Réponse à juger : {reponse}\n\nLa réponse est-elle correcte (contient les éléments attendus, ou signale "
                 f"l'absence d'information si aucun élément n'est attendu) ? Réponds par un seul mot : OUI ou NON.")
     req = urllib.request.Request(OLLAMA + "/api/generate", json.dumps({
-        "model": modele, "prompt": consigne, "stream": False, "options": {"temperature": 0, "num_predict": 3, "num_ctx": 4096}}).encode())
+        "model": modele, "prompt": consigne, "stream": False, "options": {"temperature": 0, "num_predict": 3, "num_ctx": 16384}}).encode())
     try:
         with urllib.request.urlopen(req, timeout=300) as r:
             return json.loads(r.read())["response"].strip().upper().startswith("OUI")
@@ -80,8 +86,10 @@ def pct(vals, q):
     return round(vals[min(len(vals) - 1, int(round(q / 100 * (len(vals) - 1))))], 2) if vals else None
 
 
-def lancer(adaptateur, etiquette, conteneurs_app, conteneurs_modeles, indexer=True, juge=True, limite=None):
+def lancer(adaptateur, etiquette, conteneurs_app, conteneurs_modeles, indexer=True, juge=True, limite=None, ids=None):
     qs = json.loads(QUESTIONS.read_text())["questions"][:limite]
+    if ids:
+        qs = [q for q in qs if q["id"] in ids]
     ech = Echantillonneur(conteneurs_app + conteneurs_modeles); ech.start()
     res = {"date": datetime.datetime.now().isoformat(timespec="seconds"), "solution": adaptateur.nom, "etiquette": etiquette,
            "config": adaptateur.config(), "questions": []}
@@ -109,6 +117,17 @@ def lancer(adaptateur, etiquette, conteneurs_app, conteneurs_modeles, indexer=Tr
     ech.stop.set(); ech.join(timeout=30)
     res["synthese"] = synthese(res["questions"], ech.pics, conteneurs_app)
     res["synthese"]["indexation_s"] = res.get("indexation", {}).get("duree_s")
+    return res
+
+
+def renoter(res):
+    """Recalcule exactitude et synthèse à partir des réponses enregistrées (pics de RAM conservés)."""
+    pics = res["synthese"]["pic_ram_mo"]; idx = res["synthese"].get("indexation_s")
+    qs = {q["id"]: q for q in json.loads(QUESTIONS.read_text())["questions"]}
+    for l in res["questions"]:
+        l["exacte"] = bool(REFUS.search(l["reponse"])) if l["type"] == "piège" else exacte(l["reponse"], qs[l["id"]]["attendu"])
+    app = [k for k in pics if k.startswith("rag-open-notebook")]
+    res["synthese"] = synthese(res["questions"], pics, app); res["synthese"]["indexation_s"] = idx
     return res
 
 
