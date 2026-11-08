@@ -1,0 +1,8 @@
+Q01 tableau         OK   127.5s  "Le chiffre d'affaires de Vélanor en 2025 s'élève à 48,6 M€ [source:ky761pntfu5q1u5h49l7]."
+Q08 tableau         OK     8.6s  'Le prix public du modèle Erdre Cargo est de 4 290 € TTC. [source:kyqoz60d4gkh1koz7k1c]'
+Q18 scan            NON   19.2s  'Le contrat de Batterix n’indique pas explicitement un volume minimal annuel de batteries. '
+Q24 tableau         OK    20.4s  'Le stock de batteries BAT-48V-14Ah reste de 1240 unités, comme indiqué dans le tableau des'
+Q32 multi-documents OK    17.4s  "Vélanor vise un chiffre d'affaires de 55 M€ en 2026 [source:kyqoz60d4gkh1koz7k1c]. À Saint"
+Q35 piège           OK    16.6s  "Le chiffre d'affaires de Vélanor en 2022 n'est pas mentionné dans les documents disponible"
+-> outils/resultats/open-notebook/banc-2026-11-08-llm-service-qwen-echantillon.json
+exactes 4/5, refus 1/1, bon document cité 3, p50 17.35 s, p95 127.49 s

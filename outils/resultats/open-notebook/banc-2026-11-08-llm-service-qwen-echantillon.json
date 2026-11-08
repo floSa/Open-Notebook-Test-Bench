@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-08T22:45:45",
+  "solution": "open-notebook",
+  "etiquette": "llm-service-qwen-echantillon",
+  "config": {
+    "mode": "chat",
+    "modele": "qwen3:4b-instruct",
+    "contexte_sources": "full content",
+    "num_ctx": 16384,
+    "chunk_size": "400 (défaut)",
+    "docling": "true",
+    "version": "1.15.1"
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "tableau",
+      "question": "Quel est le chiffre d'affaires 2025 de Vélanor ?",
+      "attendu": [
+        "48,6"
+      ],
+      "latence_s": 127.49,
+      "erreur": null,
+      "reponse": "Le chiffre d'affaires de Vélanor en 2025 s'élève à 48,6 M€ [source:ky761pntfu5q1u5h49l7].",
+      "citations": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": null,
+          "extrait": "source:ky761pntfu5q1u5h49l7"
+        }
+      ],
+      "exacte": true,
+      "citation": {
+        "document": true,
+        "page": null
+      }
+    },
+    {
+      "id": "Q08",
+      "type": "tableau",
+      "question": "Quel est le prix public du modèle Erdre Cargo ?",
+      "attendu": [
+        "4 290"
+      ],
+      "latence_s": 8.63,
+      "erreur": null,
+      "reponse": "Le prix public du modèle Erdre Cargo est de 4 290 € TTC. [source:kyqoz60d4gkh1koz7k1c]",
+      "citations": [
+        {
+          "document": "strategie-2026.pptx",
+          "page": null,
+          "extrait": "source:kyqoz60d4gkh1koz7k1c"
+        }
+      ],
+      "exacte": true,
+      "citation": {
+        "document": false,
+        "page": null
+      }
+    },
+    {
+      "id": "Q18",
+      "type": "scan",
+      "question": "Quel volume minimal annuel de batteries le contrat Batterix prévoit-il ?",
+      "attendu": [
+        "40 000"
+      ],
+      "latence_s": 19.2,
+      "erreur": null,
+      "reponse": "Le contrat de Batterix n’indique pas explicitement un volume minimal annuel de batteries. La seule information disponible dans les documents concernant les batteries est la mesure de la défaut de production, qui est de 0,3 %, et le fait que le contrat d'approvisionnement a été renouvelé en mars 2025 [source:ky761pntfu5q1u5h49l7]. Aucune donnée sur un volume minimal annuel de batteries n’est mentionnée dans le contexte fourni.",
+      "citations": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": null,
+          "extrait": "source:ky761pntfu5q1u5h49l7"
+        }
+      ],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      }
+    },
+    {
+      "id": "Q24",
+      "type": "tableau",
+      "question": "Quel stock de batteries BAT-48V-14Ah reste-t-il et est-il sous le seuil d'alerte ?",
+      "attendu": [
+        "1 240|1240",
+        "1 500|1500"
+      ],
+      "latence_s": 20.38,
+      "erreur": null,
+      "reponse": "Le stock de batteries BAT-48V-14Ah reste de 1240 unités, comme indiqué dans le tableau des stocks du 1er octobre 2025 [source:buuxun0wo03d59bdin7g]. Le seuil d'alerte est fixé à 1500 unités. Ainsi, le stock actuel (1240) est en dessous du seuil d'alerte (1500), ce qui signifie qu'il y a un risque de pénurie.",
+      "citations": [
+        {
+          "document": "stocks-octobre-2025.xlsx",
+          "page": null,
+          "extrait": "source:buuxun0wo03d59bdin7g"
+        }
+      ],
+      "exacte": true,
+      "citation": {
+        "document": true,
+        "page": null
+      }
+    },
+    {
+      "id": "Q32",
+      "type": "multi-documents",
+      "question": "Quel chiffre d'affaires Vélanor vise-t-elle en 2026 et combien d'embauches sont prévues à Saint-Nazaire ?",
+      "attendu": [
+        "55",
+        "70"
+      ],
+      "latence_s": 17.35,
+      "erreur": null,
+      "reponse": "Vélanor vise un chiffre d'affaires de 55 M€ en 2026 [source:kyqoz60d4gkh1koz7k1c]. À Saint-Nazaire, une usine d'assemblage ouvrira en septembre 2026 avec 70 embauches prévues [source:kyqoz60d4gkh1koz7k1c].",
+      "citations": [
+        {
+          "document": "strategie-2026.pptx",
+          "page": null,
+          "extrait": "source:kyqoz60d4gkh1koz7k1c"
+        }
+      ],
+      "exacte": true,
+      "citation": {
+        "document": true,
+        "page": null
+      }
+    },
+    {
+      "id": "Q35",
+      "type": "piège",
+      "question": "Quel était le chiffre d'affaires de Vélanor en 2022 ?",
+      "attendu": [],
+      "latence_s": 16.55,
+      "erreur": null,
+      "reponse": "Le chiffre d'affaires de Vélanor en 2022 n'est pas mentionné dans les documents disponibles. Les informations disponibles portent uniquement sur les années 2025 et 2026 [source:ky761pntfu5q1u5h49l7]. Aucun indicateur ou données historiques pour l'année 2022 n'ont été fournis dans le contexte fourni.",
+      "citations": [
+        {
+          "document": "rapport-annuel-2025.pdf",
+          "page": null,
+          "extrait": "source:ky761pntfu5q1u5h49l7"
+        }
+      ],
+      "exacte": true,
+      "citation": null
+    }
+  ],
+  "synthese": {
+    "questions": 6,
+    "exactes": 4,
+    "sur": 5,
+    "refus_corrects": 1,
+    "pieges": 1,
+    "citation_bon_document": 3,
+    "citation_bonne_page": 0,
+    "citations_avec_page": 0,
+    "juge_llm_oui": 0,
+    "juge_llm_sur": 0,
+    "erreurs": 0,
+    "latence_p50_s": 17.35,
+    "latence_p95_s": 127.49,
+    "par_type": {
+      "tableau": "3/3",
+      "scan": "0/1",
+      "multi-documents": "1/1",
+      "piège": "1/1"
+    },
+    "pic_ram_mo": {
+      "rag-open-notebook": 3886,
+      "rag-open-notebook-surrealdb": 100,
+      "ollama-central": 5593
+    },
+    "pic_ram_application_mo": 3986,
+    "vram": "sans objet (aucun GPU NVIDIA, socle CPU)",
+    "indexation_s": null
+  }
+}
