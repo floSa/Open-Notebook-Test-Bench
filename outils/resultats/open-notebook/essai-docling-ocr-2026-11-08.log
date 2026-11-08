@@ -1,0 +1,11 @@
+== 2026-11-08T14:11:14+01:00 Docling 2.130.0 installé par OPEN_NOTEBOOK_ENABLE_DOCLING=true (image 1.15.1)
+2026-11-08 13:10:22.784 | INFO     | open_notebook.domain.notebook:delete:658 - Deleted file for source source:lqm0unjuqcm8a104e0o3: /app/data/uploads/contrat-batterix-scan.pdf
+2026-11-08 13:10:23.649 | INFO     | api.routers.sources:_write_uploaded_file:167 - Saved uploaded file to: /app/data/uploads/contrat-batterix-scan.pdf
+           "/app/data/uploads/contrat-batterix-scan.pdf"                        
+No OCR engine found. Please review the install details.
+-- modules Python dans le conteneur :
+docling présent
+rapidocr présent
+onnxruntime absent
+easyocr absent
+tesserocr absent

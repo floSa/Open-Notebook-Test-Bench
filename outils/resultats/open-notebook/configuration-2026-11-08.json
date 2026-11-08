@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-08T13:55:46",
+  "date": "2026-11-08T18:38:47",
   "credential": {
     "id": "credential:1e0lofv7mmrxxf6axu90",
     "name": "ollama-socle",
@@ -21,19 +21,25 @@
     "num_ctx": 16384,
     "has_api_key": false,
     "created": "2026-11-08 12:52:08+00:00",
-    "updated": "2026-11-08 12:55:46.694833+00:00",
-    "model_count": 3,
+    "updated": "2026-11-08 17:38:48.216901+00:00",
+    "model_count": 4,
     "decryption_error": null
   },
   "test_connexion": {
     "provider": "ollama",
     "success": true,
-    "message": "Connected. 3 models available: bge-m3:latest, ministral-3:3b, qwen3:4b-instruct"
+    "message": "Connected. 4 models available: qwen3:4b, bge-m3:latest, ministral-3:3b (+1 more)"
   },
   "decouverte": {
     "credential_id": "credential:1e0lofv7mmrxxf6axu90",
     "provider": "ollama",
     "discovered": [
+      {
+        "name": "qwen3:4b",
+        "provider": "ollama",
+        "model_type": null,
+        "description": null
+      },
       {
         "name": "bge-m3:latest",
         "provider": "ollama",

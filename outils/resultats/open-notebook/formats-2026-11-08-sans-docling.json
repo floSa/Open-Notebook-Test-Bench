@@ -1,0 +1,138 @@
+{
+  "date": "2026-11-08T14:03:34",
+  "carnet": "Banc",
+  "etiquette": "sans-docling",
+  "documents": [
+    {
+      "document": "contrat-batterix-scan.pdf",
+      "statut": "failed",
+      "message": "Could not extract any text content from this source. The content may be empty, inaccessible, or in an unsupported format.",
+      "caracteres": 0,
+      "passages": 0,
+      "temoins_trouves": [],
+      "temoins_absents": [
+        "212",
+        "21 jours",
+        "40 000",
+        "8 %"
+      ],
+      "extrait": ""
+    },
+    {
+      "document": "cse-2025-10-14.md",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 528,
+      "passages": 1,
+      "temoins_trouves": [
+        "1 150",
+        "Le Gall"
+      ],
+      "temoins_absents": [],
+      "extrait": "# Compte rendu de la réunion du CSE du 14 octobre 2025\n\nDocument fictif.\n\n## Participants\n\nHélène Marchais (présidente), Sophie Le Gall (secrétaire du CSE), sept élus.\n\n## Décisions\n\n- Prime d'intéressement 2025 : 1 150 euros par salarié, versée en avril 2026.\n- Télétravail : jusqu'à 2 jours par sem"
+    },
+    {
+      "document": "faq-sav.html",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 594,
+      "passages": 1,
+      "temoins_trouves": [
+        "7 ans",
+        "02 40 00 12 34"
+      ],
+      "temoins_absents": [],
+      "extrait": "# FAQ du service après-vente\n\nDocument fictif.\n\n## Quelle est la durée de la garantie ?\n\nLe cadre est garanti 7 ans. La batterie et le moteur sont garantis 2 ans.\n\n## Quel est le délai de réparation ?\n\nUne réparation en atelier prend 10 jours ouvrés en moyenne. Le diagnostic est gratuit.\n\n## Comment"
+    },
+    {
+      "document": "message-vocal-production.mp3",
+      "statut": "failed",
+      "message": "Content extraction is not configured correctly. Check the content processing engine and speech-to-text settings; the worker log has the details.",
+      "caracteres": 0,
+      "passages": 0,
+      "temoins_trouves": [],
+      "temoins_absents": [
+        "Moreau",
+        "ligne",
+        "mars"
+      ],
+      "extrait": ""
+    },
+    {
+      "document": "procedure-batteries.docx",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 565,
+      "passages": 1,
+      "temoins_trouves": [
+        "Benali"
+      ],
+      "temoins_absents": [
+        "premier lundi",
+        "classe D"
+      ],
+      "extrait": "Procédure PR-SEC-04 — Charge et stockage des batteries\n\nResponsable de la procédure : Karim Benali, responsable HSE. Version 3 du 1er septembre 2025.\n\n\n# 1. Stockage\n\n\nLes batteries sont stockées entre 10 °C et 25 °C, dans le local B2 équipé d'une détection incendie.\n\nPour un stockage de plus de 30 "
+    },
+    {
+      "document": "rapport-annuel-2025.pdf",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 4704,
+      "passages": 5,
+      "temoins_trouves": [
+        "48,6",
+        "14,2",
+        "15 400",
+        "4 290",
+        "97",
+        "Motodrive",
+        "Saint-Nazaire"
+      ],
+      "temoins_absents": [],
+      "extrait": "|\n\n3. Chiffre d'affaires trimestriel\nTrimestre Chiffre d'affaires (M€) Part du total\nT1 2025 9,8 20 %\nT2 2025 13,7 28 %\nT3 2025 14,2 29 %\nT4 2025 10,9 22 %\nTotal 48,6 100 %\nLe troisième trimestre est le plus élevé de l'année, porté par la saison estivale.\nVélanor SAS - document fictif - page 4\n\n[Table 1 from page 4]\n| Trimestre | Chiffre d'affaires (M€) | Part du total |\n| --- | --- | --- |\n| T1 2"
+    },
+    {
+      "document": "stocks-octobre-2025.xlsx",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 703,
+      "passages": 1,
+      "temoins_trouves": [
+        "BAT-48V-14Ah",
+        "1240",
+        "1500",
+        "Motodrive"
+      ],
+      "temoins_absents": [],
+      "extrait": "\n# Sheet: Stocks\n\n| Référence | Désignation | Quantité | Seuil d'alerte | Entrepôt |\n| --- | --- | --- | --- | --- |\n| BAT-48V-14Ah | Batterie 48 V 14 Ah | 1240 | 1500 | Nantes |\n| MOT-250W | Moteur roue arrière 250 W | 2105 | 1200 | Nantes |\n| CAD-ALU-L | Cadre aluminium taille L | 860 | 600 | Cholet |\n| CAD-ALU-M | Cadre aluminium taille M | 1020 | 600 | Cholet |\n| FRN-HYD-02 | Frein hydrauliqu"
+    },
+    {
+      "document": "strategie-2026.pptx",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 565,
+      "passages": 1,
+      "temoins_trouves": [
+        "2 490",
+        "25 000",
+        "Utrecht"
+      ],
+      "temoins_absents": [],
+      "extrait": "Chiffre d'affaires visé : 55 M€\nPart de l'export visée : 32 %\nMarge nette visée : 7 %\n\n\n# Slide 3\n\n\n## Nouveau modèle\n\n\nVilaine Compact : vélo pliant électrique\nLancement en avril 2026\nPrix public : 2 490 € TTC\n\n\n# Slide 4\n\n\n## Usine de Saint-Nazaire\n\n\nOuverture en septembre 2026\nCapacité : 25 000 vélos par an\nInvestissement : 14 M€\n\n\n# Slide 5\n\n\n## Export\n\n\nAllemagne : croissance visée de 30 %\nPa"
+    },
+    {
+      "document": "supplier-audit-batterix-en.pdf",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 465,
+      "passages": 1,
+      "temoins_trouves": [
+        "87",
+        "0.3",
+        "Laura Fischer"
+      ],
+      "temoins_absents": [],
+      "extrait": "Supplier Quality Audit - Batterix GmbH,\nBremen\nFictional document. Audit date: 18 June 2025. Lead auditor: Laura Fischer (Vélanor\nquality team).\nOverall score: 87 out of 100. The supplier is approved for another year.\nTwo minor non-conformities were found: incomplete labelling of pallets, and missin"
+    }
+  ]
+}

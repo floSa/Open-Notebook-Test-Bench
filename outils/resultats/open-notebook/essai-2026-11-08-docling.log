@@ -1,0 +1,29 @@
+ Container rag-open-notebook-surrealdb Running 
+ Container rag-open-notebook Recreate 
+ Container rag-open-notebook Recreated 
+ Container rag-open-notebook Starting 
+ Container rag-open-notebook Started 
+API disponible après 72 s
+Downloading nvidia-nccl-cu13 (206.0MiB)
+Downloading nvidia-cusparse (144.0MiB)
+Downloading nvidia-cufft (208.1MiB)
+Downloading scipy (33.7MiB)
+Downloading transformers (11.4MiB)
+Downloading nvidia-cublas (386.1MiB)
+Downloading docling-parse (10.3MiB)
+Downloading nvidia-nvshmem-cu13 (129.1MiB)
+Downloading shapely (2.2MiB)
+Downloading nvidia-cusparselt-cu13 (162.3MiB)
+Downloading nvidia-cudnn-cu13 (495.1MiB)
+ Downloaded docling-parse
+Uninstalled 1 package in 34ms
+Installed 65 packages in 12.28s
+ + docling==2.130.0
+ + docling-core==2.96.0
+ + docling-ibm-models==4.0.4
+ + docling-parse==7.21.0
+ + docling-slim==2.130.0
+[entrypoint] Docling installed. The Docling engine, OCR and image sources are now available.
+{"docling_available":true,"crawl4ai_available":false,"crawl4ai_remote_configured":false}
+5.7G	donnees/open-notebook/notebook_data
+rag-open-notebook 2.084GiB / 15.32GiB

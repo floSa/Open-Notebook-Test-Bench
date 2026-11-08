@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-08T14:12:36",
+  "carnet": "Banc",
+  "etiquette": "docling",
+  "documents": [
+    {
+      "document": "contrat-batterix-scan.pdf",
+      "statut": "failed",
+      "message": "Could not extract any text content from this source. The content may be empty, inaccessible, or in an unsupported format.",
+      "caracteres": 0,
+      "passages": 0,
+      "temoins_trouves": [],
+      "temoins_absents": [
+        "212",
+        "21 jours",
+        "40 000",
+        "8 %"
+      ],
+      "extrait": ""
+    },
+    {
+      "document": "cse-2025-10-14.md",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 528,
+      "passages": 1,
+      "temoins_trouves": [
+        "1 150",
+        "Le Gall"
+      ],
+      "temoins_absents": [],
+      "extrait": "# Compte rendu de la réunion du CSE du 14 octobre 2025\n\nDocument fictif.\n\n## Participants\n\nHélène Marchais (présidente), Sophie Le Gall (secrétaire du CSE), sept élus.\n\n## Décisions\n\n- Prime d'intéressement 2025 : 1 150 euros par salarié, versée en avril 2026.\n- Télétravail : jusqu'à 2 jours par sem"
+    },
+    {
+      "document": "faq-sav.html",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 594,
+      "passages": 1,
+      "temoins_trouves": [
+        "7 ans",
+        "02 40 00 12 34"
+      ],
+      "temoins_absents": [],
+      "extrait": "# FAQ du service après-vente\n\nDocument fictif.\n\n## Quelle est la durée de la garantie ?\n\nLe cadre est garanti 7 ans. La batterie et le moteur sont garantis 2 ans.\n\n## Quel est le délai de réparation ?\n\nUne réparation en atelier prend 10 jours ouvrés en moyenne. Le diagnostic est gratuit.\n\n## Comment"
+    },
+    {
+      "document": "message-vocal-production.mp3",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 351,
+      "passages": 1,
+      "temoins_trouves": [
+        "Moreau",
+        "ligne",
+        "mars"
+      ],
+      "temoins_absents": [],
+      "extrait": "Message vocale de Julien Moreau, directeur de production chez Vélanor, enregistrait le 3 novembre VVTSEC. La ligne d'assoblage numéro 3 de Nantes sera arrêtée du 2 au 6 mars VVTSI pour maintenance. Pendant cet arrêt, la production du loire urbain sera transférée sur la ligne. La Réunion de l'Osement aura lieu le 19 février à 10h dans la salle Erdre."
+    },
+    {
+      "document": "procedure-batteries.docx",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 1085,
+      "passages": 1,
+      "temoins_trouves": [
+        "Benali",
+        "premier lundi",
+        "classe D"
+      ],
+      "temoins_absents": [],
+      "extrait": "e           |\n|------------------------------------------|----------------------------------|-----------------------|\n| Inspection du local B2                   | le premier lundi de chaque mois  | Karim Benali          |\n| Vérification des extincteurs de classe D | tous les 6 mois                  | prestataire Sécurifeu |\n| Formation des opérateurs                 | à l'embauche puis tous les 2 "
+    },
+    {
+      "document": "rapport-annuel-2025.pdf",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 4319,
+      "passages": 10,
+      "temoins_trouves": [
+        "48,6",
+        "14,2",
+        "15 400",
+        "4 290",
+        "97",
+        "Motodrive",
+        "Saint-Nazaire"
+      ],
+      "temoins_absents": [],
+      "extrait": "025     | 9,8                       | 20 %            |\n| T2 2025     | 13,7                      | 28 %            |\n| T3 2025     | 14,2                      | 29 %            |\n| T4 2025     | 10,9                      | 22 %            |\n| Total       | 48,6                      | 100 %           |\n\nLe troisième trimestre est le plus élevé de l'année, porté par la saison estivale.\n\n## 4. Produ"
+    },
+    {
+      "document": "stocks-octobre-2025.xlsx",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 1110,
+      "passages": 1,
+      "temoins_trouves": [
+        "BAT-48V-14Ah",
+        "1240",
+        "1500",
+        "Motodrive"
+      ],
+      "temoins_absents": [],
+      "extrait": "uil d'alerte | Entrepôt   |\n|--------------|---------------------------|------------|------------------|------------|\n| BAT-48V-14Ah | Batterie 48 V 14 Ah       |       1240 |             1500 | Nantes     |\n| MOT-250W     | Moteur roue arrière 250 W |       2105 |             1200 | Nantes     |\n| CAD-ALU-L    | Cadre aluminium taille L  |        860 |              600 | Cholet     |\n| CAD-ALU-M "
+    },
+    {
+      "document": "strategie-2026.pptx",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 516,
+      "passages": 1,
+      "temoins_trouves": [
+        "2 490",
+        "25 000",
+        "Utrecht"
+      ],
+      "temoins_absents": [],
+      "extrait": " 2026\n\n- Chiffre d'affaires visé : 55 M€\n- Part de l'export visée : 32 %\n- Marge nette visée : 7 %\n\n# Nouveau modèle\n\n- Vilaine Compact : vélo pliant électrique\n- Lancement en avril 2026\n- Prix public : 2 490 € TTC\n\n# Usine de Saint-Nazaire\n\n- Ouverture en septembre 2026\n- Capacité : 25 000 vélos par an\n- Investissement : 14 M€\n\n# Export\n\n- Allemagne : croissance visée de 30 %\n- Pays-Bas : ouvertu"
+    },
+    {
+      "document": "supplier-audit-batterix-en.pdf",
+      "statut": "completed",
+      "message": "",
+      "caracteres": 430,
+      "passages": 1,
+      "temoins_trouves": [
+        "87",
+        "0.3",
+        "Laura Fischer"
+      ],
+      "temoins_absents": [],
+      "extrait": "## Supplier Quality Audit - Batterix GmbH, Bremen\n\nFictional document. Audit date: 18 June 2025. Lead auditor: Laura Fischer (Vélanor quality team). Overall score: 87 out of 100. The supplier is approved for another year. Two minor non-conformities were found: incomplete labelling of pallets, and mi"
+    }
+  ]
+}
