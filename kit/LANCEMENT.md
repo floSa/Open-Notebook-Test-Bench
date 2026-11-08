@@ -73,10 +73,12 @@ Ces étapes demandent des droits d'administrateur, que l'agent n'a pas. Tout le 
 
 Dans Ubuntu :
 
+Un dépôt par solution, dans `~/Projets/Tutoriels/<Solution>-Test-Bench` (comme `Open-Notebook-Test-Bench`). Le kit, le corpus et les outils communs sont repris du banc précédent pour que les mesures restent comparables :
+
 ```bash
-mkdir -p ~/manuels-rag-local && cd ~/manuels-rag-local
-unzip /mnt/c/Users/<utilisateur>/Downloads/kit-manuels-rag-local.zip -d .
-git init && git add -A && git commit -m "Kit : prompt, fiches et réglages"
+mkdir -p ~/Projets/Tutoriels/RAGFlow-Test-Bench && cd ~/Projets/Tutoriels/RAGFlow-Test-Bench
+cp -r ~/Projets/Tutoriels/Open-Notebook-Test-Bench/{kit,corpus,CLAUDE.md,.claude,.gitignore,LICENSE} . && mkdir -p outils && cp -r ~/Projets/Tutoriels/Open-Notebook-Test-Bench/outils/communs outils/
+git init && git add -A && git commit -m "Kit : prompt, fiches, outils communs et corpus repris d'Open Notebook"
 ```
 
 Le dossier doit rester dans le système de fichiers de WSL (`~/…`), pas sous `/mnt/c` : les accès disque y sont bien plus rapides.
@@ -86,7 +88,7 @@ Le dossier doit rester dans le système de fichiers de WSL (`~/…`), pas sous `
 ## 4. Lancer
 
 ```bash
-cd ~/manuels-rag-local
+cd ~/Projets/Tutoriels/RAGFlow-Test-Bench
 claude --permission-mode auto
 ```
 
@@ -104,7 +106,7 @@ Pour ajuster les limites (taille des modèles, volume total téléchargé, nombr
 - Une mission dure plusieurs heures, davantage pour RAGFlow.
 - Suivi : `JOURNAL.md` à la racine (une entrée par étape) et `git log --oneline`.
 - **Limite d'usage atteinte** : l'objectif se met en pause, puis reprend quand la limite se réinitialise si la session est restée ouverte.
-- **Session fermée** (redémarrage, coupure) : `cd ~/manuels-rag-local && claude --continue --permission-mode auto`. L'objectif actif est restauré à la reprise, et l'agent repart du journal.
+- **Session fermée** (redémarrage, coupure) : `claude --continue --permission-mode auto` depuis le dossier de la solution. L'objectif actif est restauré à la reprise, et l'agent repart du journal.
 - Pour arrêter : `Échap`, ou `/goal clear` pour retirer l'objectif.
 
 <a id="fin"></a>
