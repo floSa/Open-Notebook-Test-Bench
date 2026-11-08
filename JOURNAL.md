@@ -7,6 +7,8 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 | N° | Décision | Option retenue (la plus prudente) | À trancher par l'utilisateur |
 |---|---|---|---|
 | D1 | La machine d'exécution n'a pas de GPU NVIDIA (Intel Arc 140T intégré, invisible pour Docker). Le §2 du prompt prévoit l'arrêt ; le `/goal` exige d'aller au critère de fin. | Socle sur CPU avec Ollama (repli prévu par la fiche), image locale `ollama/ollama` 0.30.7 figée par empreinte, modèles déjà présents copiés depuis `~/.ollama`. vLLM non installé. Profil A mesuré sur CPU ; profil B (RTX 4060 Ti 16 Go) en [Estimation]. | Relancer la mission sur une machine NVIDIA pour mesurer vLLM, ou accepter le socle CPU. |
+| D3 | L'OCR de Docling ne fonctionne pas dans l'image 1.15.1 (`onnxruntime` absent). L'installer dans le conteneur sort de l'enveloppe (paquets PyPI seulement dans `.venv` du dépôt). | Ne pas modifier le conteneur ; scan documenté en échec, contournement en [À tester]. | Autoriser `pip install onnxruntime` dans le conteneur, ou signaler le défaut au projet. |
+| D4 | Le banc en mode « Demander » (Ask) sur 38 questions dépasserait plusieurs heures sur CPU. | Échantillon d'une question par type, consigné comme tel. | Relancer le banc Ask complet sur une machine avec GPU. |
 | D2 | Des conteneurs `rag-ollama`, `rag-agent-api`, `rag-frontend` existent déjà (autre projet `rag-agent-chat`, arrêtés). | Ne pas y toucher. Conteneur du socle nommé `rag-socle-ollama`, avec l'alias réseau `rag-ollama` sur le réseau `rag-local`. `nettoyer.sh` ne vise que des noms explicites. | Renommer ou supprimer l'ancien projet si souhaité. |
 
 ## Entrées
@@ -33,3 +35,31 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 - Résultat : qwen3:4b-instruct 14,7 à 17,9 jetons/s en génération ; lecture du prompt 67 (4096) → 53 (8192) → 36 (16384) → 24 jetons/s (32768) ; RAM d'Ollama 7,3 → 13,9 Go ; 32768 tient mais demande 873 s pour un prompt de 16 000 jetons. Dépassement : 8 800 jetons envoyés avec `num_ctx` 2048, tronqués à 2 047 sans erreur (`truncated = 1` dans les journaux). Installation : 146 s la première fois (dont 120 s d'attente inutile, l'interface répondant 307 ; corrigé), 2 s ensuite. Ports sur 127.0.0.1 seulement, refusés sur l'adresse de WSL ; API en 401 sans mot de passe. Application seule : 458 Mo au repos, environ 550 Mo en pointe d'indexation. Question test : réponse juste avec `[source:…]` en 28,7 s. Le moteur d'URL vaut déjà `simple` par défaut.
 - Fichiers : `outils/communs/mesure_modeles.py`, `outils/resultats/socle/mesures-*`, `outils/open-notebook/*`, `outils/resultats/open-notebook/{installation,configuration,ports,verif-minimale,disque}-2026-11-08.*`, relectures Speaches et MCP.
 - Suite : serveur de voix Speaches, captures, puis manuels.
+
+### 2026-11-08 14:20 — Phase E et F en cours
+
+- Fait : serveur de voix Speaches (Kokoro, faster-whisper-small copié), message audio du corpus (38 questions, dont 2 audio) ; voix branchée dans Open Notebook ; banc de référence (chat, « full content », qwen3:4b-instruct, sans Docling) ; correction de la notation du banc (« 8 » reconnu dans « 87 ») et renotation (`renoter.py`) ; essai MCP (`open-notebook-mcp` 0.3.0 avec `mcp<2`) ; Docling activé et mesuré ; essai des formats avec et sans Docling ; manuels 00, 01, 02, 03, 08, 11, 12 rédigés ; file d'essais séquentielle (`file_essais.sh`).
+- Résultat : banc de référence 25/34 exactes, 4/4 refus, p50 10,8 s, p95 23,8 s, indexation 70 s. Défauts constatés : tableau DOCX perdu sans Docling ; transcription audio en échec sans `OPENAI_COMPATIBLE_BASE_URL_STT` (contourné) ; OCR de Docling inopérant (`onnxruntime` absent, D3) ; `create_source` du serveur MCP tiers en échec. Docling : 72 s d'installation, 5,7 Go, paquets CUDA inutiles.
+- Incident : l'étape `formats` de la file a tourné avant la réindexation Docling ; relancée à la main après (fichier écrasé). `pkill -f` a tué deux fois le shell appelant (motif présent dans sa propre ligne de commande) ; garde-fou réécrit en script.
+- Suite : fin de la file (banc Docling, recherche, transformations, ministral, contexte 4096, exemples), puis chat, podcast, démo, sauvegarde, manuels 04 à 07, 09, 10, phase H.
+
+### 2026-11-08 16:10 — Incident : mémoire de WSL saturée
+
+- Constat : l'application signalait « reconnexion à Ubuntu 24.04 » depuis 36 minutes. RAM de WSL 15,3/15,7 Go, swap 4/4 Go, charge 47 ; `rag-socle-ollama` à 12,8 Go.
+- Cause : échantillon « Demander » (sorties de stratégie très longues, jusqu'au délai de 900 s) après l'essai du chat qui avait chargé un troisième modèle (qwen3:4b), avec deux requêtes simultanées et le cache de prompts d'Ollama.
+- Action : arrêt de `suite_essais.sh`, de l'échantillon « Demander » (6 questions sur 8 passées, résultats dans `essai-2026-11-08-banc-ask.log` seulement : 1 exacte, 4 réponses vides, durées de 74 à 1 089 s) et de l'attente de `suite_essais2.sh` ; déchargement des modèles. RAM disponible revenue à 13,3 Go.
+- Suite : podcast, démonstration et banc 6144 lancés un par un, en surveillant la mémoire ; « Demander » déclaré inutilisable sur CPU avec ce modèle (D4).
+
+### 2026-11-08 17:35 — Phase F (fin) : podcast, démonstration, banc 6144
+
+- Fait : podcast généré (profils `duo-fr` et `court-fr`, 77 s d'audio, 307 s de génération) ; manuel 07 ; jeu de démonstration « Démo Vélanor » (8 sources sur 9, trois conversations citées, deux notes) ; manuel 09 ; sauvegarde rendue plus légère (cache Docling de 6,2 Go exclu, repris à la restauration) ; vérificateur : les libellés cités entre « » ne comptent plus pour le ton ; banc à `num_ctx` 6144 lancé.
+- Incident : la tâche de podcast est restée « new » pendant 3 600 s : worker bloqué depuis la saturation mémoire (connexion SurrealDB perdue). `docker restart rag-open-notebook` : tâche reprise et terminée. Speaches (2,4 Go) redémarré pour libérer la mémoire ; modèle de chat déchargé avant la démonstration.
+- Résultat : la seconde voix (`am_michael`, anglaise) disparaît de la transcription de contrôle de l'épisode ; recette 3 de la démonstration : un pourcentage de 2025 attribué à l'objectif 2026 sous une citation valide.
+- Suite : fin du banc 6144, manuel 10, sauvegarde et restauration, relecture adversariale (en cours), phase H.
+
+### 2026-11-08 18:50 — Phase G (fin) et phase H, clôture
+
+- Fait : banc à `num_ctx` 6144 (28/34, 4/4 ; latences faussées par les rechargements du modèle, car le juge LLM tourne à 16384 ; preuve : extrait du journal d'Ollama dans `outils/resultats/socle/`) ; manuel 10 complété ; essai de sauvegarde et de restauration (28 s, 5,5 Mo ; 18 s ; carnet témoin disparu, question de contrôle juste) ; relecture adversariale par un sous-agent neuf (22 points, tous traités ou requalifiés) ; nettoyage (carnets « Banc » et « Essai installation » supprimés, données mises de côté par la restauration supprimées) ; relevé des ressources ; `RAPPORT-open-notebook.md` ; index et comparatif ; garde-fou mémoire arrêté.
+- Résultat : `verifier_docs.py` à 0 point ; solution en marche (`num_ctx` 16384), interface sur http://127.0.0.1:8502 (307 vers `/notebooks`) ; carnet « Démo Vélanor » et un épisode de podcast gardés.
+- Incident : `nettoyer_essais.py` s'est arrêté sur une limite de l'API (`limit` ≤ 100) après avoir supprimé les carnets ; corrigé et relancé, consigné dans `nettoyage-2026-11-08.txt`.
+- Suite : décisions D1 à D4 à trancher par l'utilisateur ; solution suivante proposée : RAGFlow (fiche 02).
