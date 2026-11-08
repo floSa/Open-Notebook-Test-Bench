@@ -91,17 +91,18 @@ Comparer aux besoins de la fiche. Un manque bloquant déclenche l'arrêt décrit
 Le socle sert à toutes les solutions. Ne jamais écraser les résultats d'une solution précédente ; versionner par date.
 
 1. **Inventaire des modèles déjà présents** (`outils/communs/inventaire_modeles.sh`, résultat dans `outils/resultats/socle/modeles-existants.json`). Chercher au moins dans : le chemin donné au lancement (`MODELES_EXISTANTS`), `~/.cache/huggingface/hub`, `/mnt/c/Users/*/.cache/huggingface/hub`, `/mnt/c/Users/*/.lmstudio/models`, `/mnt/c/Users/*/.ollama/models`. Relever pour chacun : nom, format (safetensors, AWQ, GPTQ, GGUF), taille, type (chat, embedding, reranker). Ne rien modifier ni supprimer dans ces dossiers.
-2. **Serveur de modèles : vLLM d'abord.** Réseau Docker `rag-local`. Image officielle `vllm/vllm-openai`, version figée. Trois conteneurs qui se partagent le GPU :
+2. **Service de modèles : LLM-Service, jamais un serveur propre à la solution.** Les modèles de chat et d'embedding sont servis par le dépôt séparé LLM-Service (`~/Projets/Projet-IA/LLM-Service`), partagé par toutes les applications. Aucune solution n'embarque ni ne lance son propre Ollama ou vLLM ; si son compose officiel en contient un, l'override le retire.
 
-   | Conteneur | Rôle | Port |
-   |---|---|---|
-   | `rag-vllm-chat` | modèle de chat | `127.0.0.1:8000` |
-   | `rag-vllm-embed` | modèle d'embedding (mode pooling ou embed selon la version) | `127.0.0.1:8001` |
-   | `rag-vllm-rerank` | reranker, seulement s'il tient en mémoire | `127.0.0.1:8002` |
+   | Machine | Branche de LLM-Service | Conteneurs | Adresse vue par l'application (réseau `llm-net`) |
+   |---|---|---|---|
+   | sans GPU NVIDIA | `service-ollama` (sur CPU : `docker-compose.override.yml` local qui retire la réservation de GPU) | `ollama-central` (chat et embedding) | `http://ollama-central:11434` (fournisseur Ollama) ou `http://ollama-central:11434/v1` (compatible OpenAI) |
+   | avec GPU NVIDIA | `service-vllm` | `vllm-central` (chat), `vllm-embed` (embedding) ; un serveur vLLM ne sert qu'un modèle | `http://vllm-central:8000/v1`, `http://vllm-embed:8000/v1` |
 
-   - Monter les modèles existants en lecture seule. Si le chargement depuis `/mnt/c` est trop lent, copier dans un volume WSL (copie, pas téléchargement) et le mesurer.
-   - Partager la VRAM avec `--gpu-memory-utilization` (somme des trois inférieure à 0,95). Fixer `--max-model-len`. Utiliser `--enforce-eager` si la mémoire manque.
-   - Ollama (`ollama/ollama`, conteneur `rag-ollama`, `127.0.0.1:11434`) seulement en repli : modèle disponible uniquement en GGUF et refusé par vLLM, ou solution qui ne marche pas avec vLLM. Chaque repli est justifié dans le journal.
+   - Démarrage et contrôle : `outils/communs/llm_service.sh`. Ne jamais arrêter ni supprimer LLM-Service depuis ce dépôt (`arreter.sh`, `nettoyer.sh`) : d'autres applications l'utilisent.
+   - Le conteneur de l'application rejoint le réseau externe `llm-net` (en plus de `rag-local` pour la voix).
+   - Même taille de contexte pour toutes les applications et pour le juge du banc (`num_ctx` 16384, `OLLAMA_CONTEXT_LENGTH=16384` dans le `.env` de LLM-Service) : avec Ollama, deux tailles différentes forcent un rechargement du modèle à chaque alternance.
+   - Reranker : Ollama n'en sert pas. Une solution qui en utilise un garde son reranker intégré, documenté comme tel ; avec `service-vllm`, un conteneur reranker peut être ajouté à LLM-Service.
+   - Voix (transcription, synthèse) : serveur commun `rag-speaches` (`outils/communs/voix.sh`, `http://rag-speaches:8000/v1`, réseau `rag-local`).
 3. **Choix des modèles (SLM)**, justifié dans `outils/resultats/socle/modeles.json`. Priorité aux modèles déjà présents. Téléchargement seulement si rien ne convient, dans la limite fixée au lancement.
    - Chat : modèle instruct récent, bon en français, quantifié 4 bits (AWQ ou GPTQ) pour vLLM. Repères : environ 3 à 4 milliards de paramètres sous 8 Go de VRAM, 7 à 8 milliards sous 12 Go, jusqu'à 14 milliards avec 16 Go.
    - Embedding : multilingue, `BAAI/bge-m3` ou équivalent.
@@ -125,7 +126,7 @@ Le socle sert à toutes les solutions. Ne jamais écraser les résultats d'une s
    Sortie en JSON et en tableau Markdown.
 9. Captures : Playwright exécuté dans le conteneur officiel `mcr.microsoft.com/playwright/python` (version figée), branché sur le réseau `rag-local`, scripts dans `outils/communs/captures/`. Rien à installer sur WSL.
 10. `outils/communs/verifier_docs.py` (règles du §7).
-11. `outils/communs/nettoyer.sh <solution>` : arrête et supprime uniquement les ressources `rag-<solution>` ; option `--socle` pour vLLM et Ollama. Ce script n'est jamais lancé automatiquement en fin de mission.
+11. `outils/communs/nettoyer.sh <solution>` : arrête et supprime uniquement les ressources `rag-<solution>` ; option `--socle` pour le serveur de voix ; LLM-Service n'est jamais touché. Ce script n'est jamais lancé automatiquement en fin de mission.
 
 ### Phase C. Cadrage
 
@@ -140,9 +141,9 @@ Le socle sert à toutes les solutions. Ne jamais écraser les résultats d'une s
 Script rejouable et idempotent `outils/<solution>/installer.sh` :
 
 1. récupération à la version figée ;
-2. fichier d'override compose : ports sur `127.0.0.1`, réseau `rag-local`, volumes dans `donnees/<solution>/`, secrets générés localement ;
+2. fichier d'override compose : ports sur `127.0.0.1`, réseaux `rag-local` et `llm-net`, volumes dans `donnees/<solution>/`, secrets générés localement ;
 3. démarrage et attente de l'état sain ;
-4. branchement au socle (vLLM, fournisseur « OpenAI-compatible » ou fournisseur vLLM natif) ;
+4. branchement à LLM-Service (réseau `llm-net` ; fournisseur Ollama, « OpenAI-compatible » ou vLLM natif selon la branche) ;
 5. création du compte local et des clés d'essai ;
 6. vérification fonctionnelle minimale : import d'un document, une question, une citation affichée.
 
