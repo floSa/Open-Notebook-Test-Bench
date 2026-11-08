@@ -1,0 +1,86 @@
+2026-11-08 16:12:25.498 | INFO     | podcast_creator.graph:<module>:21 - Creating podcast generation graph
+2026-11-08 16:12:28.632 | INFO     | podcast_creator.graph:<module>:21 - Creating podcast generation graph
+2026-11-08 16:12:28.795 | INFO     | commands.podcast_commands:generate_podcast_command:130 - Starting podcast generation for episode: Essai Essai installation
+2026-11-08 16:12:28.795 | INFO     | commands.podcast_commands:generate_podcast_command:133 - Using episode profile: court-fr
+2026-11-08 16:12:28.880 | INFO     | commands.podcast_commands:generate_podcast_command:163 - Loaded episode profile: court-fr
+2026-11-08 16:12:28.880 | INFO     | commands.podcast_commands:generate_podcast_command:164 - Loaded speaker profile: duo-fr
+2026-11-08 16:12:29.327 | INFO     | commands.podcast_commands:generate_podcast_command:200 - Resolved models - outline: ollama/qwen3:4b-instruct, transcript: ollama/qwen3:4b-instruct, tts: openai_compatible/speaches-ai/Kokoro-82M-v1.0-ONNX
+2026-11-08 16:12:29.616 | WARNING  | commands.podcast_commands:generate_podcast_command:288 - Speaker profile 'business_panel' has no voice model, removing from config to prevent validation errors
+2026-11-08 16:12:29.616 | WARNING  | commands.podcast_commands:generate_podcast_command:288 - Speaker profile 'solo_expert' has no voice model, removing from config to prevent validation errors
+2026-11-08 16:12:29.726 | WARNING  | commands.podcast_commands:generate_podcast_command:288 - Speaker profile 'tech_experts' has no voice model, removing from config to prevent validation errors
+2026-11-08 16:12:29.788 | INFO     | commands.podcast_commands:generate_podcast_command:361 - Configured podcast-creator with episode and speaker profiles
+2026-11-08 16:12:29.788 | INFO     | commands.podcast_commands:generate_podcast_command:363 - Generated briefing (length: 93 chars)
+2026-11-08 16:12:29.791 | INFO     | commands.podcast_commands:generate_podcast_command:369 - Created output directory: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e
+2026-11-08 16:12:29.791 | INFO     | commands.podcast_commands:generate_podcast_command:372 - Starting podcast generation with podcast-creator...
+2026-11-08 16:12:29.825 | INFO     | podcast_creator.nodes:generate_outline_node:132 - Starting outline generation
+2026-11-08 16:14:14.913 | INFO     | podcast_creator.nodes:generate_outline_node:176 - Generated outline with 3 segments
+2026-11-08 16:14:14.915 | INFO     | podcast_creator.nodes:generate_transcript_node:186 - Starting transcript generation
+2026-11-08 16:14:14.937 | INFO     | podcast_creator.nodes:generate_transcript_node:229 - Generating transcript for segment 1/3: Qu'est-ce que le service après-vente ?
+2026-11-08 16:15:06.981 | INFO     | podcast_creator.nodes:generate_transcript_node:229 - Generating transcript for segment 2/3: Durée des garanties
+2026-11-08 16:15:58.242 | INFO     | podcast_creator.nodes:generate_transcript_node:229 - Generating transcript for segment 3/3: Comment faire en cas de problème ?
+2026-11-08 16:17:01.205 | INFO     | podcast_creator.nodes:generate_transcript_node:254 - Generated transcript with 14 dialogue segments
+2026-11-08 16:17:01.205 | INFO     | podcast_creator.nodes:route_audio_generation:267 - Routing 14 dialogue segments for sequential batch processing
+2026-11-08 16:17:01.206 | INFO     | podcast_creator.nodes:generate_all_audio_node:283 - Using TTS batch size: 1
+2026-11-08 16:17:01.206 | INFO     | podcast_creator.nodes:generate_all_audio_node:304 - Generating 14 audio clips in sequential batches of 1
+2026-11-08 16:17:01.206 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 1/14 (clips 0-0)
+2026-11-08 16:17:01.206 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0000 for Camille
+2026-11-08 16:17:03.787 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0000.mp3
+2026-11-08 16:17:03.789 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 1/14
+2026-11-08 16:17:04.790 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 2/14 (clips 1-1)
+2026-11-08 16:17:04.791 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0001 for Hugo
+2026-11-08 16:17:06.393 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0001.mp3
+2026-11-08 16:17:06.394 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 2/14
+2026-11-08 16:17:07.396 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 3/14 (clips 2-2)
+2026-11-08 16:17:07.397 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0002 for Camille
+2026-11-08 16:17:08.699 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0002.mp3
+2026-11-08 16:17:08.700 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 3/14
+2026-11-08 16:17:09.702 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 4/14 (clips 3-3)
+2026-11-08 16:17:09.703 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0003 for Camille
+2026-11-08 16:17:10.383 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0003.mp3
+2026-11-08 16:17:10.384 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 4/14
+2026-11-08 16:17:11.386 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 5/14 (clips 4-4)
+2026-11-08 16:17:11.387 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0004 for Hugo
+2026-11-08 16:17:13.005 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0004.mp3
+2026-11-08 16:17:13.006 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 5/14
+2026-11-08 16:17:14.008 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 6/14 (clips 5-5)
+2026-11-08 16:17:14.009 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0005 for Camille
+2026-11-08 16:17:14.830 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0005.mp3
+2026-11-08 16:17:14.831 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 6/14
+2026-11-08 16:17:15.833 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 7/14 (clips 6-6)
+2026-11-08 16:17:15.833 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0006 for Hugo
+2026-11-08 16:17:17.173 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0006.mp3
+2026-11-08 16:17:17.175 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 7/14
+2026-11-08 16:17:18.176 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 8/14 (clips 7-7)
+2026-11-08 16:17:18.177 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0007 for Camille
+2026-11-08 16:17:19.327 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0007.mp3
+2026-11-08 16:17:19.329 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 8/14
+2026-11-08 16:17:20.330 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 9/14 (clips 8-8)
+2026-11-08 16:17:20.331 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0008 for Hugo
+2026-11-08 16:17:22.047 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0008.mp3
+2026-11-08 16:17:22.048 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 9/14
+2026-11-08 16:17:23.049 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 10/14 (clips 9-9)
+2026-11-08 16:17:23.050 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0009 for Camille
+2026-11-08 16:17:23.688 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0009.mp3
+2026-11-08 16:17:23.690 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 10/14
+2026-11-08 16:17:24.691 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 11/14 (clips 10-10)
+2026-11-08 16:17:24.692 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0010 for Hugo
+2026-11-08 16:17:27.889 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0010.mp3
+2026-11-08 16:17:27.891 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 11/14
+2026-11-08 16:17:28.892 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 12/14 (clips 11-11)
+2026-11-08 16:17:28.892 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0011 for Hugo
+2026-11-08 16:17:30.754 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0011.mp3
+2026-11-08 16:17:30.755 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 12/14
+2026-11-08 16:17:31.757 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 13/14 (clips 12-12)
+2026-11-08 16:17:31.758 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0012 for Camille
+2026-11-08 16:17:32.487 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0012.mp3
+2026-11-08 16:17:32.488 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 13/14
+2026-11-08 16:17:33.490 | INFO     | podcast_creator.nodes:generate_all_audio_node:316 - Processing batch 14/14 (clips 13-13)
+2026-11-08 16:17:33.491 | INFO     | podcast_creator.nodes:generate_single_audio_clip:361 - Generating audio clip 0013 for Hugo
+2026-11-08 16:17:35.419 | INFO     | podcast_creator.nodes:generate_single_audio_clip:385 - Generated audio clip: data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/clips/0013.mp3
+2026-11-08 16:17:35.421 | INFO     | podcast_creator.nodes:generate_all_audio_node:340 - Completed batch 14/14
+2026-11-08 16:17:35.421 | INFO     | podcast_creator.nodes:generate_all_audio_node:346 - Generated all 14 audio clips
+2026-11-08 16:17:35.422 | INFO     | podcast_creator.nodes:combine_audio_node:392 - Starting audio combination
+2026-11-08 16:17:35.422 | INFO     | podcast_creator.core:combine_audio_files:365 - [Core Function] combine_audio_files called.
+2026-11-08 16:17:35.802 | INFO     | podcast_creator.core:combine_audio_files:441 - Successfully combined audio to: /app/data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/audio/33fa54cf-b4a3-4810-9b75-74a36ef6397e.mp3
+2026-11-08 16:17:35.803 | INFO     | podcast_creator.nodes:combine_audio_node:407 - Combined audio saved to: /app/data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/audio/33fa54cf-b4a3-4810-9b75-74a36ef6397e.mp3
+2026-11-08 16:17:35.857 | INFO     | commands.podcast_commands:generate_podcast_command:416 - Successfully generated podcast episode: episode:thun0k3gnsb9fcote02i in 307.06s

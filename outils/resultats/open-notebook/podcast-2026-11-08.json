@@ -1,0 +1,173 @@
+{
+  "date": "2026-11-08T16:10:40",
+  "phrase": "Le chiffre d'affaires de l'entreprise a progressé de douze pour cent, et la nouvelle usine de Saint-Nazaire ouvrira en septembre avec soixante-dix embauches.",
+  "voix": [
+    {
+      "voix": "ff_siwis",
+      "mots_retrouves": 0.7,
+      "transcription": "Le chiffre d'affaires de l'entreprise a progressé de 12 %, et la nouvelle usine de Sénasert ouvrira en septembre avec 70 enbauches.",
+      "tts_s": 12.2
+    },
+    {
+      "voix": "em_alex",
+      "mots_retrouves": 0.78,
+      "transcription": "Le chiffre d'affaires de l'entreprise a progressé de 12%, et la nouvelle usine de Sainte-Nassaire ouvrira en septembre avec Soixante-Dix-en-Bouches.",
+      "tts_s": 2.5
+    },
+    {
+      "voix": "im_nicola",
+      "mots_retrouves": 0.74,
+      "transcription": "L'équifre d'affaires de l'entreprise a progressé de 12% et la nouvelle usine de Sainte-Nazaire ouvrira en septembre avec Soixante-Dix en Baucus.",
+      "tts_s": 2.2
+    },
+    {
+      "voix": "pm_alex",
+      "mots_retrouves": 0.85,
+      "transcription": "Le chiffre d'affaires de l'entreprise a progressé de 12%. Et la nouvelle usine de Saint-Nazaire ouvrira en septembre avec Soixante-Dix en Bauches.",
+      "tts_s": 2.1
+    },
+    {
+      "voix": "am_michael",
+      "mots_retrouves": 0.93,
+      "transcription": "Le chiffre d'affaires de l'entreprise a progressé de deux pour cent. Et la nouvelle usine de Saint-Nazaire-Uvrira en septembre avec Soixante-Dix embauches.",
+      "tts_s": 2.7
+    },
+    {
+      "voix": "bm_george",
+      "mots_retrouves": 0.85,
+      "transcription": "Le chiffre d'affaires de l'entreprise a progressé de 2% et la nouvelle usine de Saint-Nazaire-Uvriere en septembre avec Soixante-Dix embauches.",
+      "tts_s": 2.6
+    }
+  ],
+  "seconde_voix": "am_michael",
+  "profils": {
+    "locuteur": {
+      "id": "speaker_profile:boehvn6esnl2lqj4ksn0",
+      "name": "duo-fr",
+      "description": "Deux voix pour un épisode en français",
+      "voice_model": "model:ee6x111oa9rh8a93lbgx",
+      "speakers": [
+        {
+          "backstory": "Animatrice, pose des questions simples.",
+          "name": "Camille",
+          "personality": "Curieuse, claire, phrases courtes.",
+          "voice_id": "ff_siwis"
+        },
+        {
+          "backstory": "Analyste de l'entreprise, connaît les documents.",
+          "name": "Hugo",
+          "personality": "Précis, cite les chiffres.",
+          "voice_id": "am_michael"
+        }
+      ]
+    },
+    "episode": {
+      "id": "episode_profile:uh20twq9xlai6b1l7dy4",
+      "name": "court-fr",
+      "description": "Épisode court en français",
+      "speaker_config": "speaker_profile:boehvn6esnl2lqj4ksn0",
+      "speaker_config_name": "duo-fr",
+      "outline_llm": "model:y1y42teep0qdu0n4cudi",
+      "transcript_llm": "model:y1y42teep0qdu0n4cudi",
+      "language": "fr-FR",
+      "default_briefing": "Épisode court et factuel, en français, qui présente les informations principales des sources.",
+      "num_segments": 3,
+      "max_tokens": 4096
+    }
+  },
+  "job": {
+    "job_id": "command:y5mqqzeu63ut46mij4zv",
+    "status": "submitted",
+    "message": "Podcast generation started for episode 'Essai Essai installation'",
+    "episode_profile": "court-fr",
+    "episode_name": "Essai Essai installation"
+  },
+  "etat_final": {
+    "job_id": "command:y5mqqzeu63ut46mij4zv",
+    "status": "new",
+    "result": null,
+    "error_message": null,
+    "created": null,
+    "updated": null,
+    "progress": null
+  },
+  "duree_generation_s": 3602.8,
+  "episode": {
+    "date": "2026-11-08T17:18:26",
+    "nom": "Essai Essai installation",
+    "id": "episode:thun0k3gnsb9fcote02i",
+    "fichier": "donnees/open-notebook/notebook_data/podcasts/episodes/33fa54cf-b4a3-4810-9b75-74a36ef6397e/audio/33fa54cf-b4a3-4810-9b75-74a36ef6397e.mp3",
+    "taille_octets": 1233452,
+    "duree_s": 77.0,
+    "repliques": 14,
+    "locuteurs": [
+      "Camille",
+      "Hugo"
+    ],
+    "script": [
+      {
+        "dialogue": "Qu'est-ce que le service après-vente ?",
+        "speaker": "Camille"
+      },
+      {
+        "dialogue": "C'est le support qui garantit les pièces et les réparations après l'achat du produit.",
+        "speaker": "Hugo"
+      },
+      {
+        "dialogue": "Dans cet épisode, on parle des garanties, du délai de réparation et des moyens de contact.",
+        "speaker": "Camille"
+      },
+      {
+        "dialogue": "Quelles sont les durées des garanties ?",
+        "speaker": "Camille"
+      },
+      {
+        "dialogue": "Le cadre est garanti 7 ans. La batterie et le moteur sont garantis 2 ans.",
+        "speaker": "Hugo"
+      },
+      {
+        "dialogue": "Et la garantie couvre-t-elle les pièces de remplacement ?",
+        "speaker": "Camille"
+      },
+      {
+        "dialogue": "Seulement les pièces d'origine Vélanor sont couvertes par la garantie.",
+        "speaker": "Hugo"
+      },
+      {
+        "dialogue": "Donc, si je remplace la batterie par une autre marque, la garantie ne s'applique pas ?",
+        "speaker": "Camille"
+      },
+      {
+        "dialogue": "C'est exact. Une batterie d'origine Vélanor est la seule couverte par la garantie.",
+        "speaker": "Hugo"
+      },
+      {
+        "dialogue": "Comment faire en cas de problème ?",
+        "speaker": "Camille"
+      },
+      {
+        "dialogue": "Vous pouvez contacter le service après-vente par téléphone au 02 40 00 12 34, du lundi au vendredi de 9 h à 18 h, ou par le formulaire du site.",
+        "speaker": "Hugo"
+      },
+      {
+        "dialogue": "Une réparation en atelier prend en moyenne 10 jours ouvrés. Le diagnostic est gratuit.",
+        "speaker": "Hugo"
+      },
+      {
+        "dialogue": "Et on peut remplacer soi-même la batterie ?",
+        "speaker": "Camille"
+      },
+      {
+        "dialogue": "Oui, avec la clé fournie, mais seulement une batterie d'origine Vélanor est couverte par la garantie.",
+        "speaker": "Hugo"
+      }
+    ],
+    "transcription_controle": "Qu'est-ce que le service apprévote ? Dans cet épisode, on parle des garanties du délai de réparation et des moyens de contact. Quels sont les durées des garanties ? Et la garantie couvre-t-elle les pièces de remplacement ? Si je remplace la batterie par une autre marque, la garantie ne s'applique pas. Comment faire en cas de problème ? Et on peut remplacer soi-même la batterie."
+  },
+  "incident": {
+    "premiere_tentative": "tâche restée « new » 3 600 s : worker bloqué après la saturation mémoire de 16:10 (connexion SurrealDB perdue, « timed out during opening handshake »)",
+    "action": "docker restart rag-open-notebook à 17:12 ; la tâche en attente a été reprise au démarrage",
+    "generation_s_journal_worker": 307.06,
+    "extrait_journal": "commands.podcast_commands:generate_podcast_command:416 - Successfully generated podcast episode: episode:thun0k3gnsb9fcote02i in 307.06s"
+  }
+}
