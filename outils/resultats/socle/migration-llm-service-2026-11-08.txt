@@ -1,0 +1,30 @@
+# Migration du socle vers LLM-Service (~/Projets/Projet-IA/LLM-Service, branche service-ollama), 2026-11-08T21:20:52+01:00
+## Modèles avant (rag-socle-ollama)
+  qwen3:4b 9230ed1499c1
+  bge-m3:latest 790764642607
+  ministral-3:3b 696e35e0fa67
+  qwen3:4b-instruct a117f98fcf01
+rag-socle-ollama supprimé
+8.5G	/dst/models
+## LLM-Service démarré : conteneur ollama-central, réseau llm-net, 127.0.0.1:11434, sur CPU (override local sans réservation GPU)
+ollama version is 0.30.7
+## Modèles après (ollama-central)
+  bge-m3:latest 790764642607
+  qwen3:4b-instruct 0edcdef34593
+  qwen3:4b 9230ed1499c1
+  ministral-3:3b 696e35e0fa67
+## Journal du préchargement
+[llm-service] Démarrage d'Ollama central...
+[llm-service] Attente du démarrage...
+[llm-service] Ollama opérationnel.
+[llm-service] Vérification / téléchargement de : qwen3:4b-instruct
+[llm-service] OK : qwen3:4b-instruct
+[llm-service] Vérification / téléchargement de : bge-m3
+[llm-service] OK : bge-m3
+[llm-service] Prêt. Modèles servis : qwen3:4b-instruct bge-m3
+## Écart constaté : empreinte de qwen3:4b-instruct changée (a117f98fcf01 -> 0edcdef34593)
+  Cause : le préchargement de LLM-Service fait « ollama pull », qui a mis à jour le manifeste depuis le registre.
+  Poids : inchangés, même couche sha256:85e4a5b7b8ef… (2 497 280 480 octets), celle que chargeait llama-server pendant les bancs.
+  Couches changées : config (487 o) et paramètres (119 o) ; paramètres actuels :
+  {"repeat_penalty":1,"stop":["<|im_start|>","<|im_end|>"],"temperature":0.7,"top_k":20,"top_p":0.8}
+  Conséquence : les bancs du 2026-11-08 restent valables pour le modèle ; un contrôle est rejoué après branchement.

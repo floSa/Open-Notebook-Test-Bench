@@ -9,7 +9,7 @@ from pathlib import Path
 
 RACINE = Path(__file__).resolve().parents[2]
 URL = "http://127.0.0.1:11434"
-CONTENEUR = "rag-socle-ollama"
+CONTENEUR = "ollama-central"
 CHATS = ["qwen3:4b-instruct", "ministral-3:3b"]
 EMBED = "bge-m3"
 CONTEXTES = [4096, 8192, 16384, 32768]
