@@ -1,0 +1,39 @@
+# Essai de sauvegarde et de restauration, 2026-11-08T18:40:01+01:00
+## Avant sauvegarde
+  Banc : 9 sources
+  Démo Vélanor : 9 sources
+  Essai installation : 1 sources
+ Container rag-open-notebook Stopping 
+ Container rag-open-notebook Stopped 
+ Container rag-open-notebook-surrealdb Stopping 
+ Container rag-open-notebook-surrealdb Stopped 
+ Container rag-open-notebook-surrealdb Starting 
+ Container rag-open-notebook-surrealdb Started 
+ Container rag-open-notebook Starting 
+ Container rag-open-notebook Started 
+## Sauvegarde : donnees/sauvegardes/open-notebook-20261108-184002.tar.gz, 5.5M, 28 s (arrêt et redémarrage compris)
+## Après création du carnet témoin
+  Banc : 9 sources
+  Démo Vélanor : 9 sources
+  Essai installation : 1 sources
+  Témoin après sauvegarde : 0 sources
+ Container rag-open-notebook Stopping 
+ Container rag-open-notebook Stopped 
+ Container rag-open-notebook-surrealdb Stopping 
+ Container rag-open-notebook-surrealdb Stopped 
+ Container rag-open-notebook-surrealdb Starting 
+ Container rag-open-notebook-surrealdb Started 
+ Container rag-open-notebook Starting 
+ Container rag-open-notebook Started 
+restauré depuis donnees/sauvegardes/open-notebook-20261108-184002.tar.gz ; anciennes données : donnees/open-notebook.avant-restauration-20261108-184034
+## Restauration : 18 s
+## Après restauration
+  Banc : 9 sources
+  Démo Vélanor : 9 sources
+  Essai installation : 1 sources
+## Question de contrôle sur le carnet « Démo Vélanor »
+(question de contrôle relancée à 18:42:31 après correction du script : demander() renvoie trois valeurs)
+   Le prix public du modèle Erdre Cargo est de 4 290 € TTC. [source:v3m0h3d6qqd2s0npnhuy]
+  sessions du carnet après contrôle : 4
+## Cache Docling : repris depuis les données mises de côté (dossier .cache présent après restauration)
+## Remarque : la session « contrôle restauration » listée encore juste après sa suppression a été supprimée à nouveau à 18:42:56 ; le carnet garde ses trois conversations.
