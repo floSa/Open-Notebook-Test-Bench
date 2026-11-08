@@ -8,7 +8,7 @@ cd "$(dirname "$0")/../.."
 IMAGE="ollama/ollama@sha256:46399ef084d97b381955b5dc585c5d836dbe7ed3f79f170d1c04660fed511e3a"  # 0.30.7
 SOURCE="${OLLAMA_SOURCE:-$HOME/.ollama/models}"
 DEST="donnees/socle/ollama/models"
-COPIER=(qwen3/4b-instruct ministral-3/3b)
+COPIER=(qwen3/4b-instruct ministral-3/3b qwen3/4b)  # qwen3:4b : modèle de raisonnement (essai du manuel 04)
 TELECHARGER=(bge-m3)
 CONTEXTE="${OLLAMA_CONTEXT_LENGTH:-8192}"
 

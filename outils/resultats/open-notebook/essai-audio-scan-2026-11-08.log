@@ -1,0 +1,8 @@
+2026-11-08 12:52:53.772 | INFO     | commands.source_commands:process_source_command:73 - Starting source processing for source: source:to9v2s5v1sohoes5f8i5
+2026-11-08 12:52:53.772 | INFO     | commands.source_commands:process_source_command:74 - Notebook IDs: ['notebook:6okd1zkwhf2zwa6xytgg']
+2026-11-08 12:52:53.772 | INFO     | commands.source_commands:process_source_command:75 - Transformations: []
+2026-11-08 12:52:53.772 | INFO     | commands.source_commands:process_source_command:76 - Embed: True
+2026-11-08 12:52:53.772 | INFO     | commands.source_commands:process_source_command:91 - Loaded 0 transformations
+2026-11-08 12:52:53.841 | INFO     | commands.source_commands:process_source_command:117 - Updated source source:to9v2s5v1sohoes5f8i5 with command reference
+2026-11-08 12:52:53.842 | INFO     | commands.source_commands:process_source_command:120 - Processing source with 1 notebooks
+2026-11-08 12:52:54.118 | INFO     | commands.source_commands:process_source_command:146 - Successfully processed source: source:to9v2s5v1sohoes5f8i5 in 0.35s

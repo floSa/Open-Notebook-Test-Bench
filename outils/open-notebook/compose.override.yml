@@ -41,6 +41,14 @@ services:
       - OPEN_NOTEBOOK_CHUNK_OVERLAP=${OPEN_NOTEBOOK_CHUNK_OVERLAP:-60}
       - OPEN_NOTEBOOK_ENABLE_DOCLING=${OPEN_NOTEBOOK_ENABLE_DOCLING:-false}
       - LOGURU_LEVEL=INFO
+      # Contournement : la transcription (content-core) n'utilise pas la Base URL enregistrée pour « OpenAI Compatible »
+      # (journal : outils/resultats/open-notebook/essai-audio-scan-2026-11-08.log). Serveur de voix : rag-speaches.
+      - OPENAI_COMPATIBLE_BASE_URL_STT=http://rag-speaches:8000/v1
+      - OPENAI_COMPATIBLE_API_KEY_STT=local
+      - OPENAI_COMPATIBLE_BASE_URL_TTS=http://rag-speaches:8000/v1
+      - OPENAI_COMPATIBLE_API_KEY_TTS=local
+      - TTS_BATCH_SIZE=1
+      - ESPERANTO_TTS_TIMEOUT=600
     volumes: !override
       - ${DONNEES}/notebook_data:/app/data
     networks: [rag-local]
