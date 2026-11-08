@@ -6,7 +6,7 @@ Version décrite : Open Notebook 1.15.1, socle Ollama 0.30.7 sur CPU (machine sa
 
 | N° | Manuel | En une phrase |
 |---|---|---|
-| - | [Open Notebook en bref](presentation.md) | Ce que fait la solution, identité du projet, grille de comparaison, résultats des essais. |
+| - | [Open Notebook en bref](presentation.md) | Ce que fait la solution, pour qui, le projet, les fonctions (oui ou non), les résultats mesurés. |
 | 00 | [Notions fondamentales](00-notions-fondamentales.md) | Ce qu'est le RAG et comment Open Notebook l'applique, avec le schéma des services et des ports. |
 | 01 | [Installation sous Windows et WSL2](01-installation.md) | Installer, brancher au socle Ollama, mesurer la mémoire, mettre à jour et tout désinstaller. |
 | 02 | [Prise en main](02-prise-en-main.md) | Du premier carnet à la première réponse citée. |
