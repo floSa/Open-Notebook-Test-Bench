@@ -1,0 +1,2 @@
+qwen3:4b-instruct    ctx=  4096 chaud=17.34 j/s prompt=67.4 j/s 1er jeton (demi-ctx)=39.07 s RAM=7303 Mo charge=3876 Mo
+qwen3:4b-instruct    ctx=  8192 chaud=16.25 j/s prompt=53.2 j/s 1er jeton (demi-ctx)=98.38 s RAM=9201 Mo charge=5093 Mo

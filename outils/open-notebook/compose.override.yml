@@ -1,0 +1,50 @@
+# Override du docker-compose.yml officiel d'Open Notebook 1.15.1 (outils/open-notebook/officiel/).
+# Projet compose : rag-open-notebook. Variables lues dans donnees/open-notebook/.env (généré par installer.sh).
+# - versions figées par empreinte, pas de re-téléchargement à chaque démarrage ;
+# - ports publiés sur 127.0.0.1 seulement ; SurrealDB non publié (inutile hors du réseau Docker) ;
+# - données dans donnees/open-notebook/ ; réseau externe rag-local (socle Ollama joignable sous le nom rag-ollama) ;
+# - secrets générés localement (clé de chiffrement, mot de passe, identifiants SurrealDB).
+name: rag-open-notebook
+
+services:
+  surrealdb:
+    image: surrealdb/surrealdb:v2.7.0@sha256:e5d7387e3727bbe2f7cd6d869e48cd34777272258572ead37c9656b25f745723
+    container_name: rag-open-notebook-surrealdb
+    pull_policy: missing
+    restart: unless-stopped
+    ports: !reset []
+    volumes: !override
+      - ${DONNEES}/surreal_data:/mydata
+    networks: [rag-local]
+
+  open_notebook:
+    image: lfnovo/open_notebook:1.15.1@sha256:e4e18f12653df5bf48674b7b187c4252be52238b4d706330fd30d9b177b95812
+    container_name: rag-open-notebook
+    pull_policy: missing
+    restart: unless-stopped
+    ports: !override
+      - "127.0.0.1:8502:8502"
+      - "127.0.0.1:5055:5055"
+    environment: !override
+      - OPEN_NOTEBOOK_ENCRYPTION_KEY=${OPEN_NOTEBOOK_ENCRYPTION_KEY}
+      - OPEN_NOTEBOOK_PASSWORD=${OPEN_NOTEBOOK_PASSWORD}
+      - SURREAL_URL=ws://surrealdb:8000/rpc
+      - SURREAL_USER=${SURREAL_USER}
+      - SURREAL_PASSWORD=${SURREAL_PASSWORD}
+      - SURREAL_NAMESPACE=open_notebook
+      - SURREAL_DATABASE=open_notebook
+      # Ollama sur CPU : une tâche de fond à la fois, et des appels LLM longs (180 s par défaut)
+      - OPEN_NOTEBOOK_WORKER_MAX_TASKS=1
+      - ESPERANTO_LLM_TIMEOUT=${ESPERANTO_LLM_TIMEOUT:-900}
+      - ESPERANTO_EMBEDDING_TIMEOUT=300
+      - OPEN_NOTEBOOK_CHUNK_SIZE=${OPEN_NOTEBOOK_CHUNK_SIZE:-400}
+      - OPEN_NOTEBOOK_CHUNK_OVERLAP=${OPEN_NOTEBOOK_CHUNK_OVERLAP:-60}
+      - OPEN_NOTEBOOK_ENABLE_DOCLING=${OPEN_NOTEBOOK_ENABLE_DOCLING:-false}
+      - LOGURU_LEVEL=INFO
+    volumes: !override
+      - ${DONNEES}/notebook_data:/app/data
+    networks: [rag-local]
+
+networks:
+  rag-local:
+    external: true

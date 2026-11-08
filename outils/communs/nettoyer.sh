@@ -18,8 +18,12 @@ echo "À supprimer : projet compose rag-$sol (conteneurs, volumes, réseau), dos
 [ $socle = 1 ] && echo "              socle : rag-socle-ollama, rag-speaches, réseau rag-local, dossier donnees/socle/"
 if [ $oui = 0 ]; then read -r -p "Confirmer (oui/non) ? " r; [ "$r" = oui ] || exit 1; fi
 
-if [ -f "outils/$sol/compose.yml" ]; then
-  docker compose -p "rag-$sol" -f "outils/$sol/compose.yml" down -v --remove-orphans || true
+# fichiers compose de la solution : compose officiel figé puis override du dépôt
+fichiers=()
+for f in "outils/$sol/officiel/docker-compose.yml" "outils/$sol/compose.override.yml"; do [ -f "$f" ] && fichiers+=(-f "$f"); done
+envf="donnees/$sol/.env"
+if [ ${#fichiers[@]} -gt 0 ] && [ -f "$envf" ]; then
+  docker compose -p "rag-$sol" --env-file "$envf" "${fichiers[@]}" down -v --remove-orphans || true
 fi
 # Les fichiers créés par les conteneurs appartiennent parfois à root : suppression via un conteneur jetable.
 [ -d "donnees/$sol" ] && docker run --rm --entrypoint rm -v "$PWD/donnees:/d" "$OLLAMA_IMAGE" -rf "/d/$sol"
