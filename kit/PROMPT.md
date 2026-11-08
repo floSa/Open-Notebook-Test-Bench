@@ -171,7 +171,12 @@ Pour chaque manuel du plan, dans l'ordre :
 ### Phase G. Profils matériels
 
 1. Rejouer le banc avec le réglage de contexte le plus serré (profil le plus petit) et noter la perte de qualité.
-2. Écrire, dans le manuel « Qualité et performances », un tableau par profil : modèles, `--max-model-len`, `--gpu-memory-utilization`, réglages de la solution, résultats du banc. Les valeurs non mesurées sur la machine d'exécution sont marquées [Estimation] avec leur calcul.
+2. **Deux configurations minimales, mesurées autant que possible, à faire figurer dans la présentation de la solution (`docs/<solution>/presentation.md`) et dans « Qualité et performances »** :
+   - **sans GPU** : processeur (nombre de cœurs ; nombre de fils de calcul d'Ollama si le processeur est hybride), RAM, disque, modèle de réponse le plus léger qui garde l'exactitude du banc, modèle d'embedding, taille de contexte ;
+   - **avec GPU NVIDIA** : mémoire de la carte, mêmes rubriques, branche `service-vllm` de LLM-Service ;
+   - pour chacune, en langage courant : la mémoire consommée (modèles, application, options comme l'OCR), le volume de documents utilisable (pages, caractères, nombre de documents selon la façon dont la solution les envoie au modèle) et le temps d'attente correspondant (première question, questions suivantes, indexation).
+   Essayer au moins un modèle plus léger que le modèle principal (moins de 3 milliards de paramètres) pour situer le plancher de qualité. Mêmes modèles et même taille de contexte que les solutions déjà passées, pour que la comparaison tienne.
+3. Écrire, dans le manuel « Qualité et performances », un tableau par profil : modèles, `--max-model-len`, `--gpu-memory-utilization`, réglages de la solution, résultats du banc. Les valeurs non mesurées sur la machine d'exécution sont marquées [Estimation] avec leur calcul.
 
 ### Phase H. Clôture
 
@@ -231,6 +236,7 @@ Un risque (perte de données, exposition réseau, réglage dangereux, bogue) est
 
 - `README.md` (racine) : court et direct. Ce que contient la série, ce qu'on y apprend, un tableau « Objectif → Lire », l'arborescence, comment lancer un exemple. Ni détail de configuration ni mention superflue.
 - `docs/README.md` : index général. Tableau par solution : version décrite, date des essais, machine de test, langue de l'interface, lien vers l'index de la solution. Puis comparatif du banc, parcours de lecture conseillés, conventions (étiquettes).
+- `docs/<solution>/presentation.md` : première page à lire, sans étiquettes ni renvoi à un concurrent, phrases courtes. Ce que fait la solution en six lignes ; pour qui (adapté, peu adapté) ; le projet (dépôt, licence, étoiles, activité relevés par `outils/communs/identite_github.py`) ; fonctions en Oui, Non ou Partiel avec la limite en une phrase, mêmes rubriques pour toutes les solutions (modèles d'IA, documents acceptés, recherche et réponses, production, installation et exploitation), termes techniques expliqués sur place ; matériel nécessaire (configurations minimales sans et avec GPU) ; résultats mesurés en cinq lignes. Modèle : `docs/open-notebook/presentation.md`.
 - `docs/<solution>/README.md` : index de la solution. Tableau Version décrite / Date des essais / Machine / Langue de l'interface ; tableau des manuels (N°, lien, contenu) ; parcours de lecture ; limites connues ; « Ce qui reste ouvert » (non traité, décisions en attente, ménage à faire à la main, écarts de version).
 - `docs/<solution>/plan-des-manuels.md` : une phrase par manuel, puis chaque section avec son contenu et un lien vers l'ancre.
 - `docs/glossaire.md` : termes techniques définis simplement, avec la solution concernée quand un terme lui est propre.
