@@ -1,0 +1,77 @@
+===== 06_client_mcp.py — 2026-11-08T14:06:34+01:00
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:httpx:HTTP Request: GET http://127.0.0.1:5055/api/notebooks?order_by=updated+desc "HTTP/1.1 200 OK"
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:httpx:HTTP Request: POST http://127.0.0.1:5055/api/search "HTTP/1.1 200 OK"
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:httpx:HTTP Request: POST http://127.0.0.1:5055/api/sources "HTTP/1.1 422 Unprocessable Entity"
+33 outils : ask_question, ask_simple, create_chat_session, create_model, create_note, create_notebook, create_source, delete_chat_session, delete_model, delete_note, delete_notebook, delete_source, execute_chat, get_chat_context, get_chat_session, get_default_models, get_model, get_note, get_notebook, get_settings, get_source, list_chat_sessions, list_models, list_notebooks, list_notes, list_sources, search, search_capabilities, update_chat_session, update_note, update_notebook, update_settings, update_source
+-- list_notebooks {"limit": 20} -> ok : {
+  "request_id": "54388d94-2916-4e86-b1b2-a78119ba5e17",
+  "count": 2,
+  "notebooks": [
+    {
+      "id": "notebook:6okd1zkwhf2zwa6xytgg",
+      "name": "Essai installation",
+      "description": "vérification minimale",
+      "archived": false,
+      "created": "2026-11-08 12:52:53.471103+00:00",
+      "updated": "2026-11-08 13:01:01.491813+00:00",
+      "source_count": 1,
+      "note_count": 0
+
+-- search {"query": "prime d'intéressement", "type": "text", "limit": 3} -> ok : {
+  "request_id": "60823fc3-c463-43eb-8410-f43c8cfb962c",
+  "results": {
+    "results": [
+      {
+        "id": "source:kba5tul1j4y728cjzwjm",
+        "parent_id": "source:kba5tul1j4y728cjzwjm",
+        "relevance": 0.1271829605102539,
+        "title": "cse-2025-10-14.md"
+      }
+    ],
+    "total_count": 1,
+    "search_type": "text"
+  }
+}
+-- create_source {"notebook_id": "notebook:6okd1zkwhf2zwa6xytgg", "type": "text", "content": "essai MCP", "title": "essai MCP"} -> ERREUR : Error executing tool create_source: API request failed: [{'type': 'missing', 'loc': ['body', 'type'], 'msg': 'Field required', 'input': None}]
+(code de sortie : 0)
+
+===== 01_etat_api.sh — 2026-11-08T14:47:58+01:00
+{"status":"healthy"}
+{"auth_enabled":true,"message":"Authentication is required"}
+sans mot de passe : HTTP 401
+avec mot de passe : HTTP 200
+(code de sortie : 0)
+
+===== 02_creer_carnet_et_source.sh — 2026-11-08T14:47:58+01:00
+carnet : notebook:7n3rx12hij3f12fi79ue
+source : source:0ipcdb1seogc68hpk847
+statut : completed, passages : 1
+(code de sortie : 0)
+
+===== 03_poser_question.py — 2026-11-08T14:48:12+01:00
+contexte : 199 jetons
+réponse : Le montant de la prime d'intéressement 2025 est de 1 150 euros par salarié. [source:0ipcdb1seogc68hpk847]
+citation : source:0ipcdb1seogc68hpk847 -> cse-2025-10-14 (1).md
+(code de sortie : 0)
+
+===== 04_rechercher.sh — 2026-11-08T14:48:29+01:00
+04_rechercher.sh: line 9: unexpected EOF while looking for matching `"'
+(code de sortie : 2)
+
+===== 05_supprimer_carnet.sh — 2026-11-08T14:48:29+01:00
+{"message":"Notebook deleted successfully","deleted_notes":0,"deleted_sources":1,"unlinked_sources":0,"deleted_chat_sessions":1}
+(code de sortie : 0)
+
+===== 04_rechercher.sh — 2026-11-08T14:49:05+01:00
+== text : prime d'intéressement
+  cse-2025-10-14.md 8.675
+== vector : prime d'intéressement
+  cse-2025-10-14.md 0.57
+  stocks-octobre-2025.xlsx 0.372
+  rapport-annuel-2025.pdf 0.362
+(code de sortie : 0)
+

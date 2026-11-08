@@ -1,0 +1,27 @@
+===== 01_etat_api.sh — 2026-11-08T14:47:58+01:00
+{"status":"healthy"}
+{"auth_enabled":true,"message":"Authentication is required"}
+sans mot de passe : HTTP 401
+avec mot de passe : HTTP 200
+(code de sortie : 0)
+
+===== 02_creer_carnet_et_source.sh — 2026-11-08T14:47:58+01:00
+carnet : notebook:7n3rx12hij3f12fi79ue
+source : source:0ipcdb1seogc68hpk847
+statut : completed, passages : 1
+(code de sortie : 0)
+
+===== 03_poser_question.py — 2026-11-08T14:48:12+01:00
+contexte : 199 jetons
+réponse : Le montant de la prime d'intéressement 2025 est de 1 150 euros par salarié. [source:0ipcdb1seogc68hpk847]
+citation : source:0ipcdb1seogc68hpk847 -> cse-2025-10-14 (1).md
+(code de sortie : 0)
+
+===== 04_rechercher.sh — 2026-11-08T14:48:29+01:00
+04_rechercher.sh: line 9: unexpected EOF while looking for matching `"'
+(code de sortie : 2)
+
+===== 05_supprimer_carnet.sh — 2026-11-08T14:48:29+01:00
+{"message":"Notebook deleted successfully","deleted_notes":0,"deleted_sources":1,"unlinked_sources":0,"deleted_chat_sessions":1}
+(code de sortie : 0)
+
