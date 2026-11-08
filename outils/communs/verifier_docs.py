@@ -76,7 +76,7 @@ def main():
                 elif ancre and dest.suffix == ".md" and ancre not in ancres(dest):
                     points.append(f"{rel}:{i} ancre absente : {cible}")
             if dans_docs:
-                for m in PRONOMS.finditer(l_sans_inline):
+                for m in PRONOMS.finditer(re.sub(r"«[^»]*»", "", l_sans_inline)):  # libellés cités tels quels
                     points.append(f"{rel}:{i} ton : « {m.group(0)} »")
                 for c in l:
                     if pictogramme(c):
