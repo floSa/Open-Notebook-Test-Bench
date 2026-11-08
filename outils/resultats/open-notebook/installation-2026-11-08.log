@@ -1,0 +1,33 @@
+=== installation 2026-11-08T13:49:43+01:00
+outils/open-notebook/officiel/docker-compose.yml: OK
+secrets générés dans donnees/open-notebook/.env
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+ Container rag-open-notebook-surrealdb Creating 
+ Container rag-open-notebook-surrealdb Created 
+ Container rag-open-notebook Creating 
+ Container rag-open-notebook Created 
+ Container rag-open-notebook-surrealdb Starting 
+ Container rag-open-notebook-surrealdb Started 
+ Container rag-open-notebook Starting 
+ Container rag-open-notebook Started 
+{"status":"healthy"}
+interface : HTTP 307
+{"test_connexion": {"provider": "ollama", "success": true, "message": "Connected. 3 models available: bge-m3:latest, ministral-3:3b, qwen3:4b-instruct"}, "modeles": {"qwen3:4b-instruct": "model:y1y42teep0qdu0n4cudi", "ministral-3:3b": "model:20uhlaxe99or023agrzm", "bge-m3": "model:v5da2tew3pwl1ax9sh8s"}}
+défauts : {'default_chat_model': 'model:y1y42teep0qdu0n4cudi', 'default_transformation_model': 'model:y1y42teep0qdu0n4cudi', 'large_context_model': 'model:y1y42teep0qdu0n4cudi', 'default_embedding_model': 'model:v5da2tew3pwl1ax9sh8s', 'default_tools_model': 'model:y1y42teep0qdu0n4cudi'}
+-> outils/resultats/open-notebook/configuration-2026-11-08.json
+rag-open-notebook 127.0.0.1:5055->5055/tcp, 127.0.0.1:8502->8502/tcp
+rag-open-notebook-surrealdb 
+durée : 146 s
+=== installation 2026-11-08T13:53:40+01:00
+outils/open-notebook/officiel/docker-compose.yml: OK
+ Container rag-open-notebook Running 
+ Container rag-open-notebook-surrealdb Running 
+{"status":"healthy"}
+interface : HTTP 307
+{"test_connexion": {"provider": "ollama", "success": true, "message": "Connected. 3 models available: bge-m3:latest, ministral-3:3b, qwen3:4b-instruct"}, "modeles": {"qwen3:4b-instruct": "model:y1y42teep0qdu0n4cudi", "ministral-3:3b": "model:20uhlaxe99or023agrzm", "bge-m3": "model:v5da2tew3pwl1ax9sh8s"}}
+défauts : {'default_chat_model': 'model:y1y42teep0qdu0n4cudi', 'default_transformation_model': 'model:y1y42teep0qdu0n4cudi', 'large_context_model': 'model:y1y42teep0qdu0n4cudi', 'default_embedding_model': 'model:v5da2tew3pwl1ax9sh8s', 'default_tools_model': 'model:y1y42teep0qdu0n4cudi'}
+-> outils/resultats/open-notebook/configuration-2026-11-08.json
+rag-open-notebook 127.0.0.1:5055->5055/tcp, 127.0.0.1:8502->8502/tcp
+rag-open-notebook-surrealdb 
+durée : 2 s

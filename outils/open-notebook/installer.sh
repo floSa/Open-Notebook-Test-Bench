@@ -46,7 +46,7 @@ outils/communs/socle.sh >/dev/null
 docker compose --env-file "$D/.env" -f "$OFF" -f outils/open-notebook/compose.override.yml up -d
 for i in $(seq 120); do curl -sf http://127.0.0.1:5055/health >/dev/null && break; sleep 2; done
 curl -s http://127.0.0.1:5055/health; echo
-for i in $(seq 60); do [ "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8502/)" = 200 ] && break; sleep 2; done
+for i in $(seq 60); do curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8502/ | grep -qE "200|307" && break; sleep 2; done
 echo "interface : HTTP $(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8502/)"
 
 # 4. branchement au socle

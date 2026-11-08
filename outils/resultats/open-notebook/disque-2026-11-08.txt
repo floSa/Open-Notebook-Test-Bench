@@ -1,0 +1,10 @@
+== disque 2026-11-08T13:53:42+01:00
+lfnovo/open_notebook:1.15.1 2.46GB
+mcr.microsoft.com/playwright/python:v1.64.1-noble 3.53GB
+surrealdb/surrealdb:<none> 118MB
+ollama/ollama:latest 8.25GB
+ghcr.io/speaches-ai/speaches:latest-cpu 3.04GB
+surrealdb v2.7.0 117684420 octets
+404K	donnees/open-notebook
+6.2G	donnees/socle/ollama
+144M	donnees/playwright

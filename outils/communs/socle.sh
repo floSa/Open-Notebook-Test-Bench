@@ -17,7 +17,7 @@ for m in "${COPIER[@]}"; do
   man="$SOURCE/manifests/registry.ollama.ai/library/$m"
   [ -f "$man" ] || { echo "absent : $m"; continue; }
   mkdir -p "$DEST/manifests/registry.ollama.ai/library/$(dirname "$m")"
-  cp -n "$man" "$DEST/manifests/registry.ollama.ai/library/$m"
+  cp --update=none "$man" "$DEST/manifests/registry.ollama.ai/library/$m"
   for dg in $(python3 -c "import json,sys;d=json.load(open(sys.argv[1]));print(' '.join([d['config']['digest']]+[l['digest'] for l in d['layers']]))" "$man"); do
     f="${dg/:/-}"
     [ -f "$DEST/blobs/$f" ] || { echo "copie $m $f"; cp "$SOURCE/blobs/$f" "$DEST/blobs/$f"; }

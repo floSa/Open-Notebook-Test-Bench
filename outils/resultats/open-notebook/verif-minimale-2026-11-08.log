@@ -1,0 +1,6 @@
+sans mot de passe : 401 {"detail":"Missing authorization header"}
+RAM au repos : {'rag-open-notebook': 378, 'rag-open-notebook-surrealdb': 80, 'rag-socle-ollama': 4403}
+indexation : {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 594, 'duree_s': 11.1} pic RAM : {'rag-open-notebook': 463, 'rag-open-notebook-surrealdb': 84, 'rag-socle-ollama': 5806}
+réponse : La durée de garantie du cadre est de 7 ans [source:to9v2s5v1sohoes5f8i5]. 
+citation présente : True (28.7 s)
+-> outils/resultats/open-notebook/verif-minimale-2026-11-08.json

@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-08T13:53:41",
+  "credential": {
+    "id": "credential:1e0lofv7mmrxxf6axu90",
+    "name": "ollama-socle",
+    "provider": "ollama",
+    "modalities": [
+      "language",
+      "embedding"
+    ],
+    "base_url": "http://rag-ollama:11434",
+    "endpoint": null,
+    "api_version": null,
+    "endpoint_llm": null,
+    "endpoint_embedding": null,
+    "endpoint_stt": null,
+    "endpoint_tts": null,
+    "project": null,
+    "location": null,
+    "credentials_path": null,
+    "num_ctx": 16384,
+    "has_api_key": false,
+    "created": "2026-11-08 12:52:08+00:00",
+    "updated": "2026-11-08 12:53:41.541390+00:00",
+    "model_count": 3,
+    "decryption_error": null
+  },
+  "test_connexion": {
+    "provider": "ollama",
+    "success": true,
+    "message": "Connected. 3 models available: bge-m3:latest, ministral-3:3b, qwen3:4b-instruct"
+  },
+  "decouverte": {
+    "credential_id": "credential:1e0lofv7mmrxxf6axu90",
+    "provider": "ollama",
+    "discovered": [
+      {
+        "name": "bge-m3:latest",
+        "provider": "ollama",
+        "model_type": null,
+        "description": null
+      },
+      {
+        "name": "ministral-3:3b",
+        "provider": "ollama",
+        "model_type": null,
+        "description": null
+      },
+      {
+        "name": "qwen3:4b-instruct",
+        "provider": "ollama",
+        "model_type": null,
+        "description": null
+      }
+    ]
+  },
+  "modeles": {
+    "qwen3:4b-instruct": "model:y1y42teep0qdu0n4cudi",
+    "ministral-3:3b": "model:20uhlaxe99or023agrzm",
+    "bge-m3": "model:v5da2tew3pwl1ax9sh8s"
+  },
+  "defauts": {
+    "default_chat_model": "model:y1y42teep0qdu0n4cudi",
+    "default_transformation_model": "model:y1y42teep0qdu0n4cudi",
+    "large_context_model": "model:y1y42teep0qdu0n4cudi",
+    "default_text_to_speech_model": null,
+    "default_speech_to_text_model": null,
+    "default_embedding_model": "model:v5da2tew3pwl1ax9sh8s",
+    "default_tools_model": "model:y1y42teep0qdu0n4cudi"
+  },
+  "reglages_avant": {
+    "default_content_processing_engine_doc": "auto",
+    "default_content_processing_engine_url": "simple",
+    "default_embedding_option": "ask",
+    "auto_delete_files": "yes",
+    "docling_ocr": true,
+    "docling_formulas": false,
+    "docling_vision": false,
+    "youtube_preferred_languages": [
+      "en",
+      "pt",
+      "es",
+      "de",
+      "nl",
+      "en-GB",
+      "fr",
+      "hi",
+      "ja",
+      "zh-CN",
+      "zh-TW"
+    ]
+  },
+  "reglages_apres": {
+    "default_content_processing_engine_doc": "auto",
+    "default_content_processing_engine_url": "simple",
+    "default_embedding_option": "ask",
+    "auto_delete_files": "yes",
+    "docling_ocr": true,
+    "docling_formulas": false,
+    "docling_vision": false,
+    "youtube_preferred_languages": [
+      "en",
+      "pt",
+      "es",
+      "de",
+      "nl",
+      "en-GB",
+      "fr",
+      "hi",
+      "ja",
+      "zh-CN",
+      "zh-TW"
+    ]
+  }
+}
