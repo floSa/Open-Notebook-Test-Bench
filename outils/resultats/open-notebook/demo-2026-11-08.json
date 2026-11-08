@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-08T17:23:00",
+  "carnet": "Démo Vélanor",
+  "sources": {
+    "contrat-batterix-scan.pdf": {
+      "status": "failed",
+      "detail": {
+        "status": "failed",
+        "message": "Source processing failed",
+        "processing_info": {
+          "status": "failed",
+          "started_at": null,
+          "completed_at": null,
+          "error": "Could not extract any text content from this source. The content may be empty, inaccessible, or in an unsupported format.",
+          "result": null
+        },
+        "command_id": "command:qf5y18st8j9vama2kh3f"
+      }
+    },
+    "cse-2025-10-14.md": {
+      "status": "completed",
+      "embedded_chunks": 1,
+      "caracteres": 528
+    },
+    "faq-sav.html": {
+      "status": "completed",
+      "embedded_chunks": 1,
+      "caracteres": 594
+    },
+    "message-vocal-production.mp3": {
+      "status": "completed",
+      "embedded_chunks": 1,
+      "caracteres": 351
+    },
+    "procedure-batteries.docx": {
+      "status": "completed",
+      "embedded_chunks": 1,
+      "caracteres": 1085
+    },
+    "rapport-annuel-2025.pdf": {
+      "status": "completed",
+      "embedded_chunks": 10,
+      "caracteres": 4319
+    },
+    "stocks-octobre-2025.xlsx": {
+      "status": "completed",
+      "embedded_chunks": 1,
+      "caracteres": 1110
+    },
+    "strategie-2026.pptx": {
+      "status": "completed",
+      "embedded_chunks": 1,
+      "caracteres": 516
+    },
+    "supplier-audit-batterix-en.pdf": {
+      "status": "completed",
+      "embedded_chunks": 1,
+      "caracteres": 430
+    }
+  },
+  "indexation_s": 105.7,
+  "conversations": [
+    {
+      "session": "Recette 1 - rapport annuel",
+      "question": "Quel est le chiffre d'affaires 2025 et quel trimestre a été le plus élevé ?",
+      "reponse": "Le chiffre d'affaires de Vélanor en 2025 s'est élevé à 48,6 M€, avec une évolution de +12,4 % par rapport à l'année précédente [source:v3m0h3d6qqd2s0npnhuy]. Le trimestre le plus élevé a été le troisième trimestre (T3) de 2025, avec un chiffre d'affaires de 14,2 M€, en raison de la saison estivale [source:v3m0h3d6qqd2s0npnhuy].",
+      "citations": [
+        "rapport-annuel-2025.pdf"
+      ],
+      "duree_s": 100.1
+    },
+    {
+      "session": "Recette 1 - rapport annuel",
+      "question": "Quel modèle est le plus vendu et quel est le plus cher ?",
+      "reponse": "Le modèle le plus vendu est le **Loire Urban**, avec 24 300 unités produites [source:v3m0h3d6qqd2s0npnhuy]. Le modèle le plus cher est le **Erdre Cargo**, avec un prix public TTC de 4 290 € [source:v3m0h3d6qqd2s0npnhuy].",
+      "citations": [
+        "rapport-annuel-2025.pdf"
+      ],
+      "duree_s": 11.7
+    },
+    {
+      "session": "Recette 2 - contrat et audit",
+      "question": "Le délai de livraison réellement constaté chez Batterix respecte-t-il le délai prévu par le contrat ?",
+      "reponse": "Le délai de livraison réellement constaté chez Batterix n'est pas explicitement mentionné dans les documents fournis. Cependant, dans le fichier *stocks-octobre-2025.xlsx*, on trouve un indicateur de \"délai moyen constaté (jours)\" pour les composants, qui est de **24 jours** pour les batteries fournies par Batterix [source:op1xwt2suut2ml0d204u].\n\nCe délai moyen constaté (24 jours) reflète la durée de livraison observée dans la pratique, mais il ne précise pas si ce délai est conforme au contrat initial. Ainsi, bien que le délai moyen soit documenté, la conformité de ce délai par rapport au contrat n’est pas précisée dans les sources disponibles.\n\nEn conséquence, on ne peut pas affirmer avec certitude que le délai de livraison réellement constaté respecte le délai prévu par le contrat, car aucune comparaison entre le délai contractuel et le délai observé n’est fournie dans les documents. [source:op1xwt2suut2ml0d204u].",
+      "citations": [
+        "stocks-octobre-2025.xlsx"
+      ],
+      "duree_s": 28.1
+    },
+    {
+      "session": "Recette 2 - contrat et audit",
+      "question": "Quelles non-conformités l'audit de Batterix a-t-il relevées ?",
+      "reponse": "L'audit de qualité effectué chez Batterix GmbH a révélé deux non-conformités majeures :\n\n1. **Étiquetage incomplet des palettes** : les palettes ne sont pas correctement étiquetées, ce qui peut entraver la traçabilité des produits.  \n2. **Manque d'attirails ESD (Electrostatic Discharge) à une station d'assemblage** : une station d'assemblage n'est pas équipée d'attirails ESD, ce qui représente un risque pour les composants sensibles, notamment les batteries.\n\nCes deux points ont été notés dans le document *supplier-audit-batterix-en.pdf*, où l'ensemble du score global est de 87 sur 100, et le fournisseur est reconnu comme approuvé pour une nouvelle année. [source:39xsvbgv0zraf1y33k6b].",
+      "citations": [
+        "supplier-audit-batterix-en.pdf"
+      ],
+      "duree_s": 24.5
+    },
+    {
+      "session": "Recette 3 - synthèse direction",
+      "question": "Rédige en cinq puces les points d'attention pour la direction en 2026, avec les chiffres.",
+      "reponse": "- Chiffre d'affaires visé en 2026 : 55 M€ (+12,4 % par rapport à 2025) [source:m34piyxj70kb2m72btxr].  \n- Part de l'export visée : 32 % (+5 points par rapport à 27 % en 2025) [source:m34piyxj70kb2m72btxr].  \n- Marge nette visée : 7 % [source:m34piyxj70kb2m72btxr].  \n- Lancement du modèle Vilaine Compact en avril 2026, au prix public de 2 490 € TTC [source:m34piyxj70kb2m72btxr].  \n- Ouverture de l'usine de Saint-Nazaire en septembre 2026 avec une capacité de 25 000 vélos par an et un investissement de 14 M€ [source:m34piyxj70kb2m72btxr].",
+      "citations": [
+        "strategie-2026.pptx"
+      ],
+      "duree_s": 28.4
+    }
+  ],
+  "note_chiffres": "note:zvussjw7w8czinbw5xbl",
+  "note_synthese": "note:val01si17cdnr00xxdzq"
+}
