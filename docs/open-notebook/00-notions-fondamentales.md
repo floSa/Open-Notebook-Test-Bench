@@ -78,7 +78,7 @@ flowchart LR
   UI --> API
   API --> DB[(SurrealDB)]
   W[Worker] --> DB
-  API -->|http://rag-ollama:11434| O[Ollama CPU]
+  API -->|http://ollama-central:11434| O[LLM-Service : Ollama CPU]
   W --> O
   subgraph rag-open-notebook [Conteneur rag-open-notebook]
     UI
@@ -93,9 +93,9 @@ flowchart LR
 | API REST | `rag-open-notebook` | `127.0.0.1:5055` (documentation sur `/docs`) | tout le fonctionnement, aussi utilisé par l'interface |
 | Worker | `rag-open-notebook` | aucun | tâches de fond : extraction, embeddings, transformations, podcasts |
 | Base de données | `rag-open-notebook-surrealdb` | aucun | carnets, sources, passages, vecteurs |
-| Modèles | `rag-socle-ollama` (alias `rag-ollama`) | `127.0.0.1:11434` | chat et embeddings |
+| Modèles | `ollama-central` (LLM-Service, dépôt séparé, partagé avec d'autres applications) | `127.0.0.1:11434` | chat et embeddings |
 
-Les trois processus de l'application tournent dans le même conteneur, lancés par supervisord [Source] (`supervisord.conf`). Tous les conteneurs sont reliés par le réseau Docker `rag-local`.
+Les trois processus de l'application tournent dans le même conteneur, lancés par supervisord [Source] (`supervisord.conf`). Open Notebook rejoint deux réseaux Docker : `llm-net` pour les modèles (LLM-Service) et `rag-local` pour la base et la voix.
 
 ### Pour aller plus loin
 

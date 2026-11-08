@@ -8,13 +8,13 @@ Principe : chaque valeur citée dans les manuels vient d'un script de ce dossier
 |---|---|
 | `communs/diagnostic.sh` | Diagnostic de la machine (Windows, WSL, CPU, RAM, disque, GPU, Docker, accès réseau, port local) vers `resultats/machine/` |
 | `communs/inventaire_modeles.py` | Inventaire en lecture seule des modèles déjà présents vers `resultats/socle/modeles-existants.json` |
-| `communs/socle.sh` | Socle de modèles : Ollama sur CPU (`rag-socle-ollama`, alias `rag-ollama`, réseau `rag-local`, `127.0.0.1:11434`), copie des modèles présents, téléchargement de ceux qui manquent |
+| `communs/llm_service.sh` | Service de modèles commun : démarre LLM-Service (dépôt séparé, `ollama-central`, réseau `llm-net`) s'il est arrêté et vérifie les modèles du banc |
 | `communs/mesure_modeles.py` | Débit, premier jeton, RAM, contexte, dépassement volontaire vers `resultats/socle/mesures-<date>-passe<N>.json` (et `.log`) |
 | `communs/generer_corpus.py` | Corpus fictif Vélanor (graine fixe, empreintes dans `corpus/MANIFEST.json`) |
 | `communs/banc/commun.py` | Banc : notation, citations, latences, pics de RAM, sorties JSON et Markdown |
 | `communs/banc/tests/test_commun.py` | Auto-contrôle de la notation du banc |
 | `communs/verifier_docs.py` | Vérification des manuels : liens, images, ancres, en-têtes, ton ; affiche le nombre de points |
-| `communs/nettoyer.sh` | Suppression d'une solution (`<solution>`), et du socle avec `--socle` ; jamais lancé automatiquement |
+| `communs/nettoyer.sh` | Suppression d'une solution (`<solution>`), et du serveur de voix avec `--socle` (LLM-Service jamais touché) ; jamais lancé automatiquement |
 | `communs/voix.sh` | Service vocal Speaches (`rag-speaches`, `127.0.0.1:8969`) : synthèse Kokoro et transcription faster-whisper-small, sur CPU |
 | `communs/generer_audio.py` | Message vocal fictif du corpus (`corpus/documents/message-vocal-production.mp3`), produit par Speaches |
 | `communs/identite_github.py` | Identité d'un dépôt GitHub (étoiles, forks, licence, commits, versions) par l'API publique, vers `resultats/<solution>/identite-github-<date>.json` |
@@ -31,7 +31,7 @@ Principe : chaque valeur citée dans les manuels vient d'un script de ce dossier
 | `open-notebook/installer.sh` | Installation complète : secrets, socle, voix, conteneurs, configuration des modèles |
 | `open-notebook/configurer.py` | Fournisseur Ollama, modèles et modèles par défaut ; `--voix` pour Speaches |
 | `open-notebook/client.py` | Client Python minimal de l'API (authentification, sources, attente d'indexation, chat) |
-| `open-notebook/demarrer.sh`, `arreter.sh`, `etat.sh` | Démarrage, arrêt (`--socle` pour arrêter aussi le socle), état résumé |
+| `open-notebook/demarrer.sh`, `arreter.sh`, `etat.sh` | Démarrage, arrêt (`--voix` pour arrêter aussi le serveur de voix), état résumé |
 | `open-notebook/verifier_ports.sh` | Contrôle que les ports ne répondent que sur `127.0.0.1` |
 | `open-notebook/verif_minimale.py` | Vérification minimale de bout en bout (carnet, source, question, citation) |
 | `open-notebook/essai_formats.py`, `essai_recherche.py`, `essai_transformations.py`, `essai_chat.py`, `essai_podcast.py` | Essais par fonction, résultats dans `resultats/open-notebook/` |

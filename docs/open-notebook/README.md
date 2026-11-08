@@ -54,6 +54,6 @@ Décisions laissées à l'utilisateur ; l'option la plus prudente a été appliq
 | Absence de GPU NVIDIA sur la machine d'essai | socle Ollama sur CPU ; vLLM non installé ; temps mesurés sur CPU | rejouer l'installation et le banc sur une machine avec GPU NVIDIA |
 | OCR de Docling inopérant (`onnxruntime` absent de l'image 1.15.1) | le contrat scanné reste illisible ; contournement non essayé [À tester] | installer `onnxruntime` dans le conteneur, ou signaler le défaut au projet |
 | Banc en mode **Demander** (Ask) | échantillon de six questions seulement, trop lent sur CPU ([Qualité et performances](10-qualite-performances.md)) | rejouer le banc Ask complet avec un GPU |
-| Anciens conteneurs `rag-ollama`, `rag-agent-api`, `rag-frontend` d'un autre projet | laissés intacts, arrêtés ; le socle de cette série s'appelle `rag-socle-ollama` | les renommer ou les supprimer à la main |
+| Anciens conteneurs `rag-ollama`, `rag-agent-api`, `rag-frontend` d'un autre projet | projet `~/Projets/rag-agent-chat`, laissés intacts, arrêtés ; sans lien avec cette série | les renommer ou les supprimer à la main |
 | Image `ubuntu:24.04` tirée pendant le diagnostic | inutilisée, laissée en place | `docker image rm ubuntu:24.04` à la main si elle ne sert pas ailleurs |
 | Serveur MCP tiers `open-notebook-mcp` 0.3.0 | `create_source` en échec ([API et MCP](08-api-et-mcp.md)) | version corrigée du serveur |

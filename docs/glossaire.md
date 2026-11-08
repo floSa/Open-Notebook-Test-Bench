@@ -5,7 +5,7 @@ Termes employés dans la série de manuels. Quand un terme est propre à une sol
 | Terme | Définition simple |
 |---|---|
 | API REST | Interface qui permet à un programme d'envoyer des requêtes HTTP (GET, POST…) à une application, par exemple pour créer un carnet ou poser une question sans passer par l'interface. |
-| Base URL | Adresse de départ d'un service d'API, par exemple `http://rag-ollama:11434`. |
+| Base URL | Adresse de départ d'un service d'API, par exemple `http://ollama-central:11434`. |
 | Budget de contexte | Nombre de jetons qu'un modèle accepte en une fois, réparti entre les consignes, les passages retrouvés, l'historique et la réponse. |
 | Carnet (notebook) | Espace de travail qui regroupe des sources, des notes et des conversations sur un même sujet (Open Notebook). |
 | Chunk, passage | Morceau de texte issu du découpage d'un document ; c'est l'unité retrouvée par la recherche. |

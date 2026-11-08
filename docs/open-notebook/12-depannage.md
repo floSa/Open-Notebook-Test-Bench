@@ -59,6 +59,7 @@ Le message affiché dans l'interface est court ; le détail est dans `docker log
 | Appel direct à Ollama (`/api/generate`) : réponse sans erreur mais qui ignore le début du texte | troncature silencieuse (`truncated = 1` dans le journal d'Ollama) | même action | [Vérifié] ([mesures](../../outils/resultats/socle/mesures-2026-11-08-passe2.json)) |
 | Première question très lente (une à deux minutes), suivantes rapides | lecture complète du prompt sur CPU, puis réutilisation du cache de préfixe d'Ollama | normal ; garder le même contexte d'une question à l'autre | [Vérifié] |
 | Délai dépassé sur un long traitement | `ESPERANTO_LLM_TIMEOUT` à 180 s par défaut | 900 s dans l'override | [Source] |
+| Réponses en plusieurs minutes, Ollama à plus de 1 500 % de CPU, 0,4 jeton/s | Ollama lance un fil par cœur vu par WSL (16 sur ce processeur hybride) | `LLAMA_ARG_THREADS=8` dans l'environnement du conteneur Ollama : 13,3 jetons/s | [Vérifié] ([mesures](../../outils/resultats/socle/migration-llm-service-2026-11-08.txt)) |
 | Mémoire saturée avec un grand contexte | mémoire de contexte proportionnelle à `num_ctx` et aux requêtes simultanées | `num_ctx` 16384 au plus sur 16 Go ; `OLLAMA_NUM_PARALLEL=1` | [Estimation] |
 
 ### Pour aller plus loin
@@ -100,7 +101,7 @@ Ce manuel est lui-même le tableau de dépannage de la série pour Open Notebook
 
 | Symptôme | Cause probable | Action |
 |---|---|---|
-| Problème absent de ce manuel | cas non rencontré pendant les essais | lire `docker logs rag-open-notebook` et `docker logs rag-socle-ollama` |
+| Problème absent de ce manuel | cas non rencontré pendant les essais | lire `docker logs rag-open-notebook` et `docker logs ollama-central` |
 
 ## Sources
 

@@ -71,6 +71,10 @@ Par type de question (qwen3:4b-instruct, `num_ctx` 16384) [Vérifié] :
 | audio | 0/2 | 2/2 |
 | piège (refus correct) | 4/4 | 4/4 |
 
+### Après passage sur LLM-Service
+
+Échantillon de 6 questions rejoué sur le service de modèles partagé, mêmes poids [Vérifié] ([banc](../../outils/resultats/open-notebook/banc-2026-11-08-llm-service-qwen-echantillon.json)) : mêmes réponses justes et fausses qu'avant (Q01, Q08, Q24, Q32 justes, Q35 refusée, Q18 fausse car issue du scan) ; temps de 8,6 à 20,4 s, 127 s pour la première question. Condition : 8 fils de calcul (`LLAMA_ARG_THREADS=8` dans LLM-Service) ; avec les 16 cœurs vus par WSL, la génération tombe à 0,4 jeton/s ([mesures](../../outils/resultats/socle/migration-llm-service-2026-11-08.txt)).
+
 ### Pour aller plus loin
 
 - Les 6 erreurs restantes avec Docling viennent toutes du contrat scanné (4 questions directes, 2 multi-documents qui en dépendent) : l'OCR ne fonctionne pas dans l'image 1.15.1 ([03](03-carnets-sources-formats.md#3-docling--tableaux-et-ocr)).

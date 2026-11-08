@@ -11,7 +11,7 @@
 ## Sommaire
 
 1. [Prérequis mesurés](#1-prérequis-mesurés)
-2. [Le socle de modèles](#2-le-socle-de-modèles)
+2. [Le service de modèles](#2-le-service-de-modèles)
 3. [Installer Open Notebook](#3-installer-open-notebook)
 4. [Ports et mot de passe](#4-ports-et-mot-de-passe)
 5. [Brancher les modèles](#5-brancher-les-modèles)
@@ -47,20 +47,26 @@ Le diagnostic vérifie aussi l'accès aux registres d'images (Docker Hub, ghcr.i
 outils/communs/diagnostic.sh
 ```
 
-## 2. Le socle de modèles
+## 2. Le service de modèles
 
 ### Essentiel
 
-Open Notebook ne contient aucun modèle : il appelle un serveur de modèles. Ici, le socle est **Ollama sur CPU**, faute de GPU NVIDIA pour vLLM (ligne « Absence de GPU NVIDIA » de l'[index](README.md#ce-qui-reste-ouvert)). Le script réutilise les modèles déjà présents dans `~/.ollama` (copie, sans téléchargement) et ne télécharge que ce qui manque (bge-m3, 1,2 Go). Commande [Testée] (33 s) :
+Open Notebook ne contient aucun modèle : il appelle un service de modèles séparé, partagé avec les autres applications. Ce service est **LLM-Service**, un dépôt à part (`~/Projets/Projet-IA/LLM-Service`, branche `service-ollama`) : un seul Ollama, conteneur `ollama-central`, sert le chat et l'embedding à toutes les applications par le réseau Docker `llm-net`. Sur la machine d'essai, sans GPU NVIDIA, il tourne sur CPU grâce à un fichier local `docker-compose.override.yml` qui retire la réservation de GPU [Vérifié] ([migration](../../outils/resultats/socle/migration-llm-service-2026-11-08.txt)).
+
+Démarrage et contrôle des modèles du banc [Testée] :
 
 ```bash
-outils/communs/socle.sh
+outils/communs/llm_service.sh
 ```
 
-| Conteneur | Rôle | Port | Nom sur le réseau `rag-local` |
+| Conteneur | Rôle | Port | Adresse vue par Open Notebook |
 |---|---|---|---|
-| `rag-socle-ollama` | chat (qwen3:4b-instruct, ministral-3:3b) et embedding (bge-m3) | `127.0.0.1:11434` | `rag-ollama` |
-| `rag-speaches` | synthèse vocale (Kokoro, voix `ff_siwis`) et transcription (faster-whisper-small) | `127.0.0.1:8969` | `rag-speaches` |
+| `ollama-central` (LLM-Service) | chat (qwen3:4b-instruct, ministral-3:3b) et embedding (bge-m3) | `127.0.0.1:11434` | `http://ollama-central:11434` (réseau `llm-net`) |
+| `rag-speaches` | synthèse vocale (Kokoro, voix `ff_siwis`) et transcription (faster-whisper-small) | `127.0.0.1:8969` | `http://rag-speaches:8000/v1` (réseau `rag-local`) |
+
+Réglages du service (`.env` de LLM-Service) : `OLLAMA_CONTEXT_LENGTH=16384`, `OLLAMA_NUM_PARALLEL=1`, `OLLAMA_KEEP_ALIVE=30m`, `OLLAMA_FLASH_ATTENTION=1`, `OLLAMA_KV_CACHE_TYPE=q8_0`, `PRELOAD_MODELS=qwen3:4b-instruct bge-m3`. Toutes les applications branchées doivent demander la même taille de contexte (16384) : sinon Ollama recharge le modèle à chaque alternance ([Qualité et performances](10-qualite-performances.md#2-résultats)).
+
+Les essais du 2026-11-08 (bancs, mesures) ont été faits avec un premier Ollama propre à la série (`rag-socle-ollama`), remplacé ensuite par LLM-Service avec les mêmes fichiers de modèles : mêmes poids, paramètres d'échantillonnage du registre mis à jour au passage ([migration](../../outils/resultats/socle/migration-llm-service-2026-11-08.txt)).
 
 Le serveur de voix sert aux podcasts et aux sources audio ; il est installé par `outils/communs/voix.sh` [Testée] ([relecture préalable](../../outils/resultats/open-notebook/relecture-speaches.md)).
 
@@ -151,7 +157,7 @@ Dans l'interface : **Modèles**, puis le fournisseur, **Ajouter une configuratio
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | Attributions des modèles par défaut | Modèle de Chat et Modèle d'Embedding (obligatoires), TTS, STT ; puis Modèle de Transformation, Modèle d'Outils, Modèle à large contexte |
-| 2 | Bloc « Ollama », configuration `ollama-socle` | Base URL `http://rag-ollama:11434`, `num_ctx` 16384, modèles qwen3:4b-instruct, ministral-3:3b, bge-m3 |
+| 2 | Bloc « Ollama », configuration `llm-service` | Base URL `http://ollama-central:11434`, `num_ctx` 16384, modèles qwen3:4b-instruct, ministral-3:3b, bge-m3 |
 | 3 | Bloc « OpenAI Compatible », configuration `speaches-voix` | Base URL `http://rag-speaches:8000/v1`, modèles TTS et STT |
 | 4 | Boutons « Test » et « Models » | test de connexion et découverte des modèles du fournisseur |
 
@@ -175,7 +181,7 @@ Mémoire [Vérifié] (`docker stats`, [vérification minimale](../../outils/resu
 | `rag-open-notebook` | 378 Mo | 463 Mo | trois processus : interface Next.js, API FastAPI, worker |
 | `rag-open-notebook-surrealdb` | 80 Mo | 84 Mo | base RocksDB |
 | Application seule | 458 Mo | environ 550 Mo | |
-| `rag-socle-ollama` | 4,4 Go (qwen3 chargé) | 5,8 Go (qwen3 et bge-m3) | poids du modèle et mémoire de contexte (KV), proportionnelle à `num_ctx` et au nombre de requêtes simultanées |
+| serveur de modèles (alors `rag-socle-ollama`) | 4,4 Go (qwen3 chargé) | 5,8 Go (qwen3 et bge-m3) | poids du modèle et mémoire de contexte (KV), proportionnelle à `num_ctx` et au nombre de requêtes simultanées |
 
 L'essentiel de la mémoire va donc aux modèles, pas à l'application.
 
@@ -212,7 +218,7 @@ outils/open-notebook/arreter.sh
 outils/open-notebook/etat.sh
 ```
 
-`arreter.sh --socle` arrête aussi Ollama. Les données restent dans `donnees/open-notebook/`.
+`arreter.sh --voix` arrête aussi le serveur de voix. LLM-Service n'est pas arrêté : il sert d'autres applications (`make down` dans son dépôt). Les données restent dans `donnees/open-notebook/`.
 
 ### Pour aller plus loin
 
@@ -243,7 +249,7 @@ Commande [Aide] (non lancée : la solution reste installée pour la démonstrati
 outils/communs/nettoyer.sh open-notebook
 ```
 
-Elle supprime les conteneurs, volumes et réseau du projet `rag-open-notebook`, puis `donnees/open-notebook/`. Avec `--socle`, elle supprime aussi `rag-socle-ollama`, `rag-speaches`, le réseau `rag-local` et `donnees/socle/`. Elle demande une confirmation, sauf avec `--oui`.
+Elle supprime les conteneurs, volumes et réseau du projet `rag-open-notebook`, puis `donnees/open-notebook/`. Avec `--socle`, elle supprime aussi `rag-speaches`, le réseau `rag-local` et `donnees/socle/`. LLM-Service n'est jamais touché. Elle demande une confirmation, sauf avec `--oui`.
 
 ### Pour aller plus loin
 
@@ -262,6 +268,6 @@ Les images Docker ne sont pas supprimées par ce script. Les conteneurs d'autres
 ## Sources
 
 - Compose officiel : https://github.com/lfnovo/open-notebook/blob/v1.15.1/docker-compose.yml ; référence des variables : https://github.com/lfnovo/open-notebook/blob/v1.15.1/docs/5-CONFIGURATION/environment-reference.md
-- Images : `lfnovo/open_notebook:1.15.1`, `surrealdb/surrealdb:v2.7.0`, `ollama/ollama` 0.30.7, `ghcr.io/speaches-ai/speaches:0.8.3-cpu` (empreintes dans `compose.override.yml`, `socle.sh`, `voix.sh`)
-- Scripts : `outils/communs/diagnostic.sh`, `socle.sh`, `voix.sh`, `mesure_modeles.py` ; `outils/open-notebook/installer.sh`, `configurer.py`, `verifier_ports.sh`, `verif_minimale.py`, `demarrer.sh`, `arreter.sh`, `etat.sh`
+- Images : `lfnovo/open_notebook:1.15.1`, `surrealdb/surrealdb:v2.7.0`, `ollama/ollama` 0.30.7, `ghcr.io/speaches-ai/speaches:0.8.3-cpu` (empreintes dans `compose.override.yml`, `voix.sh`, `voix.sh`)
+- Scripts : `outils/communs/diagnostic.sh`, `llm_service.sh`, `voix.sh`, `mesure_modeles.py` ; `outils/open-notebook/installer.sh`, `configurer.py`, `verifier_ports.sh`, `verif_minimale.py`, `demarrer.sh`, `arreter.sh`, `etat.sh`
 - Résultats : [installation](../../outils/resultats/open-notebook/installation-2026-11-08.log), [ports](../../outils/resultats/open-notebook/ports-2026-11-08.txt), [configuration](../../outils/resultats/open-notebook/configuration-2026-11-08.json), [disque](../../outils/resultats/open-notebook/disque-2026-11-08.txt), [relecture](../../outils/resultats/open-notebook/relecture.md)

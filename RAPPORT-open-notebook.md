@@ -8,7 +8,7 @@ Date : 2026-11-08. Machine : Windows 11, WSL2 Ubuntu 24.04, Intel Core Ultra 7 2
 |---|---|---|---|
 | Open Notebook (interface, API, worker) | 1.15.1, image `lfnovo/open_notebook:1.15.1@sha256:e4e18f12…95812` | `rag-open-notebook` | `127.0.0.1:8502` (interface), `127.0.0.1:5055` (API) |
 | SurrealDB | v2.7.0, `sha256:e5d7387e…45723` | `rag-open-notebook-surrealdb` | non publié |
-| Socle de modèles : Ollama sur CPU | 0.30.7, `ollama/ollama@sha256:46399ef0…11e3a` | `rag-socle-ollama` (alias `rag-ollama`) | `127.0.0.1:11434` |
+| Service de modèles : LLM-Service (dépôt séparé `~/Projets/Projet-IA/LLM-Service`, branche `service-ollama`, sur CPU) | Ollama 0.30.7 | `ollama-central`, réseau `llm-net`, partagé avec d'autres applications | `127.0.0.1:11434` |
 | Serveur de voix : Speaches | 0.8.3-cpu, `sha256:21e3df06…53ef8` | `rag-speaches` | `127.0.0.1:8969` |
 | Captures d'écran : Playwright | v1.64.1-noble, conteneur jetable | `rag-captures` (supprimé après usage) | aucun |
 
@@ -84,6 +84,7 @@ Non vérifié, et pourquoi :
 | Saturation de la mémoire de WSL pendant l'échantillon « Demander » (16:10) | WSL « en reconnexion » pendant 36 min | processus arrêtés, modèles déchargés, garde-fou mémoire, essais un par un |
 | Worker bloqué après cette saturation | tâche de podcast en attente 1 h | `docker restart rag-open-notebook` |
 | Juge du banc à un autre `num_ctx` que le chat | latences du banc 6144 faussées | signalé dans le manuel 10 ; exactitude valide |
+| Passage sur LLM-Service : génération à 0,4 jeton/s (16 fils de calcul sur un processeur hybride) | questions en 3 à 5 min | `LLAMA_ARG_THREADS=8` dans l'override local de LLM-Service : 13,3 jetons/s, échantillon de 6 questions identique au banc |
 | `pkill -f` qui tuait le shell appelant | essais interrompus | motifs de recherche réécrits |
 
 ## 7. Décisions en attente
@@ -114,10 +115,10 @@ outils/open-notebook/arreter.sh
 ```
 
 ```bash
-outils/open-notebook/arreter.sh --socle
+outils/open-notebook/arreter.sh --voix
 ```
 
-La première commande arrête l'application en gardant les données ; la seconde arrête aussi Ollama. Le serveur de voix s'arrête par `docker stop rag-speaches`. Redémarrage : `outils/open-notebook/demarrer.sh`.
+La première commande arrête l'application en gardant les données ; la seconde arrête aussi le serveur de voix. LLM-Service n'est pas arrêté : il sert d'autres applications (`make down` dans son dépôt). Redémarrage : `outils/open-notebook/demarrer.sh`.
 
 Suppression complète (jamais lancée automatiquement, confirmation demandée) :
 
@@ -125,14 +126,14 @@ Suppression complète (jamais lancée automatiquement, confirmation demandée) :
 outils/communs/nettoyer.sh open-notebook
 ```
 
-Avec `--socle`, elle supprime aussi le socle, le serveur de voix, le réseau `rag-local` et `donnees/socle/` ([manuel 01, désinstallation](docs/open-notebook/01-installation.md)). Les images Docker ne sont pas supprimées ; `docker image rm` à la main si besoin.
+Avec `--socle`, elle supprime aussi le serveur de voix, le réseau `rag-local` et `donnees/socle/` ; LLM-Service n'est jamais touché ([manuel 01, désinstallation](docs/open-notebook/01-installation.md)). Les images Docker ne sont pas supprimées ; `docker image rm` à la main si besoin.
 
 ## 10. Proposition pour la solution suivante
 
 RAGFlow (fiche 02), dans l'ordre des fiches. Points tirés de cette mission :
 
-- Réutiliser le socle tel quel (`rag-socle-ollama`, `rag-speaches`, réseau `rag-local`) et le corpus, le banc et le vérificateur, déjà rejouables.
+- Se brancher sur LLM-Service (`http://ollama-central:11434`, réseau `llm-net`) et sur le serveur de voix `rag-speaches` ; réutiliser le corpus, le banc et le vérificateur, déjà rejouables.
 - RAGFlow embarque Elasticsearch ou Infinity, MySQL, Redis et MinIO : prévoir 4 à 6 Go de RAM de plus que l'application [Estimation]. Sur 15,3 Go, n'avoir qu'un modèle de chat chargé et `OLLAMA_NUM_PARALLEL=1` pendant les essais, et garder le garde-fou mémoire.
 - RAGFlow fait de l'OCR et une recherche hybride avec reranker : c'est là que le corpus devrait départager les deux solutions (scan, multi-documents).
 - Fixer le `num_ctx` du juge du banc sur celui du chat pour éviter les rechargements du modèle.
-- Décider D1 avant de commencer si une machine NVIDIA est disponible : le socle vLLM est le socle de référence de la série.
+- Décider D1 avant de commencer si une machine NVIDIA est disponible : la branche `service-vllm` de LLM-Service est la cible pour plusieurs utilisateurs.
