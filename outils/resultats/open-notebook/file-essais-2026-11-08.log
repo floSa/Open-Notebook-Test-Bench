@@ -1,0 +1,242 @@
+##### docling — début 14:09:02
+ Container rag-open-notebook-surrealdb Running 
+ Container rag-open-notebook Recreate 
+ Container rag-open-notebook Recreated 
+ Container rag-open-notebook Starting 
+ Container rag-open-notebook Started 
+API disponible après 72 s
+Downloading nvidia-nccl-cu13 (206.0MiB)
+Downloading nvidia-cusparse (144.0MiB)
+Downloading nvidia-cufft (208.1MiB)
+Downloading scipy (33.7MiB)
+Downloading transformers (11.4MiB)
+Downloading nvidia-cublas (386.1MiB)
+Downloading docling-parse (10.3MiB)
+Downloading nvidia-nvshmem-cu13 (129.1MiB)
+Downloading shapely (2.2MiB)
+Downloading nvidia-cusparselt-cu13 (162.3MiB)
+Downloading nvidia-cudnn-cu13 (495.1MiB)
+ Downloaded docling-parse
+Uninstalled 1 package in 34ms
+Installed 65 packages in 12.28s
+ + docling==2.130.0
+ + docling-core==2.96.0
+ + docling-ibm-models==4.0.4
+ + docling-parse==7.21.0
+ + docling-slim==2.130.0
+[entrypoint] Docling installed. The Docling engine, OCR and image sources are now available.
+{"docling_available":true,"crawl4ai_available":false,"crawl4ai_remote_configured":false}
+5.7G	donnees/open-notebook/notebook_data
+rag-open-notebook 2.084GiB / 15.32GiB
+##### docling — fin 14:10:16
+##### formats — début 14:10:16
+contrat-batterix-scan.pdf          failed         0 car.   0 passages  absents : ['212', '21 jours', '40 000', '8 %']
+cse-2025-10-14.md                  completed    528 car.   1 passages  absents : []
+faq-sav.html                       completed    594 car.   1 passages  absents : []
+message-vocal-production.mp3       failed         0 car.   0 passages  absents : ['Moreau', 'ligne', 'mars']
+procedure-batteries.docx           completed    565 car.   1 passages  absents : ['premier lundi', 'classe D']
+rapport-annuel-2025.pdf            completed   4704 car.   5 passages  absents : []
+stocks-octobre-2025.xlsx           completed    703 car.   1 passages  absents : []
+strategie-2026.pptx                completed    565 car.   1 passages  absents : []
+supplier-audit-batterix-en.pdf     completed    465 car.   1 passages  absents : []
+-> outils/resultats/open-notebook/formats-2026-11-08-docling.json
+##### formats — fin 14:10:20
+##### banc-docling — début 14:10:20
+  contrat-batterix-scan.pdf          {'status': 'failed', 'detail': {'status': 'failed', 'message': 'Source processing failed', 'processing_info': {'status': 'failed', 'started_at': None, 'completed_at': None, 'error': 'Could not extract any text content from this source. The content may be empty, inaccessible, or in an unsupported format.', 'result': None}, 'command_id': 'command:oaas0hevy9qs17nu8hcq'}, 'duree_s': 24.2}
+  cse-2025-10-14.md                  {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 528, 'duree_s': 6.0}
+  faq-sav.html                       {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 594, 'duree_s': 6.0}
+  message-vocal-production.mp3       {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 351, 'duree_s': 19.3}
+  procedure-batteries.docx           {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 1085, 'duree_s': 5.8}
+  rapport-annuel-2025.pdf            {'status': 'completed', 'embedded_chunks': 10, 'caracteres': 4319, 'duree_s': 41.0}
+  stocks-octobre-2025.xlsx           {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 1110, 'duree_s': 5.9}
+  strategie-2026.pptx                {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 516, 'duree_s': 9.1}
+  supplier-audit-batterix-en.pdf     {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 430, 'duree_s': 5.9}
+indexation : 125.6 s
+Q01 tableau         OK    80.3s  "Le chiffre d'affaires de Vélanor en 2025 s'élevait à 48,6 M€ [source:t5pnatx1ejz177x6kjgd]"
+Q02 fait simple     OK     6.1s  'Vélanor a été fondée en 2014 [source:t5pnatx1ejz177x6kjgd].'
+Q03 fait simple     OK     5.7s  'La présidente de Vélanor est Hélène Marchais [source:t5pnatx1ejz177x6kjgd].'
+Q04 fait simple     OK     7.2s  "L'adresse du siège de Vélanor est le 12 quai de la Fosse, à Nantes. [source:t5pnatx1ejz177"
+Q05 tableau         OK     7.2s  'Vélanor compte 412 salariés au 31 décembre 2025 [source:t5pnatx1ejz177x6kjgd].'
+Q06 tableau         OK     7.9s  "Le chiffre d'affaires du troisième trimestre 2025 a été de 14,2 M€ [source:t5pnatx1ejz177x"
+Q07 tableau         OK    13.9s  'En 2025, 15 400 unités du modèle Sèvre Trail ont été produites. Cette information est ment'
+Q08 tableau         OK     6.5s  'Le prix public du modèle Erdre Cargo est de 4 290 € TTC. [source:t5pnatx1ejz177x6kjgd]'
+Q09 tableau         OK     6.7s  'Sur le site de Cholet, 97 salariés travaillent dans la fabrication des cadres [source:3iht'
+Q10 fait simple     OK     6.5s  "Les cadres sont fabriqués à partir d'aluminium recyclé à 82 %. [source:t5pnatx1ejz177x6kjg"
+Q11 fait simple     OK    11.0s  'Le taux de recyclage des batteries usagées collectées atteint 96 %, grâce au partenariat a'
+Q12 tableau         OK     6.4s  'Les moteurs sont livrés par Motodrive Co., qui est installé en Taïwan [source:3ihtgesc5i2t'
+Q13 tableau         OK     7.1s  'Vélanor a dégagé un résultat net de 3,1 M€ en 2025 [source:t5pnatx1ejz177x6kjgd].'
+Q14 fait simple     OK     6.5s  "Le taux de retour sous garantie s'établit à 1,8 % des vélos vendus. [source:t5pnatx1ejz177"
+Q15 scan            NON   17.7s  "Le prix unitaire des batteries n'est pas mentionné dans les documents fournis. Le contrat "
+Q16 scan            NON   22.2s  "Le délai de livraison prévu par le contrat avec Batterix n'est pas explicitement indiqué d"
+Q17 scan            NON   20.1s  "Le plafond des pénalités de retard du contrat avec Batterix n'est pas mentionné dans les d"
+Q18 scan            NON   28.2s  'Le contrat avec Batterix ne précise pas explicitement un volume minimal annuel de batterie'
+Q19 fait simple     OK     9.2s  'Les batteries doivent être stockées entre 10 °C et 25 °C. [source:xetpyxai5eddgglwpn22]'
+Q20 fait simple     OK     7.5s  'Karim Benali est responsable de la procédure de charge et de stockage des batteries. Cette'
+Q21 tableau         OK     5.7s  'Le local B2 est inspecté le premier lundi de chaque mois. [source:xetpyxai5eddgglwpn22]'
+Q22 fait simple     OK    19.6s  "Le prix du modèle Vilaine Compact n'est pas explicitement mentionné dans les documents fou"
+Q23 fait simple     OK     7.0s  "La capacité prévue de l'usine de Saint-Nazaire est de 25 000 vélos par an. [source:x5glza8"
+Q24 tableau         OK    18.4s  'Le stock de batteries BAT-48V-14Ah reste de 1 240 unités, selon les données du fichier « s'
+Q25 fait simple     OK     6.7s  'La durée de garantie du cadre est de 7 ans. Cette information est mentionnée dans le FAQ d'
+Q26 fait simple     OK     6.9s  'Le numéro de téléphone du service après-vente est le 02 40 00 12 34. [source:isk9tfd7hwf4j'
+Q27 fait simple     OK     6.9s  "La prime d'intéressement 2025 est de 1 150 euros par salarié. [source:rx0s8mci0v3i4h1ielxr"
+Q28 anglais         OK     9.5s  'Batterix obtained an overall score of 87 out of 100 at the supplier audit. [source:fktzzi8'
+Q29 anglais         OK     9.1s  "Le taux de cellules défectueuses mesuré chez Batterix lors de l'audit est de 0,3 %. Cette "
+Q30 multi-documents NON   11.9s  "Le délai contractuel de Batterix n'est pas explicitement mentionné dans les documents four"
+Q31 multi-documents NON   22.4s  "Le score obtenu par Batterix lors de l'audit est de 87 sur 100 [source:fktzzi8od9ulgyt9bz5"
+Q32 multi-documents OK    13.4s  "Vélanor vise un chiffre d'affaires de 55 M€ en 2026 [source:x5glza818yr0zev85chw]. Une sec"
+Q33 audio           OK    11.9s  "La ligne d'assemblage numéro 3 de Nantes sera arrêtée du 2 au 6 mars 2026 pour maintenance"
+Q34 audio           OK     8.8s  "Le directeur de production de Vélanor est Julien Moreau. Cette information est tirée d'un "
+Q35 piège           OK    15.5s  "Le chiffre d'affaires de Vélanor en 2022 n'est pas mentionné dans les documents fournis. L"
+Q36 piège           OK    23.8s  "Le rôle du directeur financier de Vélanor n'est pas mentionné dans les documents fournis. "
+Q37 piège           OK    16.2s  'Vélanor n’a pas vendu de trottinettes électriques en 2025. Le rapport annuel 2025 indique '
+Q38 piège           OK     9.1s  "Le salaire de Karim Benali n'est pas mentionné dans les documents fournis. Il est identifi"
+-> outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent.json
+exactes 28/34, refus 4/4, bon document cité 28, p50 9.05 s, p95 23.79 s
+##### banc-docling — fin 14:22:23
+##### recherche — début 14:22:23
+référence exacte       texte: rang 1 (1 rés.)  vecteur: rang 1 (5 rés., [0.607, 0.435, 0.424])  BAT-48V-14Ah
+nom propre             texte: rang 2 (2 rés.)  vecteur: rang 2 (6 rés., [0.421, 0.407, 0.349])  Motodrive
+mots exacts            texte: rang 1 (1 rés.)  vecteur: rang 1 (5 rés., [0.57, 0.372, 0.362])  prime d'intéressement
+reformulation          texte: rang None (0 rés.)  vecteur: rang 1 (6 rés., [0.596, 0.51, 0.432])  Combien de temps le cadre est-il couvert en cas de défaut ?
+synonyme               texte: rang None (0 rés.)  vecteur: rang 1 (6 rés., [0.581, 0.398, 0.395])  Où ranger les accumulateurs et à quelle température ?
+paraphrase             texte: rang None (0 rés.)  vecteur: rang 3 (5 rés., [0.491, 0.47, 0.409])  nouvelle usine près de l'estuaire de la Loire
+anglais                texte: rang None (0 rés.)  vecteur: rang 1 (6 rés., [0.695, 0.537, 0.484])  battery supplier audit score
+français vers anglais  texte: rang None (0 rés.)  vecteur: rang 1 (6 rés., [0.675, 0.544, 0.536])  score de l'audit du fournisseur de batteries
+thème                  texte: rang 1 (1 rés.)  vecteur: rang 1 (4 rés., [0.676, 0.466, 0.438])  chiffre d'affaires par trimestre
+absent du corpus       texte: rang None (0 rés.)  vecteur: rang None (6 rés., [0.463, 0.456, 0.455])  trottinette électrique
+-> outils/resultats/open-notebook/recherche-2026-11-08.json
+##### recherche — fin 14:22:53
+##### transformations — début 14:22:53
+fournies : ['Analyze Paper', 'Dense Summary', 'Key Insights', 'Reflections', 'Simple Summary', 'Table of Contents']
+Simple Summary : 18.8 s -> $$
+\text{Garantie : 7 ans (cadre), 2 ans (batterie et moteur)} \\
+\text{Délai de réparation : 10 jours ouvrés (diagnostic gratuit)} \\
+\text{Contact : 02 40 00 12 34 (lun-vend, 9–18 h) ou formulaire du site} \\
+\text{Remplacement de la batterie : possible avec clé fournie, uniquement celle d'origine
+personnalisée : 37.6 s -> - 48,6 M€ – Chiffre d'affaires annuel (en millions d'euros)  
+- 3,1 M€ – Résultat net (en millions d'euros)  
+- 61 800 – Vélos produits au cours de l'année 2025  
+- 412 – Effectif total au 31/12/2025  
+- 27 % – Part de l'export du chiffre d'affaires  
+- 1,8 % – Taux de retour sous garantie des vélos vendus  
+- 3,4 GWh – Consommation électrique des sites en 2025  
+- 96 % – Taux de recyclage des bat
+notes : [{'title': 'Simple Summary from source faq-sav.html', 'note_type': None}, {'title': 'Points à vérifier', 'note_type': 'human'}]
+-> outils/resultats/open-notebook/transformations-2026-11-08.json
+##### transformations — fin 14:23:50
+##### banc-ministral — début 14:23:51
+Q01 tableau         OK   100.3s  "Le chiffre d'affaires de Vélanor en 2025 s'élevait à 48,6 millions d'euros [source:t5pnatx"
+Q02 fait simple     OK     6.3s  'Vélanor a été fondée en 2014. [source:t5pnatx1ejz177x6kjgd]'
+Q03 fait simple     OK     6.0s  'La présidente de Vélanor est Hélène Marchais [source:t5pnatx1ejz177x6kjgd].'
+Q04 fait simple     OK    11.3s  "L'adresse du siège de Vélanor est : 12 quai de la Fosse, à Nantes. [source:t5pnatx1ejz177x"
+Q05 tableau         OK     7.7s  'Vélanor compte 412 salariés au 31 décembre 2025 [source:t5pnatx1ejz177x6kjgd].'
+Q06 tableau         OK     8.4s  "Le chiffre d'affaires du troisième trimestre 2025 a été de 14,2 M€ [source:t5pnatx1ejz177x"
+Q07 tableau         OK    14.4s  'En 2025, 15 400 unités du modèle Sèvre Trail ont été produites. Cela est indiqué dans le t'
+Q08 tableau         OK     6.6s  'Le prix public du modèle Erdre Cargo est de 4 290 € TTC. [source:t5pnatx1ejz177x6kjgd]'
+Q09 tableau         OK     7.1s  'Sur le site de Cholet, 97 salariés travaillent dans la fabrication des cadres [source:t5pn'
+Q10 fait simple     OK     6.7s  "Les cadres sont fabriqués à partir d'aluminium recyclé à 82 %. [source:t5pnatx1ejz177x6kjg"
+Q11 fait simple     OK    11.8s  'Le taux de recyclage des batteries usagées collectées atteint 96 %, grâce au partenariat a'
+Q12 tableau         OK     6.7s  'Les moteurs sont livrés par Motodrive Co., qui est installé en Taïwan [source:t5pnatx1ejz1'
+Q13 tableau         OK     7.7s  'En 2025, Vélanor a dégagé un résultat net de 3,1 M€ [source:t5pnatx1ejz177x6kjgd].'
+Q14 fait simple     OK     6.6s  "Le taux de retour sous garantie s'établit à 1,8 % des vélos vendus [source:t5pnatx1ejz177x"
+Q15 scan            NON   22.1s  "Le prix unitaire des batteries n'est pas mentionné dans les documents fournis. Le contrat "
+Q16 scan            NON   26.6s  "Le délai de livraison prévu par le contrat Batterix n'est pas explicitement indiqué dans l"
+Q17 scan            NON   13.4s  "Le plafond des pénalités de retard du contrat Batterix n'est pas mentionné dans les docume"
+Q18 scan            NON   56.1s  "Le contrat de fourniture en batteries avec Batterix GmbH n'indique pas explicitement un vo"
+Q19 fait simple     OK     6.0s  'Les batteries doivent être stockées entre 10 °C et 25 °C. [source:xetpyxai5eddgglwpn22]'
+Q20 fait simple     OK    10.2s  'Karim Benali, responsable HSE, est responsable de la procédure de charge et de stockage de'
+Q21 tableau         OK     6.0s  'Le local B2 est inspecté le premier lundi de chaque mois. [source:xetpyxai5eddgglwpn22]'
+Q22 fait simple     OK     7.2s  'Le prix public du modèle Vilaine Compact, lancé en avril 2026, est de 2 490 € TTC. [source'
+Q23 fait simple     OK    15.9s  "La capacité prévue de l'usine de Saint-Nazaire est de 25 000 vélos par an. Cette informati"
+Q24 tableau         OK    12.9s  'Le stock de batteries BAT-48V-14Ah reste de 1240 unités, selon les données du tableau des '
+Q25 fait simple     OK     5.7s  'La durée de garantie du cadre est de 7 ans. [source:isk9tfd7hwf4jfq39qhs]'
+Q26 fait simple     OK    12.1s  'Le numéro de téléphone du service après-vente est 02 40 00 12 34, disponible du lundi au v'
+Q27 fait simple     OK     9.1s  "La prime d'intéressement 2025 s'élève à 1 150 euros par salarié. Cette prime est prévue po"
+Q28 anglais         OK     6.5s  'Batterix obtained an overall score of 87 out of 100 at the supplier audit. [source:fktzzi8'
+Q29 anglais         OK    10.0s  "Le taux de cellules défectueuses mesuré chez Batterix lors de l'audit est de 0,3 %. Cette "
+Q30 multi-documents NON   26.0s  "Le document concernant les délais de livraison contractuels de Batterix n'est pas explicit"
+Q31 multi-documents NON   22.4s  "Le score obtenu par Batterix GmbH lors de l'audit qualité le 18 juin 2025 est de 87 sur 10"
+Q32 multi-documents OK    14.3s  "Vélanor vise un chiffre d'affaires de 55 M€ en 2026 [source:x5glza818yr0zev85chw]. À Saint"
+Q33 audio           OK    44.7s  "La ligne d'assemblage qui sera arrêtée pour maintenance est la ligne numéro 3 de Nantes. C"
+Q34 audio           OK     6.0s  'Le directeur de production de Vélanor est Julien Moreau [source:hkmqjqe64vo2uq41z245].'
+Q35 piège           OK    17.0s  "Le chiffre d'affaires de Vélanor en 2022 n'est pas mentionné dans les documents fournis. L"
+Q36 piège           OK    21.2s  "Le rôle de directeur financier de Vélanor n'est pas mentionné dans les documents fournis. "
+Q37 piège           OK    23.4s  "L'information fournie dans les documents ne mentionne aucun détail concernant la vente de "
+Q38 piège           OK     9.4s  "Le salaire de Karim Benali n'est pas mentionné dans les documents fournis. Il est identifi"
+-> outils/resultats/open-notebook/banc-2026-11-08-docling-ministral-fullcontent.json
+exactes 28/34, refus 4/4, bon document cité 30, p50 10.03 s, p95 44.68 s
+##### banc-ministral — fin 14:35:25
+##### banc-ctx4096 — début 14:35:25
+Q01 tableau         NON    9.6s  ''
+Q02 fait simple     NON   11.3s  ''
+Q03 fait simple     NON    7.5s  ''
+Q04 fait simple     NON   10.7s  ''
+Q05 tableau         NON    7.3s  ''
+Q06 tableau         NON    7.5s  ''
+Q07 tableau         NON    7.7s  ''
+Q08 tableau         NON    7.1s  ''
+Q09 tableau         NON   10.4s  ''
+Q10 fait simple     NON    6.1s  ''
+Q11 fait simple     NON    9.4s  ''
+Q12 tableau         NON    6.7s  ''
+Q13 tableau         NON   10.8s  ''
+Q14 fait simple     NON    7.0s  ''
+Q15 scan            NON    7.0s  ''
+Q16 scan            NON    7.6s  ''
+Q17 scan            NON    7.7s  ''
+Q18 scan            NON    5.8s  ''
+Q19 fait simple     NON    7.2s  ''
+Q20 fait simple     NON    7.0s  ''
+Q21 tableau         NON   11.3s  ''
+Q22 fait simple     NON    6.5s  ''
+Q23 fait simple     NON    7.0s  ''
+Q24 tableau         NON    6.8s  ''
+Q25 fait simple     NON    7.6s  ''
+Q26 fait simple     NON    7.0s  ''
+Q27 fait simple     NON    7.3s  ''
+Q28 anglais         NON    6.7s  ''
+Q29 anglais         NON    7.4s  ''
+Q30 multi-documents NON    9.8s  ''
+Q31 multi-documents NON    6.6s  ''
+Q32 multi-documents NON   10.1s  ''
+Q33 audio           NON    6.2s  ''
+Q34 audio           NON    9.6s  ''
+Q35 piège           NON    6.0s  ''
+Q36 piège           NON    8.9s  ''
+Q37 piège           NON    7.0s  ''
+Q38 piège           NON    9.7s  ''
+-> outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent-ctx4096.json
+exactes 0/34, refus 0/4, bon document cité 0, p50 None s, p95 None s
+##### banc-ctx4096 — fin 14:47:45
+##### banc-ask — début 14:47:45
+Terminated
+##### banc-ask — fin 14:47:58
+##### exemples — début 14:47:58
+===== 01_etat_api.sh — 2026-11-08T14:47:58+01:00
+{"status":"healthy"}
+{"auth_enabled":true,"message":"Authentication is required"}
+sans mot de passe : HTTP 401
+avec mot de passe : HTTP 200
+(code de sortie : 0)
+
+===== 02_creer_carnet_et_source.sh — 2026-11-08T14:47:58+01:00
+carnet : notebook:7n3rx12hij3f12fi79ue
+source : source:0ipcdb1seogc68hpk847
+statut : completed, passages : 1
+(code de sortie : 0)
+
+===== 03_poser_question.py — 2026-11-08T14:48:12+01:00
+contexte : 199 jetons
+réponse : Le montant de la prime d'intéressement 2025 est de 1 150 euros par salarié. [source:0ipcdb1seogc68hpk847]
+citation : source:0ipcdb1seogc68hpk847 -> cse-2025-10-14 (1).md
+(code de sortie : 0)
+
+===== 04_rechercher.sh — 2026-11-08T14:48:29+01:00
+04_rechercher.sh: line 9: unexpected EOF while looking for matching `"'
+(code de sortie : 2)
+
+===== 05_supprimer_carnet.sh — 2026-11-08T14:48:29+01:00
+{"message":"Notebook deleted successfully","deleted_notes":0,"deleted_sources":1,"unlinked_sources":0,"deleted_chat_sessions":1}
+(code de sortie : 0)
+
+##### exemples — fin 14:48:29

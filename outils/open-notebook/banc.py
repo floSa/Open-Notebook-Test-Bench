@@ -87,10 +87,12 @@ def main():
     p.add_argument("--reindexer", action="store_true")
     p.add_argument("--limite", type=int)
     p.add_argument("--sans-juge", action="store_true")
+    p.add_argument("--ids", help="sous-ensemble de questions, ex. Q01,Q15,Q21")
     a = p.parse_args()
     ad = Adaptateur(a.mode, a.modele, a.contexte)
     res = commun.lancer(ad, a.etiquette, ["rag-open-notebook", "rag-open-notebook-surrealdb"], ["rag-socle-ollama"],
-                        indexer=a.reindexer or not ad.nb, juge=not a.sans_juge, limite=a.limite)
+                        indexer=a.reindexer or not ad.nb, juge=not a.sans_juge, limite=a.limite,
+                        ids=a.ids.split(",") if a.ids else None)
     commun.ecrire(res, RACINE / "outils/resultats/open-notebook")
     s = res["synthese"]
     print(f"exactes {s['exactes']}/{s['sur']}, refus {s['refus_corrects']}/{s['pieges']}, bon document cité "

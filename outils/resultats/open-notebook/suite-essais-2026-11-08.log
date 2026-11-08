@@ -1,0 +1,14 @@
+##### chat — début 14:48:31
+modes : {'not in': {'jetons': 0, 'caracteres': 0}, 'insights': {'jetons': 550, 'caracteres': 1411}, 'full content': {'jetons': 3084, 'caracteres': 10677}}
+{"mode": "insights", "modele": null, "duree_s": 127.5, "jetons_contexte": 550, "reponse": "Le délai de livraison prévu par le contrat avec Batterix n'est pas indiqué dans les documents fournis. De plus, aucune donnée sur le délai moyen réellement constaté n'est disponible dans le contexte actuel.  \n\nLes informations disponibles concernent uniquement les garanties et délais de réparation, comme le délai de 10 jours ouvrés pour le diagnostic gratuit et le remplacement de la batterie, avec une garantie de 7 ans (cadre) et 2 ans (batterie et moteur) [source:isk9tfd7hwf4jfq39qhs].  \n\nAucun document n’apporte des données sur les délais de livraison prévus ou réels dans le contrat avec Batterix
+{"mode": "full content", "modele": null, "duree_s": 465.2, "jetons_contexte": 3084, "reponse": "Le document *stocks-octobre-2025.xlsx* indique que le délai moyen constaté pour les achats de batteries auprès de Batterix GmbH est de **24 jours** [source:3ihtgesc5i2tpoan1mdz].\n\nCependant, le document *contrat-batterix-scan.pdf* n'est pas disponible dans le contexte fourni, et aucune information sur un délai de livraison prévu dans le contrat n'est précisée. Ainsi, le délai prévu par contrat n'est pas accessible dans les sources disponibles.\n\nEn résumé :\n- Délai moyen constaté : 24 jours [source:3ihtgesc5i2tpoan1mdz].\n- Délai prévu par contrat : **non disponible** dans le contexte."}
+{"mode": "full content", "modele": "model:21lrvdgal1gvvnqgprmv", "duree_s": 371.3, "jetons_contexte": 3084, "reponse": "Le délai moyen réellement constaté pour les livraisons des batteries avec Batterix est de 24 jours [source:3ihtgesc5i2tpoan1mdz]. Le délai de livraison prévu par le contrat n'est pas spécifié explicitement dans les documents disponibles. Les informations sur le contrat avec Batterix sont mentionnées dans le rapport annual 2025 (renouvelé en mars 2025), mais le délai contractuel est absent des documents analysés."}
+-> outils/resultats/open-notebook/chat-2026-11-08.json
+##### fin 15:04:38
+##### banc-ask — début 15:04:38
+Q01 tableau         NON 1089.2s  ''
+Q02 fait simple     OK   403.7s  'Vélanor a été fondée en 2014 à Nantes [source:t5pnatx1ejz177x6kjgd].  \n\nCette information '
+Q15 scan            NON  389.3s  "Le prix unitaire des batteries prévu par le contrat avec Batterix n'est pas précisé dans l"
+Q21 tableau         NON  996.5s  ''
+Q28 anglais         NON  118.1s  ''
+Q30 multi-documents NON   74.4s  ''

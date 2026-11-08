@@ -1,0 +1,40 @@
+Q01 tableau         OK   100.3s  "Le chiffre d'affaires de Vélanor en 2025 s'élevait à 48,6 millions d'euros [source:t5pnatx"
+Q02 fait simple     OK     6.3s  'Vélanor a été fondée en 2014. [source:t5pnatx1ejz177x6kjgd]'
+Q03 fait simple     OK     6.0s  'La présidente de Vélanor est Hélène Marchais [source:t5pnatx1ejz177x6kjgd].'
+Q04 fait simple     OK    11.3s  "L'adresse du siège de Vélanor est : 12 quai de la Fosse, à Nantes. [source:t5pnatx1ejz177x"
+Q05 tableau         OK     7.7s  'Vélanor compte 412 salariés au 31 décembre 2025 [source:t5pnatx1ejz177x6kjgd].'
+Q06 tableau         OK     8.4s  "Le chiffre d'affaires du troisième trimestre 2025 a été de 14,2 M€ [source:t5pnatx1ejz177x"
+Q07 tableau         OK    14.4s  'En 2025, 15 400 unités du modèle Sèvre Trail ont été produites. Cela est indiqué dans le t'
+Q08 tableau         OK     6.6s  'Le prix public du modèle Erdre Cargo est de 4 290 € TTC. [source:t5pnatx1ejz177x6kjgd]'
+Q09 tableau         OK     7.1s  'Sur le site de Cholet, 97 salariés travaillent dans la fabrication des cadres [source:t5pn'
+Q10 fait simple     OK     6.7s  "Les cadres sont fabriqués à partir d'aluminium recyclé à 82 %. [source:t5pnatx1ejz177x6kjg"
+Q11 fait simple     OK    11.8s  'Le taux de recyclage des batteries usagées collectées atteint 96 %, grâce au partenariat a'
+Q12 tableau         OK     6.7s  'Les moteurs sont livrés par Motodrive Co., qui est installé en Taïwan [source:t5pnatx1ejz1'
+Q13 tableau         OK     7.7s  'En 2025, Vélanor a dégagé un résultat net de 3,1 M€ [source:t5pnatx1ejz177x6kjgd].'
+Q14 fait simple     OK     6.6s  "Le taux de retour sous garantie s'établit à 1,8 % des vélos vendus [source:t5pnatx1ejz177x"
+Q15 scan            NON   22.1s  "Le prix unitaire des batteries n'est pas mentionné dans les documents fournis. Le contrat "
+Q16 scan            NON   26.6s  "Le délai de livraison prévu par le contrat Batterix n'est pas explicitement indiqué dans l"
+Q17 scan            NON   13.4s  "Le plafond des pénalités de retard du contrat Batterix n'est pas mentionné dans les docume"
+Q18 scan            NON   56.1s  "Le contrat de fourniture en batteries avec Batterix GmbH n'indique pas explicitement un vo"
+Q19 fait simple     OK     6.0s  'Les batteries doivent être stockées entre 10 °C et 25 °C. [source:xetpyxai5eddgglwpn22]'
+Q20 fait simple     OK    10.2s  'Karim Benali, responsable HSE, est responsable de la procédure de charge et de stockage de'
+Q21 tableau         OK     6.0s  'Le local B2 est inspecté le premier lundi de chaque mois. [source:xetpyxai5eddgglwpn22]'
+Q22 fait simple     OK     7.2s  'Le prix public du modèle Vilaine Compact, lancé en avril 2026, est de 2 490 € TTC. [source'
+Q23 fait simple     OK    15.9s  "La capacité prévue de l'usine de Saint-Nazaire est de 25 000 vélos par an. Cette informati"
+Q24 tableau         OK    12.9s  'Le stock de batteries BAT-48V-14Ah reste de 1240 unités, selon les données du tableau des '
+Q25 fait simple     OK     5.7s  'La durée de garantie du cadre est de 7 ans. [source:isk9tfd7hwf4jfq39qhs]'
+Q26 fait simple     OK    12.1s  'Le numéro de téléphone du service après-vente est 02 40 00 12 34, disponible du lundi au v'
+Q27 fait simple     OK     9.1s  "La prime d'intéressement 2025 s'élève à 1 150 euros par salarié. Cette prime est prévue po"
+Q28 anglais         OK     6.5s  'Batterix obtained an overall score of 87 out of 100 at the supplier audit. [source:fktzzi8'
+Q29 anglais         OK    10.0s  "Le taux de cellules défectueuses mesuré chez Batterix lors de l'audit est de 0,3 %. Cette "
+Q30 multi-documents NON   26.0s  "Le document concernant les délais de livraison contractuels de Batterix n'est pas explicit"
+Q31 multi-documents NON   22.4s  "Le score obtenu par Batterix GmbH lors de l'audit qualité le 18 juin 2025 est de 87 sur 10"
+Q32 multi-documents OK    14.3s  "Vélanor vise un chiffre d'affaires de 55 M€ en 2026 [source:x5glza818yr0zev85chw]. À Saint"
+Q33 audio           OK    44.7s  "La ligne d'assemblage qui sera arrêtée pour maintenance est la ligne numéro 3 de Nantes. C"
+Q34 audio           OK     6.0s  'Le directeur de production de Vélanor est Julien Moreau [source:hkmqjqe64vo2uq41z245].'
+Q35 piège           OK    17.0s  "Le chiffre d'affaires de Vélanor en 2022 n'est pas mentionné dans les documents fournis. L"
+Q36 piège           OK    21.2s  "Le rôle de directeur financier de Vélanor n'est pas mentionné dans les documents fournis. "
+Q37 piège           OK    23.4s  "L'information fournie dans les documents ne mentionne aucun détail concernant la vente de "
+Q38 piège           OK     9.4s  "Le salaire de Karim Benali n'est pas mentionné dans les documents fournis. Il est identifi"
+-> outils/resultats/open-notebook/banc-2026-11-08-docling-ministral-fullcontent.json
+exactes 28/34, refus 4/4, bon document cité 30, p50 10.03 s, p95 44.68 s

@@ -1,0 +1,50 @@
+  contrat-batterix-scan.pdf          {'status': 'failed', 'detail': {'status': 'failed', 'message': 'Source processing failed', 'processing_info': {'status': 'failed', 'started_at': None, 'completed_at': None, 'error': 'Could not extract any text content from this source. The content may be empty, inaccessible, or in an unsupported format.', 'result': None}, 'command_id': 'command:tc6ln8o8xse1iuo6afzk'}, 'duree_s': 5.6}
+  cse-2025-10-14.md                  {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 528, 'duree_s': 9.2}
+  faq-sav.html                       {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 594, 'duree_s': 5.9}
+  message-vocal-production.mp3       {'status': 'failed', 'detail': {'status': 'failed', 'message': 'Source processing failed', 'processing_info': {'status': 'failed', 'started_at': None, 'completed_at': None, 'error': 'Content extraction is not configured correctly. Check the content processing engine and speech-to-text settings; the worker log has the details.', 'result': None}, 'command_id': 'command:pjqurv3h49l9pr0xt2cq'}, 'duree_s': 5.6}
+  procedure-batteries.docx           {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 565, 'duree_s': 5.9}
+  rapport-annuel-2025.pdf            {'status': 'completed', 'embedded_chunks': 5, 'caracteres': 4704, 'duree_s': 20.1}
+  stocks-octobre-2025.xlsx           {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 703, 'duree_s': 5.9}
+  strategie-2026.pptx                {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 565, 'duree_s': 5.9}
+  supplier-audit-batterix-en.pdf     {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 465, 'duree_s': 5.9}
+indexation : 70.0 s
+Q01 tableau         OK    97.8s  "Le chiffre d'affaires de Vélanor en 2025 s'élève à 48,6 M€ [source:s5ztzcy9ykaspbznzujy]."
+Q02 fait simple     OK     6.9s  'Vélanor a été fondée en 2014. [source:s5ztzcy9ykaspbznzujy]'
+Q03 fait simple     OK     5.9s  'La présidente de Vélanor est Hélène Marchais [source:s5ztzcy9ykaspbznzujy].'
+Q04 fait simple     OK    10.8s  "L'adresse du siège de Vélanor est le 12 quai de la Fosse, à Nantes. [source:s5ztzcy9ykaspb"
+Q05 tableau         OK     8.3s  'Au 31 décembre 2025, Vélanor compte 412 salariés [source:s5ztzcy9ykaspbznzujy].'
+Q06 tableau         OK     9.0s  "Le chiffre d'affaires du troisième trimestre 2025 a été de 14,2 M€. [source:s5ztzcy9ykaspb"
+Q07 tableau         OK    16.5s  'En 2025, 15 400 unités du modèle Sèvre Trail ont été produites. Cela est indiqué dans le d'
+Q08 tableau         OK     6.5s  'Le prix public du modèle Erdre Cargo est de 4 290 € TTC. [source:s5ztzcy9ykaspbznzujy]'
+Q09 tableau         OK     8.1s  'Sur le site de Cholet, 97 salariés travaillent dans la fabrication des cadres. [source:gwy'
+Q10 fait simple     OK     6.7s  "Les cadres sont fabriqués à partir d'aluminium recyclé à 82 %. [source:s5ztzcy9ykaspbznzuj"
+Q11 fait simple     OK     8.2s  'Le taux de recyclage des batteries usagées collectées atteint 96 %, grâce au partenariat a'
+Q12 tableau         OK     6.9s  'Le fournisseur des moteurs est Motodrive Co., installé au Taïwan [source:gwyzl6wvp8nq8pqk0'
+Q13 tableau         OK    11.5s  'Vélanor a dégagé un résultat net de 3,1 M€ en 2025 [source:s5ztzcy9ykaspbznzujy].'
+Q14 fait simple     OK     7.1s  "Le taux de retour sous garantie s'établit à 1,8 % des vélos vendus. [source:s5ztzcy9ykaspb"
+Q15 scan            NON   23.5s  "Le prix unitaire des batteries n'est pas mentionné dans les documents disponibles. Le cont"
+Q16 scan            NON   19.6s  'Le document qui mentionne les délais des fournisseurs, incluant Batterix, est le fichier *'
+Q17 scan            OK    20.0s  "Le plafond des pénalités de retard n'est pas mentionné dans les documents fournis. Le cont"
+Q18 scan            NON   22.9s  'Le contrat avec Batterix ne précise pas un volume minimal annuel de batteries. Le document'
+Q19 fait simple     OK     6.4s  'Les batteries doivent être stockées entre 10 °C et 25 °C. [source:kclolfk6c0keogcvj9mo]'
+Q20 fait simple     OK     7.4s  'Karim Benali, responsable HSE, est responsable de la procédure de charge et de stockage de'
+Q21 tableau         NON   14.7s  "Le document contexte ne mentionne pas explicitement la fréquence d'inspection du local B2."
+Q22 fait simple     OK     9.7s  'Le prix public du Vilaine Compact, le nouveau modèle de vélo pliant électrique, est de 2 4'
+Q23 fait simple     OK     7.8s  "La capacité prévue de l'usine de Saint-Nazaire est de 25 000 vélos par an. [source:lkudh8p"
+Q24 tableau         OK    19.3s  'Le stock de batteries BAT-48V-14Ah reste de 1240 unités, selon les données du fichier *sto'
+Q25 fait simple     OK     7.8s  'La durée de garantie du cadre est de 7 ans. Cette information est mentionnée dans le docum'
+Q26 fait simple     OK    10.5s  'Le numéro de téléphone du service après-vente est 02 40 00 12 34. [source:fklivokkcmhu4t4y'
+Q27 fait simple     OK     7.7s  "La prime d'intéressement 2025 s'élève à 1 150 euros par salarié [source:kba5tul1j4y728cjzw"
+Q28 anglais         OK     6.8s  'Batterix obtained an overall score of 87 out of 100 at the supplier audit. [source:e6mm5bg'
+Q29 anglais         OK    13.6s  "Le taux de cellules défectueuses mesuré chez Batterix lors de l'audit est de 0,3 %. Cela e"
+Q30 multi-documents NON   13.6s  "Le délai contractuel de Batterix n'est pas explicitement mentionné dans les documents four"
+Q31 multi-documents NON   27.4s  "Le score obtenu par Batterix à l'audit est de 87 sur 100 [source:e6mm5bgdfkl45d18tkyp]. Ce"
+Q32 multi-documents OK    14.7s  "Vélanor vise un chiffre d'affaires de 55 M€ en 2026 [source:lkudh8prnow82qm2et7x]. À Saint"
+Q33 audio           NON   23.8s  "Aucune information n'est disponible dans le contexte concernant une ligne d'assemblage qui"
+Q34 audio           NON   16.5s  "Le rôle de directeur de production de Vélanor n'est pas mentionné dans les documents dispo"
+Q35 piège           OK    13.7s  "Le chiffre d'affaires de Vélanor en 2022 n'est pas mentionné dans les documents fournis. L"
+Q36 piège           OK    17.1s  "Le rôle du directeur financier de Vélanor n'est pas mentionné dans les documents fournis. "
+Q37 piège           OK    14.6s  "Il n'est pas indiqué dans les documents que Vélanor a vendu de trottinettes électriques en"
+Q38 piège           OK    13.4s  "Le salaire de Karim Benali n'est pas mentionné dans les documents fournis. Il est identifi"
+-> outils/resultats/open-notebook/banc-2026-11-08-defaut-qwen-fullcontent.json
+exactes 26/34, refus 4/4, bon document cité 26, p50 10.81 s, p95 23.83 s

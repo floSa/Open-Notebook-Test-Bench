@@ -1,0 +1,719 @@
+{
+  "date": "2026-11-08T14:35:27",
+  "solution": "open-notebook",
+  "etiquette": "docling-qwen-fullcontent-ctx4096",
+  "config": {
+    "mode": "chat",
+    "modele": "qwen3:4b-instruct",
+    "contexte_sources": "full content",
+    "num_ctx": 4096,
+    "chunk_size": "400 (défaut)",
+    "docling": "true",
+    "version": "1.15.1"
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "type": "tableau",
+      "question": "Quel est le chiffre d'affaires 2025 de Vélanor ?",
+      "attendu": [
+        "48,6"
+      ],
+      "latence_s": 9.6,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4238 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4238,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q02",
+      "type": "fait simple",
+      "question": "En quelle année Vélanor a-t-elle été fondée ?",
+      "attendu": [
+        "2014"
+      ],
+      "latence_s": 11.28,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4233 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4233,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q03",
+      "type": "fait simple",
+      "question": "Qui est la présidente de Vélanor ?",
+      "attendu": [
+        "Marchais"
+      ],
+      "latence_s": 7.48,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4229 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4229,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q04",
+      "type": "fait simple",
+      "question": "Quelle est l'adresse du siège de Vélanor ?",
+      "attendu": [
+        "quai de la Fosse"
+      ],
+      "latence_s": 10.74,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4233 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4233,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q05",
+      "type": "tableau",
+      "question": "Combien de salariés compte Vélanor au 31 décembre 2025 ?",
+      "attendu": [
+        "412"
+      ],
+      "latence_s": 7.32,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4239 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4239,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q06",
+      "type": "tableau",
+      "question": "Quel a été le chiffre d'affaires du troisième trimestre 2025 ?",
+      "attendu": [
+        "14,2"
+      ],
+      "latence_s": 7.52,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4240 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4240,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q07",
+      "type": "tableau",
+      "question": "Combien d'unités du modèle Sèvre Trail ont été produites en 2025 ?",
+      "attendu": [
+        "15 400"
+      ],
+      "latence_s": 7.69,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4241 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4241,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q08",
+      "type": "tableau",
+      "question": "Quel est le prix public du modèle Erdre Cargo ?",
+      "attendu": [
+        "4 290"
+      ],
+      "latence_s": 7.07,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4230 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4230,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q09",
+      "type": "tableau",
+      "question": "Combien de salariés travaillent sur le site de Cholet ?",
+      "attendu": [
+        "97"
+      ],
+      "latence_s": 10.4,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4233 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4233,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q10",
+      "type": "fait simple",
+      "question": "Quelle est la part d'aluminium recyclé dans les cadres ?",
+      "attendu": [
+        "82"
+      ],
+      "latence_s": 6.06,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4233 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4233,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q11",
+      "type": "fait simple",
+      "question": "Quel est le taux de recyclage des batteries usagées ?",
+      "attendu": [
+        "96"
+      ],
+      "latence_s": 9.39,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4233 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4233,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q12",
+      "type": "tableau",
+      "question": "Quel fournisseur livre les moteurs et dans quel pays est-il installé ?",
+      "attendu": [
+        "Motodrive",
+        "Taïwan|Taiwan"
+      ],
+      "latence_s": 6.69,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4235 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4235,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q13",
+      "type": "tableau",
+      "question": "Quel résultat net Vélanor a-t-elle dégagé en 2025 ?",
+      "attendu": [
+        "3,1"
+      ],
+      "latence_s": 10.78,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4241 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4241,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q14",
+      "type": "fait simple",
+      "question": "Quel est le taux de retour sous garantie ?",
+      "attendu": [
+        "1,8"
+      ],
+      "latence_s": 7.02,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4230 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4230,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q15",
+      "type": "scan",
+      "question": "Quel est le prix unitaire des batteries prévu par le contrat avec Batterix ?",
+      "attendu": [
+        "212"
+      ],
+      "latence_s": 6.95,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4235 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4235,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q16",
+      "type": "scan",
+      "question": "Quel est le délai de livraison prévu par le contrat Batterix ?",
+      "attendu": [
+        "21"
+      ],
+      "latence_s": 7.63,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4233 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4233,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q17",
+      "type": "scan",
+      "question": "Quel est le plafond des pénalités de retard du contrat Batterix ?",
+      "attendu": [
+        "8"
+      ],
+      "latence_s": 7.66,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4237 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4237,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q18",
+      "type": "scan",
+      "question": "Quel volume minimal annuel de batteries le contrat Batterix prévoit-il ?",
+      "attendu": [
+        "40 000"
+      ],
+      "latence_s": 5.85,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4235 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4235,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q19",
+      "type": "fait simple",
+      "question": "À quelle température les batteries doivent-elles être stockées ?",
+      "attendu": [
+        "10",
+        "25"
+      ],
+      "latence_s": 7.19,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4232 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4232,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q20",
+      "type": "fait simple",
+      "question": "Qui est responsable de la procédure de charge et de stockage des batteries ?",
+      "attendu": [
+        "Benali"
+      ],
+      "latence_s": 6.96,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4235 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4235,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q21",
+      "type": "tableau",
+      "question": "À quelle fréquence le local B2 est-il inspecté ?",
+      "attendu": [
+        "premier lundi"
+      ],
+      "latence_s": 11.27,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4232 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4232,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q22",
+      "type": "fait simple",
+      "question": "Quel est le prix du Vilaine Compact ?",
+      "attendu": [
+        "2 490"
+      ],
+      "latence_s": 6.55,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4228 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4228,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q23",
+      "type": "fait simple",
+      "question": "Quelle est la capacité prévue de l'usine de Saint-Nazaire ?",
+      "attendu": [
+        "25 000"
+      ],
+      "latence_s": 7.04,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4236 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4236,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q24",
+      "type": "tableau",
+      "question": "Quel stock de batteries BAT-48V-14Ah reste-t-il et est-il sous le seuil d'alerte ?",
+      "attendu": [
+        "1 240|1240",
+        "1 500|1500"
+      ],
+      "latence_s": 6.75,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4247 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4247,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q25",
+      "type": "fait simple",
+      "question": "Quelle est la durée de garantie du cadre ?",
+      "attendu": [
+        "7 ans"
+      ],
+      "latence_s": 7.61,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4229 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4229,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q26",
+      "type": "fait simple",
+      "question": "Quel est le numéro de téléphone du service après-vente ?",
+      "attendu": [
+        "02 40 00 12 34"
+      ],
+      "latence_s": 6.98,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4232 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4232,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q27",
+      "type": "fait simple",
+      "question": "Quel est le montant de la prime d'intéressement 2025 ?",
+      "attendu": [
+        "1 150|1150"
+      ],
+      "latence_s": 7.35,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4238 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4238,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q28",
+      "type": "anglais",
+      "question": "What overall score did Batterix obtain at the supplier audit?",
+      "attendu": [
+        "87"
+      ],
+      "latence_s": 6.72,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4230 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4230,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q29",
+      "type": "anglais",
+      "question": "Quel est le taux de cellules défectueuses mesuré chez Batterix lors de l'audit ?",
+      "attendu": [
+        "0.3|0,3"
+      ],
+      "latence_s": 7.37,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4243 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4243,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q30",
+      "type": "multi-documents",
+      "question": "Quel est le délai de livraison contractuel de Batterix et quel délai moyen est réellement constaté ?",
+      "attendu": [
+        "21",
+        "24"
+      ],
+      "latence_s": 9.85,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4243 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4243,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q31",
+      "type": "multi-documents",
+      "question": "Quel score Batterix a-t-il obtenu à l'audit, et quel prix unitaire le contrat fixe-t-il ?",
+      "attendu": [
+        "87",
+        "212"
+      ],
+      "latence_s": 6.58,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4245 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4245,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q32",
+      "type": "multi-documents",
+      "question": "Quel chiffre d'affaires Vélanor vise-t-elle en 2026 et combien d'embauches sont prévues à Saint-Nazaire ?",
+      "attendu": [
+        "55",
+        "70"
+      ],
+      "latence_s": 10.12,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4258 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4258,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q33",
+      "type": "audio",
+      "question": "Quelle ligne d'assemblage sera arrêtée pour maintenance en mars 2026, et jusqu'à quelle date ?",
+      "attendu": [
+        "3",
+        "6 mars"
+      ],
+      "latence_s": 6.25,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4246 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4246,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": false
+    },
+    {
+      "id": "Q34",
+      "type": "audio",
+      "question": "Qui est le directeur de production de Vélanor ?",
+      "attendu": [
+        "Moreau"
+      ],
+      "latence_s": 9.63,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4231 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4231,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": {
+        "document": false,
+        "page": null
+      },
+      "juge_llm": true
+    },
+    {
+      "id": "Q35",
+      "type": "piège",
+      "question": "Quel était le chiffre d'affaires de Vélanor en 2022 ?",
+      "attendu": [],
+      "latence_s": 6.03,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4239 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4239,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": null,
+      "juge_llm": false
+    },
+    {
+      "id": "Q36",
+      "type": "piège",
+      "question": "Qui est le directeur financier de Vélanor ?",
+      "attendu": [],
+      "latence_s": 8.94,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4230 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4230,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": null,
+      "juge_llm": false
+    },
+    {
+      "id": "Q37",
+      "type": "piège",
+      "question": "Combien de trottinettes électriques Vélanor a-t-elle vendues en 2025 ?",
+      "attendu": [],
+      "latence_s": 6.95,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4245 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4245,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": null,
+      "juge_llm": false
+    },
+    {
+      "id": "Q38",
+      "type": "piège",
+      "question": "Quel est le salaire de Karim Benali ?",
+      "attendu": [],
+      "latence_s": 9.71,
+      "erreur": "RuntimeError('POST /api/chat/execute -> 502 {\"detail\":\"AI service error: {\\\\\"error\\\\\":{\\\\\"code\\\\\":400,\\\\\"message\\\\\":\\\\\"request (4230 tokens) exceeds the available context size (4096 tokens), try increasing it\\\\\",\\\\\"type\\\\\":\\\\\"exceed_context_size_error\\\\\",\\\\\"n_prompt_tokens\\\\\":4230,\\\\\"n_ctx\\\\\":4096}} (sta...\"}')",
+      "reponse": "",
+      "citations": [],
+      "exacte": false,
+      "citation": null,
+      "juge_llm": false
+    }
+  ],
+  "synthese": {
+    "questions": 38,
+    "exactes": 0,
+    "sur": 34,
+    "refus_corrects": 0,
+    "pieges": 4,
+    "citation_bon_document": 0,
+    "citation_bonne_page": 0,
+    "citations_avec_page": 0,
+    "juge_llm_oui": 18,
+    "juge_llm_sur": 38,
+    "erreurs": 38,
+    "latence_p50_s": null,
+    "latence_p95_s": null,
+    "par_type": {
+      "tableau": "0/10",
+      "fait simple": "0/13",
+      "scan": "0/4",
+      "anglais": "0/2",
+      "multi-documents": "0/3",
+      "audio": "0/2",
+      "piège": "0/4"
+    },
+    "pic_ram_mo": {
+      "rag-open-notebook": 2545,
+      "rag-open-notebook-surrealdb": 116,
+      "rag-socle-ollama": 10128
+    },
+    "pic_ram_application_mo": 2661,
+    "vram": "sans objet (aucun GPU NVIDIA, socle CPU)",
+    "indexation_s": null
+  }
+}
