@@ -18,6 +18,8 @@ Principe : chaque valeur citée dans les manuels vient d'un script de ce dossier
 | `communs/voix.sh` | Service vocal Speaches (`rag-speaches`, `127.0.0.1:8969`) : synthèse Kokoro et transcription faster-whisper-small, sur CPU |
 | `communs/generer_audio.py` | Message vocal fictif du corpus (`corpus/documents/message-vocal-production.mp3`), produit par Speaches |
 | `communs/identite_github.py` | Identité d'un dépôt GitHub (étoiles, forks, licence, commits, versions) par l'API publique, vers `resultats/<solution>/identite-github-<date>.json` |
+| `communs/versions.py` | Dernière version stable de chaque composant (GitHub), comparée à la version utilisée, vers `resultats/<solution>/versions-<date>.json` |
+| `communs/nouvelle_solution.sh` | Prépare le dépôt de la solution suivante : kit, corpus vérifié, outils communs, mesures, résultats des bancs précédents |
 | `communs/banc/renoter.py` | Recalcul des notes d'un banc déjà joué, après correction de la notation |
 | `communs/banc/tableau.py` | Tableau comparatif Markdown de tous les bancs d'un dossier de résultats |
 | `communs/captures/lancer.sh` | Lancement d'un script de captures dans le conteneur Playwright officiel, sur le réseau `rag-local` |
