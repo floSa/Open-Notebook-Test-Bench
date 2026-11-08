@@ -1,0 +1,7 @@
+# Nettoyage des artefacts d'essai, 2026-11-08T18:43:20
+première exécution interrompue par une erreur de paramètre (limit=200) après la suppression des carnets : supprimés « Banc » et « Essai installation » (et leurs sources propres)
+gardé : Démo Vélanor
+carnets restants : Démo Vélanor
+sources restantes : 9
+épisodes : Essai Essai installation
+données mises de côté par la restauration supprimées (donnees/open-notebook.avant-restauration-20261108-184034)
