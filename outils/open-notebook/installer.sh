@@ -20,7 +20,7 @@ echo "8ef83d69d06a1b42ef8dc9598010e93a2147090031c57cef6b7f7f7d59e17034  $OFF" | 
 if [ ! -f "$D/.env" ]; then
   umask 077
   cat > "$D/.env" <<EOF
-DONNEES=$D
+DONNEES=../../../donnees/open-notebook
 OPEN_NOTEBOOK_ENCRYPTION_KEY=$(openssl rand -hex 32)
 OPEN_NOTEBOOK_PASSWORD=$(openssl rand -hex 12)
 SURREAL_USER=rag

@@ -14,7 +14,7 @@ services:
     restart: unless-stopped
     ports: !reset []
     volumes: !override
-      - ${DONNEES}/surreal_data:/mydata
+      - ${DONNEES}/surreal_data:/mydata  # chemin relatif au compose officiel : survit au renommage du dossier
     networks: [rag-local]
 
   open_notebook:
