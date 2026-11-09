@@ -42,3 +42,8 @@ ollama version is 0.30.7
           et le calcul attend les cœurs les plus lents. Les réglages q8_0 et flash attention ne sont pas en cause.
   Correctif : docker-compose.override.yml local de LLM-Service : LLAMA_ARG_THREADS=8, LLAMA_ARG_THREADS_BATCH=8.
   .env de LLM-Service laissé à OLLAMA_FLASH_ATTENTION=0 et OLLAMA_KV_CACHE_TYPE=f16 (conditions des bancs du 2026-11-08).
+## Passage à la dernière version stable d'Ollama (relevé : outils/resultats/open-notebook/versions-2026-11-08.json)
+  Image : ollama/ollama:0.40.15@sha256:0e59999e0e8f9fd4e704bd788a89b7e4cad399367fb1365f8c102ac662288761 (override local de LLM-Service)
+  Modèles : inchangés (mêmes empreintes)
+  Mesure (même requête que ci-dessus, LLAMA_ARG_THREADS=8) : génération 16,4 j/s, lecture du prompt 64,4 j/s (0.30.7 : 13,3 et 38,7)
+  Banc complet rejoué : banc-2026-11-08-docling-qwen-fullcontent-ollama040.json (28/34, 4/4, médiane 7,4 s, indexation 84 s)
