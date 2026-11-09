@@ -81,6 +81,18 @@ class Echantillonneur(threading.Thread):
             self.stop.wait(self.pas)
 
 
+def vram_nvidia():
+    """VRAM GPU utilisée (nvidia-smi) : pertinent pour un socle vLLM, qui réserve sa VRAM au démarrage et la garde
+    (une mesure en fin de banc suffit, contrairement à la RAM applicative qui varie)."""
+    try:
+        out = subprocess.run(["nvidia-smi", "--query-gpu=memory.used,memory.total", "--format=csv,noheader,nounits"],
+                             capture_output=True, text=True, timeout=5).stdout.strip().splitlines()[0]
+        used, total = (int(x) for x in out.split(","))
+        return f"{used} Mo / {total} Mo (nvidia-smi, mesuré en fin de banc)"
+    except Exception:
+        return "sans objet (aucun GPU NVIDIA, socle CPU)"
+
+
 def pct(vals, q):
     vals = sorted(vals)
     return round(vals[min(len(vals) - 1, int(round(q / 100 * (len(vals) - 1))))], 2) if vals else None
@@ -150,7 +162,7 @@ def synthese(lignes, pics, conteneurs_app):
         "latence_p50_s": pct(lat, 50), "latence_p95_s": pct(lat, 95),
         "par_type": {k: f"{a}/{b}" for k, (a, b) in par_type.items()},
         "pic_ram_mo": pics, "pic_ram_application_mo": sum(v for k, v in pics.items() if k in conteneurs_app),
-        "vram": "sans objet (aucun GPU NVIDIA, socle CPU)",
+        "vram": vram_nvidia(),
     }
 
 

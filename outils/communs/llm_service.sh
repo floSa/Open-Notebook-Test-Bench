@@ -5,7 +5,7 @@
 # Ce script démarre le service s'il est arrêté et vérifie que les modèles du banc sont présents.
 # Usage : outils/communs/llm_service.sh   (LLM_SERVICE_DIR pour un autre emplacement du dépôt)
 set -euo pipefail
-DIR="${LLM_SERVICE_DIR:-$HOME/Projets/Projet-IA/LLM-Service}"
+DIR="${LLM_SERVICE_DIR:-$HOME/mes_projets/Projet-IA/LLM-Service}"
 MODELES=(qwen3:4b-instruct bge-m3)
 if ! docker ps --format '{{.Names}}' | grep -qx ollama-central; then
   [ -f "$DIR/docker-compose.yml" ] || { echo "LLM-Service introuvable dans $DIR (branche service-ollama attendue)"; exit 1; }

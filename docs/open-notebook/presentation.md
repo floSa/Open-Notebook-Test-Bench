@@ -83,7 +83,7 @@ Réponses : **Oui**, **Non**, ou **Partiel** avec la limite en une phrase.
 | Recherche par mots | Oui |
 | Recherche par le sens | Oui |
 | Recherche combinant mots et sens | Non |
-| Question posée à tous les carnets à la fois | Oui (« Demander »), mais trop lent sans carte graphique |
+| Question posée à tous les carnets à la fois | Oui (« Demander ») ; trop lent sans carte graphique, utilisable avec (médiane 7,7 s mesurée sur 16 Go de VRAM) |
 | Indication de la source dans la réponse | Oui, document par document, avec ouverture au clic |
 | Indication de la page ou surlignage du passage | Non |
 | Refus de répondre quand l'information n'est pas dans les documents | Oui |
@@ -138,16 +138,17 @@ Au-delà, la question échoue avec un message d'erreur. Un carnet peut contenir 
 
 **Modèles plus légers.** ministral-3:3b donne autant de bonnes réponses que qwen3:4b-instruct, mais met deux fois plus de temps sur les réponses longues. Les modèles de moins de 3 milliards de paramètres n'ont pas été essayés.
 
-### Avec une carte graphique NVIDIA : configuration minimale, estimée
+### Avec une carte graphique NVIDIA : mesurée sur 16 Go
 
-| Élément | Minimum |
+| Élément | Valeur mesurée |
 |---|---|
-| Carte graphique | 8 Go de mémoire |
-| Modèle de réponse | le même modèle de 4 milliards de paramètres, en version 4 bits pour vLLM |
+| Carte graphique | 16 Go de mémoire (RTX 4060 Ti) ; VRAM utilisée : 15,7 Go — tient, mais avec peu de marge |
+| Modèle de réponse | Gemma 4 E4B (vLLM, checkpoint officiel Google QAT w4a16) — pas le même modèle que sur CPU : service de modèles partagé avec d'autres projets, voir [manuel 10](10-qualite-performances.md#2-résultats) |
+| Modèle d'embedding | bge-m3, comme sur CPU |
 | Taille de contexte | 32 768 jetons |
-| Effet attendu | première question en quelques secondes au lieu de plusieurs minutes ; deux fois plus de pages par conversation ; mode « Demander » utilisable |
+| Effet mesuré | première question en 1,9 s au lieu de plusieurs dizaines de secondes ; mode « Demander » utilisable (28/34 justes, médiane 7,7 s) |
 
-Cette configuration n'a pas encore été mesurée.
+Un modèle de 4 milliards de paramètres en 4 bits (la configuration initialement visée, pour comparer au même modèle que le profil CPU) et une carte de 8 Go restent à essayer.
 
 ## 6. Résultats mesurés
 
@@ -161,7 +162,7 @@ Test sur 38 questions dont la réponse est connue, posées à 9 documents d'une 
 | Ajout des 9 documents | 1 minute 25 |
 | Podcast de 77 secondes | généré en 5 minutes |
 
-Détail : [Qualité et performances](10-qualite-performances.md).
+Sur carte graphique (16 Go de VRAM), mêmes 28 réponses justes sur 34 et 4 refus sur 4, médiane 1,9 s au lieu de 7 s ; mode « Demander » utilisable (28/34, médiane 7,7 s). Détail et comparaison complète : [Qualité et performances](10-qualite-performances.md).
 
 ## 7. Pour aller plus loin
 

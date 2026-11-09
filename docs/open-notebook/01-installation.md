@@ -37,7 +37,7 @@
 
 Valeurs [Vérifié] par `outils/communs/diagnostic.sh` ([résultat](../../outils/resultats/machine/diagnostic-2026-11-08.json)).
 
-Préparation de Windows, à faire une seule fois avec des droits d'administrateur [Source] ([kit, LANCEMENT.md](../../kit/LANCEMENT.md)) : WSL2 et Ubuntu, mémoire allouée à WSL dans `%UserProfile%\.wslconfig`, Docker Desktop avec le moteur WSL2 et l'intégration de la distribution activée. Le dépôt doit être dans le système de fichiers de WSL (`~/…`), pas sous `/mnt/c`.
+Préparation de Windows, à faire une seule fois avec des droits d'administrateur [Source] : WSL2 et Ubuntu, mémoire allouée à WSL dans `%UserProfile%\.wslconfig`, Docker Desktop avec le moteur WSL2 et l'intégration de la distribution activée. Le dépôt doit être dans le système de fichiers de WSL (`~/…`), pas sous `/mnt/c`.
 
 ### Pour aller plus loin
 

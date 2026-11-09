@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-09T10:55:00",
+  "moteur": "vllm",
+  "test_connexion_language": {
+    "provider": "openai_compatible",
+    "success": true,
+    "message": "Connected. 2 models available: gemma4:e4b, google/gemma-4-E4B-it-qat-w4a16-ct"
+  },
+  "test_connexion_embedding": {
+    "provider": "openai_compatible",
+    "success": true,
+    "message": "Connected. 2 models available: bge-m3, BAAI/bge-m3"
+  },
+  "credential": {
+    "chat": {
+      "id": "credential:t51kj04osotnlif79w8i",
+      "name": "llm-service-chat",
+      "provider": "openai_compatible",
+      "modalities": [
+        "language"
+      ],
+      "base_url": "http://vllm-central:8000/v1",
+      "endpoint": null,
+      "api_version": null,
+      "endpoint_llm": null,
+      "endpoint_embedding": null,
+      "endpoint_stt": null,
+      "endpoint_tts": null,
+      "project": null,
+      "location": null,
+      "credentials_path": null,
+      "num_ctx": null,
+      "has_api_key": true,
+      "created": "2026-11-09 09:54:37+00:00",
+      "updated": "2026-11-09 09:55:00.164947+00:00",
+      "model_count": 1,
+      "decryption_error": null
+    },
+    "embed": {
+      "id": "credential:qcad1n1xp7mh2dj360kd",
+      "name": "llm-service-embed",
+      "provider": "openai_compatible",
+      "modalities": [
+        "embedding"
+      ],
+      "base_url": "http://vllm-embed:8000/v1",
+      "endpoint": null,
+      "api_version": null,
+      "endpoint_llm": null,
+      "endpoint_embedding": null,
+      "endpoint_stt": null,
+      "endpoint_tts": null,
+      "project": null,
+      "location": null,
+      "credentials_path": null,
+      "num_ctx": null,
+      "has_api_key": true,
+      "created": "2026-11-09 09:54:37+00:00",
+      "updated": "2026-11-09 09:55:00.345195+00:00",
+      "model_count": 0,
+      "decryption_error": null
+    }
+  },
+  "modeles": {
+    "gemma4:e4b": "model:q8t6jdjkzxuoqkpiqjxt",
+    "bge-m3": "model:s8qe82pz72dzpi120kpc",
+    "speaches-ai/Kokoro-82M-v1.0-ONNX": "model:b4uytgqjswxcohz0kuw2",
+    "Systran/faster-whisper-small": "model:vwve31y0cf3u5mtz524g"
+  },
+  "defauts": {
+    "default_chat_model": "model:q8t6jdjkzxuoqkpiqjxt",
+    "default_transformation_model": "model:q8t6jdjkzxuoqkpiqjxt",
+    "large_context_model": "model:q8t6jdjkzxuoqkpiqjxt",
+    "default_text_to_speech_model": "model:b4uytgqjswxcohz0kuw2",
+    "default_speech_to_text_model": "model:vwve31y0cf3u5mtz524g",
+    "default_embedding_model": "model:s8qe82pz72dzpi120kpc",
+    "default_tools_model": "model:q8t6jdjkzxuoqkpiqjxt"
+  },
+  "voix_test": {
+    "provider": "openai_compatible",
+    "success": true,
+    "message": "Connected. 2 models available: speaches-ai/Kokoro-82M-v1.0-ONNX, Systran/faster-whisper-small"
+  },
+  "reglages_avant": {
+    "default_content_processing_engine_doc": "auto",
+    "default_content_processing_engine_url": "simple",
+    "default_embedding_option": "ask",
+    "auto_delete_files": "yes",
+    "docling_ocr": true,
+    "docling_formulas": false,
+    "docling_vision": false,
+    "youtube_preferred_languages": [
+      "en",
+      "pt",
+      "es",
+      "de",
+      "nl",
+      "en-GB",
+      "fr",
+      "hi",
+      "ja",
+      "zh-CN",
+      "zh-TW"
+    ]
+  },
+  "reglages_apres": {
+    "default_content_processing_engine_doc": "auto",
+    "default_content_processing_engine_url": "simple",
+    "default_embedding_option": "ask",
+    "auto_delete_files": "yes",
+    "docling_ocr": true,
+    "docling_formulas": false,
+    "docling_vision": false,
+    "youtube_preferred_languages": [
+      "en",
+      "pt",
+      "es",
+      "de",
+      "nl",
+      "en-GB",
+      "fr",
+      "hi",
+      "ja",
+      "zh-CN",
+      "zh-TW"
+    ]
+  }
+}

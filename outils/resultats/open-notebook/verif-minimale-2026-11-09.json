@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-09T10:55:08",
+  "sans_mot_de_passe": "401 {\"detail\":\"Missing authorization header\"}",
+  "ram_repos_mo": {
+    "rag-open-notebook": 319,
+    "rag-open-notebook-surrealdb": 76,
+    "ollama-central": 0
+  },
+  "indexation": {
+    "status": "completed",
+    "embedded_chunks": 1,
+    "caracteres": 594,
+    "duree_s": 5.4
+  },
+  "ram_pic_indexation_mo": {
+    "rag-open-notebook": 400,
+    "rag-open-notebook-surrealdb": 81,
+    "ollama-central": 0
+  },
+  "question": {
+    "question": "Quelle est la durée de garantie du cadre ?",
+    "reponse": "La durée de garantie du cadre est de 7 ans [source:iueopt9xidi61qfgo3ge]. Pour information, la batterie et le moteur sont garantis pour une durée de 2 ans [source:iueopt9xidi61qfgo3ge].",
+    "duree_s": 2.5,
+    "jetons_contexte": 204,
+    "citation_presente": true,
+    "source_id": "source:iueopt9xidi61qfgo3ge"
+  },
+  "carnet": "notebook:pfy5nj09uelcgzknswxt"
+}

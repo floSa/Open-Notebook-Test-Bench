@@ -69,15 +69,22 @@ Tous les ports sont publiés sur `127.0.0.1` uniquement.
 
 **Prérequis :** Windows 11 avec WSL2 (Ubuntu 24.04) et Docker Desktop ; 16 Go
 de RAM, 8 cœurs, 20 Go de disque ; [LLM-Service](https://github.com/floSa/llm-service)
-cloné dans `~/Projets/Projet-IA/LLM-Service`, branche `service-ollama`. Aucune
-carte graphique n'est nécessaire.
+cloné (`LLM_SERVICE_DIR`, par défaut `~/mes_projets/Projet-IA/LLM-Service`),
+branche `service-ollama`. Aucune carte graphique n'est nécessaire ; avec une
+carte NVIDIA (16 Go de VRAM mesurés), voir la variante GPU ci-dessous.
 
 > **Sous Windows :** travailler depuis un terminal WSL, avec le dépôt dans le
-> système de fichiers Linux (`~/Projets/...`), pas sous `/mnt/c`.
+> système de fichiers Linux (`~/mes_projets/...`), pas sous `/mnt/c`.
 
 ```bash
-uv venv .venv && uv pip install -p .venv reportlab python-docx python-pptx openpyxl pillow pymupdf
+uv venv --python 3.12 .venv && uv pip install -p .venv reportlab python-docx python-pptx openpyxl pillow pymupdf
 outils/open-notebook/installer.sh     # secrets, service de modèles, voix, conteneurs, configuration
+```
+
+**Variante GPU** (branche `service-vllm` de LLM-Service, voir [manuel 10](docs/open-notebook/10-qualite-performances.md#5-profils-matériels)) :
+
+```bash
+MOTEUR=vllm outils/open-notebook/installer.sh
 ```
 
 | Service | URL | Note |
@@ -176,6 +183,8 @@ Open-Notebook-Test-Bench/
 | qwen3:4b-instruct, qwen3:4b | modèles de réponse | Apache License 2.0 |
 | ministral-3:3b | modèle de réponse (comparaison) | Apache License 2.0 |
 | bge-m3 | modèle d'embedding | MIT |
+| vLLM | moteur d'inférence GPU (profil avec carte graphique) | Apache License 2.0 |
+| Gemma 4 E4B | modèle de réponse (profil avec carte graphique) | licence Gemma (Google, usage sous conditions) |
 | Kokoro-82M | synthèse vocale | Apache License 2.0 |
 | faster-whisper-small | transcription | MIT |
 | Playwright | captures d'écran | Apache License 2.0 |
@@ -278,6 +287,8 @@ Chat de carnet, documents en entier, qwen3:4b-instruct sur Ollama 0.40.15 (CPU, 
 | Pièges refusés | 4 / 4 |
 | Temps de réponse | 7,4 s en médiane, 24 s pour les plus lentes |
 | Indexation des 9 documents | 1 min 25 |
+
+Sur carte graphique (16 Go de VRAM, vLLM) : mêmes 28/34 et 4/4, médiane 1,9 s au lieu de 7,4 s ; mode « Demander » (jusque-là trop lent) devient utilisable, 28/34 à 7,7 s de médiane.
 
 Détail et comparaison des réglages : [manuel 10](docs/open-notebook/10-qualite-performances.md).
 Bilan complet de la mission : [RAPPORT-open-notebook.md](RAPPORT-open-notebook.md).

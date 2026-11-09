@@ -39,9 +39,10 @@ class Adaptateur:
 
     def config(self):
         env = dict(l.split("=", 1) for l in (RACINE / "donnees/open-notebook/.env").read_text().splitlines() if "=" in l)
-        cred = next(c for c in self.on.get("/api/credentials") if c["name"] == "llm-service")
+        # « llm-service » (Ollama, un seul crédential) ou « llm-service-chat » (vLLM, un crédential par modalité).
+        cred = next((c for c in self.on.get("/api/credentials") if c["name"] in ("llm-service", "llm-service-chat")), None)
         return {"mode": self.mode, "modele": self.modele, "contexte_sources": self.contexte if self.mode == "chat" else None,
-                "num_ctx": cred.get("num_ctx"), "chunk_size": env.get("OPEN_NOTEBOOK_CHUNK_SIZE", "400 (défaut)"),
+                "num_ctx": cred.get("num_ctx") if cred else None, "chunk_size": env.get("OPEN_NOTEBOOK_CHUNK_SIZE", "400 (défaut)"),
                 "docling": env.get("OPEN_NOTEBOOK_ENABLE_DOCLING", "false"), "version": "1.15.1"}
 
     def indexer(self, fichiers):
@@ -87,10 +88,12 @@ def main():
     p.add_argument("--reindexer", action="store_true")
     p.add_argument("--limite", type=int)
     p.add_argument("--sans-juge", action="store_true")
+    p.add_argument("--moteur", default="ollama", choices=["ollama", "vllm"], help="conteneurs du socle à mesurer (RAM/VRAM)")
     p.add_argument("--ids", help="sous-ensemble de questions, ex. Q01,Q15,Q21")
     a = p.parse_args()
     ad = Adaptateur(a.mode, a.modele, a.contexte)
-    res = commun.lancer(ad, a.etiquette, ["rag-open-notebook", "rag-open-notebook-surrealdb"], ["ollama-central"],
+    conteneurs_modeles = ["ollama-central"] if a.moteur == "ollama" else ["vllm-central", "vllm-embed"]
+    res = commun.lancer(ad, a.etiquette, ["rag-open-notebook", "rag-open-notebook-surrealdb"], conteneurs_modeles,
                         indexer=a.reindexer or not ad.nb, juge=not a.sans_juge, limite=a.limite,
                         ids=a.ids.split(",") if a.ids else None)
     commun.ecrire(res, RACINE / "outils/resultats/open-notebook")

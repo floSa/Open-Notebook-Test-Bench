@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from client import RACINE, OpenNotebook
 
 p = argparse.ArgumentParser()
+p.add_argument("--moteur", choices=["ollama", "vllm"], default="ollama", help="service de modèles LLM-Service : branche service-ollama ou service-vllm")
 p.add_argument("--num-ctx", type=int, default=16384)
 p.add_argument("--chat", default="qwen3:4b-instruct")
 p.add_argument("--second", default="ministral-3:3b")
@@ -21,21 +22,40 @@ a = p.parse_args()
 
 on = OpenNotebook()
 on.attendre_sante()
-journal = {"date": datetime.datetime.now().isoformat(timespec="seconds")}
+journal = {"date": datetime.datetime.now().isoformat(timespec="seconds"), "moteur": a.moteur}
 
-# Modèles servis par LLM-Service (ollama-central, réseau llm-net) ; « ollama-socle » : ancien nom, repris s'il existe.
-cred = next((c for c in on.get("/api/credentials") if c["name"] in ("llm-service", "ollama-socle")), None)
-corps = {"name": "llm-service", "provider": "ollama", "modalities": ["language", "embedding"],
-         "base_url": os.environ.get("LLM_SERVICE_URL", "http://ollama-central:11434"), "num_ctx": a.num_ctx}
-cred = on.put(f"/api/credentials/{cred['id']}", corps) if cred else on.post("/api/credentials", corps)
-journal["credential"] = cred
-journal["test_connexion"] = on.post(f"/api/credentials/{cred['id']}/test")
-journal["decouverte"] = on.post(f"/api/credentials/{cred['id']}/discover")
+if a.moteur == "ollama":
+    provider = "ollama"
+    # Modèles servis par LLM-Service (ollama-central, réseau llm-net) ; « ollama-socle » : ancien nom, repris s'il existe.
+    cred = next((c for c in on.get("/api/credentials") if c["name"] in ("llm-service", "ollama-socle")), None)
+    corps = {"name": "llm-service", "provider": provider, "modalities": ["language", "embedding"],
+             "base_url": os.environ.get("LLM_SERVICE_URL", "http://ollama-central:11434"), "num_ctx": a.num_ctx}
+    cred = on.put(f"/api/credentials/{cred['id']}", corps) if cred else on.post("/api/credentials", corps)
+    journal["credential"] = cred
+    journal["test_connexion"] = on.post(f"/api/credentials/{cred['id']}/test")
+    journal["decouverte"] = on.post(f"/api/credentials/{cred['id']}/discover")
+    cred_chat = cred_embed = cred
+else:
+    # vLLM : un serveur par modèle (chat et embedding sur deux conteneurs distincts), API OpenAI uniquement.
+    provider = "openai_compatible"
+
+    def brancher(nom, base_url, modalite):
+        c = next((c for c in on.get("/api/credentials") if c["name"] == nom), None)
+        corps = {"name": nom, "provider": provider, "modalities": [modalite], "base_url": base_url, "api_key": "local"}
+        c = on.put(f"/api/credentials/{c['id']}", corps) if c else on.post("/api/credentials", corps)
+        journal[f"test_connexion_{modalite}"] = on.post(f"/api/credentials/{c['id']}/test")
+        return c
+
+    cred_chat = brancher("llm-service-chat", os.environ.get("LLM_SERVICE_CHAT_URL", "http://vllm-central:8000/v1"), "language")
+    cred_embed = brancher("llm-service-embed", os.environ.get("LLM_SERVICE_EMBED_URL", "http://vllm-embed:8000/v1"), "embedding")
+    journal["credential"] = {"chat": cred_chat, "embed": cred_embed}
 
 existants = {(m["name"], m["type"]): m for m in on.get("/api/models")}
 ids = {}
-for nom, typ in ((a.chat, "language"), (a.second, "language"), (a.embed, "embedding")):
-    m = existants.get((nom, typ)) or on.post("/api/models", {"name": nom, "provider": "ollama", "type": typ, "credential": cred["id"]})
+for nom, typ, cred_ in ((a.chat, "language", cred_chat), (a.second, "language", cred_chat), (a.embed, "embedding", cred_embed)):
+    if nom in ids:
+        continue  # a.second == a.chat (cas vLLM, un seul modèle) : rien à créer deux fois
+    m = existants.get((nom, typ)) or on.post("/api/models", {"name": nom, "provider": provider, "type": typ, "credential": cred_["id"]})
     ids[nom] = m["id"]
 journal["modeles"] = ids
 journal["defauts"] = on.put("/api/models/defaults", {

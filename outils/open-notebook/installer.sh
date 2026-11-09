@@ -25,6 +25,7 @@ OPEN_NOTEBOOK_ENCRYPTION_KEY=$(openssl rand -hex 32)
 OPEN_NOTEBOOK_PASSWORD=$(openssl rand -hex 12)
 SURREAL_USER=rag
 SURREAL_PASSWORD=$(openssl rand -hex 16)
+OPEN_NOTEBOOK_ENABLE_DOCLING=true
 EOF
   echo "secrets générés dans donnees/open-notebook/.env"
 fi
@@ -41,8 +42,13 @@ EOF
   chmod 600 "$ID"
 fi
 
-# 3. socle (Ollama, Speaches) puis démarrage
-outils/communs/llm_service.sh >/dev/null
+# 3. socle (Ollama ou vLLM selon MOTEUR, Speaches) puis démarrage
+MOTEUR="${MOTEUR:-ollama}"
+if [ "$MOTEUR" = vllm ]; then
+  outils/communs/llm_service_vllm.sh >/dev/null
+else
+  outils/communs/llm_service.sh >/dev/null
+fi
 outils/communs/voix.sh >/dev/null   # Speaches : TTS et STT locaux (podcasts, sources audio)
 docker compose --env-file "$D/.env" -f "$OFF" -f outils/open-notebook/compose.override.yml up -d
 for i in $(seq 120); do curl -sf http://127.0.0.1:5055/health >/dev/null && break; sleep 2; done
@@ -51,7 +57,11 @@ for i in $(seq 60); do curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8
 echo "interface : HTTP $(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8502/)"
 
 # 4. branchement au socle
-python3 outils/open-notebook/configurer.py --voix "${@}"
+if [ "$MOTEUR" = vllm ]; then
+  python3 outils/open-notebook/configurer.py --moteur vllm --chat gemma4:e4b --second gemma4:e4b --embed bge-m3 --num-ctx 32768 --voix "${@}"
+else
+  python3 outils/open-notebook/configurer.py --voix "${@}"
+fi
 
 # ports : uniquement 127.0.0.1
 docker ps --filter name=rag-open-notebook --format '{{.Names}} {{.Ports}}'
