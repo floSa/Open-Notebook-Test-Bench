@@ -2,7 +2,7 @@
 
 > **Objet** : retrouver vite la cause d'un problème rencontré avec Open Notebook et son socle local, à partir des échecs réellement observés pendant les essais.
 > **Prérequis** : [01. Installation](01-installation.md).
-> **Version décrite** : Open Notebook 1.15.1, SurrealDB 2.7.0, Ollama 0.30.7 sur CPU, Speaches 0.8.3, Docling 2.130.0 ; Docker 29.9.2, Compose 5.6.1, WSL 2.7.14.
+> **Version décrite** : Open Notebook 1.15.1, SurrealDB 2.7.0, Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU, Speaches 0.8.3, Docling 2.130.0 ; Docker 29.9.2, Compose 5.6.1, WSL 2.7.14.
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : chaque ligne marquée [Vérifié] renvoie au journal où l'échec apparaît.
 

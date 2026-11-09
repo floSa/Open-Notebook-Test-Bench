@@ -2,7 +2,7 @@
 
 > **Objet** : trois cas d'usage complets sur le corpus fictif Vélanor, du dépôt des documents à la note finale, avec les réponses réellement obtenues et leurs défauts.
 > **Prérequis** : [02. Prise en main](02-prise-en-main.md), [04. Chat et citations](04-chat-et-citations.md), [05. Notes et transformations](05-notes-et-transformations.md).
-> **Version décrite** : Open Notebook 1.15.1, Ollama 0.30.7 sur CPU, qwen3:4b-instruct (`num_ctx` 16384), bge-m3, Docling actif, transcription par Speaches 0.8.3 (faster-whisper-small).
+> **Version décrite** : Open Notebook 1.15.1, Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU, qwen3:4b-instruct (`num_ctx` 16384), bge-m3, Docling actif, transcription par Speaches 0.8.3 (faster-whisper-small).
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : carnet « Démo Vélanor », laissé en place pour la démonstration ; script `outils/open-notebook/demo.py` (rejouable : il recrée le carnet).
 

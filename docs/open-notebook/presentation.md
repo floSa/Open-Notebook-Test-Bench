@@ -157,8 +157,8 @@ Test sur 38 questions dont la réponse est connue, posées à 9 documents d'une 
 |---|---|
 | Réponses justes | 28 sur 34 ; les 6 erreurs portent sur le document scanné, illisible |
 | Questions sans réponse dans les documents | 4 refus sur 4, aucune réponse inventée |
-| Temps de réponse | 9 secondes en général ; environ 1 minute 30 pour la première question d'une conversation, le temps que le modèle lise les documents |
-| Ajout des 9 documents | 2 minutes |
+| Temps de réponse | 7 secondes en général ; environ 1 minute 30 pour la première question d'une conversation, le temps que le modèle lise les documents |
+| Ajout des 9 documents | 1 minute 25 |
 | Podcast de 77 secondes | généré en 5 minutes |
 
 Détail : [Qualité et performances](10-qualite-performances.md).

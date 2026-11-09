@@ -8,13 +8,13 @@
 
 ## Comparatif du banc
 
-Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json)), même corpus fictif, même modèle (qwen3:4b-instruct sur Ollama 0.30.7, CPU), même machine.
+Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json)), même corpus fictif, même modèle (qwen3:4b-instruct sur Ollama 0.40.15, CPU, 8 fils de calcul), même machine.
 
 Mode chat de carnet, toutes les sources en « full content », Docling actif, `num_ctx` 16384 [Vérifié] :
 
 | Solution | Exactes (34 questions avec réponse) | Refus corrects (4 pièges) | Bon document cité | Médiane | p95 | Indexation du corpus | Pic RAM de l'application | Détail |
 |---|---|---|---|---|---|---|---|---|
-| Open Notebook 1.15.1 | 28/34 | 4/4 | 28 | 9,1 s | 23,8 s | 126 s | 3,8 Go | [Qualité et performances](open-notebook/10-qualite-performances.md) |
+| Open Notebook 1.15.1 | 28/34 | 4/4 | 28 | 7,4 s | 24,2 s | 84 s | 3,0 Go | [Qualité et performances](open-notebook/10-qualite-performances.md) |
 
 Les 6 erreurs d'Open Notebook viennent toutes du PDF scanné, illisible faute d'OCR opérationnel dans l'image 1.15.1. Les autres solutions de la série seront ajoutées à ce tableau après leurs essais.
 

@@ -2,7 +2,7 @@
 
 > **Objet** : choisir ce que le chat envoie au modèle, source par source ; lire et vérifier les citations ; connaître les limites de contexte et l'effet d'un modèle de raisonnement.
 > **Prérequis** : [02. Prise en main](02-prise-en-main.md), [03. Carnets, sources et formats](03-carnets-sources-formats.md).
-> **Version décrite** : Open Notebook 1.15.1, Ollama 0.30.7 sur CPU ; qwen3:4b-instruct (modèle par défaut), ministral-3:3b, qwen3:4b (raisonnement) ; `num_ctx` 16384, 6144 et 4096 selon les essais ; Docling actif.
+> **Version décrite** : Open Notebook 1.15.1, Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU ; qwen3:4b-instruct (modèle par défaut), ministral-3:3b, qwen3:4b (raisonnement) ; `num_ctx` 16384, 6144 et 4096 selon les essais ; Docling actif.
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : carnet « Banc » (corpus fictif) ; scripts `outils/open-notebook/essai_chat.py` et `banc.py`.
 

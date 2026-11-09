@@ -2,7 +2,7 @@
 
 > **Objet** : choisir entre recherche plein texte, recherche vectorielle et « Demander (bêta) », d'après des mesures sur le même corpus.
 > **Prérequis** : [03. Carnets, sources et formats](03-carnets-sources-formats.md).
-> **Version décrite** : Open Notebook 1.15.1, embeddings bge-m3 (1 024 dimensions) sur Ollama 0.30.7 CPU, passages de 400 jetons, Docling actif, qwen3:4b-instruct pour « Demander ».
+> **Version décrite** : Open Notebook 1.15.1, embeddings bge-m3 (1 024 dimensions) sur Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) CPU, passages de 400 jetons, Docling actif, qwen3:4b-instruct pour « Demander ».
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : requêtes sur le carnet « Banc » (corpus fictif) ; script `outils/open-notebook/essai_recherche.py`.
 

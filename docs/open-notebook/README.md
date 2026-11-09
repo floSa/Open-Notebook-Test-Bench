@@ -4,7 +4,7 @@ Alternative libre à NotebookLM : carnets de sources, chat avec citations, notes
 
 | Version décrite | Date des essais | Machine | Langue de l'interface |
 |---|---|---|---|
-| Open Notebook 1.15.1 (image `lfnovo/open_notebook:1.15.1`), SurrealDB 2.7.0, Ollama 0.30.7 sur CPU, Speaches 0.8.3 | 2026-11-08 | Intel Core Ultra 7 255H, 15,3 Go de RAM dans WSL, sans GPU NVIDIA (profil A) | français (suit la langue du navigateur) |
+| Open Notebook 1.15.1 (image `lfnovo/open_notebook:1.15.1`), SurrealDB 2.7.0, Ollama 0.40.15 sur CPU, Speaches 0.8.3 | 2026-11-08 | Intel Core Ultra 7 255H, 15,3 Go de RAM dans WSL, sans GPU NVIDIA (profil A) | français (suit la langue du navigateur) |
 
 **Commencer par** : [Open Notebook en bref](presentation.md) : ce que fait la solution, pour qui, le projet, les fonctions (oui ou non) et les résultats mesurés.
 

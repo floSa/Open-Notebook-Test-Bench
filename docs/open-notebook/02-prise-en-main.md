@@ -2,7 +2,7 @@
 
 > **Objet** : du premier carnet à la première réponse citée, dans l'interface.
 > **Prérequis** : [01. Installation](01-installation.md).
-> **Version décrite** : Open Notebook 1.15.1, interface en français (langue du navigateur), Ollama 0.30.7 sur CPU, qwen3:4b-instruct, bge-m3, `num_ctx` 16384.
+> **Version décrite** : Open Notebook 1.15.1, interface en français (langue du navigateur), Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU, qwen3:4b-instruct, bge-m3, `num_ctx` 16384.
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : documents fictifs du corpus Vélanor ; carnet d'essai « Essai installation » créé par `outils/open-notebook/verif_minimale.py`.
 

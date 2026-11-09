@@ -4,7 +4,7 @@
 
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 ![Open Notebook](https://img.shields.io/badge/Open%20Notebook-1.15.1-2E7D32)
-![Ollama](https://img.shields.io/badge/Ollama-0.30.7-000000?logo=ollama&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-0.40.15-000000?logo=ollama&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![WSL2](https://img.shields.io/badge/Windows%2011-WSL2-0078D4)
 
@@ -43,7 +43,7 @@ partagé avec les autres applications.
 |---|---|---|---|
 | Open Notebook | `rag-open-notebook` | `lfnovo/open_notebook:1.15.1` | interface (Next.js), API (FastAPI), worker des tâches de fond |
 | Base de données | `rag-open-notebook-surrealdb` | `surrealdb/surrealdb:v2.7.0` | carnets, sources, passages, vecteurs |
-| Modèles | `ollama-central` | `ollama/ollama` 0.30.7 | chat et embedding, servis par [LLM-Service](https://github.com/floSa/llm-service) (dépôt séparé) |
+| Modèles | `ollama-central` | `ollama/ollama` 0.40.15 | chat et embedding, servis par [LLM-Service](https://github.com/floSa/llm-service) (dépôt séparé) |
 | Voix | `rag-speaches` | `ghcr.io/speaches-ai/speaches:0.8.3-cpu` | synthèse vocale (podcasts) et transcription (sources audio) |
 
 ```mermaid
@@ -270,14 +270,14 @@ Tous rencontrés pendant les essais, chacun avec sa preuve dans `outils/resultat
 
 ## Résultats
 
-Chat de carnet, documents en entier, qwen3:4b-instruct sur CPU, contexte 16 384 jetons :
+Chat de carnet, documents en entier, qwen3:4b-instruct sur Ollama 0.40.15 (CPU, 8 fils de calcul), contexte 16 384 jetons :
 
 | Mesure | Résultat |
 |---|---|
 | Réponses justes | 28 / 34 (les 6 erreurs portent sur le scan) |
 | Pièges refusés | 4 / 4 |
-| Temps de réponse | 9 s en médiane, 24 s pour les plus lentes, 1 min 30 pour la première question |
-| Indexation des 9 documents | 2 min |
+| Temps de réponse | 7,4 s en médiane, 24 s pour les plus lentes |
+| Indexation des 9 documents | 1 min 25 |
 
 Détail et comparaison des réglages : [manuel 10](docs/open-notebook/10-qualite-performances.md).
 Bilan complet de la mission : [RAPPORT-open-notebook.md](RAPPORT-open-notebook.md).
@@ -288,7 +288,7 @@ Bilan complet de la mission : [RAPPORT-open-notebook.md](RAPPORT-open-notebook.m
 |---|---|
 | Open Notebook | 1.15.1 (publiée le 4 novembre 2026) |
 | SurrealDB | 2.7.0 |
-| Ollama | 0.30.7 |
+| Ollama | 0.40.15 (les essais du 8 novembre ont commencé sur 0.30.7) |
 | Speaches | 0.8.3-cpu |
 | Docling | 2.130.0 |
 | Docker / Compose | 29.9.2 / 5.6.1 |

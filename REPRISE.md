@@ -19,7 +19,7 @@ Réglages locaux de LLM-Service, propres à ce portable et non commités dans so
 | Fichier | Contenu |
 |---|---|
 | `.env` | `PRELOAD_MODELS=qwen3:4b-instruct bge-m3`, `OLLAMA_CONTEXT_LENGTH=16384`, `OLLAMA_NUM_PARALLEL=1`, `OLLAMA_KEEP_ALIVE=30m`, `OLLAMA_FLASH_ATTENTION=0`, `OLLAMA_KV_CACHE_TYPE=f16` |
-| `docker-compose.override.yml` | pas de réservation de GPU ; `LLAMA_ARG_THREADS=8` : sans ce réglage, 16 fils de calcul et 0,4 jeton/s au lieu de 13,3 |
+| `docker-compose.override.yml` | image `ollama/ollama:0.40.15` figée par empreinte ; pas de réservation de GPU ; `LLAMA_ARG_THREADS=8` : sans ce réglage, 16 fils de calcul et 0,4 jeton/s au lieu de 13,3 |
 
 ## 2. À faire tout de suite
 

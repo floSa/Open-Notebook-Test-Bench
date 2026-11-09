@@ -2,7 +2,7 @@
 
 > **Objet** : mesurer la justesse des réponses, les citations, les refus et les temps de réponse d'Open Notebook sur un corpus de référence ; savoir quels réglages changent le résultat ; choisir modèles et contexte selon la machine.
 > **Prérequis** : [04. Chat et citations](04-chat-et-citations.md), [06. Recherche](06-recherche.md).
-> **Version décrite** : Open Notebook 1.15.1, Ollama 0.30.7 sur CPU, qwen3:4b-instruct et ministral-3:3b (GGUF Q4_K_M), bge-m3, Docling 2.130.0 ; `num_ctx` 16384, 6144 et 4096 ; banc de 38 questions.
+> **Version décrite** : Open Notebook 1.15.1, Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU, qwen3:4b-instruct et ministral-3:3b (GGUF Q4_K_M), bge-m3, Docling 2.130.0 ; `num_ctx` 16384, 6144 et 4096 ; banc de 38 questions.
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (profil A : Intel Core Ultra 7 255H, 16 fils, 15,3 Go de RAM dans WSL, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : corpus fictif Vélanor de 9 documents ([manifeste](../../corpus/MANIFEST.json)) et 38 questions ([questions](../../corpus/questions.json)) ; chaque banc dans `outils/resultats/open-notebook/banc-*.json`.
 
@@ -56,6 +56,7 @@ Tableau produit par `outils/communs/banc/tableau.py` [Vérifié] :
 | [docling-qwen-fullcontent-ctx4096](../../outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent-ctx4096.json) | chat | qwen3:4b-instruct | full content | 4096 | true | 0/34 | 0/4 | 0 | - | - | - | 2661 |
 | [docling-qwen-fullcontent-ctx6144](../../outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent-ctx6144.json) | chat | qwen3:4b-instruct | full content | 6144 | true | 28/34 | 4/4 | 30 | 91.82 | 114.13 | - | 2555 |
 | [docling-qwen-fullcontent](../../outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent.json) | chat | qwen3:4b-instruct | full content | 16384 | true | 28/34 | 4/4 | 28 | 9.05 | 23.79 | 125.6 | 3765 |
+| [docling-qwen-fullcontent-ollama040](../../outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent-ollama040.json) | chat | qwen3:4b-instruct | full content | 16384 | true | 28/34 | 4/4 | 28 | 7.44 | 24.19 | 84.3 | 2989 |
 
 Les latences du banc à 6144 ne sont pas représentatives : le juge LLM du banc appelle le même modèle à `num_ctx` 16384, ce qui oblige Ollama à recharger le modèle deux fois par question (38 chargements à 6144 dans le [journal d'Ollama](../../outils/resultats/socle/ollama-journal-extrait-2026-11-08.log)) et efface le cache de préfixe ; chaque question relit donc tout le prompt (87 à 148 s). Dans un usage normal, sans changement de `num_ctx` entre deux questions, les latences seraient proches de celles à 16384 [Estimation]. L'exactitude, elle, est mesurée sans biais [Vérifié].
 
@@ -72,6 +73,9 @@ Par type de question (qwen3:4b-instruct, `num_ctx` 16384) [Vérifié] :
 | piège (refus correct) | 4/4 | 4/4 |
 
 ### Après passage sur LLM-Service
+
+Banc complet rejoué sur Ollama 0.40.15, dernière version stable, servi par LLM-Service avec 8 fils de calcul (ligne `ollama040` du tableau) [Vérifié] : mêmes 28 réponses justes sur 34 et 4 refus sur 4, mêmes 6 erreurs (scan) ; médiane 7,4 s au lieu de 9,1 s ; indexation 84 s au lieu de 126 s.
+
 
 Échantillon de 6 questions rejoué sur le service de modèles partagé, mêmes poids [Vérifié] ([banc](../../outils/resultats/open-notebook/banc-2026-11-08-llm-service-qwen-echantillon.json)) : mêmes réponses justes et fausses qu'avant (Q01, Q08, Q24, Q32 justes, Q35 refusée, Q18 fausse car issue du scan) ; temps de 8,6 à 20,4 s, 127 s pour la première question. Condition : 8 fils de calcul (`LLAMA_ARG_THREADS=8` dans LLM-Service) ; avec les 16 cœurs vus par WSL, la génération tombe à 0,4 jeton/s ([mesures](../../outils/resultats/socle/migration-llm-service-2026-11-08.txt)).
 
@@ -127,7 +131,7 @@ Le dépassement volontaire a été provoqué deux fois : par l'API `/api/generat
 
 | Élément | Réglage | Résultat |
 |---|---|---|
-| Serveur de modèles | Ollama 0.30.7, CPU, `OLLAMA_NUM_PARALLEL=2`, `OLLAMA_MAX_LOADED_MODELS=2` | |
+| Serveur de modèles | LLM-Service, Ollama 0.40.15 sur CPU, 8 fils de calcul, `OLLAMA_NUM_PARALLEL=1` (premiers essais : Ollama 0.30.7, `OLLAMA_NUM_PARALLEL=2`) | génération 16,4 jetons/s, lecture du prompt 64 jetons/s ([migration](../../outils/resultats/socle/migration-llm-service-2026-11-08.txt)) |
 | Chat | qwen3:4b-instruct (GGUF, 2,5 Go) | 14,7 à 17,9 jetons/s en génération (14,7 à `num_ctx` 16384), 24 à 67 jetons/s en lecture de prompt |
 | Embedding | bge-m3 | environ 130 jetons/s |
 | `num_ctx` | 16384 (6144 suffit pour ce corpus, sans marge pour l'historique) | voir sections 2 et 4 |

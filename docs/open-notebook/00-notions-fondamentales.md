@@ -2,7 +2,7 @@
 
 > **Objet** : comprendre le RAG (génération augmentée par récupération) et la façon dont Open Notebook l'applique ; connaître les services et les ports de l'installation.
 > **Prérequis** : aucun.
-> **Version décrite** : Open Notebook 1.15.1 (image `lfnovo/open_notebook:1.15.1`), SurrealDB 2.7.0, Ollama 0.30.7 sur CPU, modèles qwen3:4b-instruct et bge-m3 ; Windows 11, WSL2 Ubuntu 24.04.
+> **Version décrite** : Open Notebook 1.15.1 (image `lfnovo/open_notebook:1.15.1`), SurrealDB 2.7.0, Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU, modèles qwen3:4b-instruct et bge-m3 ; Windows 11, WSL2 Ubuntu 24.04.
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, 15,3 Go de RAM dans WSL, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : données fictives uniquement (corpus Vélanor) ; le code source a été relu avant installation ([relecture](../../outils/resultats/open-notebook/relecture.md)).
 

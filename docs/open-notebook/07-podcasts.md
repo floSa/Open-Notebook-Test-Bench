@@ -2,7 +2,7 @@
 
 > **Objet** : générer un épisode audio à deux voix en français à partir d'un carnet, avec un serveur de voix local ; régler les profils d'intervenants et d'épisode ; connaître la qualité obtenue.
 > **Prérequis** : [01. Installation](01-installation.md) (serveur de voix `rag-speaches`), [02. Prise en main](02-prise-en-main.md).
-> **Version décrite** : Open Notebook 1.15.1, Speaches 0.8.3-cpu avec Kokoro-82M-v1.0-ONNX (synthèse) et faster-whisper-small (transcription de contrôle), Ollama 0.30.7 sur CPU avec qwen3:4b-instruct.
+> **Version décrite** : Open Notebook 1.15.1, Speaches 0.8.3-cpu avec Kokoro-82M-v1.0-ONNX (synthèse) et faster-whisper-small (transcription de contrôle), Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU avec qwen3:4b-instruct.
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : carnet « Essai installation » (une source fictive, la FAQ du service après-vente) ; script `outils/open-notebook/essai_podcast.py`, bilan par `bilan_podcast.py`.
 

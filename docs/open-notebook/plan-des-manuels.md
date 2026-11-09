@@ -1,6 +1,6 @@
 # Plan des manuels — Open Notebook
 
-Version décrite : Open Notebook 1.15.1, socle Ollama 0.30.7 sur CPU (machine sans GPU NVIDIA).
+Version décrite : Open Notebook 1.15.1, Ollama 0.40.15 sur CPU (machine sans GPU NVIDIA).
 
 ## En une phrase par manuel
 

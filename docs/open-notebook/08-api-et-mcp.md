@@ -2,7 +2,7 @@
 
 > **Objet** : automatiser Open Notebook par son API REST (carnets, sources, questions, recherche) et le piloter depuis un assistant par le protocole MCP.
 > **Prérequis** : [01. Installation](01-installation.md), [04. Chat et citations](04-chat-et-citations.md).
-> **Version décrite** : Open Notebook 1.15.1 (API sur `127.0.0.1:5055`), serveur MCP tiers `open-notebook-mcp` 0.3.0 avec le SDK `mcp` 1.30.0, Ollama 0.30.7 sur CPU, qwen3:4b-instruct, `num_ctx` 16384.
+> **Version décrite** : Open Notebook 1.15.1 (API sur `127.0.0.1:5055`), serveur MCP tiers `open-notebook-mcp` 0.3.0 avec le SDK `mcp` 1.30.0, Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU, qwen3:4b-instruct, `num_ctx` 16384.
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : le paquet MCP tiers a été relu avant installation ([relecture](../../outils/resultats/open-notebook/relecture-mcp.md)) ; seuls des outils de lecture ont été appelés, plus un appel d'écriture sur un carnet d'essai.
 

@@ -2,7 +2,7 @@
 
 > **Objet** : prendre des notes dans un carnet, garder une réponse du chat, appliquer une transformation fournie ou personnalisée à une source.
 > **Prérequis** : [02. Prise en main](02-prise-en-main.md).
-> **Version décrite** : Open Notebook 1.15.1, Ollama 0.30.7 sur CPU, qwen3:4b-instruct (modèle de transformation), `num_ctx` 16384.
+> **Version décrite** : Open Notebook 1.15.1, Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU, qwen3:4b-instruct (modèle de transformation), `num_ctx` 16384.
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, sans GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : essais sur le carnet « Banc » (corpus fictif) ; script `outils/open-notebook/essai_transformations.py`.
 

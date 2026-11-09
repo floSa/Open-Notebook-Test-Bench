@@ -2,7 +2,7 @@
 
 > **Objet** : installer Open Notebook 1.15.1 sous Windows 11 avec WSL2 et Docker Desktop, le brancher à un socle de modèles local, vérifier qu'il n'est joignable que depuis la machine, mesurer la mémoire consommée, mettre à jour et désinstaller.
 > **Prérequis** : [00. Notions fondamentales](00-notions-fondamentales.md).
-> **Version décrite** : Open Notebook 1.15.1 (`lfnovo/open_notebook:1.15.1@sha256:e4e18f12…95812`), SurrealDB 2.7.0 (`sha256:e5d7387e…45723`), Ollama 0.30.7 sur CPU (`sha256:46399ef0…11e3a`), Speaches 0.8.3-cpu ; modèles qwen3:4b-instruct, ministral-3:3b, bge-m3, Kokoro-82M, faster-whisper-small ; `num_ctx` 16384 ; Windows 11 (10.0.26300), WSL 2.7.14, Ubuntu 24.04.5, Docker 29.9.2, Compose 5.6.1.
+> **Version décrite** : Open Notebook 1.15.1 (`lfnovo/open_notebook:1.15.1@sha256:e4e18f12…95812`), SurrealDB 2.7.0 (`sha256:e5d7387e…45723`), Ollama 0.40.15 (essais du 8 novembre faits sur 0.30.7 ; banc de référence rejoué sur 0.40.15) sur CPU (`sha256:46399ef0…11e3a`), Speaches 0.8.3-cpu ; modèles qwen3:4b-instruct, ministral-3:3b, bge-m3, Kokoro-82M, faster-whisper-small ; `num_ctx` 16384 ; Windows 11 (10.0.26300), WSL 2.7.14, Ubuntu 24.04.5, Docker 29.9.2, Compose 5.6.1.
 > **Statut des informations** : [Vérifié] observé ou mesuré le 2026-11-08 sur la machine d'essai (Intel Core Ultra 7 255H, 16 fils, 15,3 Go de RAM dans WSL, aucun GPU NVIDIA) ; [Source] documentation officielle ou code source au tag v1.15.1 ; [Estimation] calcul non mesuré ; [À tester] non documenté et non essayé.
 > **Précautions** : le compose officiel, le Dockerfile, le script d'entrée et le code d'authentification ont été relus avant installation ([relecture](../../outils/resultats/open-notebook/relecture.md)) ; secrets générés localement ; données fictives.
 
@@ -191,7 +191,7 @@ Disque [Vérifié] ([relevé](../../outils/resultats/open-notebook/disque-2026-1
 |---|---|
 | Image `lfnovo/open_notebook:1.15.1` | 2,46 Go |
 | Image SurrealDB 2.7.0 | 118 Mo |
-| Image Ollama 0.30.7 | 8,25 Go (image locale déjà présente) |
+| Image Ollama 0.40.15 (LLM-Service) | 8,5 Go |
 | Image Speaches 0.8.3-cpu | 3,04 Go |
 | Modèles Ollama copiés (`donnees/socle/ollama`) | 6,2 Go |
 | Données d'Open Notebook après installation | 0,4 Mo |
