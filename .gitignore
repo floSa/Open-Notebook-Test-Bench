@@ -6,3 +6,6 @@ __pycache__/
 *.safetensors
 *.zip
 *:Zone.Identifier
+kit/
+CLAUDE.md
+.claude/
