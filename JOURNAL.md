@@ -113,3 +113,11 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 - Résultats : installation 42 s ; ports sur 127.0.0.1 ; banc `central-chat` 28/34 justes, 4/4 refus, médiane 8,7 s, p95 27,9 s, indexation 65 s ; reranker refusé par le code (« out of scope #1087 »).
 - Constats d'interface : un nouveau document part au modèle par son seul aperçu (mode « aperçus ») ; choisir le modèle d'embedding ouvre une confirmation « Changement de modèle d'embedding » ; « Attribution automatique des défauts » répond « déjà configurés » quand l'ancien modèle par défaut a été supprimé ; un fichier déjà téléversé sous le même nom reçoit un suffixe « (1) » repris dans le titre lors d'un ajout groupé ; une source scannée en échec garde le titre « Processing... ».
 - Suite : captures des chapitres 05 à 12, textes, bancs « Demander » et « aperçus », essai de contexte, exemples, sauvegarde, relectures.
+
+### 2026-11-12 12:10 — Manuel au format du kit, démonstration, podcast
+
+- Fait : captures à la souris des chapitres 02 à 12 (70 captures annotées, 23 de repérage) ; carnet « Démo Vélanor » créé par l'interface (10 sources, notes, quatre conversations dont trois cas pratiques) ; dépassement de contexte provoqué (texte de 80 000 caractères) ; podcast « Vélanor en bref » généré par l'interface (profils `duo-fr`, `court-fr`) ; manuel 01 à 13, annexes A1 à A6 et carte ; ancien manuel à plat retiré (contenu vérifié repris dans les annexes) ; présentation régénérée depuis le chapitre 01 ; README racine (sous-agent), index de la série, rapport.
+- Résultats : dépassement → « ContextWindowExceededError … request (21842 … » (compteur 19,8 K) ; cas pratiques en aperçus incomplets, justes en contenu complet ; épisode MP3 d'environ 6 Mo, dialogue en français, chiffres justes ; `verifier_docs.py` à 0 point.
+- Incidents : `networkidle` jamais atteint ; titres suffixés « (1) » ; carnet de démonstration recréé une fois (variable d'environnement non transmise au conteneur Playwright) ; scénarios rendus reprenables.
+- Non fait (temps) : banc « Demander » et banc en aperçus complets sur le service central, exemples et sauvegarde rejoués ; inscrits dans « Ce qui reste ouvert ».
+- Suite : relecture novice de la partie 1 jusqu'à zéro remarque, commit final.
