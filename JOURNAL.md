@@ -86,3 +86,23 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 - Incidents : dossier `vllm/entrypoint.sh` créé par erreur en tant que répertoire root par un précédent essai Docker, bloquant le `git switch` (nettoyé via un conteneur Docker, sans sudo) ; bug d'idempotence dans `configurer.py` (même modèle passé en `--chat` et `--second`, doublon refusé par l'API) ; `OPEN_NOTEBOOK_ENABLE_DOCLING` non généré par `installer.sh` malgré ce que décrit le README (corrigé) ; lien mort vers `kit/LANCEMENT.md` (dossier retiré du dépôt depuis, lien supprimé).
 - Résultat : banc GPU (Docling actif) identique au CPU en exactitude (28/34, 4/4 refus), 4 fois plus rapide (médiane 1,86 s contre 7,44 s) ; mode « Demander », abandonné sur CPU, devient utilisable (28/34, médiane 7,7 s). VRAM 15,7/16,4 Go, marge faible. Manuel 10, `presentation.md` et README mis à jour avec les chiffres mesurés ; `verifier_docs.py` à 0 point.
 - Suite : relire le `git stash` de LLM-Service ; Qwen3-4B-Instruct 4 bits sur vLLM pour une comparaison à modèle identique ; carte à 8 Go de VRAM ; solution suivante (RAGFlow).
+
+### 2026-11-12 10:30 — Reprise au standard du kit : écart et plan
+
+- Début de session : `~/.claude/statut-a-jour.sh` → modifications non commitées (outils communs, `.gitignore`) ; `outils/communs/llm_central_sante.sh --essai` réussi (`chat`, `embed` 1 024 dimensions, `rerank`, `transcribe` sur le message vocal du corpus). Machine : Ryzen 5 9600X, 32 Go, RTX 4060 Ti 16 Go ; service central en profil `gpu` (`llm-swap` CUDA). Commits : `.gitignore` + `.env.example`, outils communs du kit.
+- Versions (`outils/resultats/open-notebook/versions-2026-11-12.json`) : Open Notebook v1.15.1 reste la dernière stable (image déjà figée par empreinte) ; SurrealDB v2.7.0 gardée (le compose officiel impose v2 ; dernière stable v4.0.1, raison écrite dans le JSON).
+- Écart entre l'existant et le kit :
+
+| Point du kit | Existant | À faire |
+|---|---|---|
+| Service de modèles | Open Notebook branché sur `vllm-central` / `vllm-embed` (Gemma 4 E4B), puis `ollama-central` ; STT et TTS sur `rag-speaches` | fournisseur « OpenAI Compatible » unique sur `http://llm-central:8080/v1`, noms fixes `chat`, `embed`, `transcribe` ; TTS seul sur `rag-speaches` (non servi par le central) ; anciennes configurations retirées |
+| Manuel en deux parties | 13 manuels à plat (`docs/open-notebook/00-12`), mélange utilisateur et preuves | `manuel/01…` (partie 1, sans étiquettes ni renvois aux scripts) et `annexes/A1…A6` (partie 2), contenu vérifié repris |
+| Captures annotées | 18 captures sans annotation, 4 manuels sans capture (19 points au vérificateur) | captures refaites à la souris par Playwright, rectangle rouge, pastilles, tableau N° \| Élément \| Rôle, « Où » et « Écran : » |
+| Carte de l'interface | absente | `annexes/carte-interface.md` + captures de repérage `img/carte/` |
+| Chapitre 01 « Découvrir » | `presentation.md` + `00-notions` | `manuel/01-decouvrir-open-notebook.md`, configurations minimales sans et avec GPU d'après les mesures de LLM-Service |
+| Banc | Ollama CPU (qwen3:4b-instruct), vLLM GPU (Gemma 4 E4B) | rejoué avec `chat` (Qwen3.5-4B) ; reranker non accepté par Open Notebook (cadrage) : à revérifier et écrire |
+| Relecture novice | jamais faite | sous-agent neuf jusqu'à zéro remarque |
+| Rapport | RAPPORT du 8 novembre (Ollama) | mis à jour, rubriques de la phase H |
+
+- Plan : (1) override et `installer.sh` rebranchés sur `llm-central` (clé lue dans `.env` par `--env-file`, jamais recopiée dans `donnees/`), `configurer.py` en mode `central`, ménage des anciennes configurations ; (2) vérification minimale, ports, embeddings reconstruits ; (3) banc avec `chat` ; (4) carte de l'interface (Playwright) ; (5) chapitres de la partie 1 un par un, captures annotées ; (6) annexes à partir des documents existants ; (7) relectures novice et adversariale, rapport, README, commit final.
+- Décision prudente : RAGFlow (`rag-ragflow-*`, autre dépôt, peut-être utilisé par une autre session) laissé en marche ; 19 Go de RAM disponibles suffisent pour Open Notebook (moins de 1 Go mesuré).
