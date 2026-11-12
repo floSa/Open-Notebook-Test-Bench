@@ -11,7 +11,7 @@ Une **note** est un texte gardé dans un carnet : écrite à la main, ou répons
 ## Écrire une note
 
 **Étape 1. Écrire la note**
-*Où* : page du carnet › colonne NOTES › « Écrire une note » (déplier la colonne si elle est repliée).
+*Où* : page du carnet › colonne NOTES › « Écrire une note » (si la colonne est repliée, cliquer sur la bande verticale « Notes » pour la déplier).
 Cliquer sur « Note sans titre » pour donner un titre, écrire le texte, puis « Créer la note ».
 
 ![Fenêtre Créer une note](../img/07-notes/01-ecrire-note.png)

@@ -6,7 +6,7 @@
 
 ## Ce qu'il faut savoir
 
-La page « Demander et rechercher » travaille sur tous les carnets à la fois (ou sur un seul, au choix). Elle a deux onglets. **Recherche** retrouve des documents et des notes : la *recherche textuelle* cherche les mots exacts, comme un moteur de recherche classique ; la *recherche vectorielle* cherche par le sens, à partir des embeddings, et trouve donc aussi les reformulations et les textes dans une autre langue. **Demander (bêta)** répond à une question : le modèle prépare lui-même quelques recherches par le sens, lit les passages trouvés et rédige une réponse. Contrairement à la conversation d'un carnet, elle n'envoie au modèle que les passages trouvés, ce qui convient aux grands volumes.
+La page ouverte par le lien « Demander et rechercher » s'intitule « Poser une question et Rechercher ». Elle travaille sur tous les carnets à la fois (ou sur un seul, au choix). Elle a deux onglets. **Recherche** retrouve des documents et des notes : la *recherche textuelle* cherche les mots exacts, comme un moteur de recherche classique ; la *recherche vectorielle* cherche par le sens, à partir des embeddings, et trouve donc aussi les reformulations et les textes dans une autre langue. **Demander (bêta)** répond à une question : le modèle prépare lui-même quelques recherches par le sens, lit les passages trouvés et rédige une réponse. Contrairement à la conversation d'un carnet, elle n'envoie au modèle que les passages trouvés, ce qui convient aux grands volumes.
 
 ## Rechercher
 

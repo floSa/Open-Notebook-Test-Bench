@@ -8,6 +8,8 @@
 
 La conversation d'un carnet ne cherche pas les passages utiles : elle envoie au modèle, à chaque question, **tout ce qui est choisi** dans le carnet. Chaque source a pour cela un **mode de contexte** : « aperçus » (seul le résumé automatique part), « contenu complet » (le texte entier part) ou exclue (rien ne part). Plus on envoie de texte, plus la réponse est complète, mais plus elle est lente ; et chaque question est limitée à 16 384 jetons, soit environ quinze pages, réflexion du modèle et réponse comprises. Le bas de la colonne de conversation affiche à tout moment la taille de ce qui partira. Pour interroger beaucoup de documents à la fois, la recherche « Demander » est plus adaptée (chapitre [08](08-rechercher-et-demander.md)).
 
+Les captures de ce chapitre ont été prises après le chapitre [07](07-notes-et-transformations.md) : le compteur « Context » y compte aussi deux notes, absentes à ce stade de la lecture.
+
 ## Choisir ce qui part au modèle
 
 **Étape 1. Régler toutes les sources d'un coup**
@@ -45,7 +47,7 @@ Chaque clic fait passer la source au mode suivant, dans cet ordre : contenu comp
 
 **Étape 3. Poser la question**
 *Où* : colonne DISCUTER AVEC LE CARNET, champ de question.
-Écrire « Combien de salariés compte Vélanor fin 2025, et où se trouve son siège ? », puis Ctrl+Entrée.
+Remettre d'abord toutes les sources en contenu complet (étape 1). Écrire « Combien de salariés compte Vélanor fin 2025, et où se trouve son siège ? », puis Ctrl+Entrée.
 
 ![Réponse citée](../img/06-discuter/03-reponse-citee.png)
 *Écran : carnet « Démo Vélanor », réponse du modèle.*
@@ -86,7 +88,7 @@ Une **session** est une conversation : chaque carnet peut en garder plusieurs, c
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | Bouton « + » | ouvre une nouvelle conversation, vide |
+| 1 | Bouton « + » | affiche un champ de titre ; « Créer » crée la session et l'ouvre, vide (chapitre [11](11-cas-pratiques.md), étape 1) |
 | 2 | Session | une conversation, nommée d'après le début de sa première question ; un clic la rouvre avec son historique |
 | 3 | Crayon | renomme la session |
 | 4 | Corbeille | supprime la session |

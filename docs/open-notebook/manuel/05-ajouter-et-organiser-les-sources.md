@@ -40,7 +40,7 @@ Dans la fenêtre de l'explorateur de fichiers, ouvrir le dossier `corpus\documen
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « Traitement » | la source attend ou subit son traitement |
-| 2 | « Processing... » | titre provisoire, remplacé par le nom du fichier une fois le texte extrait |
+| 2 | Titre de la carte | « Processing... » tant que le texte n'est pas extrait, puis le nom du fichier : ici, la première carte porte déjà son nom |
 | 3 | « 9 source(s) créée(s) avec succès » | confirmation de l'envoi des fichiers |
 
 *Résultat* : les documents sont traités un par un ; pour ces neuf documents, il faut compter quelques minutes, le résumé automatique de chaque document demandant une réponse du modèle. Le classeur, la page web et la note sont prêts en quelques secondes, le message vocal après sa transcription.
@@ -63,7 +63,7 @@ Le contrat `contrat-batterix-scan.pdf` est une image de papier scanné : sans re
 
 **Étape 5. Ajouter une page web**
 *Où* : « Ajouter la source » › « Ajouter la source », onglet « Ajouter une URL ».
-Exemple à ne pas suivre ici : le carnet « Démo Vélanor » ne contient pas de page web, et l'essai a été annulé par « Annuler ». Coller une ou plusieurs adresses, une par ligne. Le titre est facultatif : sans titre, il est tiré de la page.
+Exemple à ne pas suivre ici : le carnet « Démo Vélanor » ne contient aucune page ajoutée par son adresse (la page `faq-sav.html` y est entrée comme fichier), et l'essai a été annulé par « Annuler ». Coller une ou plusieurs adresses, une par ligne. Le titre est facultatif : sans titre, il est tiré de la page.
 
 ![Onglet Ajouter une URL](../img/05-sources/04-ajouter-url.png)
 *Écran : assistant, étape 1, onglet « Ajouter une URL ».*

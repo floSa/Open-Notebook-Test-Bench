@@ -87,6 +87,8 @@ Cocher le carnet « Démo Vélanor » (toutes ses sources et notes sont alors ch
 | 3 | « Nom de l'épisode » | ici « Vélanor en bref » |
 | 4 | « Générer » | lance la génération en arrière-plan |
 
+Le volume sélectionné, affiché dans la fenêtre (environ 45 000 jetons ici), dépasse la limite d'une question de conversation (16 384 jetons) : la génération d'un podcast ne passe pas par la conversation, elle procède par étapes (plan, puis répliques), et l'épisode a bien été produit avec ce volume.
+
 *Résultat* : la fenêtre se ferme ; l'épisode est fabriqué en arrière-plan, en quelques minutes ici.
 
 **Étape 5. Écouter l'épisode**
