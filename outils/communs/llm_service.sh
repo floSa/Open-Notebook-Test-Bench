@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# HISTORIQUE : ancien service de modèles (Ollama/vLLM). Ce script démarre des conteneurs de LLM-Service, désormais géré à part : ne plus le lancer.
+# Remplacé par outils/communs/llm_central_sante.sh (vérification en lecture seule du service LLM central).
 # Service de modèles commun à toutes les solutions : LLM-Service (dépôt séparé, branche service-ollama).
 # Un seul Ollama (conteneur ollama-central, réseau llm-net, 127.0.0.1:11434) sert le chat et l'embedding
 # à toutes les applications ; aucune solution n'embarque son propre serveur de modèles.

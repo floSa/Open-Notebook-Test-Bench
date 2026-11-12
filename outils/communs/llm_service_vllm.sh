@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# HISTORIQUE : ancien service de modèles (Ollama/vLLM). Ce script démarre des conteneurs de LLM-Service, désormais géré à part : ne plus le lancer.
+# Remplacé par outils/communs/llm_central_sante.sh (vérification en lecture seule du service LLM central).
 # Service de modèles pour le banc GPU : LLM-Service (dépôt séparé, branche service-vllm).
 # Deux conteneurs, un modèle chacun (vllm-central : chat, vllm-embed : embedding), réseau llm-net.
 # Contrairement à Ollama, vLLM réserve sa VRAM au démarrage : un seul moteur à la fois sur le GPU

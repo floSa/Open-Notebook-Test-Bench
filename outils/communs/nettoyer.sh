@@ -18,7 +18,11 @@ echo "À supprimer : projet compose rag-$sol (conteneurs, volumes, réseau), dos
 [ $socle = 1 ] && echo "              socle : rag-speaches, réseau rag-local, dossier donnees/socle/ (LLM-Service non touché)"
 if [ $oui = 0 ]; then read -r -p "Confirmer (oui/non) ? " r; [ "$r" = oui ] || exit 1; fi
 
-# fichiers compose de la solution : compose officiel figé puis override du dépôt
+# Solution qui fournit son propre appel de compose (ex. RAGFlow : compose officiel dans sources/, réglages dans
+# donnees/<solution>/<solution>.env) : on l'utilise ; sinon, compose officiel figé puis override du dépôt.
+if [ -x "outils/$sol/compose.sh" ] && [ -d "donnees/$sol" ]; then
+  "outils/$sol/compose.sh" down -v --remove-orphans || true
+fi
 fichiers=()
 for f in "outils/$sol/officiel/docker-compose.yml" "outils/$sol/compose.override.yml"; do [ -f "$f" ] && fichiers+=(-f "$f"); done
 envf="donnees/$sol/.env"

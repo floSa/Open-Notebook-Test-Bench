@@ -38,6 +38,15 @@ sleep 3
 port_local=$(code http://127.0.0.1:18999/)
 docker rm -f rag-diag-port >/dev/null 2>&1
 
+# vm.max_map_count de la VM de Docker (lecture seule ; Elasticsearch exige 262144 ou plus)
+max_map=$(essai 'docker run --rm --entrypoint cat nginx:alpine /proc/sys/vm/max_map_count' 60)
+
+# LLM-Service : branche, conteneurs, modèles servis (vLLM ou Ollama)
+LLMDIR="${LLM_SERVICE_DIR:-$HOME/mes_projets/Projet-IA/LLM-Service}"
+llm_branche=$(essai "git -C '$LLMDIR' branch --show-current")
+llm_conteneurs=$(essai 'docker ps --format "{{.Names}}={{.Image}}" | grep -E "^(ollama-central|vllm-central|vllm-embed)=" | paste -sd";"')
+llm_modeles=$(for port in 8001 8002 11434; do curl -s -m 5 "http://127.0.0.1:$port/v1/models"; echo; done | python3 -c 'import json,sys; print(";".join(f"{m["id"]} (max_model_len={m.get("max_model_len")})" for l in sys.stdin if l.strip() for m in json.loads(l).get("data", [])))' 2>&1)
+
 python3 - "$sortie" <<EOF
 import json, sys
 d = {
@@ -55,6 +64,8 @@ d = {
   "docker": "$docker_v", "compose": "$compose_v",
   "acces_http": {"docker_hub": "$hub", "ghcr": "$ghcr", "pypi": "$pypi", "ollama_com": "$ollamacom", "huggingface": "$hf"},
   "port_127_0_0_1_depuis_wsl": "$port_local",
+  "vm_max_map_count_docker": """$max_map""".strip(),
+  "llm_service": {"dossier": "$LLMDIR", "branche": """$llm_branche""".strip(), "conteneurs": """$llm_conteneurs""".strip(), "modeles": """$llm_modeles""".strip()},
 }
 json.dump(d, open(sys.argv[1], "w"), ensure_ascii=False, indent=2)
 print(json.dumps(d, ensure_ascii=False, indent=2))
