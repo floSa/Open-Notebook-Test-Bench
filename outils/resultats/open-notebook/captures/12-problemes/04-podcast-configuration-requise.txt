@@ -1,0 +1,58 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Podcasts
+
+Suivez les épisodes générés et gérez les profils réutilisables.
+
+Configuration requise
+Certains profils n'ont pas encore de modèles configurés. Modifiez-les pour sélectionner des modèles avant de générer des podcasts.
+
+CHOISIR UNE VUE
+
+Épisodes
+Profils
+Aperçu des épisodes
+
+Surveillez les tâches de génération de podcast et consultez les artefacts finaux.
+
+Générer un podcast
+Rafraîchir
+Total
+0
+En cours
+0
+Terminé
+0
+Échoué
+0
+En attente
+0
+
+Aucun épisode de podcast pour le moment. Cliquez sur Générer un podcast pour créer le premier.
+
+Actions rapides
+
+Navigation, recherche, poser une question, thème

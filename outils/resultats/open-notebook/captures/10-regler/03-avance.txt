@@ -1,0 +1,54 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Outils Avancés
+
+Outils et utilitaires avancés pour les utilisateurs expérimentés
+
+Infos Système
+Version actuelle
+1.15.1
+Dernière version
+1.15.1
+État
+À jour
+Reconstruire les index (Embeddings)
+Reconstruire l'index de recherche vectorielle pour toutes les sources
+Mode de reconstruction
+Existant
+
+Ré-indexer uniquement les éléments qui ont déjà des embeddings (plus rapide, utile lors d'un changement de modèle)
+
+Inclure dans la reconstruction
+Sources
+Notes
+Analyses
+🚀 Lancer la reconstruction
+Quand dois-je reconstruire les embeddings ?
+Combien de temps dure la reconstruction ?
+Est-il sûr de reconstruire pendant l'utilisation de l'application ?
+Actions rapides
+
+Navigation, recherche, poser une question, thème

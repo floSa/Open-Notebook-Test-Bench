@@ -1,0 +1,139 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Démo Vélanor
+Archiver
+Supprimer
+Dossier de démonstration : documents fictifs de l'entreprise Vélanor
+Créé à il y a 10 minutes •Mis à jour à il y a 1 minute
+SOURCES
+Ajouter la source
+supplier-audit-batterix-en.pdf
+Télécharger un fichier
+·
+1 aperçus
+strategie-2026.pptx
+Télécharger un fichier
+·
+1 aperçus
+stocks-octobre-2025.xlsx
+Télécharger un fichier
+·
+1 aperçus
+rapport-annuel-2025.pdf
+Télécharger un fichier
+·
+1 aperçus
+procedure-batteries.docx
+Télécharger un fichier
+·
+1 aperçus
+message-vocal-production.mp3
+Télécharger un fichier
+·
+1 aperçus
+faq-sav.html
+Télécharger un fichier
+·
+1 aperçus
+cse-2025-10-14.md
+Télécharger un fichier
+·
+1 aperçus
+Échec
+Source
+Processing...
+Télécharger un fichier
+Réessayer le traitement
+NOTES
+Écrire une note
+Aucune note pour le moment
+
+Créez votre première note pour capturer des idées et des observations.
+
+DISCUTER AVEC LE CARNET
+Sessions
+
+Commencer une conversation sur ce Carnet
+
+Posez des questions pour mieux comprendre le contenu
+
+Context:
+8
+1
+3.4K tokens
+/
+11.3K chars
+Modèle
+chat
+Actions rapides
+
+Navigation, recherche, poser une question, thème
+
+Ajouter une nouvelle source
+
+Le contenu sera traité et analysé par l'IA.
+
+1
+
+Ajouter la source
+
+Le contenu sera traité et analysé par l'IA.
+
+2
+
+Carnets
+
+Rechercher des carnets...
+
+3
+
+Traiter
+
+Le contenu sera traité et analysé par l'IA.
+
+Sources
+
+Le contenu sera traité et analysé par l'IA.
+
+Ajouter une URL
+Télécharger un fichier
+Saisir du texte
+
+Le contenu sera traité et analysé par l'IA.
+
+URL(s) *
+1 URL(s)
+
+Collez plusieurs URL (une par ligne) pour une importation groupée
+
+Titre (Optionnel)
+
+Si laissé vide, un titre sera généré à partir du contenu
+
+Annuler
+Suivant
+Terminé
+Fermer

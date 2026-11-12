@@ -1,0 +1,83 @@
+{
+ "date": "2026-11-12",
+ "carnet": "Démo Vélanor",
+ "note": "conversations créées à la souris (scénario manuel.py, chapitres 06 et 11), sources en contenu complet",
+ "sessions": [
+  {
+   "session": "Recette 3 - synthèse direction",
+   "messages": [
+    {
+     "type": "human",
+     "contenu": "Rédige une synthèse en cinq puces pour la direction : chiffre d'affaires 2025, objectif 2026, nouvelle usine, risque fournisseur batteries, arrêt de la ligne 3. Cite les sources."
+    },
+    {
+     "type": "ai",
+     "contenu": "Voici une synthèse pour la direction en cinq points :\n\n*   **Chiffre d'affaires 2025** : Le chiffre d'affaires atteint $48,6 \\text{ M}\\€$ avec une croissance de $+12,4\\%$, et un résultat net consolidé de $3,1 \\text{ M}\\€$. [source_insight:ax6jk08lcekeio446fjf]\n*   **Objectif 2026** : La cible fixée pour le chiffre d'affaires est de $55 \\text{ M}\\€$, accompagnée d'un taux de marge nette souhaité de $7\\%$. [source_insight:qi7kabxq1jgazv84wg8q]\n*   **Nouvelle usine** : Une usine d'assemblage à Saint-Nazaire est prévue pour septembre 2026, avec une capacité annuelle de $25\\,000$ vélos et un investissement de $14 \\text{ M}\\€$. [source_insight:qi7kabxq1jgazv84wg8q]\n*   **Risque fournisseur batteries** : Le principal fournisseur Batterix GmbH (Allemagne) a obtenu un score qualité de $87/100$ à l'audit du 18 juin 2025, bien que le rapport identifie des risques de pénurie de cellules Li-ion. [source_insight:yl78yblj0c5ot1akaazs]\n*   **Arrêt de la ligne 3** : La ligne d'assemblage Nantes (Ligne 3) a été immobilisée du 2 au 6 mars pour une maintenance technique, avec transfert de production sur une autre ligne. [source_insight:sujez85jimel3hmih7v2]"
+    }
+   ]
+  },
+  {
+   "session": "Recette 2 - contrat et audit",
+   "messages": [
+    {
+     "type": "human",
+     "contenu": "Le délai de livraison réellement constaté chez Batterix respecte-t-il le délai prévu par le contrat ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "Pour répondre à votre question sur le délai de livraison chez Batterix, voici ce que nous pouvons établir d'après les documents accessibles :\n\n## Délai constaté dans le stock (Octobre 2025)\n\nSelon le fichier des stocks [source:stocks-octobre-2025.xlsx], le délai moyen de livraison réel constaté auprès du fournisseur Batterix GmbH est de **24 jours** :\n\n> \"Batterie Supplier Association: Batterix GmbH provides Batterie component with supply delay of 24 days.\"\n\n## Délai contractuel non spécifié dans les documents\n\nLes documents disponibles mentionnent que le contrat d'approvisionnement en batteries avec Batterix a été renouvelé en mars 2025, mais **ne précisent pas** le délai de livraison conventionnel agreed dans ce contrat :\n\n- Le rapport annuel indique simplement que le fournisseur est \"Batterix GmbH situé à Brême en Allemagne\" [source:rapport-annuel-2025.pdf]\n- Aucun document ne spécifie les termes contractuels exacts concernant les délais de livraison\n\n## Conclusion\n\nIl est **difficile de confirmer** si le délai réel (24 jours) respecte le délai prévu par contrat, car cette information n'est pas explicitement contenue dans les documents actuels. \n\nUne vérification comparative devrait idéalement :\n1. Consulter le document contractuel Batterix complet\n2. Comparer avec le record de stocks observé en octobre 2025\n\nVous avez noté que ce point doit être vérifié : \"Comparer le délai de livraison du contrat Batterix au délai constaté dans le classeur des stocks.\" [note:r3ps4r1z03kz1eccjv7i]\n\nSouhaitez-vous que je recherche d'autres documents potentiellement contenant ces termes contractuels, ou souhaitez-vous explorer un autre aspect de cette question ?"
+    },
+    {
+     "type": "human",
+     "contenu": "Quelles non-conformités l'audit de Batterix a-t-il relevées ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "Selon l'audit de qualité effectué chez Batterix GmbH le 18 juin 2025 [source_insight:yl78yblj0c5ot1akaazs], deux **non-conformités mineures** ont été relevées :\n\n1. **Étiquetage incomplet des palettes** dans les entrepôts  \n2. **Manque de gants anti-statiques (ESD)** sur une station d'assemblage spécifique\n\nCes défauts n'ont pas compromettre l'approbation du fournisseur, qui a obtenu un score global de 87/100 et reste validé pour une année supplémentaire. Le taux de défaut des cellules mesuré à 0,3 % se situe dans les limites acceptables pour la production.\n\nPour plus de détails sur les processus qualité de Batterix, vous pouvez consulter le rapport complet du document 'supplier-audit-batterix-en.pdf'."
+    }
+   ]
+  },
+  {
+   "session": "Recette 1 - rapport annuel",
+   "messages": [
+    {
+     "type": "human",
+     "contenu": "Quel est le chiffre d'affaires 2025 et quel trimestre a été le plus élevé ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "D'après le rapport annuel 2025 de Vélanor SAS [source:60vesl1eolxx671t4s50] :\n\n## Chiffre d'affaires 2025\n\nLe chiffre d'affaires de l'année s'établit à **$48,6 \\text{ M}\\euro$**, avec une croissance de $+12,4\\%$ par rapport à l'année précédente [source_insight:ax6jk08lcekeio446fjf].\n\n## Trimestre le plus élevé\n\nLe troisième trimestre (T3) a été le trimestre le plus performant de l'année avec un chiffre d'affaires de **$14,2 \\text{ M}\\euro$** ($29\\%$ du total annuel), porté principalement par la saison estivale [full_text section 3].\n\nPour comparaison, voici les chiffres des trimestres :\n\n| Trimestre | CA (M€) | % du total |\n|-----------|---------|------------|\n| T1 2025   | 9,8     | 20 %       |\n| T2 2025   | 13,7    | 28 %       |\n| **T3 2025** | **14,2** | **29 %**   |\n| T4 2025   | 10,9    | 22 %       |\n\nVous souhaitez que j'approfondisse d'autres aspects financiers ou opérationnels de l'activité 2025 ?"
+    },
+    {
+     "type": "human",
+     "contenu": "Quel modèle est le plus vendu et quel est le plus cher ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "D'après le rapport annuel 2025 de Vélanor SAS [source:60vesl1eolxx671t4s50] :\n\n## Modèle le plus vendu\n\nLe modèle **Loire Urban** (usage ville) est le plus vendu avec **$24\\,300$ unités produites**, à un prix TTC de **$1\\,890 \\euro$**. [source_insight:ax6jk08lcekeio446fjf]\n\n## Modèle le plus cher\n\nLe modèle **Erdre Cargo** (usage cargo) est le plus cher de la gamme avec un prix TTC de **$4\\,290 \\euro$**, pour **$8\\,900$ unités produites**. [source_insight:ax6jk08lcekeio446fjf]\n\n## Comparaison complète des modèles en 2025\n\n| Modèle      | Usage   | Unités produites | Prix TTC    |\n|-------------|---------|------------------|-------------|\n| Loire Urban | ville   | $24\\,300$        | $1\\,890 \\euro$ |\n| Sèvre Trail | VTT     | $15\\,400$        | $3\\,150 \\euro$ |\n| Brière Kid  | enfant  | $13\\,200$        | $990 \\euro$ |\n| **Erdre Cargo** | cargo   | **$8\\,900$**    | **$4\\,290 \\euro$** |\n\nVous souhaitez que je vous donne plus d'informations sur les autres spécifications techniques ou les performances de ces modèles ?"
+    }
+   ]
+  },
+  {
+   "session": "Combien de salariés compte Vél...",
+   "messages": [
+    {
+     "type": "human",
+     "contenu": "Combien de salariés compte Vélanor fin 2025, et où se trouve son siège ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "Vélanor compte **412 salariés** au 31 décembre 2025 [source:60vesl1eolxx671t4s50]. Son siège social est situé au **12 quai de la Fosse, à Nantes** [source:60vesl1eolxx671t4s50]."
+    },
+    {
+     "type": "human",
+     "contenu": "Combien de salariés compte Vélanor fin 2025, et où se trouve son siège ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "Selon les informations disponibles :\n\nVélanor compte **412 salariés** au 31 décembre 2025 [source:60vesl1eolxx671t4s50]. Son siège social est situé au **12 quai de la Fosse, à Nantes** [source:60vesl1eolxx671t4s50].\n\nPour plus de détails sur la répartition des effectifs par site :\n- Site Nantes (siège et assemblage) : 268 salariés\n- Site Cholet (fabrication des cadres) : 97 salariés\n- Site Lyon (agence commerciale) : 31 salariés\n- Site Bruxelles (filiale Benelux) : 16 salariés\n\nTotal effectif : 412 salariés"
+    }
+   ]
+  }
+ ]
+}

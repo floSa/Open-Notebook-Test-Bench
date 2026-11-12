@@ -1,0 +1,61 @@
+{
+ "date": "2026-11-12",
+ "note": "cas pratiques joués à la souris alors que les sources du carnet étaient en mode « aperçus » (compteur relevé à l'ouverture du carnet lors du second passage : 9 sources en aperçus, 1 en contenu complet) ; sessions supprimées ensuite et rejouées après « Tout inclure (contenu complet) »",
+ "sessions": [
+  {
+   "session": "Recette 3 - synthèse direction",
+   "messages": [
+    {
+     "type": "human",
+     "contenu": "Rédige une synthèse en cinq puces pour la direction : chiffre d'affaires 2025, objectif 2026, nouvelle usine, risque fournisseur batteries, arrêt de la ligne 3. Cite les sources."
+    },
+    {
+     "type": "ai",
+     "contenu": "Voici la synthèse demandée pour la direction :\n\n*   **Chiffre d'affaires 2025** : Le CA s'établit à $48,6 \\text{ M}\\euro$ ($+12,4\\%$ par rapport à l'année précédente), avec un résultat net consolidé de $3,1 \\text{ M}\\euro$. [source_insight:ax6jk08lcekeio446fjf]\n*   **Objectif 2026** : La cible fixée pour le chiffre d'affaires est de $55 \\text{ M}\\euro$, accompagnée d'un taux de marge nette souhaité de $7\\%$. [source_insight:qi7kabxq1jgazv84wg8q]\n*   **Nouvelle usine** : Une nouvelle usine d'assemblage à Saint-Nazaire est prévue pour septembre 2026, avec une capacité annuelle de $25\\,000$ vélos. [source_insight:qi7kabxq1jgazv84wg8q]\n*   **Risque fournisseur batteries** : Le principal fournisseur Batterix GmbH (Allemagne) a obtenu un score qualité de 87/100 à l'audit du 18 juin 2025, bien que le rapport global identifie des risques de pénurie de cellules Li-ion. [source_insight:yl78yblj0c5ot1akaazs] [source_insight:ax6jk08lcekeio446fjf]\n*   **Arrêt de la ligne 3** : La ligne d'assemblage Nantes (Ligne 3) a été immobilisée du 2 au 6 mars pour une maintenance technique. [source_insight:sujez85jimel3hmih7v2]"
+    }
+   ]
+  },
+  {
+   "session": "Recette 2 - contrat et audit",
+   "messages": [
+    {
+     "type": "human",
+     "contenu": "Le délai de livraison réellement constaté chez Batterix respecte-t-il le délai prévu par le contrat ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "Pour répondre à votre question, nous devons comparer le délai de livraison réel constaté avec celui prévu par le contrat chez Batterix GmbH.\n\nD'après les données du classeur des stocks d'octobre 2025 (**source_insight:h61ns4mu1pdm45xj6764**), le fournisseur Batterix est associé à un délai de livraison constaté de **24 jours** pour les composants batterie. Cependant, la nature du document ne précise pas explicitement les termes contractuels relatifs aux délais de livraison dans les insights fournis.\n\nSelon le **rapport annuel 2025**, le partenariat avec Batterix a été renouvelé en mars 2025 (**source_insight:ax6jk08lcekeio446fjf** point 22), mais aucune clause spécifique sur les délais n'est mentionnée dans ce document. L'audit fournisseur de juin 2025 (**source_insight:yl78yblj0c5ot1akaazs**) a noté des non-conformités mineures (étiquetage incomplet, manque de bracelets anti-statiques), mais n'a pas rapporté de retard significatif sur les délais de livraison.\n\nLa note « Points à vérifier » (**note:r3ps4r1z03kz1eccjv7i**) souligne explicitement la nécessité de comparer le délai contractuel Batterix au délai observé dans les stocks. Cela suggère une divergence potentielle entre les termes contractuels et la réalité opérationnelle, bien que les documents ne fournissent pas les spécifications exactes du contrat pour déterminer cette conformité avec certitude.\n\n**En résumé :**  \nLe délai réel constaté est de **24 jours** (source: classeur des stocks). Sans accès direct aux clauses contractuelles spécifiques dans les documents actuels, on ne peut pas confirmer formellement si ce délai respecte les engagements contractuels. La présence d'une alerte de stock pour les batteries (**1 240 unités < seuil 1 500**) pourrait indiquer une tension sur l'approvisionnement si le délai était supérieur aux attentes.\n\nPour une analyse plus précise, il serait nécessaire de consulter le document original du contrat Batterix ou des rapports internes détaillant les termes d'approvisionnement."
+    },
+    {
+     "type": "human",
+     "contenu": "Quelles non-conformités l'audit de Batterix a-t-il relevées ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "L'audit fournisseur de Batterix GmbH, réalisé le 18 juin 2025 par l'équipe qualité Vélanor (Laura Fischer), a relevé des **non-conformités mineures** concernant la logistique et les normes de sécurité.\n\nSelon le document détaillant cet audit (**source_insight:yl78yblj0c5ot1akaazs**), les problèmes spécifiques identifiés sont :\n\n*   **Étiquetage incomplet des palettes.**\n*   **Manque de bracelets anti-statiques (ESD)** à la station d'assemblage.\n\nMalgré ces observations, le fournisseur a obtenu une note globale de qualité de 87 sur 100 et son statut a été approuvé pour l'année en cours. Cependant, ces points mineurs pourraient impacter les délais ou la conformité sécuritaire des livraisons de batteries."
+    }
+   ]
+  },
+  {
+   "session": "Recette 1 - rapport annuel",
+   "messages": [
+    {
+     "type": "human",
+     "contenu": "Quel est le chiffre d'affaires 2025 et quel trimestre a été le plus élevé ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "Le chiffre d'affaires consolidé de l'année 2025 s'élève à **$48,6 \\text{ M}\\euro$** [source_insight:ax6jk08lcekeio446fjf].\n\nCependant, les documents accessibles dans le contexte ne fournissent pas de détail sur la répartition du chiffre d'affaires par trimestre (T1 à T4). Il est donc impossible de déterminer avec les informations actuelles quel trimestre a été le plus élevé.\n\nIl vous faudra consulter directement le document **rapport-annuel-2025.pdf** pour voir s'il y a une section de performance détaillée non incluse dans le résumé disponible [source:60vesl1eolxx671t4s50]."
+    },
+    {
+     "type": "human",
+     "contenu": "Quel modèle est le plus vendu et quel est le plus cher ?"
+    },
+    {
+     "type": "ai",
+     "contenu": "D'après les données du rapport annuel 2025 [source_insight:ax6jk08lcekeio446fjf] :\n\n- **Le modèle le plus vendu** est le **Loire Urban** (usage ville) avec **24 300 unités produites** à un prix TTC de **1 890 €**.\n\n- **Le modèle le plus cher** de la gamme est le **Erdre Cargo** (usage cargo) à **4 290 € TTC** (avec 8 900 unités produites).\n\nPour compléter l'information, voici les autres modèles avec leurs volumes de production et prix :\n- **Sèvre Trail** (VTT) : 15 400 unités à 3 150 €\n- **Brière Kid** (enfant) : 13 200 unités à 990 €\n\nLe modèle Loire Urban représente environ la moitié de votre production totale en vélos en 2025 [source_insight:ax6jk08lcekeio446fjf]."
+    }
+   ]
+  }
+ ]
+}

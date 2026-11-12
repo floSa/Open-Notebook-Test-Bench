@@ -1,0 +1,209 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Démo Vélanor
+Archiver
+Supprimer
+Dossier de démonstration : documents fictifs de l'entreprise Vélanor
+Créé à il y a 33 minutes •Mis à jour à il y a 8 minutes
+SOURCES
+Ajouter la source
+rapport-annuel-2025.pdf
+Télécharger un fichier
+·
+2 aperçus
+Appel transporteur Loire Fret
+Saisir du texte
+·
+1 aperçus
+supplier-audit-batterix-en.pdf
+Télécharger un fichier
+·
+1 aperçus
+strategie-2026.pptx
+Télécharger un fichier
+·
+1 aperçus
+stocks-octobre-2025.xlsx
+Télécharger un fichier
+·
+1 aperçus
+procedure-batteries.docx
+Télécharger un fichier
+·
+1 aperçus
+message-vocal-production.mp3
+Télécharger un fichier
+·
+1 aperçus
+faq-sav.html
+Télécharger un fichier
+·
+1 aperçus
+cse-2025-10-14.md
+Télécharger un fichier
+·
+1 aperçus
+Échec
+Source
+Processing...
+Télécharger un fichier
+Réessayer le traitement
+Notes
+DISCUTER AVEC LE CARNET
+Sessions
+
+Quel est le chiffre d'affaires 2025 et quel trimestre a été le plus élevé ?
+
+D'après le rapport annuel 2025 de Vélanor SAS 1 :
+
+Chiffre d'affaires 2025
+
+Le chiffre d'affaires de l'année s'établit à 
+48
+,
+6
+ M
+\euro
+48,6 M\euro, avec une croissance de 
++
+12
+,
+4
+%
++12,4% par rapport à l'année précédente 2.
+
+Trimestre le plus élevé
+
+Le troisième trimestre (T3) a été le trimestre le plus performant de l'année avec un chiffre d'affaires de 
+14
+,
+2
+ M
+\euro
+14,2 M\euro (
+29
+%
+29% du total annuel), porté principalement par la saison estivale [full_text section 3].
+
+Pour comparaison, voici les chiffres des trimestres :
+
+Trimestre	CA (M€)	% du total
+T1 2025	9,8	20 %
+T2 2025	13,7	28 %
+T3 2025	14,2	29 %
+T4 2025	10,9	22 %
+
+Vous souhaitez que j'approfondisse d'autres aspects financiers ou opérationnels de l'activité 2025 ?
+
+Références: [1] - source:60vesl1eolxx671t4s50 [2] - source_insight:ax6jk08lcekeio446fjf
+
+Quel modèle est le plus vendu et quel est le plus cher ?
+
+D'après le rapport annuel 2025 de Vélanor SAS 1 :
+
+Modèle le plus vendu
+
+Le modèle Loire Urban (usage ville) est le plus vendu avec 
+24
+ 
+300
+24300 unités produites, à un prix TTC de 
+1
+ 
+890
+\euro
+1890\euro. 2
+
+Modèle le plus cher
+
+Le modèle Erdre Cargo (usage cargo) est le plus cher de la gamme avec un prix TTC de 
+4
+ 
+290
+\euro
+4290\euro, pour 
+8
+ 
+900
+8900 unités produites. 2
+
+Comparaison complète des modèles en 2025
+Modèle	Usage	Unités produites	Prix TTC
+Loire Urban	ville	
+24
+ 
+300
+24300	
+1
+ 
+890
+\euro
+1890\euro
+Sèvre Trail	VTT	
+15
+ 
+400
+15400	
+3
+ 
+150
+\euro
+3150\euro
+Brière Kid	enfant	
+13
+ 
+200
+13200	
+990
+\euro
+990\euro
+Erdre Cargo	cargo	
+8
+ 
+900
+8900	
+4
+ 
+290
+\euro
+4290\euro
+
+Vous souhaitez que je vous donne plus d'informations sur les autres spécifications techniques ou les performances de ces modèles ?
+
+Références: [1] - source:60vesl1eolxx671t4s50 [2] - source_insight:ax6jk08lcekeio446fjf
+
+Context:
+10
+•
+2
+7.0K tokens
+/
+24.2K chars
+Modèle
+chat
+Actions rapides
+
+Navigation, recherche, poser une question, thème

@@ -1,0 +1,50 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Poser une question et Rechercher
+
+CHOISIR UN MODE
+
+Demander (bêta)
+Recherche
+Interroger votre base de connaissances (bêta)
+
+Le LLM répondra à votre requête en se basant sur les documents de votre base de connaissances.
+
+Question
+
+Appuyez sur Cmd/Ctrl+Entrée pour envoyer
+
+Carnets
+Tous les carnets
+Utilisation des modèles par défaut
+Avancé
+Stratégie: chat
+Réponse: chat
+Final: chat
+Demander
+Actions rapides
+
+Navigation, recherche, poser une question, thème

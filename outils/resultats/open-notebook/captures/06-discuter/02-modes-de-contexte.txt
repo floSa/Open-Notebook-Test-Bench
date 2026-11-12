@@ -1,0 +1,96 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Démo Vélanor
+Archiver
+Supprimer
+Dossier de démonstration : documents fictifs de l'entreprise Vélanor
+Créé à il y a 25 minutes •Mis à jour à il y a 7 minutes
+SOURCES
+Ajouter la source
+rapport-annuel-2025.pdf
+Télécharger un fichier
+·
+2 aperçus
+Appel transporteur Loire Fret
+Saisir du texte
+·
+1 aperçus
+supplier-audit-batterix-en.pdf
+Télécharger un fichier
+·
+1 aperçus
+strategie-2026.pptx
+Télécharger un fichier
+·
+1 aperçus
+stocks-octobre-2025.xlsx
+Télécharger un fichier
+·
+1 aperçus
+procedure-batteries.docx
+Télécharger un fichier
+·
+1 aperçus
+message-vocal-production.mp3
+Télécharger un fichier
+·
+1 aperçus
+faq-sav.html
+Télécharger un fichier
+·
+1 aperçus
+cse-2025-10-14.md
+Télécharger un fichier
+·
+1 aperçus
+Échec
+Source
+Processing...
+Télécharger un fichier
+Réessayer le traitement
+Notes
+DISCUTER AVEC LE CARNET
+Sessions
+
+Combien de salariés compte Vélanor fin 2025, et où se trouve son siège ?
+
+Vélanor compte 412 salariés au 31 décembre 2025 1. Son siège social est situé au 12 quai de la Fosse, à Nantes 1.
+
+Références: [1] - source:60vesl1eolxx671t4s50
+
+Context:
+1
+9
+•
+1
+6.3K tokens
+/
+21.8K chars
+Modèle
+chat
+Actions rapides
+
+Navigation, recherche, poser une question, thème

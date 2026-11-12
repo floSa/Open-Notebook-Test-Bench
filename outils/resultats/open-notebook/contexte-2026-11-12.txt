@@ -1,0 +1,5 @@
+# Dépassement volontaire du contexte (chat : 16 384 jetons par requête) — 12 novembre 2026
+# Scénario : outils/open-notebook/captures/manuel.py, chapitre 12 (carnet « Essai contexte », texte de 80 000 caractères en contenu complet, supprimé ensuite)
+source longue : ['completed']
+dépassement : ['AI service error: Error code: 400 - {\'error\': {\'message\': \'litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: Hosted_vllmException - {"error":{"code":400,"message":"request (21842 ...'] upprimer|Dépassement volontaire du contexte, supprimé après l'essai|Créé à il y a moins d’une minute •Mis à jour à il y a moins d’une minute|SOURCES|Ajouter la 
+Context:|1|19.8K tokens|/

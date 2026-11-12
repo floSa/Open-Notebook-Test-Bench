@@ -1,0 +1,65 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Transformations
+
+Les transformations sont des prompts utilisés par le LLM pour traiter une source et extraire des aperçus, des résumés, etc.
+
+CHOISISSEZ UN ESPACE DE TRAVAIL
+
+Transformations
+Bac à sable (Playground)
+Prompt de transformation par défaut
+Ceci sera ajouté à tous vos prompts de transformation
+Transformations personnalisées
+Créer une nouvelle
+Analyze Paper
+Analyses a technical/scientific paper
+Bac à sable (Playground)
+Modifier
+Dense Summary
+Creates a rich, deep summary of the content
+Par défaut
+Bac à sable (Playground)
+Modifier
+Key Insights
+Extracts important insights and actionable items
+Bac à sable (Playground)
+Modifier
+Reflections
+Generates reflection questions from the document to help explore it further
+Bac à sable (Playground)
+Modifier
+Simple Summary
+Generates a small summary of the content
+Bac à sable (Playground)
+Modifier
+Table of Contents
+Describes the different topics of the document
+Bac à sable (Playground)
+Modifier
+Actions rapides
+
+Navigation, recherche, poser une question, thème

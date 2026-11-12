@@ -1,0 +1,231 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Podcasts
+
+Suivez les épisodes générés et gérez les profils réutilisables.
+
+Configuration requise
+Certains profils n'ont pas encore de modèles configurés. Modifiez-les pour sélectionner des modèles avant de générer des podcasts.
+
+CHOISIR UNE VUE
+
+Épisodes
+Profils
+Espace de travail des profils
+
+Créez des configurations d'épisodes et d'intervenants réutilisables pour une production rapide.
+
+Comment les profils propulsent la génération
+Profils d'intervenants
+
+Configurez les voix et personnalités pour les épisodes générés.
+
+Créer un intervenant
+business_panel
+Configuration requise
+Business analysis panel with diverse perspectives
+Non configuré
+Utilisé par 1 épisode
+Marcus Thompson
+ID de la voix: echo
+
+Histoire (Backstory): Former McKinsey consultant, now startup advisor. Expert in strategic analysis and market dynamics.
+
+Personnalité: Strategic thinker, data-driven, excellent at identifying key insights and implications
+
+Elena Vasquez
+ID de la voix: shimmer
+
+Histoire (Backstory): Serial entrepreneur and investor. Focuses on practical implementation and execution.
+
+Personnalité: Action-oriented, pragmatic, brings startup experience and execution focus
+
+Johny Bing
+ID de la voix: ash
+
+Histoire (Backstory): Youtube celebrity and business mogul. Focuses on practical implementation and execution.
+
+Personnalité: Controversial, likes to question ideas and concepts. He brings a fresh perspective and always has a point to make.
+
+Modifier
+solo_expert
+Configuration requise
+Single expert for educational content
+Non configuré
+Utilisé par 1 épisode
+Professor Sarah Kim
+ID de la voix: nova
+
+Histoire (Backstory): Distinguished professor and researcher. Has a gift for making complex topics accessible to broad audiences.
+
+Personnalité: Patient teacher, uses analogies and examples, breaks down complex concepts step by step
+
+Modifier
+tech_experts
+Configuration requise
+Two technical experts for tech discussions
+Non configuré
+Utilisé par 1 épisode
+Dr. Alex Chen
+ID de la voix: nova
+
+Histoire (Backstory): Senior AI researcher and former tech lead at major companies. Specializes in making complex technical concepts accessible.
+
+Personnalité: Analytical, clear communicator, asks probing questions to dig deeper into technical details
+
+Jamie Rodriguez
+ID de la voix: alloy
+
+Histoire (Backstory): Full-stack engineer and tech entrepreneur. Loves practical applications and real-world implementations.
+
+Personnalité: Enthusiastic, practical-minded, great at explaining implementation details and trade-offs
+
+Modifier
+Profils d'épisode
+
+Définissez des paramètres de génération réutilisables pour vos émissions.
+
+Créer un profil
+business_analysis
+Configuration requise
+Business-focused analysis and discussion
+Modifier
+
+MODÈLE DE PLAN
+
+Non configuré
+
+MODÈLE DE TRANSCRIPTION
+
+Non configuré
+
+SEGMENTS
+
+6
+
+PROFIL DE L'INTERVENANT
+
+business_panel
+
+BRIEFING PAR DÉFAUT
+
+Analyze the provided content from a business perspective. Discuss market implications, strategic insights, competitive advantages, and actionable business intelligence.
+
+solo_expert
+Configuration requise
+Single expert explaining complex topics
+Modifier
+
+MODÈLE DE PLAN
+
+Non configuré
+
+MODÈLE DE TRANSCRIPTION
+
+Non configuré
+
+SEGMENTS
+
+4
+
+PROFIL DE L'INTERVENANT
+
+solo_expert
+
+BRIEFING PAR DÉFAUT
+
+Create an educational explanation of the provided content. Break down complex concepts into digestible segments, use analogies and examples, and maintain an engaging teaching style.
+
+tech_discussion
+Configuration requise
+Technical discussion between 2 experts
+Modifier
+
+MODÈLE DE PLAN
+
+Non configuré
+
+MODÈLE DE TRANSCRIPTION
+
+Non configuré
+
+SEGMENTS
+
+5
+
+PROFIL DE L'INTERVENANT
+
+tech_experts
+
+BRIEFING PAR DÉFAUT
+
+Create an engaging technical discussion about the provided content. Focus on practical insights, real-world applications, and detailed explanations that would interest developers and technical professionals.
+
+Actions rapides
+
+Navigation, recherche, poser une question, thème
+
+Créer un profil d'intervenant
+
+Configurez les paramètres de synthèse vocale et définissez jusqu'à quatre intervenants.
+
+Nom du profil *
+Description
+MODÈLE VOCAL
+Modèle vocal *
+speaches-ai/Kokoro-82M-v1.0-ONNX
+openai_compatible
+speaches-ai/Kokoro-82M-v1.0-ONNXopenai_compatible
+INTERVENANTS
+
+Configurez entre un et quatre intervenants pour ce profil.
+
+Ajouter un intervenant
+
+Intervenant 1
+
+Retirer
+Nom *
+ID de la voix *
+Histoire (Backstory) *
+Personnalité *
+Remplacement TTS par intervenant (optionnel)
+Utiliser le profil par défaut
+speaches-ai/Kokoro-82M-v1.0-ONNXopenai_compatible
+
+Intervenant 2
+
+Retirer
+Nom *
+ID de la voix *
+Histoire (Backstory) *
+Personnalité *
+Remplacement TTS par intervenant (optionnel)
+Utiliser le profil par défaut
+speaches-ai/Kokoro-82M-v1.0-ONNXopenai_compatible
+Annuler
+Créer un profil
+Fermer

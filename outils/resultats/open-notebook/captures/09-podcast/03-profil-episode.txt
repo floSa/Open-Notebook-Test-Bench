@@ -1,0 +1,443 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Podcasts
+
+Suivez les épisodes générés et gérez les profils réutilisables.
+
+Configuration requise
+Certains profils n'ont pas encore de modèles configurés. Modifiez-les pour sélectionner des modèles avant de générer des podcasts.
+
+CHOISIR UNE VUE
+
+Épisodes
+Profils
+Espace de travail des profils
+
+Créez des configurations d'épisodes et d'intervenants réutilisables pour une production rapide.
+
+Comment les profils propulsent la génération
+Profils d'intervenants
+
+Configurez les voix et personnalités pour les épisodes générés.
+
+Créer un intervenant
+business_panel
+Configuration requise
+Business analysis panel with diverse perspectives
+Non configuré
+Utilisé par 1 épisode
+Marcus Thompson
+ID de la voix: echo
+
+Histoire (Backstory): Former McKinsey consultant, now startup advisor. Expert in strategic analysis and market dynamics.
+
+Personnalité: Strategic thinker, data-driven, excellent at identifying key insights and implications
+
+Elena Vasquez
+ID de la voix: shimmer
+
+Histoire (Backstory): Serial entrepreneur and investor. Focuses on practical implementation and execution.
+
+Personnalité: Action-oriented, pragmatic, brings startup experience and execution focus
+
+Johny Bing
+ID de la voix: ash
+
+Histoire (Backstory): Youtube celebrity and business mogul. Focuses on practical implementation and execution.
+
+Personnalité: Controversial, likes to question ideas and concepts. He brings a fresh perspective and always has a point to make.
+
+Modifier
+duo-fr
+Deux voix : une animatrice française et un analyste
+openai_compatible / speaches-ai/Kokoro-82M-v1.0-ONNX
+Inutilisé
+Camille
+ID de la voix: ff_siwis
+
+Histoire (Backstory): Animatrice d'une émission d'entreprise, curieuse et claire.
+
+Personnalité: Pose des questions simples et reformule.
+
+Hugo
+ID de la voix: am_michael
+
+Histoire (Backstory): Analyste financier de l'entreprise.
+
+Personnalité: Précis, cite les chiffres.
+
+Modifier
+solo_expert
+Configuration requise
+Single expert for educational content
+Non configuré
+Utilisé par 1 épisode
+Professor Sarah Kim
+ID de la voix: nova
+
+Histoire (Backstory): Distinguished professor and researcher. Has a gift for making complex topics accessible to broad audiences.
+
+Personnalité: Patient teacher, uses analogies and examples, breaks down complex concepts step by step
+
+Modifier
+tech_experts
+Configuration requise
+Two technical experts for tech discussions
+Non configuré
+Utilisé par 1 épisode
+Dr. Alex Chen
+ID de la voix: nova
+
+Histoire (Backstory): Senior AI researcher and former tech lead at major companies. Specializes in making complex technical concepts accessible.
+
+Personnalité: Analytical, clear communicator, asks probing questions to dig deeper into technical details
+
+Jamie Rodriguez
+ID de la voix: alloy
+
+Histoire (Backstory): Full-stack engineer and tech entrepreneur. Loves practical applications and real-world implementations.
+
+Personnalité: Enthusiastic, practical-minded, great at explaining implementation details and trade-offs
+
+Modifier
+Profils d'épisode
+
+Définissez des paramètres de génération réutilisables pour vos émissions.
+
+Créer un profil
+business_analysis
+Configuration requise
+Business-focused analysis and discussion
+Modifier
+
+MODÈLE DE PLAN
+
+Non configuré
+
+MODÈLE DE TRANSCRIPTION
+
+Non configuré
+
+SEGMENTS
+
+6
+
+PROFIL DE L'INTERVENANT
+
+business_panel
+
+BRIEFING PAR DÉFAUT
+
+Analyze the provided content from a business perspective. Discuss market implications, strategic insights, competitive advantages, and actionable business intelligence.
+
+solo_expert
+Configuration requise
+Single expert explaining complex topics
+Modifier
+
+MODÈLE DE PLAN
+
+Non configuré
+
+MODÈLE DE TRANSCRIPTION
+
+Non configuré
+
+SEGMENTS
+
+4
+
+PROFIL DE L'INTERVENANT
+
+solo_expert
+
+BRIEFING PAR DÉFAUT
+
+Create an educational explanation of the provided content. Break down complex concepts into digestible segments, use analogies and examples, and maintain an engaging teaching style.
+
+tech_discussion
+Configuration requise
+Technical discussion between 2 experts
+Modifier
+
+MODÈLE DE PLAN
+
+Non configuré
+
+MODÈLE DE TRANSCRIPTION
+
+Non configuré
+
+SEGMENTS
+
+5
+
+PROFIL DE L'INTERVENANT
+
+tech_experts
+
+BRIEFING PAR DÉFAUT
+
+Create an engaging technical discussion about the provided content. Focus on practical insights, real-world applications, and detailed explanations that would interest developers and technical professionals.
+
+Actions rapides
+
+Navigation, recherche, poser une question, thème
+
+Créer un profil d'épisode
+
+Définissez comment les épisodes doivent être générés et quelle configuration d'intervenants ils utilisent par défaut.
+
+Nom du profil *
+Segments *
+Jetons de sortie maximum
+
+Facultatif. Limite le nombre de tokens que chaque étape de génération peut produire — le plan et la transcription complète —, et non par réplique ou par conversation. Laissez vide pour utiliser la valeur par défaut (8192 pour les deux). Diminuez-la pour les modèles dont la limite de sortie est inférieure à 8192 ; une valeur trop basse peut tronquer la transcription.
+
+Description
+CONFIGURATION DES INTERVENANTS
+Profil de l'intervenant *
+duo-fr
+business_panel
+duo-fr
+solo_expert
+tech_experts
+GÉNÉRATION DU PLAN
+Modèle de plan *
+chat
+openai_compatible
+chatopenai_compatible
+GÉNÉRATION DE LA TRANSCRIPTION
+Modèle de transcription *
+chat
+openai_compatible
+chatopenai_compatible
+LANGUE DU PODCAST
+Langue
+French (France) (fr-FR)
+Abkhazian (Georgia) (ab-GE)
+Afar (Ethiopia) (aa-ET)
+Afrikaans (South Africa) (af-ZA)
+Akan (Ghana) (ak-GH)
+Albanian (Albania) (sq-AL)
+Amharic (Ethiopia) (am-ET)
+Arabic (Egypt) (ar-EG)
+Arabic (Saudi Arabia) (ar-SA)
+Aragonese (Spain) (an-ES)
+Armenian (Armenia) (hy-AM)
+Assamese (India) (as-IN)
+Avaric (av)
+Avestan (ae)
+Aymara (ay)
+Azerbaijani (Latin, Azerbaijan) (az-AZ)
+Bambara (Mali) (bm-ML)
+Bangla (Bangladesh) (bn-BD)
+Bashkir (Russia) (ba-RU)
+Basque (Spain) (eu-ES)
+Belarusian (Belarus) (be-BY)
+Bislama (bi)
+Bosnian (Latin, Bosnia & Herzegovina) (bs-BA)
+Breton (France) (br-FR)
+Bulgarian (Bulgaria) (bg-BG)
+Burmese (Myanmar (Burma)) (my-MM)
+Catalan (Spain) (ca-ES)
+Chamorro (ch)
+Chechen (Russia) (ce-RU)
+Chinese (Simplified, China) (zh-CN)
+Chinese (Traditional, Hong Kong SAR China) (zh-HK)
+Chinese (Traditional, Taiwan) (zh-TW)
+Church Slavic (Russia) (cu-RU)
+Chuvash (Russia) (cv-RU)
+Cornish (United Kingdom) (kw-GB)
+Corsican (France) (co-FR)
+Cree (cr)
+Croatian (Croatia) (hr-HR)
+Czech (Czechia) (cs-CZ)
+Danish (Denmark) (da-DK)
+Divehi (Maldives) (dv-MV)
+Dutch (Belgium) (nl-BE)
+Dutch (Netherlands) (nl-NL)
+Dzongkha (Bhutan) (dz-BT)
+English (Australia) (en-AU)
+English (India) (en-IN)
+English (United Kingdom) (en-GB)
+English (United States) (en-US)
+Esperanto (world) (eo-001)
+Estonian (Estonia) (et-EE)
+Ewe (Ghana) (ee-GH)
+Faroese (Faroe Islands) (fo-FO)
+Fijian (fj)
+Filipino (Philippines) (fil-PH)
+Finnish (Finland) (fi-FI)
+French (Canada) (fr-CA)
+French (France) (fr-FR)
+French (Switzerland) (fr-CH)
+Fula (Latin, Senegal) (ff-SN)
+Galician (Spain) (gl-ES)
+Ganda (Uganda) (lg-UG)
+Georgian (Georgia) (ka-GE)
+German (Austria) (de-AT)
+German (Germany) (de-DE)
+German (Switzerland) (de-CH)
+Greek (Greece) (el-GR)
+Guarani (Paraguay) (gn-PY)
+Gujarati (India) (gu-IN)
+Haitian Creole (Haiti) (ht-HT)
+Hausa (Nigeria) (ha-NG)
+Hebrew (Israel) (he-IL)
+Herero (hz)
+Hindi (India) (hi-IN)
+Hiri Motu (ho)
+Hungarian (Hungary) (hu-HU)
+Icelandic (Iceland) (is-IS)
+Ido (world) (io-001)
+Igbo (Nigeria) (ig-NG)
+Indonesian (Indonesia) (id-ID)
+Interlingua (world) (ia-001)
+Interlingue (Estonia) (ie-EE)
+Inuktitut (Canada) (iu-CA)
+Inupiaq (ik)
+Irish (Ireland) (ga-IE)
+Italian (Italy) (it-IT)
+Japanese (Japan) (ja-JP)
+Javanese (Indonesia) (jv-ID)
+Kalaallisut (Greenland) (kl-GL)
+Kannada (India) (kn-IN)
+Kanuri (kr)
+Kashmiri (Arabic, India) (ks-IN)
+Kazakh (Cyrillic, Kazakhstan) (kk-KZ)
+Khmer (Cambodia) (km-KH)
+Kikuyu (Kenya) (ki-KE)
+Kinyarwanda (Rwanda) (rw-RW)
+Komi (kv)
+Kongo (kg)
+Korean (South Korea) (ko-KR)
+Kuanyama (kj)
+Kurdish (Türkiye) (ku-TR)
+Kyrgyz (Kyrgyzstan) (ky-KG)
+Lao (Laos) (lo-LA)
+Latin (Vatican City) (la-VA)
+Latvian (Latvia) (lv-LV)
+Limburgan (li)
+Lingala (Congo - Kinshasa) (ln-CD)
+Lithuanian (Lithuania) (lt-LT)
+Luba-Katanga (Congo - Kinshasa) (lu-CD)
+Luxembourgish (Luxembourg) (lb-LU)
+Macedonian (North Macedonia) (mk-MK)
+Malagasy (Madagascar) (mg-MG)
+Malay (Malaysia) (ms-MY)
+Malayalam (India) (ml-IN)
+Maltese (Malta) (mt-MT)
+Manx (Isle of Man) (gv-IM)
+Marathi (India) (mr-IN)
+Marshallese (mh)
+Mongolian (Mongolia) (mn-MN)
+Māori (New Zealand) (mi-NZ)
+Nauru (na)
+Navajo (United States) (nv-US)
+Ndonga (ng)
+Nepali (Nepal) (ne-NP)
+North Ndebele (Zimbabwe) (nd-ZW)
+Northern Sami (Norway) (se-NO)
+Norwegian (no)
+Norwegian Bokmål (Norway) (nb-NO)
+Norwegian Nynorsk (Norway) (nn-NO)
+Nyanja (Malawi) (ny-MW)
+Occitan (France) (oc-FR)
+Odia (India) (or-IN)
+Ojibwa (oj)
+Oromo (Ethiopia) (om-ET)
+Ossetic (Georgia) (os-GE)
+Pali (pi)
+Pashto (Afghanistan) (ps-AF)
+Persian (Iran) (fa-IR)
+Polish (Poland) (pl-PL)
+Portuguese (Brazil) (pt-BR)
+Portuguese (Portugal) (pt-PT)
+Punjabi (Gurmukhi, India) (pa-IN)
+Quechua (Peru) (qu-PE)
+Romanian (Romania) (ro-RO)
+Romansh (Switzerland) (rm-CH)
+Rundi (Burundi) (rn-BI)
+Russian (Russia) (ru-RU)
+Samoan (sm)
+Sango (Central African Republic) (sg-CF)
+Sanskrit (India) (sa-IN)
+Sardinian (Italy) (sc-IT)
+Scottish Gaelic (United Kingdom) (gd-GB)
+Serbian (Cyrillic, Serbia) (sr-RS)
+Serbo-Croatian (sh)
+Shona (Zimbabwe) (sn-ZW)
+Sichuan Yi (China) (ii-CN)
+Sindhi (Arabic, Pakistan) (sd-PK)
+Sinhala (Sri Lanka) (si-LK)
+Slovak (Slovakia) (sk-SK)
+Slovenian (Slovenia) (sl-SI)
+Somali (Somalia) (so-SO)
+South Ndebele (South Africa) (nr-ZA)
+Southern Sotho (South Africa) (st-ZA)
+Spanish (Argentina) (es-AR)
+Spanish (Colombia) (es-CO)
+Spanish (Mexico) (es-MX)
+Spanish (Spain) (es-ES)
+Sundanese (Latin, Indonesia) (su-ID)
+Swahili (Tanzania) (sw-TZ)
+Swati (South Africa) (ss-ZA)
+Swedish (Sweden) (sv-SE)
+Tahitian (ty)
+Tajik (Tajikistan) (tg-TJ)
+Tamil (India) (ta-IN)
+Tatar (Russia) (tt-RU)
+Telugu (India) (te-IN)
+Thai (Thailand) (th-TH)
+Tibetan (China) (bo-CN)
+Tigrinya (Ethiopia) (ti-ET)
+Tongan (Tonga) (to-TO)
+Tsonga (South Africa) (ts-ZA)
+Tswana (South Africa) (tn-ZA)
+Turkish (Türkiye) (tr-TR)
+Turkmen (Turkmenistan) (tk-TM)
+Twi (tw)
+Ukrainian (Ukraine) (uk-UA)
+Urdu (Pakistan) (ur-PK)
+Uyghur (China) (ug-CN)
+Uzbek (Latin, Uzbekistan) (uz-UZ)
+Venda (South Africa) (ve-ZA)
+Vietnamese (Vietnam) (vi-VN)
+Volapük (world) (vo-001)
+Walloon (Belgium) (wa-BE)
+Welsh (United Kingdom) (cy-GB)
+Western Frisian (Netherlands) (fy-NL)
+Wolof (Senegal) (wo-SN)
+Xhosa (South Africa) (xh-ZA)
+Yiddish (Ukraine) (yi-UA)
+Yoruba (Nigeria) (yo-NG)
+Zhuang (China) (za-CN)
+Zulu (South Africa) (zu-ZA)
+Briefing par défaut *
+Annuler
+Créer un profil
+Fermer

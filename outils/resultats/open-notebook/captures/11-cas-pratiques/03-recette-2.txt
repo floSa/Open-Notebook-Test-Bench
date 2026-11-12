@@ -1,0 +1,133 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Démo Vélanor
+Archiver
+Supprimer
+Dossier de démonstration : documents fictifs de l'entreprise Vélanor
+Créé à il y a 33 minutes •Mis à jour à il y a 8 minutes
+SOURCES
+Ajouter la source
+rapport-annuel-2025.pdf
+Télécharger un fichier
+·
+2 aperçus
+Appel transporteur Loire Fret
+Saisir du texte
+·
+1 aperçus
+supplier-audit-batterix-en.pdf
+Télécharger un fichier
+·
+1 aperçus
+strategie-2026.pptx
+Télécharger un fichier
+·
+1 aperçus
+stocks-octobre-2025.xlsx
+Télécharger un fichier
+·
+1 aperçus
+procedure-batteries.docx
+Télécharger un fichier
+·
+1 aperçus
+message-vocal-production.mp3
+Télécharger un fichier
+·
+1 aperçus
+faq-sav.html
+Télécharger un fichier
+·
+1 aperçus
+cse-2025-10-14.md
+Télécharger un fichier
+·
+1 aperçus
+Échec
+Source
+Processing...
+Télécharger un fichier
+Réessayer le traitement
+Notes
+DISCUTER AVEC LE CARNET
+Sessions
+
+Le délai de livraison réellement constaté chez Batterix respecte-t-il le délai prévu par le contrat ?
+
+Pour répondre à votre question sur le délai de livraison chez Batterix, voici ce que nous pouvons établir d'après les documents accessibles :
+
+Délai constaté dans le stock (Octobre 2025)
+
+Selon le fichier des stocks [1-octobre-2025.xlsx], le délai moyen de livraison réel constaté auprès du fournisseur Batterix GmbH est de 24 jours :
+
+"Batterie Supplier Association: Batterix GmbH provides Batterie component with supply delay of 24 days."
+
+Délai contractuel non spécifié dans les documents
+
+Les documents disponibles mentionnent que le contrat d'approvisionnement en batteries avec Batterix a été renouvelé en mars 2025, mais ne précisent pas le délai de livraison conventionnel agreed dans ce contrat :
+
+Le rapport annuel indique simplement que le fournisseur est "Batterix GmbH situé à Brême en Allemagne" [2-annuel-2025.pdf]
+Aucun document ne spécifie les termes contractuels exacts concernant les délais de livraison
+Conclusion
+
+Il est difficile de confirmer si le délai réel (24 jours) respecte le délai prévu par contrat, car cette information n'est pas explicitement contenue dans les documents actuels.
+
+Une vérification comparative devrait idéalement :
+
+Consulter le document contractuel Batterix complet
+Comparer avec le record de stocks observé en octobre 2025
+
+Vous avez noté que ce point doit être vérifié : "Comparer le délai de livraison du contrat Batterix au délai constaté dans le classeur des stocks." 3
+
+Souhaitez-vous que je recherche d'autres documents potentiellement contenant ces termes contractuels, ou souhaitez-vous explorer un autre aspect de cette question ?
+
+Références: [1] - source:stocks [2] - source:rapport [3] - note:r3ps4r1z03kz1eccjv7i
+
+Quelles non-conformités l'audit de Batterix a-t-il relevées ?
+
+Selon l'audit de qualité effectué chez Batterix GmbH le 18 juin 2025 1, deux non-conformités mineures ont été relevées :
+
+Étiquetage incomplet des palettes dans les entrepôts
+Manque de gants anti-statiques (ESD) sur une station d'assemblage spécifique
+
+Ces défauts n'ont pas compromettre l'approbation du fournisseur, qui a obtenu un score global de 87/100 et reste validé pour une année supplémentaire. Le taux de défaut des cellules mesuré à 0,3 % se situe dans les limites acceptables pour la production.
+
+Pour plus de détails sur les processus qualité de Batterix, vous pouvez consulter le rapport complet du document 'supplier-audit-batterix-en.pdf'.
+
+Références: [1] - source_insight:yl78yblj0c5ot1akaazs
+
+Context:
+10
+•
+2
+7.0K tokens
+/
+24.2K chars
+Modèle
+chat
+Actions rapides
+
+Navigation, recherche, poser une question, thème

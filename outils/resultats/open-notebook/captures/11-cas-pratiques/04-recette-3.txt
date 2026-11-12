@@ -1,0 +1,138 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Démo Vélanor
+Archiver
+Supprimer
+Dossier de démonstration : documents fictifs de l'entreprise Vélanor
+Créé à il y a 33 minutes •Mis à jour à il y a 8 minutes
+SOURCES
+Ajouter la source
+rapport-annuel-2025.pdf
+Télécharger un fichier
+·
+2 aperçus
+Appel transporteur Loire Fret
+Saisir du texte
+·
+1 aperçus
+supplier-audit-batterix-en.pdf
+Télécharger un fichier
+·
+1 aperçus
+strategie-2026.pptx
+Télécharger un fichier
+·
+1 aperçus
+stocks-octobre-2025.xlsx
+Télécharger un fichier
+·
+1 aperçus
+procedure-batteries.docx
+Télécharger un fichier
+·
+1 aperçus
+message-vocal-production.mp3
+Télécharger un fichier
+·
+1 aperçus
+faq-sav.html
+Télécharger un fichier
+·
+1 aperçus
+cse-2025-10-14.md
+Télécharger un fichier
+·
+1 aperçus
+Échec
+Source
+Processing...
+Télécharger un fichier
+Réessayer le traitement
+Notes
+DISCUTER AVEC LE CARNET
+Sessions
+
+Rédige une synthèse en cinq puces pour la direction : chiffre d'affaires 2025, objectif 2026, nouvelle usine, risque fournisseur batteries, arrêt de la ligne 3. Cite les sources.
+
+Voici une synthèse pour la direction en cinq points :
+
+Chiffre d'affaires 2025 : Le chiffre d'affaires atteint 
+48
+,
+6
+ M
+\€
+48,6 M\€ avec une croissance de 
++
+12
+,
+4
+%
++12,4%, et un résultat net consolidé de 
+3
+,
+1
+ M
+\€
+3,1 M\€. 1
+Objectif 2026 : La cible fixée pour le chiffre d'affaires est de 
+55
+ M
+\€
+55 M\€, accompagnée d'un taux de marge nette souhaité de 
+7
+%
+7%. 2
+Nouvelle usine : Une usine d'assemblage à Saint-Nazaire est prévue pour septembre 2026, avec une capacité annuelle de 
+25
+ 
+000
+25000 vélos et un investissement de 
+14
+ M
+\€
+14 M\€. 2
+Risque fournisseur batteries : Le principal fournisseur Batterix GmbH (Allemagne) a obtenu un score qualité de 
+87
+/
+100
+87/100 à l'audit du 18 juin 2025, bien que le rapport identifie des risques de pénurie de cellules Li-ion. 3
+Arrêt de la ligne 3 : La ligne d'assemblage Nantes (Ligne 3) a été immobilisée du 2 au 6 mars pour une maintenance technique, avec transfert de production sur une autre ligne. 4
+
+Références: [1] - source_insight:ax6jk08lcekeio446fjf [2] - source_insight:qi7kabxq1jgazv84wg8q [3] - source_insight:yl78yblj0c5ot1akaazs [4] - source_insight:sujez85jimel3hmih7v2
+
+Context:
+10
+•
+2
+7.0K tokens
+/
+24.2K chars
+Modèle
+chat
+Actions rapides
+
+Navigation, recherche, poser une question, thème

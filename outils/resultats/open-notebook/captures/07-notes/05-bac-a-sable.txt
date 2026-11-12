@@ -1,0 +1,52 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Transformations
+
+Les transformations sont des prompts utilisés par le LLM pour traiter une source et extraire des aperçus, des résumés, etc.
+
+CHOISISSEZ UN ESPACE DE TRAVAIL
+
+Transformations
+Bac à sable (Playground)
+Bac à sable (Playground)
+Les transformations sont des prompts utilisés par le LLM pour traiter une source et extraire des aperçus, des résumés, etc.
+Transformation
+fiche-chiffres-fr
+Modèle
+chat
+openai_compatible
+Texte d'entrée
+Exécuter la transformation
+Sortie
+
+Voici la liste des chiffres clés extraits du document :
+
+7 (élus) : Nombre de membres représentant le CSE lors de la réunion.
+1 150 euros par salarié : Montant alloué à chaque employé pour la prime d'intéressement de l'année 2025.
+2 jours/semaine : Durée maximum autorisée pour le télétravail hebdomadaire.
+Actions rapides
+
+Navigation, recherche, poser une question, thème

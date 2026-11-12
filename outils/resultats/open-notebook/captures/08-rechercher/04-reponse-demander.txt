@@ -1,0 +1,71 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Poser une question et Rechercher
+
+CHOISIR UN MODE
+
+Demander (bêta)
+Recherche
+Interroger votre base de connaissances (bêta)
+
+Le LLM répondra à votre requête en se basant sur les documents de votre base de connaissances.
+
+Question
+
+Appuyez sur Cmd/Ctrl+Entrée pour envoyer
+
+Carnets
+Tous les carnets
+Utilisation des modèles par défaut
+Avancé
+Stratégie: chat
+Réponse: chat
+Final: chat
+Demander
+Enregistrer dans les Carnets
+Stratégie
+Réponses individuelles (4)
+Réponse finale
+
+Selon les documents récupérés dans l'espace de travail, voici les résultats détaillés concernant l'audit du fournisseur Batterix :
+
+Score de l'audit
+
+L'entreprise a obtenu un score de 87 sur 100 lors de l'audit effectué le 18 juin 2025 par Laura Fischer (auditrice qualité Vélanor) [source:igzqfpx7ihgoc7boetu7]. Ce niveau indique un bon état de conformité globale, et Batterix a été maintenue dans l'approvisionnement pour une autre année.
+
+Non-conformités relevées
+
+Deux non-conformités mineures ont été signalées lors de cette inspection [source:igzqfpx7ihgoc7boetu7] :
+
+Étiquetage incomplet des palettes : Le marquage sur les palettes de livraison ne respecte pas les normes de traçabilité requis.
+Absence de bracelets anti-statiques (ESD) : Un poste d'assemblage spécifique manquait les brassards obligatoires pour la protection des cellules.
+Contexte additionnel
+
+Bien que des écarts aient été constatés, le fournisseur a été approuvé pour un renouvellement de contrat. Le taux de défaut mesuré des cellules s'établit à 0,3 %, et la prochaine inspection est prévue pour juin 2026 [source:igzqfpx7ihgoc7boetu7].
+
+Actions rapides
+
+Navigation, recherche, poser une question, thème
