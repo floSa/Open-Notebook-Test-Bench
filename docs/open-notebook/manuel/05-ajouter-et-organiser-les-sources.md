@@ -161,6 +161,7 @@ Le carnet quitte la liste des carnets actifs sans rien perdre ; il se retrouve e
 
 **Étape 12. Supprimer un carnet**
 *Où* : page du carnet « Premier essai » (Carnets › « Carnets archivés » › clic sur « Premier essai »), en haut à droite › « Supprimer ».
+Dans la fenêtre, cocher « Supprimer les sources exclusives » (pastille 1 ; la capture montre l'autre option, cochée par défaut), puis cliquer sur « Supprimer » (pastille 3).
 
 ![Fenêtre Supprimer le carnet](../img/05-sources/11-supprimer-carnet.png)
 *Écran : fenêtre « Supprimer le carnet ».*
