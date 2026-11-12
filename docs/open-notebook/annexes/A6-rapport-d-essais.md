@@ -58,8 +58,8 @@ Les essais des 8 et 9 novembre 2026 ont été faits avec Ollama sur processeur (
 
 ## 6. Relectures
 
-- Relecture novice de la partie 1 par un lecteur neuf, sans accès au logiciel ni aux annexes, jusqu'à zéro remarque : voir `RAPPORT-open-notebook.md`.
-- Relecture adversariale de la partie 2 (preuves, liens, étiquettes) : voir `RAPPORT-open-notebook.md`.
+- Relecture novice de la partie 1 : dix lecteurs neufs successifs (sous-agents sans accès au logiciel ni aux annexes), 66 remarques corrigées au total, dont neuf captures refaites ; le dixième n'a fait « Aucune remarque » [Vérifié] (historique des commits du 12 novembre 2026).
+- Relecture adversariale de la partie 2 : faite le 8 novembre sur l'ancien manuel (22 points) ; non refaite sur les annexes réécrites pendant la reprise [À tester]. Les liens et images sont contrôlés par `outils/communs/verifier_docs.py` (0 point).
 
 ## Dépannage
 

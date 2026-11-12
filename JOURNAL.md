@@ -121,3 +121,9 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 - Incidents : `networkidle` jamais atteint ; titres suffixés « (1) » ; carnet de démonstration recréé une fois (variable d'environnement non transmise au conteneur Playwright) ; scénarios rendus reprenables.
 - Non fait (temps) : banc « Demander » et banc en aperçus complets sur le service central, exemples et sauvegarde rejoués ; inscrits dans « Ce qui reste ouvert ».
 - Suite : relecture novice de la partie 1 jusqu'à zéro remarque, commit final.
+
+### 2026-11-12 13:30 — Relecture novice et clôture de la reprise
+
+- Fait : relecture novice de la partie 1 par dix sous-agents neufs successifs ; 66 remarques corrigées (dont neuf captures refaites : pastilles décalées par le défilement d'une zone, fenêtres plus hautes que l'écran, icône « Contexte » annotée, modes de contexte côte à côte) ; dixième passage : « Aucune remarque ». Téléchargement du fichier d'origine vérifié (HTTP 200, 53 745 octets).
+- Résultat : `verifier_docs.py` à 0 point ; Open Notebook en marche sur http://127.0.0.1:8502 avec le carnet « Démo Vélanor » et le podcast « Vélanor en bref ».
+- Reste ouvert : bancs « Demander » et « aperçus » complets, exemples et sauvegarde rejoués sur le service central, relecture adversariale des annexes réécrites (voir `RAPPORT-open-notebook.md`).

@@ -42,7 +42,7 @@ Page d'accueil : [docs/open-notebook/README.md](docs/open-notebook/README.md).
 | Installation, branchement au service central, ports sur 127.0.0.1, vérification minimale | Banc « Demander » complet sur le service central : une question essayée seulement (temps de mission) |
 | Banc complet avec `chat` ; dépassement de contexte provoqué (erreur explicite) | Banc complet en mode aperçus : effet vu sur cinq questions |
 | Chaque chapitre de la partie 1 rejoué à la souris, captures annotées | Profil sans carte graphique avec le service central : chiffres tirés des mesures de LLM-Service |
-| Carte de l'interface (23 écrans), relecture novice de la partie 1 | Exemples de l'API et essai de sauvegarde : sorties de l'ancienne pile, non rejouées |
+| Carte de l'interface (23 écrans) ; relecture novice de la partie 1 par dix lecteurs neufs successifs (24, 16, 8, 4, 3, 1, 4, 3, 3 remarques corrigées, puis « Aucune remarque ») | Exemples de l'API et essai de sauvegarde : sorties de l'ancienne pile, non rejouées ; relecture adversariale de la partie 2 non refaite pendant la reprise (celle du 8 novembre portait sur l'ancien manuel) |
 
 ## 6. Incidents
 
