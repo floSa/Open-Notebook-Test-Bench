@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-12T09:45:56",
+  "composants": [
+    {
+      "depot": "lfnovo/open-notebook",
+      "derniere_stable": "v1.15.1",
+      "publiee_le": "2026-11-04",
+      "utilisee": "v1.15.1",
+      "a_jour": true,
+      "raison": null
+    },
+    {
+      "depot": "surrealdb/surrealdb",
+      "derniere_stable": "v4.0.1",
+      "publiee_le": "2026-11-09",
+      "utilisee": "v2.7.0",
+      "a_jour": false,
+      "raison": "le docker-compose officiel d'Open Notebook v1.15.1 impose surrealdb:v2 (compatibilité du client SurrealDB) ; v2.7.0 est la dernière v2, montée en v4 non essayée"
+    }
+  ]
+}

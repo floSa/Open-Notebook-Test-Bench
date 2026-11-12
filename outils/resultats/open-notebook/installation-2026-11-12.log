@@ -1,0 +1,16 @@
+=== installation 2026-11-12T09:47:49+01:00
+outils/open-notebook/officiel/docker-compose.yml: OK
+ Container rag-open-notebook Recreate 
+ Container rag-open-notebook Recreated 
+ Container rag-open-notebook-surrealdb Starting 
+ Container rag-open-notebook-surrealdb Started 
+ Container rag-open-notebook Starting 
+ Container rag-open-notebook Started 
+{"status":"healthy"}
+interface : HTTP 307
+{"test_connexion": {"provider": "openai_compatible", "success": true, "message": "Connected. 9 models available: chat, embed, rerank (+6 more)"}, "voix_test": {"provider": "openai_compatible", "success": true, "message": "Connected. 2 models available: speaches-ai/Kokoro-82M-v1.0-ONNX, Systran/faster-whisper-small"}, "modeles": {"chat": "model:5k5l9gblirzudihao9kn", "embed": "model:v1ri6kdpu4vb3vvjxnbb", "transcribe": "model:fi8iaznkaog9cucw67zi", "speaches-ai/Kokoro-82M-v1.0-ONNX": "model:b4uytgqjswxcohz0kuw2"}}
+modèles enregistrés : [('chat', 'language'), ('speaches-ai/Kokoro-82M-v1.0-ONNX', 'text_to_speech'), ('transcribe', 'speech_to_text'), ('embed', 'embedding')]
+-> outils/resultats/open-notebook/configuration-2026-11-12.json
+rag-open-notebook 127.0.0.1:5055->5055/tcp, 127.0.0.1:8502->8502/tcp
+rag-open-notebook-surrealdb 
+durée : 42 s

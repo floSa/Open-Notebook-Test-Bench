@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-12T09:48:29",
+  "base_url": "http://llm-central:8080/v1",
+  "retires": [
+    {
+      "nom": "llm-service-embed",
+      "reponse": {
+        "message": "Credential deleted successfully",
+        "deleted_models": 1
+      }
+    },
+    {
+      "nom": "llm-service-chat",
+      "reponse": {
+        "message": "Credential deleted successfully",
+        "deleted_models": 1
+      }
+    },
+    {
+      "modele": "Systran/faster-whisper-small"
+    }
+  ],
+  "credential": {
+    "id": "credential:1eskk0wkmt2ujf4eu9p3",
+    "name": "llm-central",
+    "provider": "openai_compatible",
+    "modalities": [
+      "language",
+      "embedding",
+      "speech_to_text"
+    ],
+    "base_url": "http://llm-central:8080/v1",
+    "endpoint": null,
+    "api_version": null,
+    "endpoint_llm": null,
+    "endpoint_embedding": null,
+    "endpoint_stt": null,
+    "endpoint_tts": null,
+    "project": null,
+    "location": null,
+    "credentials_path": null,
+    "num_ctx": null,
+    "has_api_key": true,
+    "created": "2026-11-12 08:48:29.562124+00:00",
+    "updated": "2026-11-12 08:48:29.562125+00:00",
+    "model_count": 0,
+    "decryption_error": null
+  },
+  "test_connexion": {
+    "provider": "openai_compatible",
+    "success": true,
+    "message": "Connected. 9 models available: chat, embed, rerank (+6 more)"
+  },
+  "modeles": {
+    "chat": "model:5k5l9gblirzudihao9kn",
+    "embed": "model:v1ri6kdpu4vb3vvjxnbb",
+    "transcribe": "model:fi8iaznkaog9cucw67zi",
+    "speaches-ai/Kokoro-82M-v1.0-ONNX": "model:b4uytgqjswxcohz0kuw2"
+  },
+  "voix_test": {
+    "provider": "openai_compatible",
+    "success": true,
+    "message": "Connected. 2 models available: speaches-ai/Kokoro-82M-v1.0-ONNX, Systran/faster-whisper-small"
+  },
+  "defauts": {
+    "default_chat_model": "model:5k5l9gblirzudihao9kn",
+    "default_transformation_model": "model:5k5l9gblirzudihao9kn",
+    "large_context_model": "model:5k5l9gblirzudihao9kn",
+    "default_text_to_speech_model": "model:b4uytgqjswxcohz0kuw2",
+    "default_speech_to_text_model": "model:fi8iaznkaog9cucw67zi",
+    "default_embedding_model": "model:v1ri6kdpu4vb3vvjxnbb",
+    "default_tools_model": "model:5k5l9gblirzudihao9kn"
+  },
+  "reglages": {
+    "default_content_processing_engine_doc": "auto",
+    "default_content_processing_engine_url": "simple",
+    "default_embedding_option": "ask",
+    "auto_delete_files": "yes",
+    "docling_ocr": true,
+    "docling_formulas": false,
+    "docling_vision": false,
+    "youtube_preferred_languages": [
+      "en",
+      "pt",
+      "es",
+      "de",
+      "nl",
+      "en-GB",
+      "fr",
+      "hi",
+      "ja",
+      "zh-CN",
+      "zh-TW"
+    ]
+  },
+  "modeles_enregistres": [
+    {
+      "name": "chat",
+      "type": "language",
+      "provider": "openai_compatible"
+    },
+    {
+      "name": "speaches-ai/Kokoro-82M-v1.0-ONNX",
+      "type": "text_to_speech",
+      "provider": "openai_compatible"
+    },
+    {
+      "name": "transcribe",
+      "type": "speech_to_text",
+      "provider": "openai_compatible"
+    },
+    {
+      "name": "embed",
+      "type": "embedding",
+      "provider": "openai_compatible"
+    }
+  ]
+}

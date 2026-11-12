@@ -1,0 +1,9 @@
+# Reranker dans Open Notebook 1.15.1 — relevé du 2026-11-12T09:50:34+01:00
+# Commande : docker exec rag-open-notebook grep -n -i rerank /app/open_notebook/ai/*.py ; types acceptés : api/routers/models.py
+/app/open_notebook/ai/provider_registry.py:222:        # AIFactory.get_provider_models). Reranking is out of scope (#1087).
+/app/open_notebook/ai/model_discovery.py:165:# SiliconFlow's /models catalog mixes chat models with embedding, rerank and
+/app/open_notebook/ai/model_discovery.py:690:    and embedding models. Reranking is out of scope (tracked at #1087).
+/app/open_notebook/ai/model_discovery.py:710:        # rerank/None-typed models.
+210:        valid_types = ["language", "embedding", "text_to_speech", "speech_to_text"]
+211:        if model_data.type not in valid_types:
+214:                detail=f"Invalid model type. Must be one of: {valid_types}",

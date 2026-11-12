@@ -1,0 +1,12 @@
+== 2026-11-12T09:49:53+01:00
+-- ports publiés (docker ps)
+rag-open-notebook  127.0.0.1:5055->5055/tcp, 127.0.0.1:8502->8502/tcp
+rag-open-notebook-surrealdb  
+rag-speaches  127.0.0.1:8969->8000/tcp
+-- adresse de WSL : 172.28.171.62
+port 8502 : 127.0.0.1 -> HTTP 307 ; 172.28.171.62 -> HTTP 000 (000 = refusé)
+port 5055 : 127.0.0.1 -> HTTP 200 ; 172.28.171.62 -> HTTP 000 (000 = refusé)
+port 8080 : 127.0.0.1 -> HTTP 200 ; 172.28.171.62 -> HTTP 000 (000 = refusé)
+port 8969 : 127.0.0.1 -> HTTP 404 ; 172.28.171.62 -> HTTP 000 (000 = refusé)
+-- écoute 0.0.0.0 côté hôte (doit être vide)
+(aucune)
