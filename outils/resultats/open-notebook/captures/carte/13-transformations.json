@@ -1,0 +1,53 @@
+{
+ "url": "http://rag-open-notebook:8502/transformations",
+ "titres": [
+  "COLLECTER",
+  "TRAITER",
+  "CRÉER",
+  "GÉRER",
+  "Transformations",
+  "Transformations personnalisées",
+  "Actions rapides"
+ ],
+ "onglets": [
+  "Transformations",
+  "Bac à sable (Playground)"
+ ],
+ "boutons": [
+  "Créer",
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé",
+  "Thème Thème",
+  "Langue Changer de langue",
+  "Se déconnecter",
+  "Bac à sable (Playground)",
+  "Prompt de transformation par défaut Ceci sera ajouté à tous vos prompts de transformation",
+  "Créer une nouvelle",
+  "Analyze Paper Analyses a technical/scientific paper",
+  "Modifier",
+  "Dense Summary Creates a rich, deep summary of the content Par défaut",
+  "Key Insights Extracts important insights and actionable items",
+  "Reflections Generates reflection questions from the document to help explore it further",
+  "Simple Summary Generates a small summary of the content",
+  "Table of Contents Describes the different topics of the document"
+ ],
+ "champs": [],
+ "listes": [],
+ "interrupteurs": [],
+ "liens": [
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé"
+ ]
+}

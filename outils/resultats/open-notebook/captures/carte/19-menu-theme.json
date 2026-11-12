@@ -1,0 +1,59 @@
+{
+ "url": "http://rag-open-notebook:8502/notebooks",
+ "titres": [
+  "COLLECTER",
+  "TRAITER",
+  "CRÉER",
+  "GÉRER",
+  "Carnets",
+  "Consultés récemment",
+  "Carnets actifs",
+  "Actions rapides"
+ ],
+ "onglets": [],
+ "boutons": [
+  "Créer",
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé",
+  "Thème Thème",
+  "Langue Changer de langue",
+  "Se déconnecter",
+  "Vue en mosaïque",
+  "Vue en liste",
+  "Nouveau Carnet",
+  "Afficher/masquer les éléments récents"
+ ],
+ "champs": [
+  "Rechercher des carnets..."
+ ],
+ "listes": [],
+ "interrupteurs": [],
+ "liens": [
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé",
+  "supplier-audit-batterix-en.pdf SOURCE Consulté il y a 1 minute",
+  "Banc CARNET Consulté il y a 1 minute",
+  "strategie-2026.pptx SOURCE Consulté il y a 10 minutes",
+  "stocks-octobre-2025.xlsx SOURCE Consulté il y a 10 minutes",
+  "rapport-annuel-2025.pdf SOURCE Consulté il y a 10 minutes",
+  "procedure-batteries.docx SOURCE Consulté il y a 10 minutes",
+  "message-vocal-production.mp3 SOURCE Consulté il y a 11 minutes",
+  "faq-sav.html SOURCE Consulté il y a 11 minutes",
+  "cse-2025-10-14.md SOURCE Consulté il y a 11 minutes",
+  "faq-sav.html SOURCE Consulté il y a 12 minutes",
+  "faq-sav.html SOURCE Consulté il y a 13 minutes",
+  "faq-sav.html SOURCE Consulté il y a 3 jours"
+ ]
+}

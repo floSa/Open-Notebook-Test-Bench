@@ -1,0 +1,226 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Modèles
+
+Connectez vos fournisseurs d'IA et stockez leurs identifiants en toute sécurité.
+
+Attributions des modèles par défaut
+Configurez quels modèles utiliser pour les différents usages d'Open Notebook
+Modèles requis manquants : Modèle de Chat, Modèle d'Embedding. Open Notebook pourrait ne pas fonctionner correctement sans eux.
+Attribution automatique des défauts
+Modèle de Chat
+*
+Modèle d'Embedding
+*
+Modèle de Synthèse Vocale (TTS)
+speaches-ai/Kokoro-82M-v1.0-ONNX
+openai_compatible
+Modèle de Transcription Vocale (STT)
+
+Avancé
+
+Modèle de Transformation
+
+Utilisé pour les résumés, les aperçus et les transformations
+
+Modèle d'Outils
+
+Utilisé pour l'appel de fonctions (OpenAI ou Anthropic recommandé)
+
+Modèle à large contexte
+
+Utilisé pour le traitement de documents volumineux (Gemini recommandé)
+
+OpenAI Compatible
+Language
+Embedding
+STT
+TTS
+Configuré
+speaches-voix
+TTS
+Key
+Test
+Models
+TTS
+speaches-ai/Kokoro-82M-v1.0-ONNX
+(TTS)
+llm-central
+Language
+Embedding
+STT
+TTS
+Key
+Test
+Models
+Ajouter une configuration
+OpenAI
+Language
+Embedding
+STT
+TTS
+Non configuré
+Ajouter une configuration
+Anthropic
+Language
+Non configuré
+Ajouter une configuration
+Google AI
+Language
+Embedding
+STT
+TTS
+Non configuré
+Ajouter une configuration
+Groq
+Language
+STT
+Non configuré
+Ajouter une configuration
+Mistral AI
+Language
+Embedding
+STT
+TTS
+Non configuré
+Ajouter une configuration
+DeepSeek
+Language
+Non configuré
+Ajouter une configuration
+XAI (Grok)
+Language
+TTS
+Non configuré
+Ajouter une configuration
+OpenRouter
+Language
+Embedding
+STT
+TTS
+Non configuré
+Ajouter une configuration
+DashScope (Qwen)
+Language
+Non configuré
+Ajouter une configuration
+MiniMax
+Language
+TTS
+Non configuré
+Ajouter une configuration
+Novita
+Language
+Non configuré
+Ajouter une configuration
+SiliconFlow
+Language
+Non configuré
+Ajouter une configuration
+Z.Ai
+Language
+Non configuré
+Ajouter une configuration
+PayPerQ
+Language
+Embedding
+STT
+TTS
+Non configuré
+Ajouter une configuration
+Cohere
+Language
+Embedding
+Non configuré
+Ajouter une configuration
+Voyage AI
+Embedding
+Non configuré
+Ajouter une configuration
+ElevenLabs
+TTS
+STT
+Non configuré
+Ajouter une configuration
+Deepgram
+TTS
+STT
+Non configuré
+Ajouter une configuration
+Ollama
+Language
+Embedding
+Non configuré
+Ajouter une configuration
+OMLX
+Language
+Embedding
+Non configuré
+Ajouter une configuration
+Azure OpenAI
+Language
+Embedding
+STT
+TTS
+Non configuré
+Ajouter une configuration
+Google Vertex AI
+Language
+Embedding
+TTS
+Non configuré
+Ajouter une configuration
+Anthropic Compatible
+Language
+Non configuré
+Ajouter une configuration
+Apprenez à connecter des fournisseurs d'IA →
+Actions rapides
+
+Navigation, recherche, poser une question, thème
+
+Découvrir les modèles - OpenAI Compatible
+
+llm-central
+
+Type de modèle
+Language
+
+Sélectionnez le type de modèles que vous souhaitez ajouter. Si vous avez besoin de types différents, ajoutez-les par lots séparés.
+
+Ajouter la sélection (1/9)
+chat
+embed
+rerank
+transcribe
+gemma-4-e4b
+qwen3.5-4b
+bge-m3
+bge-reranker-v2-m3
+faster-whisper-small
+Annuler
+Ajouter (1)
+Fermer

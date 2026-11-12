@@ -1,0 +1,76 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Paramètres
+Traitement du contenu
+Configurez la manière dont les documents et les URL sont traités
+Moteur de traitement de documents
+Auto (Recommandé)
+Auto (Recommandé)
+Docling
+Simple
+Aidez-moi à choisir
+Activer l'OCR
+
+Extrait le texte des PDF numérisés et des images avec le moteur Docling. Traitement plus lent.
+
+Extraire les formules
+
+Extrait les formules mathématiques sous forme de balisage structuré avec le moteur Docling. Augmente le temps de traitement.
+
+Décrire les images et les graphiques
+
+Utilise un modèle de vision pour décrire les images et extraire les données des graphiques avec le moteur Docling. Nettement plus lent et peut appeler un modèle de vision.
+
+Moteur de traitement d'URL
+Simple
+Auto (Recommandé)
+Firecrawl
+Jina
+Crawl4AI
+Simple
+
+Crawl4AI local est facultatif. Activez-le avec OPEN_NOTEBOOK_ENABLE_CRAWL4AI=true (s'installe au premier démarrage), ou définissez CRAWL4AI_API_URL pour utiliser un serveur distant.
+
+Aidez-moi à choisir
+Indexation (Embedding) et Recherche
+Configurez les options de recherche et d'indexation
+Option d'indexation par défaut
+Demander
+Demander
+Toujours
+Jamais
+Aidez-moi à choisir
+Gestion des fichiers
+Configurez les options de manipulation et de stockage des fichiers
+Suppression automatique des fichiers
+Oui
+Oui
+Non
+Aidez-moi à choisir
+Enregistrer
+Actions rapides
+
+Navigation, recherche, poser une question, thème

@@ -1,0 +1,82 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Banc
+Archiver
+Supprimer
+Corpus Vélanor, banc automatique
+Créé à il y a 11 minutes •Mis à jour à il y a moins d’une minute
+SOURCES
+Ajouter la source
+supplier-audit-batterix-en.pdf
+Télécharger un fichier
+strategie-2026.pptx
+Télécharger un fichier
+stocks-octobre-2025.xlsx
+Télécharger un fichier
+rapport-annuel-2025.pdf
+Télécharger un fichier
+procedure-batteries.docx
+Télécharger un fichier
+message-vocal-production.mp3
+Télécharger un fichier
+faq-sav.html
+Télécharger un fichier
+cse-2025-10-14.md
+Télécharger un fichier
+Échec
+Source
+contrat-batterix-scan.pdf
+Télécharger un fichier
+Réessayer le traitement
+NOTES
+Écrire une note
+Aucune note pour le moment
+
+Créez votre première note pour capturer des idées et des observations.
+
+DISCUTER AVEC LE CARNET
+Sessions
+
+Commencer une conversation sur ce Carnet
+
+Posez des questions pour mieux comprendre le contenu
+
+Context:
+9
+2.9K tokens
+/
+10.1K chars
+Modèle
+chat
+Actions rapides
+
+Navigation, recherche, poser une question, thème
+
+Créer une note
+Note sans titre
+Annuler
+Créer la note
+Fermer

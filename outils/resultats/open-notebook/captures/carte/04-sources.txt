@@ -1,0 +1,110 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Toutes les sources
+
+Affichez toutes vos sources ici. Vous pouvez en ajouter de nouvelles ou gérer les existantes.
+
+Type
+	Titre
+	Créé
+	Mis à jour
+	Aperçus
+	Indexé (Embedded)
+	Actions
+
+FICHIER
+	
+supplier-audit-batterix-en.pdf
+	il y a 9 minutes	il y a 9 minutes	0	Oui	
+
+
+FICHIER
+	
+strategie-2026.pptx
+	il y a 10 minutes	il y a 9 minutes	0	Oui	
+
+
+FICHIER
+	
+stocks-octobre-2025.xlsx
+	il y a 10 minutes	il y a 10 minutes	0	Oui	
+
+
+FICHIER
+	
+rapport-annuel-2025.pdf
+	il y a 10 minutes	il y a 10 minutes	0	Oui	
+
+
+FICHIER
+	
+procedure-batteries.docx
+	il y a 10 minutes	il y a 10 minutes	0	Oui	
+
+
+FICHIER
+	
+message-vocal-production.mp3
+	il y a 10 minutes	il y a 10 minutes	0	Oui	
+
+
+FICHIER
+	
+faq-sav.html
+	il y a 10 minutes	il y a 10 minutes	0	Oui	
+
+
+FICHIER
+	
+cse-2025-10-14.md
+	il y a 10 minutes	il y a 10 minutes	0	Oui	
+
+
+FICHIER
+	
+contrat-batterix-scan.pdf
+	il y a 10 minutes	il y a 10 minutes	0	Non	
+
+
+FICHIER
+	
+faq-sav.html
+	il y a 12 minutes	il y a 12 minutes	0	Oui	
+
+
+FICHIER
+	
+faq-sav.html
+	il y a 12 minutes	il y a 12 minutes	0	Oui	
+
+
+FICHIER
+	
+faq-sav.html
+	il y a 3 jours	il y a 3 jours	0	Oui	
+Actions rapides
+
+Navigation, recherche, poser une question, thème

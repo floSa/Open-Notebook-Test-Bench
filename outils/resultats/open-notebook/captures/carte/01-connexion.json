@@ -1,0 +1,14 @@
+{
+ "url": "http://rag-open-notebook:8502/login",
+ "titres": [],
+ "onglets": [],
+ "boutons": [
+  "Se connecter"
+ ],
+ "champs": [
+  "Mot de passe"
+ ],
+ "listes": [],
+ "interrupteurs": [],
+ "liens": []
+}

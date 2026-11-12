@@ -1,0 +1,65 @@
+{
+ "url": "http://rag-open-notebook:8502/settings",
+ "titres": [
+  "COLLECTER",
+  "TRAITER",
+  "CRÉER",
+  "GÉRER",
+  "Paramètres",
+  "Actions rapides"
+ ],
+ "onglets": [],
+ "boutons": [
+  "Créer",
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé",
+  "Thème Thème",
+  "Langue Changer de langue",
+  "Se déconnecter",
+  "Auto (Recommandé)",
+  "Aidez-moi à choisir",
+  "Simple",
+  "Demander",
+  "Oui",
+  "Enregistrer"
+ ],
+ "champs": [
+  "checkbox",
+  "checkbox",
+  "checkbox"
+ ],
+ "listes": [
+  "Auto (Recommandé)",
+  "Auto (Recommandé) Docling Simple",
+  "Simple",
+  "Auto (Recommandé) Firecrawl Jina Crawl4AI Simple",
+  "Demander",
+  "Demander Toujours Jamais",
+  "Oui",
+  "Oui Non"
+ ],
+ "interrupteurs": [
+  "Activer l'OCR",
+  "Activer l'OCR",
+  "Extraire les formules",
+  "Extraire les formules",
+  "Décrire les images et les graphiques",
+  "Décrire les images et les graphiques"
+ ],
+ "liens": [
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé"
+ ]
+}

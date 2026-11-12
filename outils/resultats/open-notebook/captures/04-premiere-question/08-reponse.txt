@@ -1,0 +1,58 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Premier essai
+Archiver
+Supprimer
+Une page de la FAQ du service après-vente
+Créé à il y a 1 minute •Mis à jour à il y a 1 minute
+SOURCES
+Ajouter la source
+faq-sav.html
+Télécharger un fichier
+·
+1 aperçus
+Notes
+DISCUTER AVEC LE CARNET
+Sessions
+
+Quelle est la durée de garantie du cadre ?
+
+La durée de garantie du cadre est de 7 ans : 1.
+
+Il est important de noter que les autres composants ont des durées différentes, notamment la batterie et le moteur qui sont garantis pour 2 ans seulement selon ce document fictif de service après-vente.
+
+Références: [1] - source:n7g7hr011utoewmmhhm4
+
+Context:
+1
+460 tokens
+/
+1.7K chars
+Modèle
+chat
+Actions rapides
+
+Navigation, recherche, poser une question, thème

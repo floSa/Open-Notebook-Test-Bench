@@ -1,0 +1,90 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Premier essai
+Archiver
+Supprimer
+Une page de la FAQ du service après-vente
+Créé à il y a 1 minute •Mis à jour à il y a 1 minute
+SOURCES
+Ajouter la source
+faq-sav.html
+Télécharger un fichier
+·
+1 aperçus
+Notes
+DISCUTER AVEC LE CARNET
+Sessions
+
+Quelle est la durée de garantie du cadre ?
+
+La durée de garantie du cadre est de 7 ans : 1.
+
+Il est important de noter que les autres composants ont des durées différentes, notamment la batterie et le moteur qui sont garantis pour 2 ans seulement selon ce document fictif de service après-vente.
+
+Références: [1] - source:n7g7hr011utoewmmhhm4
+
+Context:
+1
+460 tokens
+/
+1.7K chars
+Modèle
+chat
+Actions rapides
+
+Navigation, recherche, poser une question, thème
+
+Détails de la source
+faq-sav.html
+
+ID de la source: source:n7g7hr011utoewmmhhm4
+
+file
+Discuter avec Sources
+Contenu
+Analyses (1)
+Détails
+FAQ du service après-vente
+
+Document fictif.
+
+Quelle est la durée de la garantie ?
+
+Le cadre est garanti 7 ans. La batterie et le moteur sont garantis 2 ans.
+
+Quel est le délai de réparation ?
+
+Une réparation en atelier prend 10 jours ouvrés en moyenne. Le diagnostic est gratuit.
+
+Comment joindre le service après-vente ?
+
+Par téléphone au 02 40 00 12 34, du lundi au vendredi de 9 h à 18 h, ou par le formulaire du site.
+
+Peut-on remplacer soi-même la batterie ?
+
+Oui, la batterie se retire avec la clé fournie. Seule une batterie d'origine Vélanor est couverte par la garantie.
+
+Fermer

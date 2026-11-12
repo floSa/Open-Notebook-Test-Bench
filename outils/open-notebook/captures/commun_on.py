@@ -13,6 +13,8 @@ from annoter import capture
 URL = "http://rag-open-notebook:8502"
 API = "http://rag-open-notebook:5055"
 ENV = dict(l.split("=", 1) for l in Path("donnees/open-notebook/.env").read_text().splitlines() if "=" in l)
+# clé du service LLM central : lue dans le .env du dépôt, saisie dans un champ masqué avant toute capture, jamais affichée
+CLE_CENTRAL = next((l.split("=", 1)[1].strip() for l in Path(".env").read_text().splitlines() if l.startswith("LLM_CENTRAL_KEY=")), "")
 IMG = Path("docs/open-notebook/img")
 TXT = Path("outils/resultats/open-notebook/captures")
 
@@ -39,10 +41,11 @@ class Session:
         self.chapitre = chapitre
 
     def aller(self, chemin, attendre=None):
-        self.pg.goto(URL + chemin); self.pg.wait_for_load_state("networkidle")
+        # l'interface interroge l'API en continu : « networkidle » n'arrive jamais ; on attend le chargement puis un élément
+        self.pg.goto(URL + chemin); self.pg.wait_for_load_state("load")
         if attendre is not None:
             attendre.wait_for(state="visible", timeout=30000)
-        self.pg.wait_for_timeout(800)
+        self.pg.wait_for_timeout(2000)
 
     def connexion(self):
         self.aller("/login")
@@ -50,7 +53,7 @@ class Session:
         if champ.count():
             champ.fill(ENV["OPEN_NOTEBOOK_PASSWORD"]); self.pg.keyboard.press("Enter")
             self.pg.wait_for_url(lambda u: "/login" not in u, timeout=30000)
-            self.pg.wait_for_load_state("networkidle"); self.pg.wait_for_timeout(800)
+            self.pg.wait_for_load_state("load"); self.pg.wait_for_timeout(2000)
 
     def ecran(self, nom, elements=(), masques=(), plein=False, clip=None, attendre=None, chapitre=None):
         ch = chapitre or self.chapitre

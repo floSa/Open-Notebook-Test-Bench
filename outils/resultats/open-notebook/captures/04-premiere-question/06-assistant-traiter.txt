@@ -1,0 +1,118 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Premier essai
+Archiver
+Supprimer
+Une page de la FAQ du service après-vente
+Créé à il y a moins d’une minute •Mis à jour à il y a moins d’une minute
+SOURCES
+Ajouter la source
+Aucune source pour le moment
+
+Ajoutez votre première source pour commencer à bâtir votre base de connaissances.
+
+NOTES
+Écrire une note
+Aucune note pour le moment
+
+Créez votre première note pour capturer des idées et des observations.
+
+DISCUTER AVEC LE CARNET
+Sessions
+
+Commencer une conversation sur ce Carnet
+
+Posez des questions pour mieux comprendre le contenu
+
+No sources or notes included in context. Toggle icons on cards to include them.
+Modèle
+chat
+Actions rapides
+
+Navigation, recherche, poser une question, thème
+
+Ajouter une nouvelle source
+
+Le contenu sera traité et analysé par l'IA.
+
+✓
+
+Ajouter la source
+
+Le contenu sera traité et analysé par l'IA.
+
+✓
+
+Carnets
+
+Rechercher des carnets...
+
+3
+
+Traiter
+
+Le contenu sera traité et analysé par l'IA.
+
+Transformations (Optionnel)
+
+Le contenu sera traité et analysé par l'IA.
+
+Paper Analysis
+
+Analyses a technical/scientific paper
+
+Dense Summary
+
+Creates a rich, deep summary of the content
+
+Key Insights
+
+Extracts important insights and actionable items
+
+Reflection Questions
+
+Generates reflection questions from the document to help explore it further
+
+Simple Summary
+
+Generates a small summary of the content
+
+Table of Contents
+
+Describes the different topics of the document
+
+Paramètres
+
+Le contenu sera traité et analysé par l'IA.
+
+Activer l'indexation pour la recherche
+
+Permet à cette source d'être trouvée dans les recherches vectorielles et les requêtes IA
+
+Annuler
+Retour
+Terminé
+Fermer

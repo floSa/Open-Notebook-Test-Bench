@@ -1,0 +1,59 @@
+{
+ "url": "http://rag-open-notebook:8502/settings/models",
+ "titres": [
+  "COLLECTER",
+  "TRAITER",
+  "CRÉER",
+  "GÉRER",
+  "Modèles",
+  "Actions rapides"
+ ],
+ "onglets": [],
+ "boutons": [
+  "Créer",
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé",
+  "Thème Thème",
+  "Langue Changer de langue",
+  "Se déconnecter",
+  "chat openai_compatible",
+  "embed openai_compatible",
+  "speaches-ai/Kokoro-82M-v1.0-ONNX openai_compatible",
+  "transcribe openai_compatible",
+  "Test",
+  "Models",
+  "Modifier",
+  "Supprimer",
+  "Tester le modèle",
+  "Supprimer le modèle",
+  "Ajouter une configuration"
+ ],
+ "champs": [],
+ "listes": [
+  "chat openai_compatible",
+  "embed openai_compatible",
+  "speaches-ai/Kokoro-82M-v1.0-ONNX openai_compatible",
+  "transcribe openai_compatible",
+  "chat openai_compatible",
+  "chat openai_compatible",
+  "chat openai_compatible"
+ ],
+ "interrupteurs": [],
+ "liens": [
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé",
+  "Apprenez à connecter des fournisseurs d'IA →"
+ ]
+}

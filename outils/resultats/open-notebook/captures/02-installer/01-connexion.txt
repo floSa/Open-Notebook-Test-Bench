@@ -1,0 +1,5 @@
+Open Notebook
+Entrez votre mot de passe pour accéder à l'application
+Se connecter
+Version 1.15.1
+http://rag-open-notebook:5055

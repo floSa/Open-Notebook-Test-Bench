@@ -1,0 +1,45 @@
+{
+ "url": "http://rag-open-notebook:8502/sources",
+ "titres": [
+  "COLLECTER",
+  "TRAITER",
+  "CRÉER",
+  "GÉRER",
+  "Toutes les sources",
+  "Actions rapides"
+ ],
+ "onglets": [],
+ "boutons": [
+  "Créer",
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé",
+  "Thème Thème",
+  "Langue Changer de langue",
+  "Se déconnecter",
+  "Type",
+  "Titre",
+  "Créé",
+  "Mis à jour",
+  "Aperçus",
+  "Indexé (Embedded)"
+ ],
+ "champs": [],
+ "listes": [],
+ "interrupteurs": [],
+ "liens": [
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé"
+ ]
+}

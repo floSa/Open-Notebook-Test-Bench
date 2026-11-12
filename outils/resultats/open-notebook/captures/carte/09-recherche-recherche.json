@@ -1,0 +1,50 @@
+{
+ "url": "http://rag-open-notebook:8502/search",
+ "titres": [
+  "COLLECTER",
+  "TRAITER",
+  "CRÉER",
+  "GÉRER",
+  "Poser une question et Rechercher",
+  "Actions rapides"
+ ],
+ "onglets": [
+  "Demander (bêta)",
+  "Recherche"
+ ],
+ "boutons": [
+  "Créer",
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé",
+  "Thème Thème",
+  "Langue Changer de langue",
+  "Se déconnecter",
+  "Demander (bêta)",
+  "Recherche",
+  "Carnets Tous les carnets"
+ ],
+ "champs": [
+  "Entrez votre recherche..."
+ ],
+ "listes": [],
+ "interrupteurs": [
+  "Rechercher dans les Sources",
+  "Rechercher dans les Notes"
+ ],
+ "liens": [
+  "Sources",
+  "Carnets",
+  "Demander et rechercher",
+  "Podcasts",
+  "Modèles",
+  "Transformations",
+  "Paramètres",
+  "Avancé"
+ ]
+}

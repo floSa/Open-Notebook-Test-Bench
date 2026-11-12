@@ -1,0 +1,117 @@
+{
+ "creer": {
+  "menu": [
+   "Source",
+   "Carnet",
+   "Podcast"
+  ],
+  "dialogue": []
+ },
+ "langue": {
+  "menu": [
+   "English",
+   "Türkçe",
+   "Català",
+   "简体中文",
+   "繁體中文",
+   "Português",
+   "日本語",
+   "Italiano",
+   "Français",
+   "Русский",
+   "বাংলা",
+   "Español",
+   "Deutsch",
+   "Polski"
+  ],
+  "dialogue": []
+ },
+ "theme": {
+  "menu": [
+   "Clair",
+   "Sombre",
+   "Système"
+  ],
+  "dialogue": []
+ },
+ "ajouter-source": {
+  "menu": [
+   "Ajouter la source",
+   "Ajouter des sources existantes"
+  ],
+  "dialogue": []
+ },
+ "ajouter-source-fleche": {
+  "erreur": "Locator.click: Timeout 30000ms exceeded."
+ },
+ "contexte": {
+  "menu": [
+   "Tout inclure (aperçus uniquement)",
+   "Tout inclure (contenu complet)",
+   "Tout exclure du contexte"
+  ],
+  "dialogue": []
+ },
+ "sessions": {
+  "menu": [],
+  "dialogue": [
+   "Sessions de Chat Sessions Aucune session de chat pour le moment Créez une session pour commencer. Fermer"
+  ]
+ },
+ "modele-chat": {
+  "menu": [],
+  "dialogue": [
+   "Configuration du modèle Remplacer le modèle par défaut pour cette session de chat. Laissez vide pour utiliser le modèle par défaut du système. Modèle Par défaut (chat) openai_compatible Réinitialiser Enregistrer les modifications Fermer"
+  ]
+ },
+ "selection-sources": {
+  "erreur": "Locator.click: Error: strict mode violation: locator(\"text=SOURCES\").locator(\"xpath=following::button[1]\") resolved to 2 elements:"
+ },
+ "icone-source": {
+  "menu": [],
+  "dialogue": []
+ },
+ "generer-podcast": {
+  "menu": [],
+  "dialogue": [
+   "Générer un épisode de podcast Sélectionnez le contenu à inclure et configurez les détails de l'épisode avant de générer un nouvel épisode de podcast. CONTENU Choisissez les carnets, sources et notes à inclure dans cet épisode. 0 éléments sélectionnés Banc Aucun contenu sélectionné 0 Sources · 0 Notes PARAMÈTRES DE L'ÉPISODE Profil de l'épisode Sélectionnez un profil d'épisode Nom de l'épisode Instructions supplémentaires Générer Annuler Fermer"
+  ]
+ },
+ "creer-intervenant": {
+  "menu": [],
+  "dialogue": [
+   "Créer un profil d'intervenant Configurez les paramètres de synthèse vocale et définissez jusqu'à quatre intervenants. Nom du profil * Description MODÈLE VOCAL Modèle vocal * Sélectionnez le modèle vocal speaches-ai/Kokoro-82M-v1.0-ONNXopenai_compatible INTERVENANTS Configurez entre un et quatre intervenants pour ce profil. Ajouter un intervenant Intervenant 1 Retirer Nom * ID de la voix * Histoire (Backstory) * Personnalité * Remplacement TTS par intervenant (optionnel) Utiliser le profil par défaut speaches-ai/Kokoro-82M-v1.0-ONNXopenai_compatible Annuler Créer un profil Fermer"
+  ]
+ },
+ "creer-profil": {
+  "menu": [],
+  "dialogue": [
+   "Créer un profil d'épisode Définissez comment les épisodes doivent être générés et quelle configuration d'intervenants ils utilisent par défaut. Nom du profil * Segments * Jetons de sortie maximum Facultatif. Limite le nombre de tokens que chaque étape de génération peut produire — le plan et la transcription complète —, et non par réplique ou par conversation. Laissez vide pour utiliser la valeur par défaut (8192 pour les deux). Diminuez-la pour les modèles dont la limite de sortie est inférieure à 8192 ; une valeur trop basse peut tronquer la transcription. Description CONFIGURATION DES INTERVENANTS Profil de l'intervenant * business_panel business_panel solo_expert tech_experts GÉNÉRATION DU PLAN Modèle de plan * Sélectionnez le modèle de plan chatopenai_compatible GÉNÉRATION DE LA TRANSCRIPTION Modèle de transcription * Sélectionnez le modèle de transcription chatopenai_compatible LANGUE DU PODCAST Langue Sélectionnez une langue (optionnel) Abkhazian (Georgia) (ab-GE) Afar (Ethiopia) (aa-ET) Afrikaans (South Africa) (af-ZA) Akan (Ghana) (ak-GH) Albanian (Albania) (sq-AL) Amharic (Ethiopia) (am-ET) Arabic (Egypt) (ar-EG) Arabic (Saudi Arabia) (ar-SA) Aragonese (Spain) (an-ES) Armenian (Armenia) (hy-AM) Assamese (India) (as-IN) Avaric (av) Avestan (ae) Aymara (ay) Azerbaijani (Latin, Azerbaijan) (az-AZ) Bambara (Mali) (bm-ML) Bangla (Bangladesh) (bn-BD) Bashkir (Russia) (ba-RU) Basque (Spain) (eu-ES) Belarusian (Belarus) (be-BY) Bislama (bi) Bosnian (Latin, Bosnia & Herzegov"
+  ]
+ },
+ "creer-transformation": {
+  "menu": [],
+  "dialogue": [
+   "Créer une nouvelle Créer une nouvelle Nom Titre Modèle Défaut Système Défaut Système chat Suggérer par défaut sur les nouvelles sources Ajouter une description Prompt Système Les prompts doivent être rédigés en pensant au contenu de la source. Vous pouvez demander au modèle de résumer, d'extraire des analyses ou de produire des sorties structurées comme des tableaux. Annuler Créer une nouvelle Fermer"
+  ]
+ },
+ "playground": {
+  "menu": [],
+  "dialogue": []
+ },
+ "models-decouverte": {
+  "menu": [],
+  "dialogue": [
+   "Découvrir les modèles - OpenAI Compatible speaches-voix Type de modèle TTS Sélectionnez le type de modèles que vous souhaitez ajouter. Si vous avez besoin de types différents, ajoutez-les par lots séparés. Ajouter la sélection (0/2) speaches-ai/Kokoro-82M-v1.0-ONNX Systran/faster-whisper-small Annuler Ajouter (0) Fermer"
+  ]
+ },
+ "modifier-config": {
+  "menu": [],
+  "dialogue": [
+   "Modifier la configuration Nom de la configuration Un nom descriptif pour cette configuration (ex : « Production », « Développement ») Clé API (Optionnel) Show Laissez vide pour conserver la clé API existante Obtenir une clé API → URL de base Incluez le chemin de version de l'API requis par votre serveur. Pour LM Studio dans Docker, utilisez http://host.docker.internal:1234/v1. Annuler Enregistrer Fermer"
+  ]
+ },
+ "carnets-portee": {
+  "erreur": "Locator.click: Timeout 30000ms exceeded."
+ }
+}
