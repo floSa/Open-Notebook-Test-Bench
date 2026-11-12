@@ -27,7 +27,7 @@ Démo Vélanor
 Archiver
 Supprimer
 Dossier de démonstration : documents fictifs de l'entreprise Vélanor
-Créé à il y a 33 minutes •Mis à jour à il y a 8 minutes
+Créé à il y a environ 1 heure •Mis à jour à il y a 6 minutes
 SOURCES
 Ajouter la source
 rapport-annuel-2025.pdf
@@ -125,12 +125,13 @@ Arrêt de la ligne 3 : La ligne d'assemblage Nantes (Ligne 3) a été immobilis�
 Références: [1] - source_insight:ax6jk08lcekeio446fjf [2] - source_insight:qi7kabxq1jgazv84wg8q [3] - source_insight:yl78yblj0c5ot1akaazs [4] - source_insight:sujez85jimel3hmih7v2
 
 Context:
-10
+9
+1
 •
 2
-7.0K tokens
+4.5K tokens
 /
-24.2K chars
+14.8K chars
 Modèle
 chat
 Actions rapides

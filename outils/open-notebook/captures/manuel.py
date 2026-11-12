@@ -1006,7 +1006,34 @@ def retouches2(s):
     pg.keyboard.press("Escape")
 
 
-SCENARIOS = {"retouches2": retouches2, "retouches": retouches, "09b": podcast_fin, "11": cas_pratiques, "12": problemes, "09": podcast, "07": notes, "08": rechercher, "10": regler, "06": discuter, "02": installer, "03": premiers_pas, "04": premiere_question, "05": sources, "05b": sources_suite}
+def retouches3(s):
+    """Captures reprises après la quatrième relecture novice : éléments tous visibles sans défilement (une zone qui défile
+    entre deux mesures décale les cadres)."""
+    pg = s.pg
+    s.chapitre = "10-regler"
+    pg.set_viewport_size({"width": 1440, "height": 1300})
+    s.aller("/settings", attendre=pg.get_by_text("Traitement du contenu").first)
+    ind = pg.get_by_text("Option d'indexation par défaut").first
+    ind.scroll_into_view_if_needed(); pg.wait_for_timeout(500)
+    s.ecran("02-indexation-et-fichiers", [(ind.locator("xpath=following::*[@role='combobox'][1]"), "Option d'indexation par défaut"),
+                                          (pg.get_by_text("Suppression automatique des fichiers").first.locator("xpath=following::*[@role='combobox'][1]"), "Suppression automatique des fichiers"),
+                                          (bouton(s, "Enregistrer"), "Enregistrer")])
+    s.chapitre = "11-cas-pratiques"
+    s.aller(f"/notebooks/{carnet(DEMO)}", attendre=pg.get_by_text("faq-sav.html").first)
+    bouton(s, "Écrire une note").locator("xpath=following::button[1]").click(); pg.wait_for_timeout(800)
+    bouton(s, "Sessions").click(); d = dialogue(s); d.wait_for(state="visible"); pg.wait_for_timeout(800)
+    d.get_by_text(re.compile("^Recette 3")).first.click(); pg.wait_for_timeout(2500)
+    if dialogue(s).count() and dialogue(s).is_visible():
+        pg.keyboard.press("Escape"); pg.wait_for_timeout(500)
+    cit = pg.get_by_text(re.compile(r"^source(_insight)?:[a-z0-9]+$")).last
+    cit.scroll_into_view_if_needed(); pg.wait_for_timeout(500)
+    bulle = cit.locator("xpath=ancestor::div[contains(@class,'rounded')][1]")
+    rep = bulle.get_by_text(re.compile("Arrêt de la ligne 3")).first
+    icones = bulle.locator("xpath=following::button[position()<=2]")
+    s.ecran("04-recette-3", [(rep, "Réponse"), (cit, "Citation"), (icones.nth(0), "Enregistrer en note")])
+
+
+SCENARIOS = {"retouches3": retouches3, "retouches2": retouches2, "retouches": retouches, "09b": podcast_fin, "11": cas_pratiques, "12": problemes, "09": podcast, "07": notes, "08": rechercher, "10": regler, "06": discuter, "02": installer, "03": premiers_pas, "04": premiere_question, "05": sources, "05b": sources_suite}
 
 if __name__ == "__main__":
     with sync_playwright() as p:

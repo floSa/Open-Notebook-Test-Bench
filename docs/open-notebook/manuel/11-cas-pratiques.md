@@ -67,7 +67,7 @@ Questions posées : « Le délai de livraison réellement constaté chez Batteri
 Question : « Rédige une synthèse en cinq puces pour la direction : chiffre d'affaires 2025, objectif 2026, nouvelle usine, risque fournisseur batteries, arrêt de la ligne 3. Cite les sources. » Puis cliquer sur l'icône d'enregistrement sous la réponse.
 
 ![Cas 3, synthèse](../img/11-cas-pratiques/04-recette-3.png)
-*Écran : carnet « Démo Vélanor », session « Recette 3 - synthèse direction ».*
+*Écran : carnet « Démo Vélanor », session « Recette 3 - synthèse direction », rouverte après coup (le compteur « Context » en bas montre l'état du carnet à ce moment-là, pas celui de la question).*
 
 | N° | Élément | Rôle |
 |---|---|---|

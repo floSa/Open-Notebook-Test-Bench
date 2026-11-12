@@ -1,7 +1,7 @@
 # 02. Installer Open Notebook
 
 > Ce chapitre apprend à installer Open Notebook sous Windows 11 avec WSL2, à le démarrer, à l'arrêter et à le désinstaller.
-> **Point de départ** : un terminal Ubuntu (WSL2) ouvert à la racine du dépôt, Docker Desktop lancé.
+> **Point de départ** : un terminal Ubuntu (WSL2) ouvert dans le dossier personnel, Docker Desktop lancé.
 > **Durée** : environ 15 minutes la première fois (téléchargement des images), moins d'une minute ensuite. **Avant** : chapitre [01](01-decouvrir-open-notebook.md).
 
 **Risque réseau.** Le fichier d'installation fourni par le projet ouvre l'application à tout le réseau, sans mot de passe. L'installation décrite ici la limite à la machine (`127.0.0.1`) et active un mot de passe : ne pas lancer le fichier officiel tel quel.
