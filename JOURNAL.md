@@ -87,7 +87,7 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 - Résultat : banc GPU (Docling actif) identique au CPU en exactitude (28/34, 4/4 refus), 4 fois plus rapide (médiane 1,86 s contre 7,44 s) ; mode « Demander », abandonné sur CPU, devient utilisable (28/34, médiane 7,7 s). VRAM 15,7/16,4 Go, marge faible. Manuel 10, `presentation.md` et README mis à jour avec les chiffres mesurés ; `verifier_docs.py` à 0 point.
 - Suite : relire le `git stash` de LLM-Service ; Qwen3-4B-Instruct 4 bits sur vLLM pour une comparaison à modèle identique ; carte à 8 Go de VRAM ; solution suivante (RAGFlow).
 
-### 2026-11-12 10:30 — Reprise au standard du kit : écart et plan
+### 2026-11-12 09:40 — Reprise au standard du kit : écart et plan
 
 - Début de session : `~/.claude/statut-a-jour.sh` → modifications non commitées (outils communs, `.gitignore`) ; `outils/communs/llm_central_sante.sh --essai` réussi (`chat`, `embed` 1 024 dimensions, `rerank`, `transcribe` sur le message vocal du corpus). Machine : Ryzen 5 9600X, 32 Go, RTX 4060 Ti 16 Go ; service central en profil `gpu` (`llm-swap` CUDA). Commits : `.gitignore` + `.env.example`, outils communs du kit.
 - Versions (`outils/resultats/open-notebook/versions-2026-11-12.json`) : Open Notebook v1.15.1 reste la dernière stable (image déjà figée par empreinte) ; SurrealDB v2.7.0 gardée (le compose officiel impose v2 ; dernière stable v4.0.1, raison écrite dans le JSON).
@@ -106,3 +106,10 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 
 - Plan : (1) override et `installer.sh` rebranchés sur `llm-central` (clé lue dans `.env` par `--env-file`, jamais recopiée dans `donnees/`), `configurer.py` en mode `central`, ménage des anciennes configurations ; (2) vérification minimale, ports, embeddings reconstruits ; (3) banc avec `chat` ; (4) carte de l'interface (Playwright) ; (5) chapitres de la partie 1 un par un, captures annotées ; (6) annexes à partir des documents existants ; (7) relectures novice et adversariale, rapport, README, commit final.
 - Décision prudente : RAGFlow (`rag-ragflow-*`, autre dépôt, peut-être utilisé par une autre session) laissé en marche ; 19 Go de RAM disponibles suffisent pour Open Notebook (moins de 1 Go mesuré).
+
+### 2026-11-12 10:55 — Service central branché, banc rejoué, manuel en cours
+
+- Fait : override, `compose.sh`, `installer.sh`, `configurer.py` rebranchés sur `llm-central` (OpenAI Compatible, `chat`, `embed`, `transcribe` ; TTS seul sur `rag-speaches`) ; anciennes configurations Ollama/vLLM retirées ; juge du banc adapté (`chat`, réflexion coupée) ; diagnostic adapté (`llm-*`, profil) ; sauvegarde, restauration et nettoyage sans l'image Ollama ; banc complet avec `chat` ; carte de l'interface (23 écrans) ; annexes A3 à A5 converties (sous-agent), A6 ; chapitres 01 à 05 et 13 rédigés ; scénarios Playwright des chapitres 02 à 12.
+- Résultats : installation 42 s ; ports sur 127.0.0.1 ; banc `central-chat` 28/34 justes, 4/4 refus, médiane 8,7 s, p95 27,9 s, indexation 65 s ; reranker refusé par le code (« out of scope #1087 »).
+- Constats d'interface : un nouveau document part au modèle par son seul aperçu (mode « aperçus ») ; choisir le modèle d'embedding ouvre une confirmation « Changement de modèle d'embedding » ; « Attribution automatique des défauts » répond « déjà configurés » quand l'ancien modèle par défaut a été supprimé ; un fichier déjà téléversé sous le même nom reçoit un suffixe « (1) » repris dans le titre lors d'un ajout groupé ; une source scannée en échec garde le titre « Processing... ».
+- Suite : captures des chapitres 05 à 12, textes, bancs « Demander » et « aperçus », essai de contexte, exemples, sauvegarde, relectures.
