@@ -46,7 +46,7 @@ Dans la fenêtre de l'explorateur de fichiers, sélectionner les neuf fichiers �
 *Résultat* : les documents sont traités un par un ; pour ces neuf documents, il faut compter quelques minutes, le résumé automatique de chaque document demandant une réponse du modèle. Le classeur, la page web et la note sont prêts en quelques secondes, le message vocal après sa transcription.
 
 **Étape 4. Repérer une source en échec**
-*Où* : colonne SOURCES, carte du contrat scanné.
+*Où* : colonne SOURCES, carte marquée « Échec » et titrée « Processing... » (c'est le contrat scanné).
 Le contrat `contrat-batterix-scan.pdf` est une image de papier scanné : sans reconnaissance de caractères, il n'en sort aucun texte.
 
 ![Source en échec](../img/05-sources/03-source-en-echec.png)
@@ -63,7 +63,7 @@ Le contrat `contrat-batterix-scan.pdf` est une image de papier scanné : sans re
 
 **Étape 5. Ajouter une page web**
 *Où* : « Ajouter la source » › « Ajouter la source », onglet « Ajouter une URL ».
-Coller une ou plusieurs adresses, une par ligne. Le titre est facultatif : sans titre, il est tiré de la page.
+Exemple à ne pas suivre ici : le carnet « Démo Vélanor » ne contient pas de page web, et l'essai a été annulé par « Annuler ». Coller une ou plusieurs adresses, une par ligne. Le titre est facultatif : sans titre, il est tiré de la page.
 
 ![Onglet Ajouter une URL](../img/05-sources/04-ajouter-url.png)
 *Écran : assistant, étape 1, onglet « Ajouter une URL ».*
@@ -77,8 +77,8 @@ Coller une ou plusieurs adresses, une par ligne. Le titre est facultatif : sans 
 *Résultat* : avec « Suivant » puis « Terminé », la page est téléchargée et traitée comme un document. L'application va chercher la page sur Internet : le poste doit y avoir accès. Dans cette installation, la lecture des pages se fait sans service extérieur (moteur « Simple », chapitre [10](10-regler-l-application.md)).
 
 **Étape 6. Ajouter un texte collé**
-*Où* : « Ajouter la source » › « Ajouter la source », onglet « Saisir du texte ».
-Utile pour un compte rendu d'appel, un courriel, un extrait copié.
+*Où* : carnet « Démo Vélanor » › « Ajouter la source » › « Ajouter la source », onglet « Saisir du texte ».
+À faire : ce texte devient la dixième source du carnet, comptée dans les chapitres suivants. Utile pour un compte rendu d'appel, un courriel, un extrait copié.
 
 ![Onglet Saisir du texte](../img/05-sources/05-saisir-texte.png)
 *Écran : assistant, étape 1, onglet « Saisir du texte ».*
@@ -159,7 +159,7 @@ Le carnet quitte la liste des carnets actifs sans rien perdre ; il se retrouve e
 | 1 | « Carnets archivés » | liste repliée des carnets archivés ; un clic la déplie, un clic sur un carnet le rouvre |
 
 **Étape 12. Supprimer un carnet**
-*Où* : page du carnet, en haut à droite › « Supprimer ».
+*Où* : page du carnet « Premier essai » (Carnets › « Carnets archivés » › clic sur « Premier essai »), en haut à droite › « Supprimer ».
 
 ![Fenêtre Supprimer le carnet](../img/05-sources/11-supprimer-carnet.png)
 *Écran : fenêtre « Supprimer le carnet ».*

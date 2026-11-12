@@ -11,16 +11,17 @@ La conversation d'un carnet ne cherche pas les passages utiles : elle envoie au 
 ## Choisir ce qui part au modèle
 
 **Étape 1. Régler toutes les sources d'un coup**
-*Où* : page du carnet › colonne SOURCES › « Contexte ».
+*Où* : page du carnet › colonne SOURCES › icône en forme de liste cochée, avec une petite flèche, juste à droite du titre SOURCES (son nom, « Contexte », s'affiche au survol).
 
 ![Menu Contexte](../img/06-discuter/01-menu-contexte.png)
 *Écran : carnet « Démo Vélanor », menu « Contexte » ouvert.*
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Tout inclure (aperçus uniquement) » | envoie le résumé de chaque source : léger, mais les détails manquent |
-| 2 | « Tout inclure (contenu complet) » | envoie le texte entier de chaque source : réponses précises |
-| 3 | « Tout exclure du contexte » | n'envoie aucune source ; utile avant d'en choisir quelques-unes une par une |
+| 1 | « Contexte » | icône qui ouvre ce menu |
+| 2 | « Tout inclure (aperçus uniquement) » | envoie le résumé de chaque source : léger, mais les détails manquent |
+| 3 | « Tout inclure (contenu complet) » | envoie le texte entier de chaque source : réponses précises |
+| 4 | « Tout exclure du contexte » | n'envoie aucune source ; utile avant d'en choisir quelques-unes une par une |
 
 *Résultat* : avec « Tout inclure (contenu complet) », le compteur « Context » indique les dix sources du carnet et environ 6 000 jetons, soit 21 000 caractères.
 
@@ -35,7 +36,7 @@ Chaque clic fait passer la source au mode suivant, dans cet ordre : contenu comp
 |---|---|---|
 | 1 | Icône en forme de page | source envoyée en contenu complet |
 | 2 | Icône d'ampoule | source envoyée par son seul aperçu (résumé) |
-| 3 | « Context » | ce qui partira : ici 1 aperçu et 9 sources complètes, environ 5 900 jetons |
+| 3 | « Context » | ce qui partira : ici 1 source en aperçu, 9 sources complètes et 1 note (chapitre [07](07-notes-et-transformations.md)), environ 6 300 jetons |
 
 *Résultat* : un nouveau clic sur l'icône remet la source dans le cycle.
 

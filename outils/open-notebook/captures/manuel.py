@@ -906,7 +906,63 @@ def podcast_fin(s):
     s.ecran("05-episode-pret", elems)
 
 
-SCENARIOS = {"09b": podcast_fin, "11": cas_pratiques, "12": problemes, "09": podcast, "07": notes, "08": rechercher, "10": regler, "06": discuter, "02": installer, "03": premiers_pas, "04": premiere_question, "05": sources, "05b": sources_suite}
+def retouches(s):
+    """Captures refaites après la relecture novice : fenêtres hautes affichées en entier (fenêtre du navigateur portée à
+    1440 × 1300 pour ces trois fenêtres, sinon leur haut sort de l'écran) ; icône « Contexte » annotée. Rien n'est créé :
+    chaque fenêtre est remplie puis fermée par « Annuler » ou Échap."""
+    pg = s.pg
+    nb = carnet(DEMO)
+    s.chapitre = "06-discuter"
+    s.aller(f"/notebooks/{nb}", attendre=pg.get_by_text("faq-sav.html").first)
+    bouton(s, "Écrire une note").locator("xpath=following::button[1]").click(); pg.wait_for_timeout(800)
+    print("boutons Contexte :", pg.get_by_role("button", name="Contexte").count(), flush=True)
+    # le menu ouvert masque le bouton aux outils d'accessibilité : repère posé avant l'ouverture
+    bouton(s, "Contexte").evaluate("e => e.setAttribute('data-rag-repere', 'contexte')")
+    ctx = pg.locator("[data-rag-repere=contexte]"); ctx.click(); pg.wait_for_timeout(600)
+    s.ecran("01-menu-contexte", [(ctx, "Contexte"), (pg.get_by_role("menuitem", name="Tout inclure (aperçus uniquement)"), "Tout inclure (aperçus uniquement)"),
+                                 (pg.get_by_role("menuitem", name="Tout inclure (contenu complet)"), "Tout inclure (contenu complet)"),
+                                 (pg.get_by_role("menuitem", name="Tout exclure du contexte"), "Tout exclure du contexte")])
+    pg.keyboard.press("Escape")
+    pg.set_viewport_size({"width": 1440, "height": 1300})
+    s.chapitre = "07-notes"
+    s.aller("/transformations", attendre=bouton(s, "Créer une nouvelle"))
+    bouton(s, "Créer une nouvelle").click(); d = dialogue(s); d.wait_for(state="visible"); pg.wait_for_timeout(800)
+    ch = d.locator("input"); ch.nth(0).fill("fiche-chiffres-fr"); ch.nth(1).fill("Chiffres clés")
+    prompt = d.locator("textarea, [contenteditable=true], .cm-content").last; prompt.click()
+    pg.keyboard.type("Réponds en français. À partir du document, dresse une liste à puces des chiffres clés (au plus 8), "
+                     "chacun avec son unité et ce qu'il mesure. N'invente aucun chiffre.")
+    ch.nth(0).scroll_into_view_if_needed(); pg.wait_for_timeout(300)
+    s.ecran("04-nouvelle-transformation", [(ch.nth(0), "Nom"), (ch.nth(1), "Titre"), (prompt, "Prompt Système"),
+                                           (d.get_by_role("button", name="Créer une nouvelle").last, "Créer une nouvelle")])
+    d.get_by_role("button", name="Annuler").click(); pg.wait_for_timeout(500)
+    s.chapitre = "09-podcast"
+    s.aller("/podcasts", attendre=pg.get_by_role("tab", name="Profils"))
+    pg.get_by_role("tab", name="Profils").click(); pg.wait_for_timeout(1000)
+    bouton(s, "Créer un intervenant").click(); d = dialogue(s); d.wait_for(state="visible"); pg.wait_for_timeout(800)
+    vm = d.get_by_role("combobox").first
+    if "Kokoro" not in (vm.inner_text() or ""):
+        choisir_option(s, vm, "Kokoro")
+    d.get_by_placeholder("ex: Discussion tech").fill("duo-fr")
+    d.get_by_placeholder("Hôte 1").fill("Camille"); d.get_by_placeholder("voice_123").first.fill("ff_siwis")
+    d.get_by_placeholder(re.compile("Courte biographie")).first.fill("Animatrice d'une émission d'entreprise, curieuse et claire.")
+    d.get_by_placeholder(re.compile("Décrivez le style")).first.fill("Pose des questions simples et reformule.")
+    d.get_by_placeholder("ex: Discussion tech").scroll_into_view_if_needed(); pg.wait_for_timeout(300)
+    s.ecran("02-profil-intervenants", [(vm, "Modèle vocal"), (d.get_by_placeholder("ex: Discussion tech"), "Nom du profil"),
+                                       (d.get_by_placeholder("Hôte 1"), "Nom"), (d.get_by_placeholder("voice_123").first, "ID de la voix"),
+                                       (d.get_by_placeholder(re.compile("Courte biographie")).first, "Histoire (Backstory)"),
+                                       (d.get_by_placeholder(re.compile("Décrivez le style")).first, "Personnalité")])
+    pg.keyboard.press("Escape"); pg.wait_for_timeout(600)
+    bouton(s, "Créer un profil").click(); d = dialogue(s); d.wait_for(state="visible"); pg.wait_for_timeout(800)
+    nom = champ(d, "Nom du profil"); nom.fill("court-fr"); seg = champ(d, "Segments"); seg.fill("3")
+    listes = d.get_by_role("combobox")
+    nom.scroll_into_view_if_needed(); pg.wait_for_timeout(300)
+    print("listes profil épisode :", [l.inner_text().replace("\n", " ") for l in listes.all()], flush=True)
+    s.ecran("03-profil-episode", [(nom, "Nom du profil"), (seg, "Segments"), (listes.nth(0), "Profil de l'intervenant"),
+                                  (listes.nth(1), "Modèle de plan"), (listes.nth(2), "Modèle de transcription"), (listes.nth(3), "Langue")])
+    pg.keyboard.press("Escape")
+
+
+SCENARIOS = {"retouches": retouches, "09b": podcast_fin, "11": cas_pratiques, "12": problemes, "09": podcast, "07": notes, "08": rechercher, "10": regler, "06": discuter, "02": installer, "03": premiers_pas, "04": premiere_question, "05": sources, "05b": sources_suite}
 
 if __name__ == "__main__":
     with sync_playwright() as p:

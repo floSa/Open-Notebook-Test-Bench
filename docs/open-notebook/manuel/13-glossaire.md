@@ -13,6 +13,7 @@ Les libellés de l'interface sont cités entre guillemets, tels qu'ils s'affiche
 | Mot | Sens |
 |---|---|
 | Analyse (insight) | résultat d'une transformation appliquée à une source, rangé dans l'onglet « Analyses » de la source |
+| Aperçu | autre nom d'une analyse dans l'interface (« 1 aperçus », « Générer un nouvel aperçu ») ; le résumé automatique d'un nouveau document est un aperçu ; en mode « aperçus », seul ce résumé part au modèle |
 | Archiver | ranger un carnet hors de la liste des carnets actifs, sans le supprimer |
 | Attributions des modèles par défaut | réglage qui dit quel modèle sert à quoi : discuter, transformer, chercher par le sens, transcrire l'audio, lire les podcasts |
 | Carnet | dossier de travail qui réunit des sources, des notes et des conversations sur un même sujet |

@@ -14,11 +14,11 @@ L'écran a deux parties : le **menu de gauche**, toujours visible, et la **page*
 *Où* : n'importe quelle page, colonne de gauche.
 
 ![Menu de gauche](../img/03-premiers-pas/01-menu.png)
-*Écran : Carnets, menu de gauche.*
+*Écran : Carnets, menu de gauche. La page montre ici des carnets d'essai ; juste après l'installation, elle est vide.*
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Créer » | crée en un clic une source, un carnet ou un podcast (étape 6) |
+| 1 | « Créer » | crée en un clic une source, un carnet ou un podcast (étape 7) |
 | 2 | « Sources » | liste de tous les documents ajoutés, tous carnets confondus (chapitre [05](05-ajouter-et-organiser-les-sources.md)) |
 | 3 | « Carnets » | liste des carnets ; c'est la page d'accueil |
 | 4 | « Demander et rechercher » | recherche et question dans tous les carnets (chapitre [08](08-rechercher-et-demander.md)) |
@@ -35,9 +35,9 @@ L'écran a deux parties : le **menu de gauche**, toujours visible, et la **page*
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Actions rapides » (Ctrl+K) | ouvre une barre de commande au clavier (étape 5) |
-| 2 | « Thème » | choisit des couleurs claires ou sombres (étape 4) |
-| 3 | « Langue » | change la langue de l'interface (étape 3) |
+| 1 | « Actions rapides » (Ctrl+K) | ouvre une barre de commande au clavier (étape 6) |
+| 2 | « Thème » | choisit des couleurs claires ou sombres (étape 5) |
+| 3 | « Langue » | change la langue de l'interface (étape 4) |
 | 4 | « Se déconnecter » | ferme la session ; le mot de passe sera redemandé |
 
 **Étape 3. Lire la page Carnets**
@@ -59,7 +59,7 @@ L'écran a deux parties : le **menu de gauche**, toujours visible, et la **page*
 
 **Étape 4. Choisir la langue**
 *Où* : bas du menu › « Langue ».
-L'interface suit d'abord la langue du navigateur. Le menu « Langue » propose quatorze langues ; cliquer sur « Français » (pastille 1).
+L'interface suit d'abord la langue du navigateur : si celui-ci est en anglais, le bouton s'appelle « Language » (et « Theme » pour le thème). Le menu propose quatorze langues ; cliquer sur « Français » (pastille 1).
 
 ![Menu Langue ouvert](../img/03-premiers-pas/04-menu-langue.png)
 *Écran : Carnets, menu « Langue » ouvert.*
@@ -108,6 +108,8 @@ Une barre de commande s'ouvre au milieu de l'écran : taper quelques lettres (le
 | 3 | « Podcast » | ouvre la fenêtre de génération d'un épisode (chapitre [09](09-creer-un-podcast.md)) |
 
 ## Déclarer les modèles d'IA
+
+**Faut-il faire cette partie ?** Après le script d'installation du chapitre [02](02-installer-open-notebook.md), les modèles sont déjà déclarés : seule l'étape 14 (vérifier) est utile. Les étapes 8 à 13 servent après une remise à zéro, ou si la configuration `llm-central` a été supprimée ; refaites alors qu'elle existe encore, elles créeraient une configuration en double.
 
 Open Notebook a besoin d'au moins deux modèles : un **modèle de langage**, qui rédige les réponses, et un **modèle d'embedding**, qui sert à la recherche par le sens. Dans cette installation, tous deux viennent du service LLM central, sous les noms fixes `chat` et `embed` ; le modèle `transcribe` du même service transcrit l'audio. Le service central se déclare comme un fournisseur « OpenAI Compatible », parce qu'il accepte les mêmes requêtes que l'API d'OpenAI. Il faut son adresse et sa clé : l'adresse est `http://llm-central:8080/v1` ; la clé est la valeur de `LLM_CENTRAL_KEY` dans le fichier `.env` à la racine du dépôt.
 
@@ -171,7 +173,7 @@ La fenêtre « Découvrir les modèles » liste les modèles du service. Choisir
 
 **Étape 12. Choisir les modèles par défaut**
 *Où* : page « Modèles », haut de la page, cadre « Attributions des modèles par défaut ».
-Dans « Modèle de Chat », choisir `chat` ; dans « Modèle de Transcription Vocale (STT) », choisir `transcribe`. Un bandeau signale tant qu'il manque un modèle obligatoire.
+Dans l'ordre : 1) choisir `chat` dans la liste « Modèle de Chat » et `transcribe` dans « Modèle de Transcription Vocale (STT) » ; 2) cliquer sur « Attribution automatique des défauts » (pastille 2), qui remplit les cases restées vides ; 3) si « Modèle d'Embedding » reste vide, passer à l'étape 13. Un bandeau signale tant qu'il manque un modèle obligatoire ; les listes sont visibles sous le bandeau et annotées à l'étape 14.
 
 ![Bandeau des modèles manquants](../img/03-premiers-pas/12-attribution-automatique.png)
 *Écran : Modèles, « Attributions des modèles par défaut », modèle d'embedding manquant.*
@@ -199,7 +201,7 @@ Changer de modèle d'embedding demande une confirmation, parce que les documents
 
 **Étape 14. Vérifier les attributions**
 *Où* : page « Modèles », cadre « Attributions des modèles par défaut ».
-Sous « Avancé », choisir aussi `chat` pour « Modèle de Transformation », « Modèle d'Outils » et « Modèle à large contexte ».
+Dans le même cadre, sous le petit titre « Avancé » (à ne pas confondre avec la page « Avancé » du menu), choisir aussi `chat` dans les trois listes « Modèle de Transformation », « Modèle d'Outils » et « Modèle à large contexte » (sous les quatre listes annotées).
 
 ![Attributions des modèles par défaut complètes](../img/03-premiers-pas/15-attributions.png)
 *Écran : Modèles, attributions complètes.*

@@ -6,7 +6,7 @@
 
 ## Ce qu'il faut savoir
 
-Une **note** est un texte gardé dans un carnet : écrite à la main, ou réponse du modèle enregistrée d'un clic (chapitre [06](06-discuter-avec-les-sources.md), étape 3). Les notes partent au modèle avec les sources, et la recherche les trouve. Une **transformation** est une consigne réutilisable que le modèle applique à un document : résumer, lister les points clés, faire une table des matières… Son résultat s'appelle une **analyse** (ou aperçu) et se range dans l'onglet « Analyses » de la source. Six transformations sont fournies, avec des consignes en anglais ; « Dense Summary » s'applique d'office à chaque nouveau document.
+Une **note** est un texte gardé dans un carnet : écrite à la main, ou réponse du modèle enregistrée d'un clic (chapitre [06](06-discuter-avec-les-sources.md), étape 3). Les notes partent au modèle avec les sources, et la recherche les trouve. Une **transformation** est une consigne réutilisable que le modèle applique à un document : résumer, lister les points clés, faire une table des matières… Son résultat s'appelle une **analyse** et se range dans l'onglet « Analyses » de la source ; l'interface dit aussi **aperçu** (« 1 aperçus » sur une carte, « Générer un nouvel aperçu ») : les deux mots désignent la même chose, et le résumé automatique « Dense Summary » d'un nouveau document est l'une de ces analyses. Six transformations sont fournies, avec des consignes en anglais ; « Dense Summary » s'applique d'office à chaque nouveau document.
 
 ## Écrire une note
 

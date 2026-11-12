@@ -36,9 +36,10 @@ Choisir le modèle vocal, nommer le profil, puis décrire chaque intervenant ; �
 | 2 | « Nom du profil » | ici `duo-fr` |
 | 3 | « Nom » | nom de l'intervenant, prononcé dans le dialogue |
 | 4 | « ID de la voix » | identifiant de la voix dans le serveur de voix : `ff_siwis` est la seule voix française de Kokoro |
-| 5 | « Créer un profil » | enregistre le profil |
+| 5 | « Histoire (Backstory) » | qui est l'intervenant : Camille, « Animatrice d'une émission d'entreprise, curieuse et claire. » ; Hugo, « Analyste financier de l'entreprise. » |
+| 6 | « Personnalité » | son style : Camille, « Pose des questions simples et reformule. » ; Hugo, « Précis, cite les chiffres. » |
 
-*Résultat* : le profil apparaît sous « Profils d'intervenants ». Les champs « Histoire (Backstory) » et « Personnalité » de chaque intervenant sont obligatoires : ils orientent le ton des répliques.
+*Résultat* : après « Créer un profil » (bas de la fenêtre), le profil apparaît sous « Profils d'intervenants ». Les champs « Histoire (Backstory) » et « Personnalité » sont obligatoires : ils orientent le ton des répliques.
 
 **Étape 3. Créer le profil d'épisode**
 *Où* : onglet « Profils » › « Créer un profil ».
@@ -51,9 +52,12 @@ Ici, profil `court-fr` : trois parties, intervenants `duo-fr`, modèle `chat` po
 |---|---|---|
 | 1 | « Nom du profil » | ici `court-fr` |
 | 2 | « Segments » | nombre de parties de l'épisode ; peu de parties = épisode court |
-| 3 | « Profil de l'intervenant » | voix utilisées, ici `duo-fr` |
-| 4 | Briefing | consigne générale : « Épisode court et factuel, en français, qui présente les informations principales des sources. » |
-| 5 | « Créer un profil » | enregistre le profil |
+| 3 | « Profil de l'intervenant » | voix utilisées : choisir `duo-fr` |
+| 4 | « Modèle de plan » | modèle qui découpe le contenu : `chat` |
+| 5 | « Modèle de transcription » | modèle qui écrit les répliques : `chat` |
+| 6 | « Langue » | « French (France) (fr-FR) » |
+
+Remplir enfin « Briefing par défaut » : « Épisode court et factuel, en français, qui présente les informations principales des sources. », puis « Créer un profil ».
 
 ## Générer et écouter un épisode
 

@@ -12,6 +12,20 @@ Open Notebook tourne dans deux [conteneurs](../../glossaire.md) Docker : l'appli
 
 ## Préparer la machine
 
+**Étape 0. Récupérer le dépôt**
+*Où* : terminal Ubuntu (WSL2), dossier personnel.
+Le dépôt contient les scripts d'installation utilisés dans ce manuel. Le copier puis entrer dans son dossier :
+
+```bash
+git clone https://github.com/floSa/Open-Notebook-Test-Bench.git
+```
+
+```bash
+cd Open-Notebook-Test-Bench
+```
+
+*Résultat* : le terminal est « à la racine du dépôt » ; toutes les commandes suivantes se lancent depuis ce dossier.
+
 **Étape 1. Vérifier les prérequis**
 *Où* : terminal Ubuntu (WSL2).
 Il faut, une fois pour toutes : WSL2 avec Ubuntu, Docker Desktop réglé sur le moteur WSL2 avec l'intégration de la distribution activée, et le dépôt placé dans le dossier personnel de WSL (`~/…`, pas sous `/mnt/c`). La commande suivante fait le point sur la machine (processeur, mémoire, disque, carte graphique, Docker, service central) :
@@ -24,7 +38,7 @@ outils/communs/diagnostic.sh
 
 **Étape 2. Vérifier que le service LLM central répond**
 *Où* : même terminal.
-Le service central doit tourner avant Open Notebook. Sa clé se trouve dans le fichier `.env` à la racine du dépôt (copie de `.env.example`, complétée avec la clé du service ; ce fichier n'est jamais publié). La commande suivante liste les modèles du service, puis fait un essai réel de chacun :
+Le service central doit tourner avant Open Notebook. Sa clé se trouve dans le fichier `.env` à la racine du dépôt : copier `.env.example` en `.env`, puis y recopier, sur la ligne `LLM_CENTRAL_KEY=`, la valeur de `LITELLM_MASTER_KEY` du fichier `.env` du dépôt LLM-Service (`~/mes_projets/Projet-IA/LLM-Service/.env`). Ce fichier n'est jamais publié. La commande suivante liste les modèles du service, puis fait un essai réel de chacun :
 
 ```bash
 outils/communs/llm_central_sante.sh --essai
@@ -65,7 +79,7 @@ rag-open-notebook 127.0.0.1:5055->5055/tcp, 127.0.0.1:8502->8502/tcp
 durée : 42 s
 ```
 
-La ligne `127.0.0.1:…` confirme que l'application n'est joignable que depuis la machine.
+« HTTP 307 » est normal : l'interface redirige vers la page de connexion. La ligne `127.0.0.1:…` confirme que l'application n'est joignable que depuis la machine.
 
 **Étape 4. Ouvrir l'interface**
 *Où* : navigateur Windows, adresse `http://127.0.0.1:8502`.

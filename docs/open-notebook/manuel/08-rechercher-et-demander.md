@@ -43,7 +43,7 @@ La page « Demander et rechercher » travaille sur tous les carnets à la fois (
 
 **Étape 3. Poser une question à tous les carnets**
 *Où* : onglet « Demander (bêta) ».
-Écrire la question, choisir la portée dans « Carnets », puis « Demander ».
+Écrire « Quel score l'audit du fournisseur Batterix a-t-il obtenu, et quelles non-conformités a-t-il relevées ? », laisser « Tous les carnets », puis « Demander ».
 
 ![Onglet Demander](../img/08-rechercher/03-demander.png)
 *Écran : onglet « Demander (bêta) », question écrite.*
@@ -63,7 +63,7 @@ La page « Demander et rechercher » travaille sur tous les carnets à la fois (
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | Réponse | synthèse rédigée à partir des passages trouvés, avec ses citations |
+| 1 | Réponse | synthèse rédigée à partir des passages trouvés, avec ses citations : score de 87 sur 100, étiquetage incomplet des palettes et protection antistatique manquante |
 
 *Résultat* : la réponse arrive après plusieurs appels au modèle, plus lentement qu'une question dans un carnet ; elle s'appuie sur les passages trouvés, pas sur des documents entiers.
 

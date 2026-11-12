@@ -92,7 +92,7 @@ Provoqué ici avec un carnet « Essai contexte » contenant un texte d'environ 8
 |---|---|---|
 | `http://127.0.0.1:8502` ne répond pas | conteneurs arrêtés | `outils/open-notebook/demarrer.sh` ; `outils/open-notebook/etat.sh` pour l'état |
 | Recherche par le sens sans résultat après un changement de modèle | index calculés avec l'ancien modèle | chapitre [10](10-regler-l-application.md), reconstruction des index |
-| « Attribution automatique des défauts » répond « Tous les modèles par défaut sont déjà configurés » alors qu'une case est vide | l'ancien modèle par défaut a été supprimé | choisir le modèle à la main (chapitre [03](03-premiers-pas.md), étape 13) |
+| « Attribution automatique des défauts » répond « Tous les modèles par défaut sont déjà configurés » alors qu'une case est vide | l'ancien modèle par défaut a été supprimé | choisir le modèle à la main (chapitre [03](03-premiers-pas.md), étapes 12 à 14) |
 | Un document ajouté reçoit un nom suivi de « (1) » | un fichier du même nom existe déjà | sans conséquence ; renommer n'est pas nécessaire |
 
 ---

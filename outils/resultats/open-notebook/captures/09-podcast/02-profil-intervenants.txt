@@ -71,6 +71,25 @@ Histoire (Backstory): Youtube celebrity and business mogul. Focuses on practical
 Personnalité: Controversial, likes to question ideas and concepts. He brings a fresh perspective and always has a point to make.
 
 Modifier
+duo-fr
+Deux voix : une animatrice française et un analyste
+openai_compatible / speaches-ai/Kokoro-82M-v1.0-ONNX
+Utilisé par 1 épisode
+Camille
+ID de la voix: ff_siwis
+
+Histoire (Backstory): Animatrice d'une émission d'entreprise, curieuse et claire.
+
+Personnalité: Pose des questions simples et reformule.
+
+Hugo
+ID de la voix: am_michael
+
+Histoire (Backstory): Analyste financier de l'entreprise.
+
+Personnalité: Précis, cite les chiffres.
+
+Modifier
 solo_expert
 Configuration requise
 Single expert for educational content
@@ -133,6 +152,35 @@ business_panel
 BRIEFING PAR DÉFAUT
 
 Analyze the provided content from a business perspective. Discuss market implications, strategic insights, competitive advantages, and actionable business intelligence.
+
+court-fr
+Épisode court et factuel, en français
+Modifier
+
+MODÈLE DE PLAN
+
+openai_compatible / chat
+
+MODÈLE DE TRANSCRIPTION
+
+openai_compatible / chat
+
+SEGMENTS
+
+3
+
+LANGUE
+
+fr-FR
+
+PROFIL DE L'INTERVENANT
+
+duo-fr
+openai_compatible / speaches-ai/Kokoro-82M-v1.0-ONNX
+
+BRIEFING PAR DÉFAUT
+
+Épisode court et factuel, en français, qui présente les informations principales des sources.
 
 solo_expert
 Configuration requise
@@ -206,17 +254,6 @@ Configurez entre un et quatre intervenants pour ce profil.
 Ajouter un intervenant
 
 Intervenant 1
-
-Retirer
-Nom *
-ID de la voix *
-Histoire (Backstory) *
-Personnalité *
-Remplacement TTS par intervenant (optionnel)
-Utiliser le profil par défaut
-speaches-ai/Kokoro-82M-v1.0-ONNXopenai_compatible
-
-Intervenant 2
 
 Retirer
 Nom *

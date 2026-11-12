@@ -94,7 +94,7 @@ Laisser les choix proposés, puis cliquer sur « Terminé ».
 | 2 | « Activer l'indexation pour la recherche » | calcule les embeddings, pour que le document soit trouvé par la recherche par le sens |
 | 3 | « Terminé » | lance le traitement et ferme l'assistant |
 
-*Résultat* : la carte du document apparaît dans la colonne SOURCES, sous le nom du fichier. Si un fichier du même nom a déjà été ajouté dans un autre carnet, un suffixe s'ajoute : ici « faq-sav (1).html », le carnet « Démo Vélanor » du chapitre [05](05-ajouter-et-organiser-les-sources.md) contenant déjà ce fichier. Le traitement se fait en arrière-plan ; pour cette page courte, il dure quelques secondes. La carte indique alors « 1 aperçus ».
+*Résultat* : la carte du document apparaît dans la colonne SOURCES, sous le nom du fichier. Si un fichier du même nom a déjà été ajouté dans un autre carnet, un suffixe s'ajoute au nom, par exemple « faq-sav (1).html » sur les captures de ce chapitre ; sur une installation neuve, la carte s'appelle « faq-sav.html ». Le traitement se fait en arrière-plan ; pour cette page courte, il dure quelques secondes. La carte indique alors « 1 aperçus ».
 
 ## Poser la question
 

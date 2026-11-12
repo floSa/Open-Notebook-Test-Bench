@@ -74,7 +74,7 @@ Modifier
 duo-fr
 Deux voix : une animatrice française et un analyste
 openai_compatible / speaches-ai/Kokoro-82M-v1.0-ONNX
-Inutilisé
+Utilisé par 1 épisode
 Camille
 ID de la voix: ff_siwis
 
@@ -153,6 +153,35 @@ BRIEFING PAR DÉFAUT
 
 Analyze the provided content from a business perspective. Discuss market implications, strategic insights, competitive advantages, and actionable business intelligence.
 
+court-fr
+Épisode court et factuel, en français
+Modifier
+
+MODÈLE DE PLAN
+
+openai_compatible / chat
+
+MODÈLE DE TRANSCRIPTION
+
+openai_compatible / chat
+
+SEGMENTS
+
+3
+
+LANGUE
+
+fr-FR
+
+PROFIL DE L'INTERVENANT
+
+duo-fr
+openai_compatible / speaches-ai/Kokoro-82M-v1.0-ONNX
+
+BRIEFING PAR DÉFAUT
+
+Épisode court et factuel, en français, qui présente les informations principales des sources.
+
 solo_expert
 Configuration requise
 Single expert explaining complex topics
@@ -220,24 +249,22 @@ Facultatif. Limite le nombre de tokens que chaque étape de génération peut pr
 Description
 CONFIGURATION DES INTERVENANTS
 Profil de l'intervenant *
-duo-fr
+business_panel
 business_panel
 duo-fr
 solo_expert
 tech_experts
 GÉNÉRATION DU PLAN
 Modèle de plan *
-chat
-openai_compatible
+Sélectionnez le modèle de plan
 chatopenai_compatible
 GÉNÉRATION DE LA TRANSCRIPTION
 Modèle de transcription *
-chat
-openai_compatible
+Sélectionnez le modèle de transcription
 chatopenai_compatible
 LANGUE DU PODCAST
 Langue
-French (France) (fr-FR)
+Sélectionnez une langue (optionnel)
 Abkhazian (Georgia) (ab-GE)
 Afar (Ethiopia) (aa-ET)
 Afrikaans (South Africa) (af-ZA)
