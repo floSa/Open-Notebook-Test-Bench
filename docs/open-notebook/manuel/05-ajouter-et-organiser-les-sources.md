@@ -137,7 +137,8 @@ Taper quelques lettres du nom, cocher la case de la source, puis « Ajouter la s
 | 3 | « Ajouter la sélection » | rattache les sources cochées au carnet |
 
 **Étape 10. Retirer ou supprimer une source**
-*Où* : carte d'une source › menu à trois points (visible au survol de la carte).
+*Où* : carnet « Premier essai », carte `cse-2025-10-14.md` › menu à trois points (visible au survol de la carte).
+Choisir ici « Retirer du carnet » : la source quitte « Premier essai » et reste dans « Démo Vélanor ». Ne pas choisir « Supprimer la source », qui l'enlèverait aussi de « Démo Vélanor ».
 
 ![Menu d'une carte de source](../img/05-sources/09-menu-source.png)
 *Écran : carnet « Premier essai », menu d'une source.*

@@ -37,7 +37,7 @@ Provoqué ici avec une configuration volontairement fausse (adresse `http://llm-
 | 1 | `essai-erreur` | configuration testée |
 | 2 | Message « Erreur » | le service ne répond pas à cette adresse, ou refuse la clé |
 
-*Remède* : vérifier l'adresse (`http://llm-central:8080/v1`, avec `/v1`) et la clé (« Modifier » sur la carte) ; vérifier que le service central tourne, depuis le terminal : `outils/communs/llm_central_sante.sh --essai` ; s'il ne répond pas, le démarrer (chapitre [02](02-installer-open-notebook.md), étape 2). Les conversations échouent de la même façon tant que le service est arrêté.
+*Remède* : vérifier l'adresse (`http://llm-central:8080/v1`, avec `/v1`) et la clé (icône en forme de crayon, à droite de « Models » sur la carte) ; vérifier que le service central tourne, depuis le terminal : `outils/communs/llm_central_sante.sh --essai` ; s'il ne répond pas, le démarrer (chapitre [02](02-installer-open-notebook.md), étape 2). Les conversations échouent de la même façon tant que le service est arrêté.
 
 ## Un document n'est pas lu
 
@@ -84,7 +84,7 @@ Provoqué ici avec un carnet « Essai contexte » contenant un texte d'environ 8
 |---|---|---|
 | 1 | « Configuration requise » | « Certains profils n'ont pas encore de modèles configurés » : les profils d'exemple fournis n'ont pas de modèle de voix |
 
-*Remède* : sans conséquence pour les profils créés au chapitre [09](09-creer-un-podcast.md) ; modifier ou supprimer les profils d'exemple (« business_panel », « solo_expert », « tech_experts ») fait disparaître le bandeau.
+*Remède* : sans conséquence pour les profils créés au chapitre [09](09-creer-un-podcast.md) ; modifier ou supprimer, dans l'onglet « Profils », tous les profils marqués « Configuration requise » (profils d'exemple comme « business_panel », « business_analysis », « solo_expert »…) fait disparaître le bandeau.
 
 ## Autres situations
 
