@@ -56,7 +56,7 @@ Questions posées : « Le délai de livraison réellement constaté chez Batteri
 | 1 | Réponse | deux non-conformités mineures (étiquetage incomplet des palettes, protection antistatique manquante à une station d'assemblage), score de 87 sur 100 |
 | 2 | Citation | renvoi à l'audit, document en anglais : la réponse est en français |
 
-*Résultat* : le délai constaté (24 jours, tiré du classeur des stocks) est juste ; le délai prévu au contrat reste inconnu, parce que le contrat est le document scanné non lu (chapitre [12](12-en-cas-de-probleme.md), cas 3). Dans cette réponse, le modèle a cité le nom du fichier (`source:stocks-octobre-2025.xlsx`) au lieu de son identifiant : la citation ne s'ouvre pas d'un clic.
+*Résultat* : le délai constaté (24 jours, tiré du classeur des stocks) est juste ; le délai prévu au contrat reste inconnu, parce que le contrat est le document scanné non lu (chapitre [12](12-en-cas-de-probleme.md), cas 3). Dans la réponse à la première question (hors capture), le modèle a cité le nom du fichier (`source:stocks-octobre-2025.xlsx`) au lieu de son identifiant : la citation ne s'ouvre pas d'un clic.
 
 ## Cas 3 : préparer une synthèse pour la direction
 
@@ -71,7 +71,7 @@ Question : « Rédige une synthèse en cinq puces pour la direction : chiffre d'
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | Réponse | cinq puces, chacune avec sa citation |
+| 1 | Une puce de la réponse | la cinquième des cinq puces, « Arrêt de la ligne 3 » ; chaque puce finit par le numéro de sa citation |
 | 2 | Citation | renvoi à la source ou à son aperçu |
 | 3 | Enregistrer en note | garde la synthèse dans la colonne NOTES |
 

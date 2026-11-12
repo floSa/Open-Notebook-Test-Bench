@@ -63,7 +63,7 @@ La page ouverte par le lien « Demander et rechercher » s'intitule « Poser une
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | Réponse | synthèse rédigée à partir des passages trouvés, avec ses citations : score de 87 sur 100, étiquetage incomplet des palettes et protection antistatique manquante |
+| 1 | Score dans la réponse | « 87 » : la réponse, sous « Réponse finale », donne le score de 87 sur 100, l'étiquetage incomplet des palettes et la protection antistatique manquante, avec ses citations |
 
 *Résultat* : la réponse arrive après plusieurs appels au modèle, plus lentement qu'une question dans un carnet ; elle s'appuie sur les passages trouvés, pas sur des documents entiers.
 

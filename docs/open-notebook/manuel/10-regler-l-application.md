@@ -35,7 +35,7 @@ Les réglages de la page « Paramètres » s'appliquent aux documents ajoutés *
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « Option d'indexation par défaut » | « Demander » : l'assistant d'ajout propose l'indexation ; « Toujours » ou « Jamais » : sans question |
-| 2 | « Suppression automatique des fichiers » | « Oui » : le fichier d'origine peut être effacé une fois le texte extrait |
+| 2 | « Suppression automatique des fichiers » | réglage sur le fichier d'origine une fois le texte extrait ; dans cette installation, réglée sur « Oui », les fichiers sont pourtant restés sur le disque et « Télécharger » (chapitre [05](05-ajouter-et-organiser-les-sources.md), étape 8) les rend toujours |
 | 3 | « Enregistrer » | applique les réglages |
 
 *Résultat* : les réglages enregistrés valent pour les documents ajoutés ensuite. Les captures montrent les réglages de cette installation, laissés tels quels.

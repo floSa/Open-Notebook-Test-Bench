@@ -1,0 +1,12 @@
+# Fichiers d'origine avec « Suppression automatique des fichiers » = Oui — 12 novembre 2026
+# ls donnees/open-notebook/notebook_data/uploads/ (après traitement du carnet Démo Vélanor) :
+contrat-batterix-scan.pdf
+cse-2025-10-14.md
+faq-sav.html
+message-vocal-production.mp3
+procedure-batteries.docx
+rapport-annuel-2025.pdf
+stocks-octobre-2025.xlsx
+strategie-2026.pptx
+supplier-audit-batterix-en.pdf
+# GET /api/sources/<rapport-annuel-2025.pdf>/download : HTTP 200, 53745 octets (taille du fichier du corpus : 53745)
