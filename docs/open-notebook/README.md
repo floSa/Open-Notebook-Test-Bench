@@ -1,59 +1,68 @@
-# Open Notebook — manuels vérifiés
+# Open Notebook — manuel utilisateur
 
-Alternative libre à NotebookLM : carnets de sources, chat avec citations, notes, transformations, recherche, podcasts. Installation locale sous Windows 11 et WSL2, branchée à des modèles locaux.
+Ce manuel apprend à installer et à utiliser Open Notebook 1.15.1, une application qui répond aux questions posées sur ses propres documents en citant ses sources, sur un poste Windows 11 avec WSL2 et des modèles d'IA qui tournent sur la machine. Il s'adresse à un utilisateur à l'aise avec un terminal, sans être forcément développeur. Il se lit dans l'ordre : la partie 1 suffit pour maîtriser l'outil ; la partie 2 évalue le produit et sert à choisir le matériel, automatiser et exploiter.
 
-| Version décrite | Date des essais | Machine | Langue de l'interface |
+| Version décrite | Date des essais | Machine d'essai | Langue de l'interface |
 |---|---|---|---|
-| Open Notebook 1.15.1 (image `lfnovo/open_notebook:1.15.1`), SurrealDB 2.7.0, Ollama 0.40.15 sur CPU, Speaches 0.8.3 | 2026-11-08 | Intel Core Ultra 7 255H, 15,3 Go de RAM dans WSL, sans GPU NVIDIA (profil A) | français (suit la langue du navigateur) |
+| Open Notebook 1.15.1, SurrealDB 2.7.0 ; modèles du service LLM central : `chat` (Qwen3.5-4B), `embed` (bge-m3), `transcribe` (faster-whisper-small) | 12 novembre 2026 | Ryzen 5 9600X, 32 Go de RAM, RTX 4060 Ti 16 Go, Windows 11 + WSL2 | français |
 
-**Commencer par** : [Open Notebook en bref](presentation.md) : ce que fait la solution, pour qui, le projet, les fonctions (oui ou non) et les résultats mesurés.
+## Par où commencer
 
-## Manuels
+1. [01. Découvrir Open Notebook](manuel/01-decouvrir-open-notebook.md) : savoir si l'outil convient et quelle machine il demande.
+2. [02. Installer Open Notebook](manuel/02-installer-open-notebook.md) : l'installer en une commande.
+3. [03. Premiers pas](manuel/03-premiers-pas.md) : se connecter et se repérer dans l'écran.
+4. [04. Première question en dix minutes](manuel/04-premiere-question.md) : obtenir une première réponse citée.
 
-| N° | Manuel | Contenu |
+## Partie 1 — Manuel utilisateur
+
+| N° | Chapitre | Ce qu'on saura faire |
 |---|---|---|
-| 00 | [Notions fondamentales](00-notions-fondamentales.md) | RAG, briques, particularités d'Open Notebook, schéma des services et des ports |
-| 01 | [Installation sous Windows et WSL2](01-installation.md) | prérequis mesurés, socle Ollama, installation, ports, mémoire, mise à jour, désinstallation |
-| 02 | [Prise en main](02-prise-en-main.md) | premier carnet, première source, première réponse citée |
-| 03 | [Carnets, sources et formats](03-carnets-sources-formats.md) | ce qui est extrait de chaque format, OCR avec Docling, audio |
-| 04 | [Chat et citations](04-chat-et-citations.md) | contexte par source, citations, troncature, modèles |
-| 05 | [Notes et transformations](05-notes-et-transformations.md) | notes, transformations fournies et personnalisées |
-| 06 | [Recherche](06-recherche.md) | plein texte, vectorielle, « Demander » |
-| 07 | [Podcasts](07-podcasts.md) | profils, voix locales, français |
-| 08 | [API REST et MCP](08-api-et-mcp.md) | automatisation, exemples, serveur MCP tiers |
-| 09 | [Recettes](09-recettes.md) | cas d'usage de bout en bout |
-| 10 | [Qualité et performances](10-qualite-performances.md) | banc de 38 questions, réglages, profils matériels |
-| 11 | [Exploitation](11-exploitation.md) | sauvegarde, restauration, mise à jour, journaux, sécurité |
-| 12 | [Dépannage et FAQ](12-depannage.md) | échecs réels et solutions |
+| 01 | [Découvrir Open Notebook](manuel/01-decouvrir-open-notebook.md) | dire à quoi sert l'outil, pour qui, ce qu'il demande comme machine (sans et avec carte graphique), et les mots de base |
+| 02 | [Installer Open Notebook](manuel/02-installer-open-notebook.md) | installer, démarrer, arrêter et désinstaller l'application sous Windows 11 + WSL2 |
+| 03 | [Premiers pas](manuel/03-premiers-pas.md) | se connecter, choisir la langue et le thème, se repérer dans chaque zone de l'écran, déclarer les modèles d'IA |
+| 04 | [Première question en dix minutes](manuel/04-premiere-question.md) | créer un carnet, ajouter un document, poser une question et ouvrir la citation |
+| 05 | [Ajouter et organiser ses sources](manuel/05-ajouter-et-organiser-les-sources.md) | ajouter des fichiers, des liens et des textes, suivre leur lecture, consulter une source, ranger et supprimer carnets et sources |
+| 06 | [Discuter avec ses sources](manuel/06-discuter-avec-les-sources.md) | choisir ce qui est envoyé au modèle, lire les citations, gérer plusieurs conversations, changer de modèle |
+| 07 | [Prendre des notes et transformer les sources](manuel/07-notes-et-transformations.md) | écrire et garder des notes, appliquer une transformation, créer sa propre transformation |
+| 08 | [Rechercher et demander](manuel/08-rechercher-et-demander.md) | chercher par mots ou par le sens dans tous les carnets, poser une question à tous les carnets |
+| 09 | [Créer un podcast](manuel/09-creer-un-podcast.md) | régler les voix et le déroulé, générer un épisode et l'écouter |
+| 10 | [Régler l'application](manuel/10-regler-l-application.md) | régler la lecture des documents, les embeddings et les options avancées |
+| 11 | [Cas pratiques](manuel/11-cas-pratiques.md) | mener trois cas réels de bout en bout sur un dossier d'entreprise |
+| 12 | [En cas de problème](manuel/12-en-cas-de-probleme.md) | reconnaître les erreurs réellement rencontrées, leur cause et leur remède |
+| 13 | [Glossaire](manuel/13-glossaire.md) | retrouver le sens des mots de l'interface |
 
-Plan détaillé : [plan des manuels](plan-des-manuels.md). Termes : [glossaire](../glossaire.md).
+## Partie 2 — Évaluation et compléments
 
-## Parcours de lecture
+| N° | Annexe | Contenu |
+|---|---|---|
+| A1 | [Évaluation : qualité et performances](annexes/A1-qualite-et-performances.md) | banc de 38 questions, réglages qui changent le résultat, préconisations |
+| A2 | [Choisir son matériel et ses modèles](annexes/A2-materiel-et-modeles.md) | configurations minimales sans et avec carte graphique, taille de contexte, temps d'attente |
+| A3 | [Automatiser par l'API et MCP](annexes/A3-api-et-mcp.md) | API REST, exemples exécutés, serveur MCP |
+| A4 | [Exploitation](annexes/A4-exploitation.md) | sauvegarde et restauration, mise à jour, journaux, sécurité, administration |
+| A5 | [Fonctionnement interne](annexes/A5-fonctionnement-interne.md) | architecture, services, ports, notions techniques |
+| A6 | [Rapport d'essais](annexes/A6-rapport-d-essais.md) | méthode, preuves, étiquettes, renvois aux résultats bruts |
+| — | [Carte de l'interface](annexes/carte-interface.md) | chaque page, menu et réglage de l'interface, et le chapitre qui le couvre |
+
+Une présentation d'une page reste disponible : [Open Notebook en bref](presentation.md). Termes communs à la série : [glossaire général](../glossaire.md).
+
+## Parcours conseillés
 
 | Objectif | Lire |
 |---|---|
-| Installer et essayer | 01, 02 |
-| Comprendre avant de choisir | 00, 10 |
-| Travailler sur ses documents | 02, 03, 04, 05, 06 |
-| Automatiser | 08, 09 |
-| Exploiter au quotidien | 11, 12 |
-
-## Limites connues
-
-- Citations au niveau de la source, sans page ni passage.
-- Chat de carnet sans recherche : les sources choisies sont envoyées en entier au modèle.
-- Tableaux des documents DOCX non extraits par le moteur par défaut ; scans illisibles sans Docling.
-- Sur CPU, chaque nouvelle question sur un grand contexte coûte une lecture lente du prompt.
+| Savoir si l'outil convient | 01, puis A1 et A2 |
+| Installer et essayer | 01, 02, 03, 04 |
+| Travailler sur ses documents au quotidien | 05, 06, 07, 08, puis 11 |
+| Produire un podcast | 04, 09 |
+| Automatiser | 04, puis A3 |
+| Exploiter et dépanner | 12, A4, A5 |
 
 ## Ce qui reste ouvert
 
-Décisions laissées à l'utilisateur ; l'option la plus prudente a été appliquée en attendant (détail dans le journal de la mission, `JOURNAL.md`).
-
-| Sujet | État dans ces manuels | Ce qui permettrait de conclure |
+| Sujet | État | Ce qui permettrait de conclure |
 |---|---|---|
-| Absence de GPU NVIDIA sur la machine d'essai | socle Ollama sur CPU ; vLLM non installé ; temps mesurés sur CPU | rejouer l'installation et le banc sur une machine avec GPU NVIDIA |
-| OCR de Docling inopérant (`onnxruntime` absent de l'image 1.15.1) | le contrat scanné reste illisible ; contournement non essayé [À tester] | installer `onnxruntime` dans le conteneur, ou signaler le défaut au projet |
-| Banc en mode **Demander** (Ask) | échantillon de six questions seulement, trop lent sur CPU ([Qualité et performances](10-qualite-performances.md)) | rejouer le banc Ask complet avec un GPU |
-| Anciens conteneurs `rag-ollama`, `rag-agent-api`, `rag-frontend` d'un autre projet | projet `~/Projets/rag-agent-chat`, laissés intacts, arrêtés ; sans lien avec cette série | les renommer ou les supprimer à la main |
-| Image `ubuntu:24.04` tirée pendant le diagnostic | inutilisée, laissée en place | `docker image rm ubuntu:24.04` à la main si elle ne sert pas ailleurs |
-| Serveur MCP tiers `open-notebook-mcp` 0.3.0 | `create_source` en échec ([API et MCP](08-api-et-mcp.md)) | version corrigée du serveur |
+| Documents scannés | OCR de Docling inopérant dans l'image 1.15.1 ; le contrat scanné reste illisible (6 erreurs du banc) | installer le moteur d'OCR dans l'image, ou signaler le défaut au projet (décision en attente) |
+| Mode « Demander » | une question essayée dans l'interface ; banc complet non rejoué sur le service central | rejouer `banc.py --mode ask` |
+| Sources en aperçus | effet mesuré sur cinq questions seulement | banc complet en mode aperçus |
+| Réflexion de `chat` | non réglable depuis Open Notebook | modèle de réponse sans réflexion ou plus léger dans LLM-Service (décision en attente) |
+| Profil sans carte graphique | non mesuré avec le service central ; chiffres tirés des mesures de LLM-Service | rejouer le banc avec le service en profil `cpu` |
+| Exemples de l'API, sauvegarde et restauration | sorties et essai du 8 novembre (ancienne pile) | les rejouer sur le service central |

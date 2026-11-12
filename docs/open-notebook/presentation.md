@@ -1,176 +1,126 @@
 # Open Notebook en bref
 
-Version 1.15.1, essayée le 8 novembre 2026 sur Windows 11 (WSL2), avec des modèles d'IA installés sur la machine.
+Version 1.15.1, essayée le 12 novembre 2026 sous Windows 11 (WSL2), avec les modèles du service LLM central. Cette page reprend le chapitre [01. Découvrir Open Notebook](manuel/01-decouvrir-open-notebook.md) du manuel ; la suite du manuel est sommairement décrite dans [la page d'accueil](README.md).
 
-## Sommaire
+## Ce que c'est
 
-1. [Ce que c'est](#1-ce-que-cest)
-2. [Pour qui](#2-pour-qui)
-3. [Le projet](#3-le-projet)
-4. [Fonctions](#4-fonctions)
-5. [Matériel nécessaire](#5-matériel-nécessaire)
-6. [Résultats mesurés](#6-résultats-mesurés)
-7. [Pour aller plus loin](#7-pour-aller-plus-loin)
+Open Notebook est une application web qui permet de poser des questions à ses propres documents et d'obtenir des réponses qui indiquent de quel document vient chaque information. Elle s'utilise dans le navigateur, mais tout tourne sur la machine : les documents ne partent vers aucun service en ligne.
 
-## 1. Ce que c'est
+Le travail s'organise en **carnets**, un par sujet ou par dossier. Un carnet réunit :
 
-Open Notebook est une application web qui permet de poser des questions à ses propres documents et d'obtenir des réponses qui indiquent de quel document vient chaque information.
+- des **sources** : fichiers PDF, Word, Excel, PowerPoint, pages web, textes collés, enregistrements audio ;
+- une **conversation** : une question en langage courant, une réponse rédigée à partir des sources, avec un renvoi cliquable vers le document utilisé (la **citation**) ;
+- des **notes** : réponses gardées, résumés, notes libres.
 
-Le travail s'organise en **carnets**. Un carnet réunit :
+À partir d'un carnet, l'application sait aussi appliquer une consigne réutilisable à un document (une **transformation** : résumé, liste des chiffres clés…), chercher dans tous les carnets à la fois, et produire un **podcast** : un dialogue audio à deux voix qui présente le contenu des documents.
 
-- des **sources** : fichiers PDF, Word, Excel, PowerPoint, pages web, enregistrements audio ;
-- une **conversation** : une question en langage courant, une réponse rédigée à partir des sources, avec un renvoi cliquable vers le document utilisé ;
-- des **notes** : réponses conservées, résumés, notes libres.
+## Les mots à connaître
 
-À partir d'un carnet, l'application peut aussi produire des résumés ou des extractions selon une consigne réutilisable, et un **podcast** : un dialogue audio entre deux voix qui présente le contenu des documents.
+| Mot | Sens dans ce manuel |
+|---|---|
+| Carnet | dossier de travail : des sources, des notes, des conversations sur un même sujet |
+| Source | un document ajouté à un carnet (fichier, lien web, texte collé, audio) |
+| Conversation (chat) | échange de questions et de réponses avec le modèle d'IA, à partir des sources du carnet |
+| Citation | renvoi, à la fin d'une phrase de la réponse, vers la source qui la justifie ; un clic ouvre la source |
+| Note | texte gardé dans le carnet : écrit à la main, ou réponse enregistrée |
+| Transformation | consigne réutilisable appliquée à une source, par exemple « résumer » |
+| Modèle d'IA | programme qui rédige les réponses (modèle de langage) ou qui calcule la ressemblance de sens entre deux textes (modèle d'embedding) |
+| Service LLM central | le service, installé à part, qui fait tourner les modèles d'IA pour toutes les applications de la machine |
+| Jeton | unité de texte comptée par le modèle : environ trois quarts de mot en français |
 
-L'application s'installe sur un poste ou un serveur. Elle peut fonctionner sans aucun service en ligne : les modèles d'IA tournent alors sur la même machine, et les documents ne quittent pas le poste.
+Les autres termes sont dans le [glossaire](manuel/13-glossaire.md).
 
-## 2. Pour qui
+## Pour qui
 
 | Adapté | Peu adapté |
 |---|---|
 | Une personne qui travaille sur un dossier de quelques dizaines de documents et veut des réponses vérifiables | Une équipe : il n'existe qu'un mot de passe commun, sans comptes ni droits séparés |
 | Des documents confidentiels qui ne doivent pas partir vers un service en ligne | Des documents scannés : l'application ne les lit pas en l'état |
-| Des documents texte, des tableaux, des réunions enregistrées | Une recherche dans des centaines de documents à la fois : la conversation transmet au modèle les documents choisis en entier, ce qui limite leur nombre |
+| Des documents texte, des tableaux, des réunions enregistrées | Une question posée à des centaines de documents à la fois dans la conversation : elle transmet au modèle les documents choisis en entier, ce qui en limite le volume |
 
-## 3. Le projet
+## Le projet
 
 | | |
 |---|---|
 | Dépôt | https://github.com/lfnovo/open-notebook |
 | Site | https://www.open-notebook.ai |
 | Licence | MIT : libre, usage commercial autorisé |
-| Popularité | 41 764 étoiles, 4 798 forks sur GitHub |
+| Popularité | 41 884 étoiles et 4 815 copies (forks) sur GitHub |
 | Activité | très active : 114 modifications sur les 90 derniers jours, 98 contributeurs, une nouvelle version par mois environ |
 | Ancienneté | projet créé en octobre 2024 ; versions 1.x stables |
-| Coût | gratuit ; aucun abonnement |
+| Coût | gratuit, sans abonnement |
 
-Chiffres relevés sur GitHub le 8 novembre 2026.
+Chiffres relevés sur GitHub le 12 novembre 2026.
 
-## 4. Fonctions
+## Ce que fait l'application
 
 Réponses : **Oui**, **Non**, ou **Partiel** avec la limite en une phrase.
 
-### Modèles d'IA
-
 | Fonction | Réponse |
 |---|---|
-| Modèles installés sur la machine avec Ollama | Oui |
-| Modèles installés sur la machine avec vLLM, LM Studio ou tout serveur compatible OpenAI | Oui |
-| Services en ligne (OpenAI, Anthropic, Mistral, Google…) | Oui, une vingtaine |
-| Calcul des embeddings sur la machine (représentation numérique du sens d'un passage, qui sert à la recherche par le sens) | Oui |
-| Reranking (second tri des passages trouvés, par un modèle spécialisé, pour garder les plus pertinents) | Non |
-| Voix (lecture et transcription) sur la machine | Oui, avec un serveur de voix séparé |
-
-### Documents acceptés
-
-| Fonction | Réponse |
-|---|---|
-| PDF, Word, Excel, PowerPoint, OpenDocument, EPUB, texte, Markdown, HTML | Oui |
-| Tableaux | Oui, avec le module Docling activé ; sans lui, les tableaux Word sont perdus |
-| Documents scannés (OCR) | Non : le module prévu ne fonctionne pas dans la version 1.15.1 |
-| Pages web à partir d'une adresse | Oui |
-| Audio (MP3, WAV, M4A) | Oui, transcrit automatiquement |
-| Vidéo et liens YouTube | Oui, transcrits |
-| Connexion à Google Drive, SharePoint, Notion, Slack | Non : les documents s'ajoutent un par un |
-
-### Recherche et réponses
-
-| Fonction | Réponse |
-|---|---|
-| Conversation sur les documents d'un carnet | Oui : les documents cochés sont transmis en entier au modèle |
-| Recherche par mots | Oui |
-| Recherche par le sens | Oui |
-| Recherche combinant mots et sens | Non |
-| Question posée à tous les carnets à la fois | Oui (« Demander ») ; trop lent sans carte graphique, utilisable avec (médiane 7,7 s mesurée sur 16 Go de VRAM) |
-| Indication de la source dans la réponse | Oui, document par document, avec ouverture au clic |
-| Indication de la page ou surlignage du passage | Non |
+| Modèles d'IA installés sur la machine (service compatible OpenAI, Ollama, LM Studio…) | Oui |
+| Services en ligne payants (OpenAI, Anthropic, Mistral, Google…) | Oui, une vingtaine ; non utilisés dans ce manuel |
+| Second tri des passages par un modèle spécialisé (reranker) | Non |
+| PDF, Word, Excel, PowerPoint, OpenDocument, EPUB, texte, Markdown, pages web | Oui |
+| Tableaux dans les documents | Oui, avec le module de lecture avancée (Docling), activé dans cette installation |
+| Documents scannés (reconnaissance de caractères) | Non : le module prévu ne fonctionne pas dans la version 1.15.1 |
+| Audio et vidéo | Oui, transcrits automatiquement |
+| Conversation sur les documents d'un carnet, avec citations | Oui, document par document ; pas de numéro de page |
+| Recherche par mots et recherche par le sens | Oui, séparément ; pas de recherche qui combine les deux |
+| Question posée à tous les carnets à la fois (« Demander ») | Oui |
 | Refus de répondre quand l'information n'est pas dans les documents | Oui |
-
-### Production
-
-| Fonction | Réponse |
-|---|---|
-| Notes | Oui |
-| Résumés et extractions à partir d'une consigne réutilisable | Oui |
+| Notes, résumés et extractions par consigne réutilisable | Oui |
 | Podcast | Oui, de 1 à 4 voix ; une seule voix française disponible avec le serveur de voix utilisé |
-| Rapports, diapositives | Non |
-
-### Installation et exploitation
-
-| Fonction | Réponse |
-|---|---|
-| Installation | Docker, deux conteneurs : l'application et sa base de données |
-| Mémoire nécessaire, hors modèles d'IA | 1 Go ; 4 Go avec le module Docling |
 | Interface en français | Oui |
 | Plusieurs utilisateurs avec leurs propres comptes | Non |
 | API pour automatiser | Oui, complète |
-| Connexion à un assistant IA par MCP | Partiel : serveur MCP externe au projet, une fonction en échec |
 | Fonctionnement hors ligne | Oui, sauf une vérification de version auprès de GitHub, impossible à couper |
-| Envoi de statistiques d'usage | Non |
-| Sauvegarde et restauration | Oui, par copie des dossiers de données |
 
-## 5. Matériel nécessaire
+## Le matériel nécessaire
 
-### Sans carte graphique : configuration minimale, mesurée
+Open Notebook lui-même est léger : environ 0,5 Go de mémoire vive, près de 3 Go quand le module de lecture avancée des documents (Docling) est chargé, et 2,6 Go de disque pour ses images. L'essentiel de la machine sert aux **modèles d'IA**, qui tournent dans le service LLM central. Ce service fonctionne de deux façons : avec une carte graphique NVIDIA, ou sur le processeur seul, plus lentement. Pour l'application, rien ne change : même adresse, mêmes modèles.
+
+Les modèles utilisés sont les mêmes dans les deux cas : un modèle de réponse de 4 milliards de paramètres (Qwen3.5-4B, nommé `chat`), un modèle d'embedding multilingue (bge-m3, nommé `embed`) et un modèle de transcription de la voix (faster-whisper-small, nommé `transcribe`). Chaque question peut envoyer au modèle 16 384 jetons au plus, soit environ 45 000 caractères ou une quinzaine de pages, réflexion du modèle et réponse comprises.
+
+### Configuration minimale sans carte graphique
 
 | Élément | Minimum |
 |---|---|
-| Processeur | 8 cœurs récents (instructions AVX2) |
+| Processeur | 8 cœurs récents |
 | Mémoire vive | 16 Go |
-| Disque libre | 20 Go : application 2,5 Go, module Docling 6 Go, modèles 4 Go, voix 1,3 Go, images Docker |
-| Modèle de réponse | qwen3:4b-instruct : 4 milliards de paramètres, 2,5 Go |
-| Modèle d'embedding | bge-m3 : 1,2 Go, multilingue |
-| Taille de contexte | 16 384 jetons |
+| Disque libre | 25 Go : modèles d'IA environ 6 Go, images du service central et d'Open Notebook, module Docling 6 Go |
+| Mémoire prise par le service central | environ 4,3 Go, les trois modèles permanents chargés |
+| Mémoire prise par Open Notebook | 0,5 Go, 3 Go avec Docling |
+| Ce qui reste sur 16 Go | environ 8 Go pour Windows, le navigateur et les autres programmes |
 
-Mémoire utilisée : 5,5 Go pour les modèles, 1 Go pour l'application (4 Go avec Docling), 0,5 à 2,4 Go pour la voix. Le total reste sous 12 Go, ce qui laisse de la marge sur 16 Go.
+Temps d'attente : le modèle de réponse écrit environ 14 jetons par seconde, soit une réponse de quelques phrases en 10 à 20 secondes, plus le temps de lire les documents envoyés. Le modèle **réfléchit** avant de répondre ; sur processeur seul, une question qui demande un calcul peut prendre environ 2 minutes. L'ajout d'un document de quelques pages prend de quelques secondes à une minute.
 
-**Combien de documents par conversation.** La conversation transmet au modèle tous les documents cochés, en entier. Sans carte graphique, c'est leur volume qui fixe le temps d'attente de la première question :
+### Configuration minimale avec carte graphique NVIDIA
 
-| Volume coché | Équivalent | Première question | Questions suivantes |
-|---|---|---|---|
-| 12 000 caractères | 5 pages de texte | 1 min 30 | 10 à 25 s |
-| 28 000 caractères | 10 pages | 5 min | 10 à 25 s |
-| 45 000 caractères | 15 pages, la limite d'un contexte de 16 384 jetons | 6 à 10 min (estimé) | 10 à 25 s |
-
-Au-delà, la question échoue avec un message d'erreur. Un carnet peut contenir beaucoup plus de documents : seuls ceux cochés en « Contenu complet » comptent.
-
-**Modèles plus légers.** ministral-3:3b donne autant de bonnes réponses que qwen3:4b-instruct, mais met deux fois plus de temps sur les réponses longues. Les modèles de moins de 3 milliards de paramètres n'ont pas été essayés.
-
-### Avec une carte graphique NVIDIA : mesurée sur 16 Go
-
-| Élément | Valeur mesurée |
+| Élément | Minimum |
 |---|---|
-| Carte graphique | 16 Go de mémoire (RTX 4060 Ti) ; VRAM utilisée : 15,7 Go — tient, mais avec peu de marge |
-| Modèle de réponse | Gemma 4 E4B (vLLM, checkpoint officiel Google QAT w4a16) — pas le même modèle que sur CPU : service de modèles partagé avec d'autres projets, voir [manuel 10](10-qualite-performances.md#2-résultats) |
-| Modèle d'embedding | bge-m3, comme sur CPU |
-| Taille de contexte | 32 768 jetons |
-| Effet mesuré | première question en 1,9 s au lieu de plusieurs dizaines de secondes ; mode « Demander » utilisable (28/34 justes, médiane 7,7 s) |
+| Carte graphique | 12 Go de mémoire : les trois modèles permanents en prennent 7,0 Go, Windows et l'affichage environ 1,8 Go ; une carte de 8 Go ne suffit pas ; la machine d'essai en a 16 |
+| Mémoire vive | 16 Go ; la machine d'essai en a 32 |
+| Mémoire vive prise par le service central | environ 5,4 Go |
+| Mémoire prise par Open Notebook | 0,5 Go, 3 Go avec Docling |
 
-Un modèle de 4 milliards de paramètres en 4 bits (la configuration initialement visée, pour comparer au même modèle que le profil CPU) et une carte de 8 Go restent à essayer.
+Temps d'attente : le modèle écrit environ 68 jetons par seconde. Une question sur neuf documents reçoit sa réponse en quelques secondes ; une question de calcul avec réflexion prend 15 à 40 secondes.
 
-## 6. Résultats mesurés
+Le détail des mesures et leurs sources est dans l'annexe [A2](annexes/A2-materiel-et-modeles.md).
 
-Test sur 38 questions dont la réponse est connue, posées à 9 documents d'une entreprise fictive. Modèle qwen3:4b-instruct, sur un ordinateur portable sans carte graphique dédiée.
+## Les résultats mesurés
+
+Test sur 38 questions dont la réponse est connue, posées à 9 documents d'une entreprise fictive, avec le modèle `chat` du service central sur carte graphique ; détail dans l'annexe [A1](annexes/A1-qualite-et-performances.md).
 
 | Mesure | Résultat |
 |---|---|
-| Réponses justes | 28 sur 34 ; les 6 erreurs portent sur le document scanné, illisible |
+| Réponses justes | 28 sur 34 ; les 6 erreurs portent sur le contrat scanné, illisible |
 | Questions sans réponse dans les documents | 4 refus sur 4, aucune réponse inventée |
-| Temps de réponse | 7 secondes en général ; environ 1 minute 30 pour la première question d'une conversation, le temps que le modèle lise les documents |
-| Ajout des 9 documents | 1 minute 25 |
-| Podcast de 77 secondes | généré en 5 minutes |
+| Temps de réponse | 9 secondes en général, jusqu'à une minute quand le modèle réfléchit longtemps |
+| Ajout des 9 documents | environ une minute (quelques minutes avec le résumé automatique de chaque document) |
+| Document trop long pour une question | refusé avec un message d'erreur clair, jamais tronqué en silence |
 
-Sur carte graphique (16 Go de VRAM), mêmes 28 réponses justes sur 34 et 4 refus sur 4, médiane 1,9 s au lieu de 7 s ; mode « Demander » utilisable (28/34, médiane 7,7 s). Détail et comparaison complète : [Qualité et performances](10-qualite-performances.md).
+## Bon à savoir
 
-## 7. Pour aller plus loin
-
-| Pour | Lire |
-|---|---|
-| Installer | [01. Installation](01-installation.md) |
-| Premier carnet, première réponse | [02. Prise en main](02-prise-en-main.md) |
-| Trois cas d'usage complets | [09. Recettes](09-recettes.md) |
-| Limites connues et questions en suspens | [index, « Ce qui reste ouvert »](README.md#ce-qui-reste-ouvert) |
-
-Les réponses de cette page viennent des essais du 8 novembre 2026 et du code source de la version 1.15.1 : [relevé GitHub](../../outils/resultats/open-notebook/identite-github-2026-11-08.json), [analyse du code](../../outils/resultats/open-notebook/cadrage-source.md), [résultats des essais](../../outils/resultats/open-notebook/).
+- Une réponse citée n'est pas forcément juste : la citation désigne le document, pas la phrase exacte. Les chiffres importants se relisent dans la source.
+- La conversation envoie au modèle les documents choisis **en entier**, à chaque question : plus le carnet est gros, plus l'attente est longue. Le chapitre [06](manuel/06-discuter-avec-les-sources.md) explique comment choisir ce qui est envoyé.

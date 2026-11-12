@@ -2,29 +2,36 @@
 
 ## Solutions décrites
 
-| Solution | Version décrite | Date des essais | Machine de test | Langue de l'interface | Manuels |
+| Solution | Version décrite | Date des essais | Machine de test | Langue de l'interface | Manuel |
 |---|---|---|---|---|---|
-| Open Notebook | 1.15.1 | 2026-11-08 | Intel Core Ultra 7 255H, 15,3 Go de RAM (WSL), sans GPU NVIDIA ; socle Ollama sur CPU | français (langue du navigateur) | [présentation](open-notebook/presentation.md), [index](open-notebook/README.md) |
+| Open Notebook | 1.15.1 | 2026-11-12 | Ryzen 5 9600X, 32 Go, RTX 4060 Ti 16 Go, WSL2 ; modèles du service LLM central (profil `gpu`) | français | [manuel](open-notebook/README.md), [présentation](open-notebook/presentation.md) |
+
+Dépôt de chaque solution : `https://github.com/floSa/<Solution>-Test-Bench` (ici [Open-Notebook-Test-Bench](https://github.com/floSa/Open-Notebook-Test-Bench)).
 
 ## Comparatif du banc
 
-Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json)), même corpus fictif, même modèle (qwen3:4b-instruct sur Ollama 0.40.15, CPU, 8 fils de calcul), même machine.
+Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json)), même corpus fictif, mêmes modèles du service LLM central (`chat` = Qwen3.5-4B, réflexion activée, 16 384 jetons ; `embed` = bge-m3), même machine.
 
-Mode chat de carnet, toutes les sources en « full content », Docling actif, `num_ctx` 16384 [Vérifié] :
-
-| Solution | Exactes (34 questions avec réponse) | Refus corrects (4 pièges) | Bon document cité | Médiane | p95 | Indexation du corpus | Pic RAM de l'application | Détail |
-|---|---|---|---|---|---|---|---|---|
-| Open Notebook 1.15.1 | 28/34 | 4/4 | 28 | 7,4 s | 24,2 s | 84 s | 3,0 Go | [Qualité et performances](open-notebook/10-qualite-performances.md) |
+| Solution | Réglages | Exactes (34 questions avec réponse) | Refus corrects (4 pièges) | Bon document cité | Médiane | p95 | Indexation du corpus | Pic RAM de l'application | Détail |
+|---|---|---|---|---|---|---|---|---|---|
+| Open Notebook 1.15.1 | conversation de carnet, toutes les sources en contenu complet, Docling actif, pas de reranker possible | 28/34 | 4/4 | 29 | 8,7 s | 27,9 s | 65 s | 4,7 Go | [évaluation](open-notebook/annexes/A1-qualite-et-performances.md), [résultat brut](../outils/resultats/open-notebook/banc-2026-11-12-central-chat.json) |
 
 Les 6 erreurs d'Open Notebook viennent toutes du PDF scanné, illisible faute d'OCR opérationnel dans l'image 1.15.1. Les autres solutions de la série seront ajoutées à ce tableau après leurs essais.
+
+### Bancs sur l'ancienne pile (modèles différents, non comparable tel quel)
+
+| Solution | Service de modèles | Modèle | Exactes | Refus | Médiane | Résultat brut |
+|---|---|---|---|---|---|---|
+| Open Notebook 1.15.1 | Ollama 0.40.15 sur processeur (8 novembre) | qwen3:4b-instruct | 28/34 | 4/4 | 7,4 s | [banc](../outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent-ollama040.json) |
+| Open Notebook 1.15.1 | vLLM sur carte graphique (9 novembre) | Gemma 4 E4B | 28/34 | 4/4 | 1,9 s | [banc](../outils/resultats/open-notebook/banc-2026-11-09-gpu-vllm-docling.json) |
 
 ## Parcours de lecture conseillés
 
 | Profil | Parcours |
 |---|---|
-| Découvrir le RAG local | [glossaire](glossaire.md), puis les notions fondamentales de la solution ([Open Notebook](open-notebook/00-notions-fondamentales.md)) |
-| Installer et essayer rapidement | installation puis prise en main ([Open Notebook](open-notebook/01-installation.md)) |
-| Choisir entre solutions | comparatif ci-dessus, puis « Qualité et performances » de chaque solution |
+| Découvrir le RAG local | [glossaire](glossaire.md), puis le chapitre « Découvrir » de chaque solution ([Open Notebook](open-notebook/manuel/01-decouvrir-open-notebook.md)) |
+| Installer et essayer rapidement | chapitres 02 à 04 de chaque manuel ([Open Notebook](open-notebook/manuel/02-installer-open-notebook.md)) |
+| Choisir entre solutions | comparatif ci-dessus, puis l'annexe A1 de chaque solution |
 
 ## Conventions
 
@@ -37,4 +44,4 @@ Les 6 erreurs d'Open Notebook viennent toutes du PDF scanné, illisible faute d'
 | [Testée] | commande exécutée pendant les essais |
 | [Aide] | commande lue dans l'aide, non exécutée |
 
-Les libellés de l'interface sont cités tels qu'affichés. Les données sont fictives (entreprise Vélanor).
+Les étiquettes ne figurent que dans la partie 2 des manuels (annexes) ; la partie 1 se lit sans elles. Les libellés de l'interface sont cités tels qu'affichés. Les données sont fictives (entreprise Vélanor).
