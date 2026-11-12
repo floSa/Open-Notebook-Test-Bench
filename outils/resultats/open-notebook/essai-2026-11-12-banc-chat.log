@@ -1,0 +1,71 @@
+               total        used        free      shared  buff/cache   available
+Mem:           32098       14050         222         913       19109       18048
+== http://127.0.0.1:8080/v1/models
+  chat (chat)
+  embed (embedding)
+  rerank (rerank)
+  transcribe (audio_transcription)
+  gemma-4-e4b (chat)
+  qwen3.5-4b (chat)
+  bge-m3 (embedding)
+  bge-reranker-v2-m3 (rerank)
+  faster-whisper-small (audio_transcription)
+== chat (réflexion coupée pour l'essai)
+  Bonjour
+== embed
+  dimensions : 1024
+== rerank
+  doc 0 score 9.05
+  doc 1 score -8.63
+== transcribe (corpus/documents/message-vocal-production.mp3)
+  Message vocale de Julien Moreau, directeur de production chez Vélanor, enregistrait le 3 novembre VVTSEC. La ligne d'assoblage numéro 3 de Nantes sera arrêtée du 2 au 6 mars VVTSI pour maintenance. Pe
+  contrat-batterix-scan.pdf          {'status': 'failed', 'detail': {'status': 'failed', 'message': 'Source processing failed', 'processing_info': {'status': 'failed', 'started_at': None, 'completed_at': None, 'error': 'Could not extract any text content from this source. The content may be empty, inaccessible, or in an unsupported format.', 'result': None}, 'command_id': 'command:ibubeuosxeitqfy8359c'}, 'duree_s': 10.4}
+  cse-2025-10-14.md                  {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 528, 'duree_s': 5.4}
+  faq-sav.html                       {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 594, 'duree_s': 5.4}
+  message-vocal-production.mp3       {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 351, 'duree_s': 10.5}
+  procedure-batteries.docx           {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 1085, 'duree_s': 5.4}
+  rapport-annuel-2025.pdf            {'status': 'completed', 'embedded_chunks': 10, 'caracteres': 4319, 'duree_s': 10.5}
+  stocks-octobre-2025.xlsx           {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 1110, 'duree_s': 5.4}
+  strategie-2026.pptx                {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 516, 'duree_s': 5.4}
+  supplier-audit-batterix-en.pdf     {'status': 'completed', 'embedded_chunks': 1, 'caracteres': 430, 'duree_s': 5.4}
+indexation : 64.9 s
+Q01 tableau         OK     7.3s  "Le chiffre d'affaires de Vélanor en 2025 est de **48,6 M€**, soit une croissance de 12,4 %"
+Q02 fait simple     OK    20.1s  "Selon le rapport annuel de Vélanor pour l'année 2025, l'entreprise a été fondée en **2014*"
+Q03 fait simple     OK     6.0s  "D'après le rapport annuel 2025 de Vélanor SAS [source:4wo3g85n2n1j2w7viz2x], la présidente"
+Q04 fait simple     OK     4.7s  "Selon le rapport annuel 2025 de Vélanor SAS [source:4wo3g85n2n1j2w7viz2x], l'adresse du si"
+Q05 tableau         OK     7.3s  "Selon le rapport annuel de Vélanor pour 2025, l'entreprise comptait **412 salariés** au 31"
+Q06 tableau         OK     8.7s  "Le chiffre d'affaires du troisième trimestre de 2025 était de **14,2 M€** [source:4wo3g85n"
+Q07 tableau         OK     7.9s  'Selon le rapport annuel de 2025, **15 400 unités** du modèle Sèvre Trail ont été produites'
+Q08 tableau         OK     9.6s  'Selon le rapport annuel 2025 de Vélanor, le prix public du modèle Erdre Cargo est de **4 2'
+Q09 tableau         OK    15.7s  'Selon le rapport annuel 2025 de Vélanor, **97 salariés** travaillent au site de Cholet (po'
+Q10 fait simple     OK     7.4s  "La part d'aluminium recyclé dans les cadres de vélos Vélanor est de **82 %** [source:4wo3g"
+Q11 fait simple     OK    17.4s  'Selon le Rapport annuel 2025 de Vélanor SAS, le taux de recyclage des batteries usagées co'
+Q12 tableau         OK     8.7s  "D'après les informations disponibles dans le rapport annuel 2025 de Vélanor, le fournisseu"
+Q13 tableau         OK    17.1s  'Selon le Rapport annuel 2025 [source:4wo3g85n2n1j2w7viz2x], Vélanor a dégagé un résultat n'
+Q14 fait simple     OK     6.3s  "Selon le rapport annuel 2025 de Vélanor, **le taux de retour sous garantie s'établit à 1,8"
+Q15 scan            NON   13.5s  "Je vais vous aider à rechercher l'information sur le prix unitaire des batteries dans le c"
+Q16 scan            NON    7.0s  "D'après les données disponibles, le délai de livraison moyen constaté pour les batteries a"
+Q17 scan            NON    8.8s  "Je n'ai pas trouvé d'information spécifique sur les pénalités de retard dans le contrat av"
+Q18 scan            NON   12.0s  "Je ne trouve pas d'information spécifique sur le volume minimal annuel de batteries que le"
+Q19 fait simple     OK    11.2s  'Selon la procédure interne en vigueur, les batteries doivent être stockées dans une plage '
+Q20 fait simple     OK     6.6s  "D'après les documents du projet, le responsable de la procédure de charge et stockage des "
+Q21 tableau         OK     4.9s  'Le local B2 est inspecté **le premier lundi de chaque mois**. [source:ggmyu6suudq3bwyc4h7c'
+Q22 fait simple     OK     6.3s  'Le prix du modèle **Vilaine Compact** est de **2 490 € TTC**. Ce vélo pliant électrique fe'
+Q23 fait simple     OK     6.3s  "La capacité de l'usine de Saint-Nazaire prévue pour son ouverture en septembre 2026 est de"
+Q24 tableau         OK    19.1s  "D'après le fichier « stocks-octobre-2025.xlsx », le stock restant pour les batteries BAT-4"
+Q25 fait simple     OK     5.0s  'La durée de garantie du cadre est de **7 ans** [source:1gcnjrpzbahfy91nmeli].'
+Q26 fait simple     OK     6.7s  'Le numéro de téléphone du service après-vente est **02 40 00 12 34**. [source:1gcnjrpzbahf'
+Q27 fait simple     OK     5.5s  'Selon le compte rendu de la réunion du CSE (Comité Social et Économique) tenue le 14 octob'
+Q28 anglais         OK     5.0s  'Batterix obtained an **overall score of 87 out of 100** at the supplier audit [source:lpor'
+Q29 anglais         OK     7.2s  "Le taux de cellules défectueuses mesuré chez Batterix lors de l'audit s'établit à **0,3 %*"
+Q30 multi-documents NON   11.9s  "Selon les documents dans le contexte, voici l'information disponible concernant le délai d"
+Q31 multi-documents NON   27.9s  'D’après le document de l’audit fournisseur [source:lportkt7w3fp9l9cha9], **Batterix GmbH a'
+Q32 multi-documents OK    58.5s  "Vélanor vise un chiffre d'affaires de **55 M€** pour l'année 2026 [source:oqgnw7a7ky4crw7z"
+Q33 audio           OK    57.7s  "D'après le message vocal du directeur de production [source:443buktiovu6himla7ek], la lign"
+Q34 audio           OK     9.8s  'Le directeur de production chez Vélanor est **Julien Moreau**, comme indiqué dans un messa'
+Q35 piège           OK    12.1s  "Je ne trouve pas d'information spécifique sur le chiffre d'affaires de Vélanor en 2022 dan"
+Q36 piège           OK    10.6s  "Je n'ai pas trouvé d'information sur le directeur financier de Vélanor dans les documents "
+Q37 piège           OK    10.4s  "D'après les documents disponibles, il n'y a **aucune mention de ventes de trottinettes éle"
+Q38 piège           OK     8.8s  "D'après les documents disponibles dans le contexte, je ne trouve pas d'information sur le "
+-> outils/resultats/open-notebook/banc-2026-11-12-central-chat.json
+exactes 28/34, refus 4/4, bon document cité 29, p50 8.69 s, p95 27.92 s
