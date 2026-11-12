@@ -58,7 +58,7 @@ La page a trois colonnes : SOURCES (les documents), NOTES (ce qu'on garde) et DI
 
 **Étape 5. Choisir le fichier**
 *Où* : assistant, étape 1 « Ajouter la source ».
-Cliquer sur l'onglet « Télécharger un fichier », puis choisir `faq-sav.html` dans la fenêtre de l'explorateur de fichiers.
+Cliquer sur l'onglet « Télécharger un fichier », puis choisir `faq-sav.html` dans la fenêtre de l'explorateur de fichiers de Windows. Le fichier est dans le dépôt, côté Linux : dans la barre d'adresse de l'explorateur, taper `\\wsl$\Ubuntu\home\<utilisateur>\Open-Notebook-Test-Bench\corpus\documents` (remplacer `<utilisateur>` par le nom d'utilisateur Ubuntu).
 
 ![Assistant, étape 1 : choix du fichier](../img/04-premiere-question/04-assistant-fichier.png)
 *Écran : assistant « Ajouter une nouvelle source », étape 1, onglet « Télécharger un fichier ».*

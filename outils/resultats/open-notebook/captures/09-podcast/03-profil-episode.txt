@@ -249,22 +249,24 @@ Facultatif. Limite le nombre de tokens que chaque étape de génération peut pr
 Description
 CONFIGURATION DES INTERVENANTS
 Profil de l'intervenant *
-business_panel
+duo-fr
 business_panel
 duo-fr
 solo_expert
 tech_experts
 GÉNÉRATION DU PLAN
 Modèle de plan *
-Sélectionnez le modèle de plan
+chat
+openai_compatible
 chatopenai_compatible
 GÉNÉRATION DE LA TRANSCRIPTION
 Modèle de transcription *
-Sélectionnez le modèle de transcription
+chat
+openai_compatible
 chatopenai_compatible
 LANGUE DU PODCAST
 Langue
-Sélectionnez une langue (optionnel)
+French (France) (fr-FR)
 Abkhazian (Georgia) (ab-GE)
 Afar (Ethiopia) (aa-ET)
 Afrikaans (South Africa) (af-ZA)

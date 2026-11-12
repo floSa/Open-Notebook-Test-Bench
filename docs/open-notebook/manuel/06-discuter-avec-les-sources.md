@@ -30,13 +30,14 @@ La conversation d'un carnet ne cherche pas les passages utiles : elle envoie au 
 Chaque clic fait passer la source au mode suivant, dans cet ordre : contenu complet (icône en forme de page), exclue, aperçus seuls (icône d'ampoule), puis de nouveau contenu complet. Le compteur se met à jour aussitôt.
 
 ![Modes de contexte des sources](../img/06-discuter/02-modes-de-contexte.png)
-*Écran : carnet « Démo Vélanor », une source passée en aperçus.*
+*Écran : carnet « Démo Vélanor », une source dans chaque mode.*
 
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | Icône en forme de page | source envoyée en contenu complet |
-| 2 | Icône d'ampoule | source envoyée par son seul aperçu (résumé) |
-| 3 | « Context » | ce qui partira : ici 1 source en aperçu, 9 sources complètes et 1 note (chapitre [07](07-notes-et-transformations.md)), environ 6 300 jetons |
+| 2 | Œil barré | source exclue : rien ne part |
+| 3 | Icône d'ampoule | source envoyée par son seul aperçu (résumé) |
+| 4 | « Context » | ce qui partira : ici 1 source en aperçu, 8 sources complètes et 2 notes (chapitre [07](07-notes-et-transformations.md)), environ 6 300 jetons |
 
 *Résultat* : un nouveau clic sur l'icône remet la source dans le cycle.
 
@@ -80,8 +81,8 @@ Chaque clic fait passer la source au mode suivant, dans cet ordre : contenu comp
 *Où* : colonne DISCUTER AVEC LE CARNET › « Sessions ».
 Une **session** est une conversation : chaque carnet peut en garder plusieurs, chacune avec son historique. Séparer les sujets garde les historiques courts, donc les réponses rapides.
 
-![Fenêtre Sessions de Chat](../img/06-discuter/05-sessions.png)
-*Écran : fenêtre « Sessions de Chat ».*
+![Fenêtre Sessions](../img/06-discuter/05-sessions.png)
+*Écran : fenêtre « Sessions ».*
 
 | N° | Élément | Rôle |
 |---|---|---|

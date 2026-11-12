@@ -158,7 +158,7 @@ Saisir un nom, la clé et l'adresse, puis valider.
 
 **Étape 11. Ajouter les modèles `chat`, `embed` et `transcribe`**
 *Où* : carte `llm-central` › « Models ».
-La fenêtre « Découvrir les modèles » liste les modèles du service. Choisir d'abord le type, cocher le modèle, puis « Ajouter ». Recommencer pour chaque type : « Language » avec `chat`, « Embedding » avec `embed`, « STT » avec `transcribe`. Ne pas choisir les autres noms de la liste (`qwen3.5-4b`, `bge-m3`…) : ce sont les noms réels des modèles, qui peuvent changer ; les noms fixes restent.
+La fenêtre « Découvrir les modèles » liste tous les modèles du service, quel que soit le type choisi. Choisir d'abord le type, cocher seulement le modèle de ce type, puis cliquer sur « Ajouter (1) » ; ne pas utiliser « Ajouter la sélection », qui coche tous les modèles de la liste. Recommencer pour chaque type : « Language » avec `chat`, « Embedding » avec `embed`, « STT » avec `transcribe`. Ne pas choisir les autres noms de la liste (`qwen3.5-4b`, `bge-m3`…) : ce sont les noms réels des modèles, qui peuvent changer ; les noms fixes restent.
 
 ![Fenêtre Découvrir les modèles](../img/03-premiers-pas/11-decouverte.png)
 *Écran : fenêtre « Découvrir les modèles », type « Language ».*
@@ -197,7 +197,7 @@ Changer de modèle d'embedding demande une confirmation, parce que les documents
 | 1 | « Changement de modèle d'embedding » | prévient que les index de recherche doivent être reconstruits |
 | 2 | « Changer & Aller à la reconstruction » | enregistre le choix et ouvre la page « Avancé », où se lance la reconstruction (chapitre [10](10-regler-l-application.md)) ; « Changer le modèle uniquement » enregistre sans ouvrir cette page |
 
-*Résultat* : la page « Avancé » s'ouvre. Revenir sur « Modèles » pour finir les réglages.
+*Résultat* : la page « Avancé » s'ouvre. Sur une installation sans document, il n'y a rien à reconstruire : revenir sur « Modèles » pour finir les réglages. Si des documents ont déjà été ajoutés, lancer la reconstruction comme au chapitre [10](10-regler-l-application.md), étapes 3 et 4.
 
 **Étape 14. Vérifier les attributions**
 *Où* : page « Modèles », cadre « Attributions des modèles par défaut ».
@@ -227,7 +227,7 @@ Dans le même cadre, sous le petit titre « Avancé » (à ne pas confondre avec
 |---|---|---|
 | Le test de connexion échoue | adresse ou clé fausse, ou service central arrêté | vérifier l'adresse (avec `/v1`) et la clé ; démarrer le service (chapitre [02](02-installer-open-notebook.md), étape 2) |
 | Bandeau « Modèles requis manquants » | modèle de chat ou d'embedding non choisi | étapes 12 et 13 |
-| La liste « Découvrir les modèles » est vide | mauvais type choisi | choisir le bon « Type de modèle » |
+| Un modèle est rangé sous le mauvais usage | modèle coché avec le mauvais « Type de modèle » | le supprimer sur la carte (corbeille), puis le rajouter avec le bon type |
 
 Autres cas : chapitre [12](12-en-cas-de-probleme.md).
 

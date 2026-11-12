@@ -6,7 +6,7 @@
 
 ## Ce qu'il faut savoir
 
-Les réglages de la page « Paramètres » s'appliquent aux documents ajoutés **après** leur modification : un document déjà lu ne change pas, sauf s'il est retraité (« Réessayer le traitement ») ou ajouté de nouveau. La page « Avancé » donne la version installée et permet de **reconstruire les index**, c'est-à-dire de recalculer les embeddings de tous les documents : indispensable après un changement de modèle d'embedding (chapitre [03](03-premiers-pas.md), étape 13), sinon la recherche par le sens compare des nombres qui ne correspondent plus.
+Les réglages de la page « Paramètres » s'appliquent aux documents ajoutés **après** leur modification : un document déjà lu ne change pas, sauf s'il est ajouté de nouveau (ou, pour une source en échec, retraité par « Réessayer le traitement »). La page « Avancé » donne la version installée et permet de **reconstruire les index**, c'est-à-dire de recalculer les embeddings de tous les documents : indispensable après un changement de modèle d'embedding (chapitre [03](03-premiers-pas.md), étape 13), sinon la recherche par le sens compare des nombres qui ne correspondent plus.
 
 ## Régler la lecture des documents
 
@@ -77,7 +77,7 @@ Les réglages de la page « Paramètres » s'appliquent aux documents ajoutés *
 | Symptôme | Cause | Que faire |
 |---|---|---|
 | Recherche par le sens sans résultat pertinent après un changement de modèle | index calculés avec l'ancien modèle | reconstruire les index (étapes 3 et 4) |
-| Un réglage n'a pas d'effet sur un document | le document a été lu avant le changement | « Réessayer le traitement » ou ajouter le document de nouveau |
+| Un réglage n'a pas d'effet sur un document | le document a été lu avant le changement | supprimer la source et ajouter le document de nouveau (« Réessayer le traitement » n'apparaît que sur une source en échec) |
 
 ---
 *Version décrite : Open Notebook 1.15.1, essais du 12 novembre 2026. Détails et preuves : [fonctionnement interne](../annexes/A5-fonctionnement-interne.md), [rapport d'essais](../annexes/A6-rapport-d-essais.md).*

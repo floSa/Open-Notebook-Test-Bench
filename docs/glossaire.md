@@ -38,6 +38,6 @@ Termes employés dans la série de manuels. Quand un terme est propre à une sol
 | STT, TTS | Transcription de la parole en texte ; synthèse vocale du texte en parole. |
 | SurrealDB | Base de données utilisée par Open Notebook pour les carnets, les sources et les vecteurs. |
 | Top-k | Nombre de passages retrouvés et transmis au modèle. |
-| Transformation (Open Notebook) | Consigne appliquée à une source pour produire une note (résumé, points clés, etc.). |
+| Transformation (Open Notebook) | Consigne appliquée à une source pour produire une analyse (résumé, points clés, etc.), rangée dans l'onglet « Analyses » de la source. |
 | vLLM | Serveur de modèles rapide pour GPU NVIDIA, compatible avec l'API d'OpenAI. Utilisé pour un banc GPU de la série le 9 novembre 2026, remplacé depuis par le service LLM central. |
 | WSL2 | Sous-système Linux de Windows ; Docker Desktop y fait tourner ses conteneurs. |

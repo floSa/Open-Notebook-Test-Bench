@@ -15,7 +15,7 @@ Chaque cas utilise une **session** séparée : l'historique reste court et chaqu
 Donner un titre à la session, puis « Créer ».
 
 ![Nouvelle session](../img/11-cas-pratiques/01-nouvelle-session.png)
-*Écran : fenêtre « Sessions de Chat », création d'une session.*
+*Écran : fenêtre « Sessions », création d'une session.*
 
 | N° | Élément | Rôle |
 |---|---|---|
@@ -81,7 +81,7 @@ Question : « Rédige une synthèse en cinq puces pour la direction : chiffre d'
 *Où* : colonne DISCUTER AVEC LE CARNET › « Sessions ».
 
 ![Trois sessions](../img/11-cas-pratiques/05-trois-sessions.png)
-*Écran : fenêtre « Sessions de Chat ».*
+*Écran : fenêtre « Sessions ».*
 
 | N° | Élément | Rôle |
 |---|---|---|

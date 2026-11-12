@@ -475,7 +475,9 @@ def discuter(s):
     poser(s, "Combien de salariés compte Vélanor fin 2025, et où se trouve son siège ?")
     cit = citation(s); bulle = cit.locator("xpath=ancestor::div[contains(@class,'rounded')][1]")
     icones = bulle.locator("xpath=following::button[position()<=2]")
-    s.ecran("03-reponse-citee", [(bulle, "Réponse"), (cit, "Citation"), (icones.nth(0), "Enregistrer en note"), (icones.nth(1), "Copier")])
+    # éléments tous visibles sans défilement : la zone de discussion défile seule et décalerait les cadres
+    rep = bulle.get_by_text(re.compile("412 salariés")).first
+    s.ecran("03-reponse-citee", [(rep, "Réponse"), (cit, "Citation"), (icones.nth(0), "Enregistrer en note"), (icones.nth(1), "Copier")])
     bouton(s, "chat", exact=True).click(); d = dialogue(s); d.wait_for(state="visible"); pg.wait_for_timeout(800)
     s.ecran("04-modele-de-session", [(d.get_by_role("combobox").first, "Modèle"), (d.get_by_role("button", name="Réinitialiser"), "Réinitialiser"),
                                      (d.get_by_role("button", name="Enregistrer les modifications"), "Enregistrer les modifications")])
@@ -962,7 +964,49 @@ def retouches(s):
     pg.keyboard.press("Escape")
 
 
-SCENARIOS = {"retouches": retouches, "09b": podcast_fin, "11": cas_pratiques, "12": problemes, "09": podcast, "07": notes, "08": rechercher, "10": regler, "06": discuter, "02": installer, "03": premiers_pas, "04": premiere_question, "05": sources, "05b": sources_suite}
+def retouches2(s):
+    """Captures reprises après la seconde relecture novice : les trois modes de contexte côte à côte, citation d'une réponse,
+    onglet « Profils » sans fenêtre, profil d'épisode rempli (fenêtre fermée par Échap, rien n'est créé)."""
+    pg = s.pg
+    nb = carnet(DEMO)
+    s.chapitre = "06-discuter"
+    s.aller(f"/notebooks/{nb}", attendre=pg.get_by_text("faq-sav.html").first)
+    bouton(s, "Écrire une note").locator("xpath=following::button[1]").click(); pg.wait_for_timeout(800)
+    bouton(s, "Contexte").click(); pg.get_by_role("menuitem", name="Tout inclure (contenu complet)").click(); pg.wait_for_timeout(1500)
+    exclu = icone_contexte(s, "procedure-batteries.docx"); exclu.click(); pg.wait_for_timeout(1200)
+    apercu = icone_contexte(s, "message-vocal-production.mp3"); apercu.click(); pg.wait_for_timeout(1000); apercu.click(); pg.wait_for_timeout(1200)
+    print("contexte trois modes :", contexte_chat(s).locator("xpath=..").inner_text().replace("\n", " "), flush=True)
+    s.ecran("02-modes-de-contexte", [(icone_contexte(s, "faq-sav.html"), "Contenu complet"), (exclu, "Exclue"), (apercu, "Aperçus"),
+                                     (contexte_chat(s), "Context")])
+    bouton(s, "Contexte").click(); pg.get_by_role("menuitem", name="Tout inclure (contenu complet)").click(); pg.wait_for_timeout(1500)
+    bouton(s, "Sessions").click(); d = dialogue(s); d.wait_for(state="visible"); pg.wait_for_timeout(800)
+    d.get_by_text(re.compile("^Combien de salariés")).first.click(); pg.wait_for_timeout(2500)
+    if dialogue(s).count() and dialogue(s).is_visible():
+        pg.keyboard.press("Escape"); pg.wait_for_timeout(500)
+    cit = pg.get_by_text(re.compile(r"^source:[a-z0-9]+$")).last
+    cit.scroll_into_view_if_needed(); pg.wait_for_timeout(500)
+    bulle = cit.locator("xpath=ancestor::div[contains(@class,'rounded')][1]")
+    icones = bulle.locator("xpath=following::button[position()<=2]")
+    # éléments tous visibles sans défilement : la zone de discussion défile seule et décalerait les cadres
+    rep = bulle.get_by_text(re.compile("412 salariés")).first
+    s.ecran("03-reponse-citee", [(rep, "Réponse"), (cit, "Citation"), (icones.nth(0), "Enregistrer en note"), (icones.nth(1), "Copier")])
+    s.chapitre = "09-podcast"
+    s.aller("/podcasts", attendre=pg.get_by_role("tab", name="Profils"))
+    pg.get_by_role("tab", name="Profils").click(); pg.wait_for_timeout(1200)
+    s.ecran("01b-onglet-profils", [(bouton(s, "Créer un intervenant"), "Créer un intervenant"), (bouton(s, "Créer un profil"), "Créer un profil")])
+    pg.set_viewport_size({"width": 1440, "height": 1300})
+    bouton(s, "Créer un profil").click(); d = dialogue(s); d.wait_for(state="visible"); pg.wait_for_timeout(800)
+    nom = champ(d, "Nom du profil"); nom.fill("court-fr"); seg = champ(d, "Segments"); seg.fill("3")
+    listes = d.get_by_role("combobox")
+    choisir_option(s, listes.nth(0), "^duo-fr"); choisir_option(s, listes.nth(1), "^chat"); choisir_option(s, listes.nth(2), "^chat")
+    choisir_option(s, listes.nth(3), r"\(fr-FR\)")
+    nom.scroll_into_view_if_needed(); pg.wait_for_timeout(300)
+    s.ecran("03-profil-episode", [(nom, "Nom du profil"), (seg, "Segments"), (listes.nth(0), "Profil de l'intervenant"),
+                                  (listes.nth(1), "Modèle de plan"), (listes.nth(2), "Modèle de transcription"), (listes.nth(3), "Langue")])
+    pg.keyboard.press("Escape")
+
+
+SCENARIOS = {"retouches2": retouches2, "retouches": retouches, "09b": podcast_fin, "11": cas_pratiques, "12": problemes, "09": podcast, "07": notes, "08": rechercher, "10": regler, "06": discuter, "02": installer, "03": premiers_pas, "04": premiere_question, "05": sources, "05b": sources_suite}
 
 if __name__ == "__main__":
     with sync_playwright() as p:

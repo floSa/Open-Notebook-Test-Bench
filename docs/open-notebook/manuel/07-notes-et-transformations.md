@@ -64,11 +64,11 @@ Une consigne courte, en français, avec un format de sortie imposé, convient mi
 | 3 | « Prompt Système » | la consigne : « Réponds en français. À partir du document, dresse une liste à puces des chiffres clés (au plus 8), chacun avec son unité et ce qu'il mesure. N'invente aucun chiffre. » |
 | 4 | « Créer une nouvelle » | enregistre la transformation |
 
-*Résultat* : « Chiffres clés » apparaît dans la liste. La case « Suggérer par défaut sur les nouvelles sources » de la même fenêtre la cocherait d'office dans l'assistant d'ajout.
+*Résultat* : la transformation apparaît dans la liste et dans le bac à sable sous son nom, `fiche-chiffres-fr` ; ses analyses portent son titre, « Chiffres clés ». La case « Suggérer par défaut sur les nouvelles sources » de la même fenêtre la cocherait d'office dans l'assistant d'ajout.
 
 **Étape 5. Essayer la transformation dans le bac à sable**
 *Où* : Transformations › onglet « Bac à sable (Playground) ».
-Choisir la transformation et le modèle, coller un texte, puis « Exécuter la transformation ». Le résultat s'affiche sous « Sortie », en bas de la page ; rien n'est enregistré.
+Choisir la transformation et le modèle, coller un texte, puis « Exécuter la transformation ». Pour l'exemple, ouvrir `corpus/documents/cse-2025-10-14.md` du dépôt dans un éditeur de texte, tout copier, puis coller dans « Texte d'entrée ». Le résultat s'affiche sous « Sortie », en bas de la page ; rien n'est enregistré.
 
 ![Bac à sable](../img/07-notes/05-bac-a-sable.png)
 *Écran : Transformations, onglet « Bac à sable (Playground) ».*

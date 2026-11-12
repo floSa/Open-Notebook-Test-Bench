@@ -27,7 +27,7 @@ Démo Vélanor
 Archiver
 Supprimer
 Dossier de démonstration : documents fictifs de l'entreprise Vélanor
-Créé à il y a 25 minutes •Mis à jour à il y a 7 minutes
+Créé à il y a environ 1 heure •Mis à jour à il y a 1 minute
 SOURCES
 Ajouter la source
 rapport-annuel-2025.pdf
@@ -101,10 +101,10 @@ Références: [1] - source:60vesl1eolxx671t4s50
 Context:
 10
 •
-1
-6.6K tokens
+2
+7.0K tokens
 /
-22.9K chars
+24.2K chars
 Modèle
 chat
 Actions rapides

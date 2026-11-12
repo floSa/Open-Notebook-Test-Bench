@@ -21,10 +21,22 @@ Un **podcast** est un épisode audio où une à quatre voix de synthèse présen
 | 3 | « Générer un podcast » | lance un nouvel épisode (étape 4) |
 | 4 | « Rafraîchir » | met à jour l'état des épisodes |
 
+Le bandeau rouge « Configuration requise », en haut de la page, est sans gravité : il concerne des profils d'exemple fournis sans voix (chapitre [12](12-en-cas-de-probleme.md), cas 5).
+
 ## Régler les voix et le déroulé
 
 **Étape 2. Créer le profil d'intervenants**
-*Où* : onglet « Profils » › « Créer un intervenant ».
+*Où* : onglet « Profils ».
+
+![Onglet Profils](../img/09-podcast/01b-onglet-profils.png)
+*Écran : Podcasts, onglet « Profils ».*
+
+| N° | Élément | Rôle |
+|---|---|---|
+| 1 | « Créer un intervenant » | crée un profil d'intervenants (les voix) : à utiliser à cette étape |
+| 2 | « Créer un profil » | crée un profil d'épisode (étape 3) |
+
+*Où* : fenêtre « Créer un profil d'intervenant », ouverte par « Créer un intervenant ».
 Choisir le modèle vocal, nommer le profil, puis décrire chaque intervenant ; « Ajouter un intervenant » en ajoute un, jusqu'à quatre. Ici, profil `duo-fr` : Camille (voix `ff_siwis`, animatrice) et Hugo (voix `am_michael`, analyste).
 
 ![Fenêtre Créer un profil d'intervenant](../img/09-podcast/02-profil-intervenants.png)

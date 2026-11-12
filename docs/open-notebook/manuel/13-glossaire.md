@@ -26,7 +26,7 @@ Les libellés de l'interface sont cités entre guillemets, tels qu'ils s'affiche
 | Jeton | unité de texte comptée par le modèle, environ trois quarts de mot en français |
 | Modèle de langage | modèle d'IA qui rédige les réponses ; ici `chat` |
 | Modèle d'embedding | modèle d'IA qui calcule les embeddings ; ici `embed` |
-| Note | texte gardé dans le carnet : écrit à la main, réponse enregistrée ou analyse |
+| Note | texte gardé dans le carnet : écrit à la main, ou réponse enregistrée ; une analyse reste dans l'onglet « Analyses » de sa source, sauf si elle est enregistrée en note |
 | Podcast | épisode audio généré à partir d'un carnet, avec une ou plusieurs voix de synthèse |
 | Profil d'épisode, profil d'intervenants | réglages d'un podcast : plan, langue, nombre de parties ; voix et personnalité de chaque intervenant |
 | Recherche textuelle | recherche par mots exacts |

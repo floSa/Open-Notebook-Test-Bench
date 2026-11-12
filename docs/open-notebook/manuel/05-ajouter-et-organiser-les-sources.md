@@ -18,7 +18,7 @@ La fenêtre est celle du chapitre [04](04-premiere-question.md), étape 2. Nom :
 
 **Étape 2. Choisir les fichiers**
 *Où* : page du carnet › colonne SOURCES › « Ajouter la source » › « Ajouter la source », onglet « Télécharger un fichier ».
-Dans la fenêtre de l'explorateur de fichiers, sélectionner les neuf fichiers à la fois (Ctrl+A ou Ctrl+clic).
+Dans la fenêtre de l'explorateur de fichiers, ouvrir le dossier `corpus\documents` du dépôt (même chemin qu'au chapitre [04](04-premiere-question.md), étape 5), puis sélectionner les neuf fichiers à la fois (Ctrl+A ou Ctrl+clic).
 
 ![Neuf fichiers choisis](../img/05-sources/01-plusieurs-fichiers.png)
 *Écran : assistant « Ajouter une nouvelle source », étape 1, neuf fichiers choisis.*
@@ -166,7 +166,7 @@ Le carnet quitte la liste des carnets actifs sans rien perdre ; il se retrouve e
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Supprimer les sources exclusives » | supprime aussi les sources qui n'appartiennent qu'à ce carnet |
+| 1 | « Supprimer les sources exclusives » | supprime aussi les sources qui n'appartiennent qu'à ce carnet ; à choisir ici, puisque « Premier essai » n'était qu'un exercice |
 | 2 | « Délier et les conserver » | garde ces sources, visibles dans la page « Sources » |
 | 3 | « Supprimer » | confirme ; l'action est irréversible |
 
