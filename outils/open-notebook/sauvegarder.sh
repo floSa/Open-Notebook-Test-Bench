@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 mkdir -p donnees/sauvegardes
 A="donnees/sauvegardes/open-notebook-$(date +%Y%m%d-%H%M%S).tar.gz"
-IMG="ollama/ollama@sha256:46399ef084d97b381955b5dc585c5d836dbe7ed3f79f170d1c04660fed511e3a"  # image déjà présente, sert d'outil tar
+IMG="lfnovo/open_notebook:1.15.1@sha256:e4e18f12653df5bf48674b7b187c4252be52238b4d706330fd30d9b177b95812"  # image de l'application, déjà présente : sert d'outil tar
 outils/open-notebook/arreter.sh >/dev/null
 # certains fichiers appartiennent à root (écrits par les conteneurs) : archive faite dans un conteneur jetable
 docker run --rm --entrypoint tar -v "$PWD/donnees:/d" "$IMG" -czf "/d/${A#donnees/}" \

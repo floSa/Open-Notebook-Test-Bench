@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 outils/communs/llm_central_sante.sh >/dev/null || echo "attention : service LLM central injoignable (démarrer LLM-Service)" >&2
-docker start rag-speaches >/dev/null
+docker start rag-speaches >/dev/null 2>&1 || echo "serveur de voix rag-speaches absent : podcasts indisponibles (outils/communs/voix.sh)" >&2
 outils/open-notebook/compose.sh up -d
 for i in $(seq 90); do curl -sf http://127.0.0.1:5055/health >/dev/null && break; sleep 2; done
 echo "Interface : http://127.0.0.1:8502  (mot de passe : donnees/IDENTIFIANTS-LOCAUX.txt)"

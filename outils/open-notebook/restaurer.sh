@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 A="${1:?usage : restaurer.sh donnees/sauvegardes/open-notebook-....tar.gz}"
 [ -f "$A" ] || { echo "archive introuvable : $A"; exit 1; }
-IMG="ollama/ollama@sha256:46399ef084d97b381955b5dc585c5d836dbe7ed3f79f170d1c04660fed511e3a"
+IMG="lfnovo/open_notebook:1.15.1@sha256:e4e18f12653df5bf48674b7b187c4252be52238b4d706330fd30d9b177b95812"
 outils/open-notebook/arreter.sh >/dev/null
 COTE="open-notebook.avant-restauration-$(date +%Y%m%d-%H%M%S)"
 docker run --rm --entrypoint mv -v "$PWD/donnees:/d" "$IMG" /d/open-notebook "/d/$COTE"
