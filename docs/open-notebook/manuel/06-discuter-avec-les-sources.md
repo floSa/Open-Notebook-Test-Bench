@@ -8,7 +8,7 @@
 
 La conversation d'un carnet ne cherche pas les passages utiles : elle envoie au modèle, à chaque question, **tout ce qui est choisi** dans le carnet. Chaque source a pour cela un **mode de contexte** : « aperçus » (seul le résumé automatique part), « contenu complet » (le texte entier part) ou exclue (rien ne part). Plus on envoie de texte, plus la réponse est complète, mais plus elle est lente ; et chaque question est limitée à 16 384 jetons, soit environ quinze pages, réflexion du modèle et réponse comprises. Le bas de la colonne de conversation affiche à tout moment la taille de ce qui partira. Pour interroger beaucoup de documents à la fois, la recherche « Demander » est plus adaptée (chapitre [08](08-rechercher-et-demander.md)).
 
-Les captures de ce chapitre ont été prises après le chapitre [07](07-notes-et-transformations.md) : le compteur « Context » y compte aussi deux notes, absentes à ce stade de la lecture.
+Les captures de ce chapitre ont été prises après les chapitres [07](07-notes-et-transformations.md) et [11](11-cas-pratiques.md) : le compteur « Context » y compte deux notes (« Points à vérifier » du chapitre 07 et la synthèse enregistrée au chapitre 11), absentes à ce stade de la lecture.
 
 ## Choisir ce qui part au modèle
 

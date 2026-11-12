@@ -8,7 +8,7 @@
 
 ## Ce qu'il faut savoir
 
-Chaque cas utilise une **session** séparée : l'historique reste court et chaque sujet se retrouve d'un clic. Avant de commencer, toutes les sources du carnet passent en contenu complet (« Contexte » › « Tout inclure (contenu complet) », chapitre [06](06-discuter-avec-les-sources.md), étape 1) : le compteur « Context » indique alors environ 7 000 jetons, un peu plus qu'au chapitre [06](06-discuter-avec-les-sources.md) parce que les notes ajoutées entre-temps partent aussi au modèle. Les mêmes questions posées avec les sources en aperçus seuls ont donné des réponses incomplètes : le trimestre le plus élevé n'était pas trouvé.
+Chaque cas utilise une **session** séparée : l'historique reste court et chaque sujet se retrouve d'un clic. Avant de commencer, toutes les sources du carnet passent en contenu complet (« Contexte » › « Tout inclure (contenu complet) », chapitre [06](06-discuter-avec-les-sources.md), étape 1) : le compteur « Context » indique alors environ 7 000 jetons, notes comprises. Les mêmes questions posées avec les sources en aperçus seuls ont donné des réponses incomplètes : le trimestre le plus élevé n'était pas trouvé.
 
 **Étape 1. Ouvrir une session pour le cas**
 *Où* : colonne DISCUTER AVEC LE CARNET › « Sessions » › bouton « + ».

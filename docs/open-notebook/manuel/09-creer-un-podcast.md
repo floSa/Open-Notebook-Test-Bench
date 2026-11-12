@@ -82,7 +82,7 @@ Cocher le carnet « Démo Vélanor » (toutes ses sources et notes sont alors ch
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | Case du carnet « Démo Vélanor » | choisit tout le carnet : « 12 éléments sélectionnés » (sources et notes) ; chaque élément peut aussi être coché à part, en résumé ou en contenu complet |
+| 1 | Case du carnet « Démo Vélanor » | choisit tout le carnet : « 12 éléments sélectionnés » sur la capture, soit 10 sources et 2 notes (celles des chapitres 07 et 11) ; chaque élément peut aussi être coché à part, en résumé ou en contenu complet |
 | 2 | « Profil de l'épisode » | ici `court-fr` |
 | 3 | « Nom de l'épisode » | ici « Vélanor en bref » |
 | 4 | « Générer » | lance la génération en arrière-plan |
