@@ -2,8 +2,10 @@
 # Projet compose : rag-open-notebook. Variables lues dans donnees/open-notebook/.env (généré par installer.sh).
 # - versions figées par empreinte, pas de re-téléchargement à chaque démarrage ;
 # - ports publiés sur 127.0.0.1 seulement ; SurrealDB non publié (inutile hors du réseau Docker) ;
-# - données dans donnees/open-notebook/ ; réseaux externes llm-net (modèles : LLM-Service, http://ollama-central:11434) et rag-local (voix : rag-speaches) ;
-# - secrets générés localement (clé de chiffrement, mot de passe, identifiants SurrealDB).
+# - données dans donnees/open-notebook/ ; réseaux externes llm-net (modèles : service LLM central de LLM-Service,
+#   http://llm-central:8080/v1, noms fixes chat, embed, transcribe) et rag-local (synthèse vocale : rag-speaches) ;
+# - secrets générés localement (clé de chiffrement, mot de passe, identifiants SurrealDB) ;
+# - clé du service central : LLM_CENTRAL_KEY, lue dans le .env du dépôt (second --env-file, voir compose.sh), jamais recopiée.
 name: rag-open-notebook
 
 services:
@@ -33,7 +35,7 @@ services:
       - SURREAL_PASSWORD=${SURREAL_PASSWORD}
       - SURREAL_NAMESPACE=open_notebook
       - SURREAL_DATABASE=open_notebook
-      # Ollama sur CPU : une tâche de fond à la fois, et des appels LLM longs (180 s par défaut)
+      # Service central partagé : une tâche de fond à la fois, et des appels LLM longs (180 s par défaut ; réflexion de chat)
       - OPEN_NOTEBOOK_WORKER_MAX_TASKS=1
       - ESPERANTO_LLM_TIMEOUT=${ESPERANTO_LLM_TIMEOUT:-900}
       - ESPERANTO_EMBEDDING_TIMEOUT=300
@@ -42,9 +44,10 @@ services:
       - OPEN_NOTEBOOK_ENABLE_DOCLING=${OPEN_NOTEBOOK_ENABLE_DOCLING:-false}
       - LOGURU_LEVEL=INFO
       # Contournement : la transcription (content-core) n'utilise pas la Base URL enregistrée pour « OpenAI Compatible »
-      # (journal : outils/resultats/open-notebook/essai-audio-scan-2026-11-08.log). Serveur de voix : rag-speaches.
-      - OPENAI_COMPATIBLE_BASE_URL_STT=http://rag-speaches:8000/v1
-      - OPENAI_COMPATIBLE_API_KEY_STT=local
+      # (journal : outils/resultats/open-notebook/essai-audio-scan-2026-11-08.log) : elle lit ces variables.
+      # Transcription : transcribe du service central. Synthèse vocale (non servie par le central) : rag-speaches (Kokoro).
+      - OPENAI_COMPATIBLE_BASE_URL_STT=http://llm-central:8080/v1
+      - OPENAI_COMPATIBLE_API_KEY_STT=${LLM_CENTRAL_KEY:?clé LLM_CENTRAL_KEY absente du .env du dépôt}
       - OPENAI_COMPATIBLE_BASE_URL_TTS=http://rag-speaches:8000/v1
       - OPENAI_COMPATIBLE_API_KEY_TTS=local
       - TTS_BATCH_SIZE=1

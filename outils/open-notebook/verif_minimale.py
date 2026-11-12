@@ -22,14 +22,14 @@ except urllib.error.HTTPError as e:
     res["sans_mot_de_passe"] = f"{e.code} {e.read().decode()[:80]}"
 print("sans mot de passe :", res["sans_mot_de_passe"])
 
-repos = Echantillonneur(APP + ["ollama-central"], pas=2); repos.start(); time.sleep(6); repos.stop.set(); repos.join()
+repos = Echantillonneur(APP, pas=2); repos.start(); time.sleep(6); repos.stop.set(); repos.join()
 res["ram_repos_mo"] = repos.pics
 print("RAM au repos :", repos.pics)
 
 on = OpenNotebook()
 nb = on.post("/api/notebooks", {"name": "Essai installation", "description": "vérification minimale"})
 doc = RACINE / "corpus/documents/faq-sav.html"
-ech = Echantillonneur(APP + ["ollama-central"], pas=2); ech.start()
+ech = Echantillonneur(APP, pas=2); ech.start()
 t0 = time.time()
 src = on.ajouter_fichier(doc, nb["id"])
 etat = on.attendre_source(src["id"])
