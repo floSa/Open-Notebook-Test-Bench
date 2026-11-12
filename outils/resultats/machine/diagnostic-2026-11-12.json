@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-12T09:59:32+01:00",
+  "windows": "Microsoft Windows [version 10.0.26300.9974]",
+  "wsl_version": "Version WSL : 3.0.5.0\nVersion du noyau : 6.18.58.1-1\nVersion WSLg : 1.0.79\nVersion MSRDC : 1.2.7391\nVersion direct3D : 1.611.1-81528511\nVersion de DXCore : 10.0.26100.1-240331-1435.ge-release\nVersion de Windows : 10.0.26300.9974",
+  "distribution": "Ubuntu 24.04.5 LTS",
+  "noyau": "6.18.58.1-microsoft-standard-WSL2",
+  "cpu": "AMD Ryzen 5 9600X 6-Core Processor",
+  "coeurs_logiques": 12,
+  "ram_wsl_mo": 32098,
+  "swap_wsl_mo": 4096,
+  "disque_libre_depot_go": 539,
+  "docker_root": "/var/lib/docker",
+  "docker_df": "Images=114.1GB;Containers=6.399GB;Local Volumes=22.58GB;Build Cache=73.2GB",
+  "nvidia_smi_wsl": "NVIDIA GeForce RTX 4060 Ti, 16380 MiB, 616.92",
+  "gpu_dans_conteneur": "OK",
+  "cartes_video_windows": "NVIDIA GeForce RTX 4060 Ti;AMD Radeon(TM) Graphics",
+  "docker": "29.9.3",
+  "compose": "5.7.0",
+  "acces_http": {
+    "docker_hub": "401",
+    "ghcr": "401",
+    "pypi": "200",
+    "ollama_com": "200",
+    "huggingface": "200"
+  },
+  "port_127_0_0_1_depuis_wsl": "200",
+  "vm_max_map_count_docker": "1048576",
+  "llm_service": {
+    "dossier": "/home/florian/mes_projets/Projet-IA/LLM-Service",
+    "branche": "service-llamacpp",
+    "profil": "gpu",
+    "conteneurs": "llm-central=ghcr.io/berriai/litellm:v1.109.0;llm-swap=ghcr.io/mostlygeek/llama-swap:v272-cuda-b12282;llm-speaches=ghcr.io/speaches-ai/speaches:0.8.3-cpu",
+    "modeles": "chat (chat);embed (embedding);rerank (rerank);transcribe (audio_transcription);gemma-4-e4b (chat);qwen3.5-4b (chat);bge-m3 (embedding);bge-reranker-v2-m3 (rerank);faster-whisper-small (audio_transcription)"
+  }
+}
