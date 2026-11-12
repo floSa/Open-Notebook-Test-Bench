@@ -71,7 +71,20 @@ Cocher le carnet « Démo Vélanor » (toutes ses sources et notes sont alors ch
 | 3 | « Nom de l'épisode » | ici « Vélanor en bref » |
 | 4 | « Générer » | lance la génération en arrière-plan |
 
-EPISODE_A_COMPLETER
+*Résultat* : la fenêtre se ferme ; l'épisode est fabriqué en arrière-plan, en quelques minutes ici.
+
+**Étape 5. Écouter l'épisode**
+*Où* : onglet « Épisodes » › « Rafraîchir ».
+
+![Épisode terminé](../img/09-podcast/05-episode-pret.png)
+*Écran : Podcasts, onglet « Épisodes », épisode terminé.*
+
+| N° | Élément | Rôle |
+|---|---|---|
+| 1 | « Vélanor en bref » | l'épisode, compté dans « Terminé » en haut de la liste |
+| 2 | Lecteur audio | lecture de l'épisode dans le navigateur |
+
+*Résultat* : le dialogue, en français, alterne Camille et Hugo et reprend des chiffres justes du carnet (« un chiffre d'affaires total de 48,6 millions d'euros avec une croissance […] de 12,4 % »). Le fichier MP3, d'environ 6 Mo, rangé dans `donnees/open-notebook/notebook_data/podcasts/episodes/` sur le poste. Les compteurs « Total », « En cours », « Terminé », « Échoué » et « En attente » résument l'état des générations.
 
 ## Bon à savoir
 

@@ -25,7 +25,7 @@ Page d'accueil : [docs/open-notebook/README.md](docs/open-notebook/README.md).
 
 - Partie 1, manuel utilisateur ([manuel/](docs/open-notebook/manuel/)) : 01 Découvrir, 02 Installer, 03 Premiers pas, 04 Première question, 05 Sources, 06 Discuter, 07 Notes et transformations, 08 Rechercher et demander, 09 Podcast, 10 Régler, 11 Cas pratiques, 12 En cas de problème, 13 Glossaire.
 - Partie 2, annexes ([annexes/](docs/open-notebook/annexes/)) : A1 évaluation, A2 matériel, A3 API et MCP, A4 exploitation, A5 fonctionnement interne, A6 rapport d'essais, [carte de l'interface](docs/open-notebook/annexes/carte-interface.md).
-- Captures annotées par chapitre : CAPTURES_A_COMPLETER
+- Captures annotées par chapitre : 02-installer : 2, 03-premiers-pas : 14, 04-premiere-question : 9, 05-sources : 11, 06-discuter : 5, 07-notes : 7, 08-rechercher : 4, 09-podcast : 5, 10-regler : 4, 11-cas-pratiques : 5, 12-problemes : 4 ; total 70 captures annotées, plus 23 captures de repérage de la carte.
 
 ## 4. Banc en cinq lignes
 

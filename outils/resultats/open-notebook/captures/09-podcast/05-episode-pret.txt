@@ -1,0 +1,65 @@
+Open Notebook
+Créer
+COLLECTER
+Sources
+TRAITER
+Carnets
+Demander et rechercher
+CRÉER
+Podcasts
+GÉRER
+Modèles
+Transformations
+Paramètres
+Avancé
+Actions rapides
+Ctrl+
+K
+
+Navigation, recherche, poser une question, thème
+
+Thème
+Thème
+Langue
+Changer de langue
+Se déconnecter
+Podcasts
+
+Suivez les épisodes générés et gérez les profils réutilisables.
+
+Configuration requise
+Certains profils n'ont pas encore de modèles configurés. Modifiez-les pour sélectionner des modèles avant de générer des podcasts.
+
+CHOISIR UNE VUE
+
+Épisodes
+Profils
+Aperçu des épisodes
+
+Surveillez les tâches de génération de podcast et consultez les artefacts finaux.
+
+Générer un podcast
+Rafraîchir
+Total
+1
+En cours
+0
+Terminé
+1
+Échoué
+0
+En attente
+0
+Épisodes terminés
+
+Prêts à être consultés, téléchargés ou publiés.
+
+Vélanor en bref
+
+Profil: court-fr • Créé à il y a 3 minutes
+
+Détails
+Supprimer
+Actions rapides
+
+Navigation, recherche, poser une question, thème

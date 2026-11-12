@@ -1,0 +1,190 @@
+{
+ "name": "Vélanor en bref",
+ "job_status": "completed",
+ "audio_file": "episodes/47a1bdf2-5fd1-45a8-8dfa-b32ff4eaebfe/audio/47a1bdf2-5fd1-45a8-8dfa-b32ff4eaebfe.mp3",
+ "created": "2026-11-12 10:36:45.908883+00:00",
+ "episode_profile": {
+  "created": "2026-11-12T10:36:37.515745Z",
+  "default_briefing": "Épisode court et factuel, en français, qui présente les informations principales des sources.",
+  "description": "Épisode court et factuel, en français",
+  "id": "episode_profile:93zp8adzftix9cto98j1",
+  "language": "fr-FR",
+  "name": "court-fr",
+  "num_segments": 3,
+  "outline_llm": "model:586bjj37nnln9t5cucro",
+  "speaker_config": "speaker_profile:pl0cnpwk5c5e8v2sho44",
+  "transcript_llm": "model:586bjj37nnln9t5cucro",
+  "updated": "2026-11-12T10:36:37.515746Z",
+  "outline_model_provider": "openai_compatible",
+  "outline_model_name": "chat",
+  "transcript_model_provider": "openai_compatible",
+  "transcript_model_name": "chat"
+ },
+ "speaker_profile": {
+  "created": "2026-11-12T10:36:28.234711Z",
+  "description": "Deux voix : une animatrice française et un analyste",
+  "id": "speaker_profile:pl0cnpwk5c5e8v2sho44",
+  "name": "duo-fr",
+  "speakers": [
+   {
+    "backstory": "Animatrice d'une émission d'entreprise, curieuse et claire.",
+    "name": "Camille",
+    "personality": "Pose des questions simples et reformule.",
+    "voice_id": "ff_siwis"
+   },
+   {
+    "backstory": "Analyste financier de l'entreprise.",
+    "name": "Hugo",
+    "personality": "Précis, cite les chiffres.",
+    "voice_id": "am_michael"
+   }
+  ],
+  "updated": "2026-11-12T10:36:28.234712Z",
+  "voice_model": "model:b4uytgqjswxcohz0kuw2",
+  "voice_model_provider": "openai_compatible",
+  "voice_model_name": "speaches-ai/Kokoro-82M-v1.0-ONNX"
+ },
+ "transcript": {
+  "transcript": [
+   {
+    "dialogue": "Bienvenue à tous sur Vélanor Info ! Aujourd'hui, on accueille les salariés et on présente cette émission au public interne de Vélanor. Avant de plonger dans nos chiffres, une première question : quelle a été la performance globale de l'entreprise en 2025 ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Pour résumer le rapport annuel 2025, nous avons un chiffre d'affaires total de 48,6 millions d'euros avec une croissance nette de plus de 12,4% par rapport à l'année précédente. Le résultat net consolidé s'établit quant à lui à 3,1 million d'euros.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Donc pour faire simple : on a touché près de quarante-huit millions d'euros de chiffre d'affaires en 2025, avec une croissance de douze point quatre pour cent, et un résultat net de trois millions d'euros. C'est un excellent démarrage avant de regarder les volumes produits.",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Exactement. Pour rappel, la production totale en volume de vélos a atteint 61 800 unités en 2025, ce qui représente le premier franchissement du seuil de croissance soutenu malgré les tensions sur les cellules de batterie.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Notons bien : 61 800 vélos produits, un volume important pour Vélanor, et c'est la première fois que l'entreprise franchit ce seuil de croissance soutenue. On va maintenant voir les détails de cette production.",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Parlons maintenant des produits phares de Vélanor, les vélos eux-mêmes ! Hugo a-t-il quelques chiffres clés sur les modèles les plus populaires en 2025 ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Bien sûr. Notre modèle vedette est le Loire Urban, le plus vendu avec vingt-quatre mille trois cents unités produites à un prix TTC de mille huit cent soixante-dix euros.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Donc le Loire Urban reste le grand best-seller, presque la moitié de nos ventes. Et il y a d'autres catégories aussi ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Absolument. Le modèle Brière Kid, destiné aux enfants, compte treize mille deux cents unités vendues à neuf cent quatre-vingts euros TTC, tandis que le Sèvre Trail pour les VTT fait dix-neuf mille cinq cents unités à trois mille un cent cinquante euros.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Et l'autre segment ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "L'Erdre Cargo, la catégorie cargo, représente huit mille neuf cents vélos assemblés à un prix de quatre mille deux cent soixante-dix euros, le plus cher de notre gamme.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Intéressant ! On voit bien les trois segments urbains, VTT et famille. Par contre, ça me préoccupe quand même : ces vélos dépendent-ils d'un fournisseur unique pour les pièces critiques ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "C'est très vrai. Notre principal fournisseur de batteries est Batterix GmbH en Allemagne, dont le contrat vient de se renouveler en mars 2025.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Et quel est leur niveau de qualité ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "L'audit du dix-huit juin deux mille vingt-cinq nous a donné un score qualité de soixante-seize sur cent, avec quelques non-conformités mineurs comme des étiquettes de palettes incomplètes et des bretelles ESD manquantes.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "D'accord, donc une bonne note. Mais y a-t-il un risque ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Le taux de défaut sur les cellules Lithium-Ion s'établit à zéro point trois pour cent, mais l'entreprise identifie tout de même la pénurie de batteries comme un risque majeur.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "On va maintenant parler de la stratégie pour l'année 2026 ! Hugo, peux-tu nous présenter le plan qui a été défini par le conseil d'administration ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Bien sûr. L'objectif de chiffre d'affaires pour 2026 est fixé à cinquante-cinq millions d'euros, avec une marge nette souhaitée de sept pour cent, et un objectif de part de marché des exportations à trente-deux pour cent.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Donc presque quarante-huit millions d'euros en plus par rapport à l'année dernière, c'est une croissance ambitieuse. Et quels sont les investissements nécessaires pour atteindre ces objectifs ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Il est prévu l'ouverture d'une nouvelle usine d'assemblage à Saint-Nazaire en septembre 2026 avec une capacité annuelle de vingt-cinq mille vélos, et un investissement total de quatorze millions d'euros pour cette facility.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "C'est impressionnant ! Et on a aussi le lancement du nouveau modèle Vilaine Compact ? Hugo, quand sera-t-il disponible et à quel prix ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Le Vilaine Compact sera lancé en avril deux mille vingt-six à un prix public de deux mille quatre cent soixante-dix euros TTC. Il s'agit d'un vélo pliant compact pour répondre aux besoins des clients urbains.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Et tu as aussi mentionné une ouverture de showroom à Utrecht aux Pays-Bas ? C'est bien pour le marché du Benelux, n'est-ce pas ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Exactement. En plus du nouveau showroom en Hollande, l'objectif est d'une croissance de trente pour cent sur le marché allemand, et Vélanor vise la neutralité carbone de ses sites d'ici 2030.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Et ce recyclage des batteries usagées à quarante-six pour cent ? Ou pas un autre chiffre ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "Non, c'est le taux de recyclage des batteries usagées collectées qui atteint quatre-vingt-dix-six pour cent grâce au partenariat avec la filière Recylo, ce qui est excellent.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Parfait. Et pour les collaborateurs ? Qu'en est-il des objectifs RH liés à cet investissement et cette croissance ?",
+    "speaker": "Camille"
+   },
+   {
+    "dialogue": "L'entreprise prévoit d'accorder une prime d'intéressement de onze cent cinquante euros par salarié, payable en avril deux mille vingt-six, ainsi que le restaurant du site de Nantes qui ouvrira en janvier prochain.",
+    "speaker": "Hugo"
+   },
+   {
+    "dialogue": "Bravo ! C'est donc un plan global : nouvelle usine à Saint-Nazaire, produit compact Vilaine Compact, showroom aux Pays-Bas, marché allemand en croissance, et des objectifs environnementaux comme la neutralité carbone. On termine cette émission sur ces belles ambitions pour 2026, merci Hugo pour ces précisions stratégiques !",
+    "speaker": "Camille"
+   }
+  ]
+ },
+ "outline": {
+  "segments": [
+   {
+    "description": "Camille ouvre l'épisode en accueillant les salariés et les présentant au public interne de Vélanor. Elle pose une première question sur la performance globale de 2025. Hugo présente brièvement les informations clés du rapport annuel 2025 : le CA de 48,6 millions d'euros avec une croissance de 12,4% et le résultat net de 3,1 million d'euros. Camille reformule pour s'assurer que tout le monde est au courant des grandes lignes avant de plonger dans les détails. Elle pose ensuite la question du volume de production atteint en 2025 avec 61 800 vélos, notant franchement le seuil de croissance soutenu.",
+    "name": "Introduction : Présentation et contexte stratégique",
+    "size": "short"
+   },
+   {
+    "description": "Camille demande à Hugo d'expliquer en détail les différents modèles de vélos vendus par Vélanor. Hugo cite les chiffres précis : Loire Urban (24 300 unités à 1 890 €), Erdre Cargo (8 900 unités à 4 290 €), Sèvre Trail (15 400 unités à 3 150 €) et Brière Kid (13 200 unités à 990 €). Camille pose ensuite la question des risques liés aux fournisseurs, particulièrement Batterix GmbH en Allemagne. Hugo détaille le score qualité de 87/100 obtenu lors de l'audit du 18 juin 2025, les non-conformités mineurs (étiquetage incomplet, bretelles ESD manquantes), et le taux de défaut de cellules à 0,3%. Camille souligne la précarité potentielle due aux tensions sur les batteries lithium-ion.",
+    "name": "Production, fournisseurs et risques d'approvisionnement",
+    "size": "medium"
+   },
+   {
+    "description": "Camille demande à Hugo de présenter le plan stratégique pour 2026. Hugo expose la cible de chiffre d'affaires de 55 millions d'euros avec une marge nette souhaitée de 7% et un objectif de part de marché des exportations à 32%. Il détaille les investissements : l'ouverture d'une nouvelle usine à Saint-Nazaire en septembre 2026 avec une capacité de 25 000 vélos par an et un investissement de 14 millions d'euros. Camille pose la question du lancement du nouveau modèle Vilaine Compact en avril 2026 à 2 490 € TTC et mentionne l'ouverture d'un showroom à Utrecht. Hugo conclut sur les ambitions : croissance de 30% du marché allemand, recyclage de 96% des batteries usagées, neutralité carbone d'ici 2030, et les objectifs RH comme la prime d'intéressement de 1 150 € par salarié.",
+    "name": "Objectifs 2026, nouvelles usines et perspectives",
+    "size": "medium"
+   }
+  ]
+ }
+}
