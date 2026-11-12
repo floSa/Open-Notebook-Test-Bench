@@ -47,24 +47,23 @@ Final: chat
 Demander
 Enregistrer dans les Carnets
 Stratégie
-Réponses individuelles (4)
+Réponses individuelles (3)
 Réponse finale
 
-Selon les documents récupérés dans l'espace de travail, voici les résultats détaillés concernant l'audit du fournisseur Batterix :
-
-Score de l'audit
-
-L'entreprise a obtenu un score de 87 sur 100 lors de l'audit effectué le 18 juin 2025 par Laura Fischer (auditrice qualité Vélanor) [source:igzqfpx7ihgoc7boetu7]. Ce niveau indique un bon état de conformité globale, et Batterix a été maintenue dans l'approvisionnement pour une autre année.
+L'audit du fournisseur Batterix GmbH (Brême, Allemagne) a obtenu un score de 87 sur 100 lors de l'inspection qualité effectuée le 18 juin 2025 [source:igzqfpx7ihgoc7boetu7]. L'auditrice principale était Laura Fischer, représentant l'équipe qualité de Vélanor.
 
 Non-conformités relevées
 
-Deux non-conformités mineures ont été signalées lors de cette inspection [source:igzqfpx7ihgoc7boetu7] :
+Deux non-conformités mineures ont été identifiées lors de cette inspection :
 
-Étiquetage incomplet des palettes : Le marquage sur les palettes de livraison ne respecte pas les normes de traçabilité requis.
-Absence de bracelets anti-statiques (ESD) : Un poste d'assemblage spécifique manquait les brassards obligatoires pour la protection des cellules.
-Contexte additionnel
+Étiquetage incomplet des palettes : Une étiquetage insuffisant a été constaté sur certaines palettes [source:igzqfpx7ihgoc7boetu7].
+Manque de protections ESD : La présence de bracelets anti-statiques (ESD wrist straps) manquait à un poste d'assemblage spécifique [note:v06aq3bm999n71qcs6jc].
+Autres éléments du rapport d'audit
+Le taux de défaut de cellules mesuré s'est élevé à 0,3 % [source:igzqfpx7ihgoc7boetu7].
+Le fournisseur a été agréé pour une année supplémentaire et le contrat d'approvisionnement en batteries a été renouvelé en mars 2025 [source:60vesl1eolxx671t4s50].
+Le prochain audit est programmé pour juin 2026 [note:v06aq3bm999n71qcs6jc].
 
-Bien que des écarts aient été constatés, le fournisseur a été approuvé pour un renouvellement de contrat. Le taux de défaut mesuré des cellules s'établit à 0,3 %, et la prochaine inspection est prévue pour juin 2026 [source:igzqfpx7ihgoc7boetu7].
+Pour plus de détails sur la gestion des risques fournisseurs et l'approvisionnement en batteries, vous pouvez consulter le rapport directionnel qui mentionne également la pénurie de cellules Li-ion comme risque majeur.
 
 Actions rapides
 

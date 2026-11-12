@@ -615,7 +615,8 @@ def rechercher(s):
             break
     pg.wait_for_timeout(4000)
     print("demander :", pg.locator("main").inner_text()[-1200:].replace("\n", "|"), flush=True)
-    s.ecran("04-reponse-demander", [(pg.get_by_text(re.compile("87")).last, "Réponse")], plein=True)
+    par = pg.get_by_text(re.compile("87")).last.locator("xpath=ancestor-or-self::*[self::p or self::li][1]")
+    s.ecran("04-reponse-demander", [(par, "Réponse")], plein=True)
 
 
 # ---------------------------------------------------------------- 10. Régler
