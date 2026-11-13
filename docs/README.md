@@ -33,13 +33,13 @@ Un service « déporté » tourne hors du conteneur de la solution et peut être
 
 Le corpus contient un contrat scanné (PDF image, 4 questions). Sans OCR, il est illisible.
 
-| Solution | OCR utilisé dans le banc | Scan lu | Docling déporté possible | Docling déporté essayé |
-|---|---|---|---|---|
-| Open WebUI | Docling déporté | oui | oui | oui, banc complet |
-| RAGFlow | DeepDoc, l'OCR intégré de RAGFlow | oui | oui (réglage `DOCLING_SERVER_URL`, plus `ALLOW_ANY_HOST=1`) | oui, banc complet : 34/34, même score qu'avec DeepDoc |
-| Kotaemon | Docling, dans le conteneur de Kotaemon | oui | oui (lecteur ajouté au conteneur) | oui, banc complet : 29/34 (31 avec le Docling intégré, écart expliqué ci-dessous) |
-| AnythingLLM | Tesseract, l'OCR intégré d'AnythingLLM | oui | non | sans objet |
-| Open Notebook | Docling, dans le conteneur d'Open Notebook, sans moteur d'OCR dans l'image 1.15.1 | non | non | sans objet |
+| Solution | OCR utilisé dans le banc | Scan lu | Docling déporté possible | Docling déporté essayé | Procédure dans le manuel |
+|---|---|---|---|---|---|
+| Open WebUI | Docling déporté | oui | oui | oui, banc complet | [chapitre 08](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/docs/open-webui/manuel/08-regler-la-lecture-des-documents.md) |
+| RAGFlow | DeepDoc, l'OCR intégré de RAGFlow | oui | oui (réglage `DOCLING_SERVER_URL`, plus `ALLOW_ANY_HOST=1`) | oui, banc complet : 34/34, même score qu'avec DeepDoc | [chapitre 06](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/docs/ragflow/manuel/06-regler-la-lecture-des-documents.md), étapes 31 à 33 |
+| Kotaemon | Docling, dans le conteneur de Kotaemon | oui | oui (lecteur ajouté au conteneur) | oui, banc complet : 29/34 (31 avec le Docling intégré, écart expliqué ci-dessous) | [chapitre 05](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/docs/kotaemon/manuel/05-ajouter-et-organiser-ses-documents.md), étapes 17 et 18 |
+| AnythingLLM | Tesseract, l'OCR intégré d'AnythingLLM | oui | non | sans objet | sans objet |
+| Open Notebook | Docling, dans le conteneur d'Open Notebook, sans moteur d'OCR dans l'image 1.15.1 | non | non | sans objet | sans objet |
 
 DeepDoc est le lecteur de documents propre à RAGFlow (OCR, mise en page, tableaux) ; ses modèles sont dans l'image de RAGFlow et ne se déportent pas.
 
