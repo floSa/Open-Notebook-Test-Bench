@@ -36,12 +36,18 @@ Le corpus contient un contrat scanné (PDF image, 4 questions). Sans OCR, il est
 | Solution | OCR utilisé dans le banc | Scan lu | Docling déporté possible | Docling déporté essayé |
 |---|---|---|---|---|
 | Open WebUI | Docling déporté | oui | oui | oui, banc complet |
-| RAGFlow | DeepDoc, l'OCR intégré de RAGFlow | oui | oui (réglage `DOCLING_SERVER_URL`) | non |
-| Kotaemon | Docling, dans le conteneur de Kotaemon | oui | oui (lecteur ajouté au conteneur) | oui, lecture du scan seulement |
+| RAGFlow | DeepDoc, l'OCR intégré de RAGFlow | oui | oui (réglage `DOCLING_SERVER_URL`, plus `ALLOW_ANY_HOST=1`) | oui, banc complet : 34/34, même score qu'avec DeepDoc |
+| Kotaemon | Docling, dans le conteneur de Kotaemon | oui | oui (lecteur ajouté au conteneur) | oui, banc complet : 29/34 (31 avec le Docling intégré, écart expliqué ci-dessous) |
 | AnythingLLM | Tesseract, l'OCR intégré d'AnythingLLM | oui | non | sans objet |
 | Open Notebook | Docling, dans le conteneur d'Open Notebook, sans moteur d'OCR dans l'image 1.15.1 | non | non | sans objet |
 
 DeepDoc est le lecteur de documents propre à RAGFlow (OCR, mise en page, tableaux) ; ses modèles sont dans l'image de RAGFlow et ne se déportent pas.
+
+Docling déporté, ce que les bancs du 13 novembre montrent :
+
+- RAGFlow : même score qu'avec DeepDoc (34/34, 4/4), indexation deux fois plus rapide (35 s contre 64 s). Le branchement demande `ALLOW_ANY_HOST=1`, qui autorise RAGFlow à joindre toute adresse du réseau privé, pas seulement Docling.
+- Kotaemon : 29/34 au lieu de 31. Le lecteur déporté relit tous les PDF, alors que le meilleur banc ne relisait que le scan ; deux questions sur les tableaux du rapport annuel échouent à cause de ce découpage différent, pas du déport.
+- Le conteneur Docling occupe environ 2,5 Go de mémoire : le déport n'allège l'ensemble que s'il est partagé par plusieurs applications.
 
 ### Audio et reranker
 

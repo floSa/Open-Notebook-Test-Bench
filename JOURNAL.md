@@ -134,3 +134,7 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 - README : section « Résultats » au même format que les autres dépôts, « Le parcours » placé juste après le sommaire.
 - Annexes A1 à A3 renommées comme dans les autres dépôts (`A1-evaluation-qualite-et-performances`, `A2-choisir-son-materiel-et-ses-modeles`, `A3-automatiser-par-l-api`), liens mis à jour.
 - `verifier_docs.py` : 0 point.
+
+### 2026-11-13 — Index de la série : Docling déporté
+
+- `docs/README.md` mis à jour : résultats des bancs Docling déporté de RAGFlow (34/34) et de Kotaemon (29/34).
