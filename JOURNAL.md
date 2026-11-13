@@ -154,3 +154,7 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 ### 2026-11-13 — Index de la série réécrit
 
 - Solutions en colonnes, critères en lignes ; un tableau par sujet : PDF scanné (OCR et Docling), audio, reranker, résultats par cas, détail du meilleur réglage. Parcours de lecture et étiquettes retirés.
+
+### 2026-11-13 — Index de la série : technologies et résultats séparés
+
+- Tableaux OCR et Docling, audio, reranker : capacités seulement ; résultats déplacés dans « Résultats par cas » et « Détail du meilleur réglage » (scores par type de question). Cases vides quand la solution ne le fait pas.

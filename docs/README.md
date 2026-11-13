@@ -22,51 +22,46 @@ Les cinq solutions appellent le même service de modèles, hors de leur conteneu
 | Reranker | bge-reranker-v2-m3 (Q8_0) |
 | Transcription audio | faster-whisper-small |
 
-Toutes les solutions n'acceptent pas tous ces modèles : les trois tableaux suivants disent lesquels.
+Les trois tableaux suivants disent ce que chaque solution sait utiliser. Une case vide : la solution ne le fait pas.
 
 ## PDF scanné : OCR et Docling
 
-Le corpus contient un contrat scanné (4 questions). Sans OCR, il est illisible.
-
 | | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
 |---|---|---|---|---|---|
-| OCR intégré | aucun | DeepDoc | Tesseract | aucun | aucun |
-| Docling dans le conteneur | non | non | non | oui | oui, mais sans OCR |
-| Docling déporté (serveur à part) | oui | oui ¹ | non | oui | non |
-| OCR utilisé au banc | Docling déporté | DeepDoc | Tesseract | Docling dans le conteneur | aucun |
-| Scan lu | oui | oui | oui | oui | non |
-| Score avec Docling déporté | 34/34 | 34/34 | impossible | 29/34 ² | impossible |
+| OCR intégré | | DeepDoc | Tesseract | | |
+| Docling dans le conteneur | | | | oui | oui, sans OCR |
+| Docling déporté (serveur à part) | oui | oui ¹ | | oui | |
+| OCR utilisé au banc | Docling déporté | DeepDoc | Tesseract | Docling dans le conteneur | |
 
 ¹ Demande `ALLOW_ANY_HOST=1`, qui autorise RAGFlow à joindre toute adresse du réseau privé, pas seulement Docling.
-² 31/34 avec le Docling du conteneur : le Docling déporté relit tous les PDF, le découpage du rapport annuel change et deux questions sur ses tableaux échouent.
 
 ## Audio
 
 | | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
 |---|---|---|---|---|---|
-| Transcription | Whisper déporté | Whisper déporté | Whisper déporté | non : l'audio n'est pas lu | Whisper déporté |
-| Questions audio réussies | 2/2 | 2/2 | 2/2 | 0/2 | 2/2 |
+| Transcription | Whisper déporté | Whisper déporté | Whisper déporté | | Whisper déporté |
 
 ## Reranker
 
 | | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
 |---|---|---|---|---|---|
-| bge-reranker-v2-m3 branchable | oui | oui | non : seulement son reranker intégré (MiniLM) | oui | non : aucune étape de tri |
-| Exactes sans puis avec reranker | 28 puis 28 (sans Docling) | 33 puis 34 (défaut), 34 puis 34 (meilleur) | 33 puis 34 (son reranker) | 25 puis 25 | impossible |
+| bge-reranker-v2-m3 branchable | oui | oui | | oui | |
+| Reranker intégré | | | MiniLM | | |
 
 ## Résultats par cas
 
-Nombre de réponses exactes sur 34, puis temps de réponse médian.
+Nombre de réponses exactes sur 34, puis temps de réponse médian. Une case vide : cas impossible pour cette solution.
 
 | Cas | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
 |---|---|---|---|---|---|
-| Réglage par défaut | 28, 60,1 s | 33, 7,8 s | 33 ³, 14,3 s | 25 ⁴, 25,8 s | 28, 8,7 s |
+| Réglage par défaut | 28, 60,1 s | 33, 7,8 s | 33 ², 14,3 s | 25 ³, 25,8 s | 28, 8,7 s |
 | Meilleur réglage | 34, 24,0 s | 34, 7,8 s | 34, 10,7 s | 31, 22,0 s | 28, 8,7 s |
-| Meilleur réglage avec bge-reranker-v2-m3 | 34 (déjà inclus) | 34, 8,8 s | impossible | 31 (déjà inclus) | impossible |
-| Meilleur réglage avec Docling déporté | 34 (déjà inclus) | 34, 8,1 s | impossible | 29, 18,4 s | impossible |
+| Meilleur réglage avec bge-reranker-v2-m3 | = meilleur réglage | 34, 8,8 s | | = meilleur réglage | |
+| Meilleur réglage avec Docling déporté | = meilleur réglage | 34, 8,1 s | | 29 ⁴, 18,4 s | |
 
-³ 3 pièges refusés sur 4 ; tous les autres cas en refusent 4 sur 4.
-⁴ Le comptage automatique donne 26 : une réponse qui refuse (Q17) y est comptée juste à tort.
+² 3 pièges refusés sur 4 ; tous les autres cas en refusent 4 sur 4.
+³ Le comptage automatique donne 26 : une réponse qui refuse (Q17) y est comptée juste à tort.
+⁴ 31 avec le Docling du conteneur : le Docling déporté relit tous les PDF, le découpage du rapport annuel change et deux questions sur ses tableaux échouent.
 
 Open WebUI avec la réflexion du modèle coupée : 34/34, 1,3 s ([résultat brut](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-sans-reflexion.json)). La durée vient surtout de la réflexion du modèle.
 
@@ -74,11 +69,17 @@ Open WebUI avec la réflexion du modèle coupée : 34/34, 1,3 s ([résultat brut
 
 | | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
 |---|---|---|---|---|---|
-| OCR | Docling déporté | DeepDoc | Tesseract | Docling dans le conteneur | aucun |
-| Recherche | hybride | hybride, vecteurs 0,7 | vecteurs | hybride | aucune : documents envoyés en entier |
+| OCR | Docling déporté | DeepDoc | Tesseract | Docling dans le conteneur | |
+| Recherche | hybride | hybride, vecteurs 0,7 | vecteurs | hybride | documents envoyés en entier |
 | Passages envoyés au modèle | 10 | 8 | 8 | 3 | tous |
-| Reranker | bge-reranker-v2-m3 | aucun | intégré (MiniLM) | bge-reranker-v2-m3 | aucun |
+| Reranker | bge-reranker-v2-m3 | | MiniLM | bge-reranker-v2-m3 | |
 | Exactes /34 | 34 | 34 | 34 | 31 | 28 |
+| dont faits simples /13 | 13 | 13 | 13 | 13 | 13 |
+| dont tableaux /10 | 10 | 10 | 10 | 10 | 10 |
+| dont scan /4 | 4 | 4 | 4 | 4 | |
+| dont anglais /2 | 2 | 2 | 2 | 2 | 2 |
+| dont multi-documents /3 | 3 | 3 | 3 | 2 | 1 |
+| dont audio /2 | 2 | 2 | 2 | | 2 |
 | Pièges refusés /4 | 4 | 4 | 4 | 4 | 4 |
 | Bon document cité /34 | 34 | 34 | 34 | 32 | 29 |
 | Temps médian | 24,0 s ⁵ | 7,8 s | 10,7 s | 22,0 s | 8,7 s |
@@ -87,6 +88,8 @@ Open WebUI avec la réflexion du modèle coupée : 34/34, 1,3 s ([résultat brut
 | Résultat brut | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-taches.json) | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8.json) | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-top8-rerank-natif.json) | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-docling-rerank-serre-top3.json) | [JSON](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/outils/resultats/open-notebook/banc-2026-11-12-central-chat.json) |
 
 ⁵ Génération des requêtes de recherche coupée ; laissée active (réglage par défaut), 58 s.
+
+Une case vide pour le scan ou l'audio : la solution ne lit pas ce document ; ses questions comptent comme manquées dans « Exactes /34 ».
 
 Sens des lignes :
 
