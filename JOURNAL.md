@@ -150,3 +150,7 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 ### 2026-11-13 — Index de la série : contradictions levées
 
 - Ligne « RAGFlow, meilleur, avec reranker » ajoutée au comparatif ; colonne « Effet du reranker mesuré au banc » ; résumé « En bref » et sens des colonnes ; Docling intégré possible seulement dans Kotaemon et Open Notebook (Open WebUI et RAGFlow : serveur à part uniquement, vérifié dans le code et les images).
+
+### 2026-11-13 — Index de la série réécrit
+
+- Solutions en colonnes, critères en lignes ; un tableau par sujet : PDF scanné (OCR et Docling), audio, reranker, résultats par cas, détail du meilleur réglage. Parcours de lecture et étiquettes retirés.

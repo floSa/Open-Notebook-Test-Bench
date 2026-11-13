@@ -1,22 +1,19 @@
 # Index de la série
 
-Manuels vérifiés de cinq solutions de RAG local, alternatives auto-hébergées à NotebookLM. Chaque solution a son dépôt `https://github.com/floSa/<Solution>-Test-Bench` ; cette page est identique dans les cinq dépôts.
+Cinq solutions de RAG local, alternatives auto-hébergées à NotebookLM, testées sur le même corpus avec les mêmes modèles. Cette page est identique dans les cinq dépôts.
 
-## Solutions décrites
+## Solutions
 
-| Solution | Version décrite | Manuel utilisateur |
-|---|---|---|
-| Open Notebook | 1.15.1 | [Open-Notebook-Test-Bench](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/docs/open-notebook/README.md) |
-| RAGFlow | 1.0.0 | [RAGFlow-Test-Bench](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/docs/ragflow/README.md) |
-| AnythingLLM | 1.19.0 | [AnythingLLM-Test-Bench](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/docs/anythingllm/README.md) |
-| Kotaemon | 0.12.0 | [Kotaemon-Test-Bench](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/docs/kotaemon/README.md) |
-| Open WebUI | 0.13.3 | [OpenWebUI-Test-Bench](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/docs/open-webui/README.md) |
+| | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
+|---|---|---|---|---|---|
+| Version | 0.13.3 | 1.0.0 | 1.19.0 | 0.12.0 | 1.15.1 |
+| Manuel | [OpenWebUI-Test-Bench](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/docs/open-webui/README.md) | [RAGFlow-Test-Bench](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/docs/ragflow/README.md) | [AnythingLLM-Test-Bench](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/docs/anythingllm/README.md) | [Kotaemon-Test-Bench](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/docs/kotaemon/README.md) | [Open-Notebook-Test-Bench](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/docs/open-notebook/README.md) |
 
 Essais : novembre 2026. Machine : Ryzen 5 9600X, RTX 4060 Ti 16 Go, 64 Go de RAM (32 Go attribués à WSL2).
 
-## Modèles utilisés
+## Modèles
 
-Les cinq solutions appellent le même service de modèles local (LiteLLM devant llama.cpp et un serveur Whisper), avec les mêmes modèles :
+Les cinq solutions appellent le même service de modèles, hors de leur conteneur :
 
 | Rôle | Modèle |
 |---|---|
@@ -25,93 +22,78 @@ Les cinq solutions appellent le même service de modèles local (LiteLLM devant 
 | Reranker | bge-reranker-v2-m3 (Q8_0) |
 | Transcription audio | faster-whisper-small |
 
-## Services déportables
+Toutes les solutions n'acceptent pas tous ces modèles : les trois tableaux suivants disent lesquels.
 
-Un service « déporté » tourne hors du conteneur de la solution et peut être partagé par plusieurs applications. Dans ce banc, le service de modèles ci-dessus est déporté pour toutes ; Docling (lecture des PDF et OCR) l'est pour Open WebUI, dans un conteneur `docling-serve` 1.38.2 à part.
+## PDF scanné : OCR et Docling
 
-### Lecture des documents scannés (OCR)
+Le corpus contient un contrat scanné (4 questions). Sans OCR, il est illisible.
 
-Le corpus contient un contrat scanné (PDF image, 4 questions). Sans OCR, il est illisible.
-
-| Solution | OCR utilisé dans le banc | Scan lu | Docling déporté possible | Docling déporté essayé | Procédure dans le manuel |
+| | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
 |---|---|---|---|---|---|
-| Open WebUI | Docling déporté | oui | oui | oui, banc complet | [chapitre 08](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/docs/open-webui/manuel/08-regler-la-lecture-des-documents.md) |
-| RAGFlow | DeepDoc, l'OCR intégré de RAGFlow | oui | oui (réglage `DOCLING_SERVER_URL`, plus `ALLOW_ANY_HOST=1`) | oui, banc complet : 34/34, même score qu'avec DeepDoc | [chapitre 06](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/docs/ragflow/manuel/06-regler-la-lecture-des-documents.md), étapes 31 à 33 |
-| Kotaemon | Docling, dans le conteneur de Kotaemon | oui | oui (lecteur ajouté au conteneur) | oui, banc complet : 29/34 (31 avec le Docling intégré, écart expliqué ci-dessous) | [chapitre 05](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/docs/kotaemon/manuel/05-ajouter-et-organiser-ses-documents.md), étapes 17 et 18 |
-| AnythingLLM | Tesseract, l'OCR intégré d'AnythingLLM | oui | non | sans objet | sans objet |
-| Open Notebook | Docling, dans le conteneur d'Open Notebook, sans moteur d'OCR dans l'image 1.15.1 | non | non | sans objet | sans objet |
+| OCR intégré | aucun | DeepDoc | Tesseract | aucun | aucun |
+| Docling dans le conteneur | non | non | non | oui | oui, mais sans OCR |
+| Docling déporté (serveur à part) | oui | oui ¹ | non | oui | non |
+| OCR utilisé au banc | Docling déporté | DeepDoc | Tesseract | Docling dans le conteneur | aucun |
+| Scan lu | oui | oui | oui | oui | non |
+| Score avec Docling déporté | 34/34 | 34/34 | impossible | 29/34 ² | impossible |
 
-Docling dans le conteneur de l'application : seuls Kotaemon et Open Notebook l'embarquent. Open WebUI et RAGFlow n'ont pas de Docling intégré : avec eux, Docling est toujours un serveur à part (déporté).
+¹ Demande `ALLOW_ANY_HOST=1`, qui autorise RAGFlow à joindre toute adresse du réseau privé, pas seulement Docling.
+² 31/34 avec le Docling du conteneur : le Docling déporté relit tous les PDF, le découpage du rapport annuel change et deux questions sur ses tableaux échouent.
 
-DeepDoc est le lecteur de documents propre à RAGFlow (OCR, mise en page, tableaux) ; ses modèles sont dans l'image de RAGFlow et ne se déportent pas.
+## Audio
 
-Docling déporté, ce que les bancs du 13 novembre montrent :
+| | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
+|---|---|---|---|---|---|
+| Transcription | Whisper déporté | Whisper déporté | Whisper déporté | non : l'audio n'est pas lu | Whisper déporté |
+| Questions audio réussies | 2/2 | 2/2 | 2/2 | 0/2 | 2/2 |
 
-- RAGFlow : même score qu'avec DeepDoc (34/34, 4/4), indexation deux fois plus rapide (35 s contre 64 s). Le branchement demande `ALLOW_ANY_HOST=1`, qui autorise RAGFlow à joindre toute adresse du réseau privé, pas seulement Docling.
-- Kotaemon : 29/34 au lieu de 31. Le lecteur déporté relit tous les PDF, alors que le meilleur banc ne relisait que le scan ; deux questions sur les tableaux du rapport annuel échouent à cause de ce découpage différent, pas du déport.
-- Le conteneur Docling occupe environ 2,5 Go de mémoire : le déport n'allège l'ensemble que s'il est partagé par plusieurs applications.
+## Reranker
 
-### Audio et reranker
+| | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
+|---|---|---|---|---|---|
+| bge-reranker-v2-m3 branchable | oui | oui | non : seulement son reranker intégré (MiniLM) | oui | non : aucune étape de tri |
+| Exactes sans puis avec reranker | 28 puis 28 (sans Docling) | 33 puis 34 (défaut), 34 puis 34 (meilleur) | 33 puis 34 (son reranker) | 25 puis 25 | impossible |
 
-| Solution | Transcription audio | Reranker bge-reranker-v2-m3 branchable | Effet du reranker mesuré au banc |
-|---|---|---|---|
-| Open WebUI | Whisper déporté | oui | seul, aucun effet (28/34 avec et sans) ; utilisé dans le meilleur réglage avec Docling (34/34) |
-| RAGFlow | Whisper déporté | oui | 34/34 avec ou sans : aucun gain sur le meilleur réglage ; rattrape une question sur le réglage par défaut (33 → 34) |
-| Kotaemon | ne lit pas l'audio | oui | aucun effet (25/34 avec et sans) ; laissé dans le meilleur réglage |
-| AnythingLLM | Whisper déporté | non : seulement son reranker intégré (ms-marco-MiniLM-L-6-v2) | reranker intégré : 33 → 34/34 |
-| Open Notebook | Whisper déporté | non : aucune étape de tri | sans objet |
+## Résultats par cas
 
-## Comparatif du banc
+Nombre de réponses exactes sur 34, puis temps de réponse médian.
 
-En bref : trois solutions atteignent le score maximal (34/34 et 4 pièges sur 4) : RAGFlow (avec ou sans reranker, avec DeepDoc ou Docling), Open WebUI (Docling et reranker) et AnythingLLM (son reranker intégré et 8 passages). Kotaemon suit (31/34, il ne lit pas l'audio), puis Open Notebook (28/34, il ne lit pas le scan). Entre les trois premières, la différence se fait sur la vitesse et la mémoire.
+| Cas | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
+|---|---|---|---|---|---|
+| Réglage par défaut | 28, 60,1 s | 33, 7,8 s | 33 ³, 14,3 s | 25 ⁴, 25,8 s | 28, 8,7 s |
+| Meilleur réglage | 34, 24,0 s | 34, 7,8 s | 34, 10,7 s | 31, 22,0 s | 28, 8,7 s |
+| Meilleur réglage avec bge-reranker-v2-m3 | 34 (déjà inclus) | 34, 8,8 s | impossible | 31 (déjà inclus) | impossible |
+| Meilleur réglage avec Docling déporté | 34 (déjà inclus) | 34, 8,1 s | impossible | 29, 18,4 s | impossible |
 
-Colonnes : « Exactes » compte les réponses qui contiennent la bonne valeur (exemple : « 48,6 » pour le chiffre d'affaires) ; « Pièges refusés » compte les questions sans réponse dans le corpus où l'outil dit ne pas savoir au lieu d'inventer ; « Bon document cité » compte les réponses dont la source affichée est le bon document.
+³ 3 pièges refusés sur 4 ; tous les autres cas en refusent 4 sur 4.
+⁴ Le comptage automatique donne 26 : une réponse qui refuse (Q17) y est comptée juste à tort.
 
-Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json) : 34 avec réponse, 4 pièges sans réponse dans le corpus), même corpus fictif de 9 documents (dont le PDF scanné et un message vocal), mêmes modèles. Deux lignes par solution : le réglage livré par défaut, puis le meilleur réglage trouvé ; des lignes de plus quand le meilleur réglage a été rejoué avec le reranker ou avec Docling déporté. Toutes les variantes essayées sont dans l'annexe A1 de chaque manuel.
+Open WebUI avec la réflexion du modèle coupée : 34/34, 1,3 s ([résultat brut](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-sans-reflexion.json)). La durée vient surtout de la réflexion du modèle.
 
-| Solution | Réglage | OCR | Recherche | Passages | Reranker | Exactes /34 | Pièges refusés /4 | Bon document cité /34 | Médiane | p95 | Pic RAM de l'application | Résultat brut |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Open WebUI | défaut | aucun : scan refusé | vecteurs | 10 | aucun | 28 | 4 | 30 | 60,1 s | 106,0 s | 2,3 Go | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-defaut-sans-rerank.json) |
-| Open WebUI | meilleur | Docling déporté | hybride | 10 | bge-reranker-v2-m3 | 34 | 4 | 34 | 24,0 s ¹ | 86,9 s | 3,6 Go | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-taches.json) |
-| RAGFlow | défaut | DeepDoc | hybride, vecteurs 0,3 | 6 | aucun | 33 | 4 | 34 | 7,8 s | 50,0 s | 5,4 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-defaut.json) |
-| RAGFlow | meilleur | DeepDoc | hybride, vecteurs 0,7 | 8 | aucun | 34 | 4 | 34 | 7,8 s | 56,9 s | 5,1 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8.json) |
-| RAGFlow | meilleur, avec reranker | DeepDoc | hybride, vecteurs 0,7 | 8 | bge-reranker-v2-m3 | 34 | 4 | 34 | 8,8 s | 55,0 s | 5,1 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8-reranker.json) |
-| RAGFlow | meilleur, Docling déporté | Docling déporté | hybride, vecteurs 0,7 | 8 | aucun | 34 | 4 | 34 | 8,1 s | 61,2 s | 7,3 Go, dont 2,5 Go pour Docling | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-13-docling-deporte-vecteurs07-top8.json) |
-| AnythingLLM | défaut | Tesseract | vecteurs | 4 | aucun | 33 | 3 | 33 | 14,3 s | 27,8 s | 0,9 Go | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-defaut-sans-rerank.json) |
-| AnythingLLM | meilleur | Tesseract | vecteurs | 8 | intégré (MiniLM) | 34 | 4 | 34 | 10,7 s | 37,6 s | 1,6 Go | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-top8-rerank-natif.json) |
-| Kotaemon | défaut | aucun | hybride | 10 | aucun | 25 ² | 4 | 27 | 25,8 s | 38,2 s | 1,9 Go | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-defaut-sans-rerank.json) |
-| Kotaemon | meilleur | Docling dans le conteneur | hybride | 3 | bge-reranker-v2-m3 | 31 | 4 | 32 | 22,0 s | 38,7 s | 1,7 Go | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-docling-rerank-serre-top3.json) |
-| Kotaemon | meilleur, Docling déporté | Docling déporté | hybride | 3 | bge-reranker-v2-m3 | 29 ³ | 4 | 32 | 18,4 s | 27,3 s | 4,9 Go, dont 2,5 Go pour Docling | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-13-docling-deporte-rerank-serre-top3.json) |
-| Open Notebook | défaut = meilleur | aucun (Docling sans OCR) | aucune : sources entières | toutes | aucun | 28 | 4 | 29 | 8,7 s | 27,9 s | 4,7 Go | [JSON](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/outils/resultats/open-notebook/banc-2026-11-12-central-chat.json) |
+## Détail du meilleur réglage
 
-¹ Génération des requêtes de recherche coupée ; laissée active (défaut), la médiane passe à 58 s. ² Le comptage automatique donne 26 : une réponse qui refuse (Q17) y est comptée juste à tort. ³ Docling déporté relit tous les PDF, le Docling intégré ne relisait que le scan : deux questions sur les tableaux du rapport annuel échouent à cause de ce découpage différent.
+| | Open WebUI | RAGFlow | AnythingLLM | Kotaemon | Open Notebook |
+|---|---|---|---|---|---|
+| OCR | Docling déporté | DeepDoc | Tesseract | Docling dans le conteneur | aucun |
+| Recherche | hybride | hybride, vecteurs 0,7 | vecteurs | hybride | aucune : documents envoyés en entier |
+| Passages envoyés au modèle | 10 | 8 | 8 | 3 | tous |
+| Reranker | bge-reranker-v2-m3 | aucun | intégré (MiniLM) | bge-reranker-v2-m3 | aucun |
+| Exactes /34 | 34 | 34 | 34 | 31 | 28 |
+| Pièges refusés /4 | 4 | 4 | 4 | 4 | 4 |
+| Bon document cité /34 | 34 | 34 | 34 | 32 | 29 |
+| Temps médian | 24,0 s ⁵ | 7,8 s | 10,7 s | 22,0 s | 8,7 s |
+| Temps p95 | 86,9 s | 56,9 s | 37,6 s | 38,7 s | 27,9 s |
+| Mémoire de l'application | 3,6 Go | 5,1 Go | 1,6 Go | 1,7 Go | 4,7 Go |
+| Résultat brut | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-taches.json) | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8.json) | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-top8-rerank-natif.json) | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-docling-rerank-serre-top3.json) | [JSON](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/outils/resultats/open-notebook/banc-2026-11-12-central-chat.json) |
 
-Lecture :
+⁵ Génération des requêtes de recherche coupée ; laissée active (réglage par défaut), 58 s.
 
-- Le PDF scanné fait l'essentiel des écarts : les solutions qui le lisent atteignent 34/34 ; les autres perdent ses 4 questions et une ou deux questions multi-documents qui en dépendent.
-- Kotaemon ne lit pas l'audio : 2 questions perdues quel que soit le réglage.
-- La durée vient surtout de la réflexion du modèle et des appels supplémentaires de la solution (génération de requêtes, surlignage des citations). Open WebUI, réflexion coupée, donne 34/34 avec une médiane de 1,3 s ([JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-sans-reflexion.json)).
-- Mémoire : RAGFlow est le plus lourd (environ 5 Go : Elasticsearch, MySQL, MinIO, DeepDoc), AnythingLLM le plus léger (0,9 à 1,6 Go). Le service de modèles, commun aux cinq, n'est pas compté.
+Sens des lignes :
 
-## Parcours de lecture conseillés
+- Exactes : la réponse contient la bonne valeur (exemple : « 48,6 » pour le chiffre d'affaires).
+- Pièges refusés : sur les 4 questions dont la réponse n'est pas dans le corpus, l'outil dit ne pas savoir au lieu d'inventer.
+- Bon document cité : la source affichée sous la réponse est le bon document.
+- Temps p95 : 95 % des réponses arrivent en moins de ce temps.
+- Mémoire de l'application : pic mesuré pendant le banc, conteneurs de la solution seulement (le service de modèles, commun aux cinq, n'est pas compté).
 
-| Profil | Parcours |
-|---|---|
-| Découvrir le RAG local | [glossaire](glossaire.md), puis le chapitre 01 « Découvrir » de chaque manuel |
-| Installer et essayer rapidement | chapitres 01 à 04 de chaque manuel |
-| Choisir entre solutions | les tableaux ci-dessus, puis les annexes A1 (qualité et performances) et A2 (matériel et modèles) de chaque manuel |
-
-## Étiquettes des annexes
-
-Dans les annexes de chaque manuel, chaque affirmation porte une étiquette qui dit d'où elle vient :
-
-| Étiquette | Sens |
-|---|---|
-| [Vérifié] | observé ou mesuré sur la machine d'essai ; renvoie à un script et à un résultat brut de `outils/` |
-| [Source] | lu dans la documentation officielle ou le code source, non essayé |
-| [Estimation] | calcul non mesuré, avec son raisonnement |
-| [À tester] | ni documenté ni essayé |
-| [Testée] | commande exécutée pendant les essais |
-| [Aide] | commande lue dans l'aide, non exécutée |
-
-Les étiquettes ne figurent que dans les annexes (partie 2) ; le manuel (partie 1) se lit sans elles. Les libellés de l'interface sont cités tels qu'affichés. Les données sont fictives (entreprise Vélanor).
+Corpus : 9 documents d'une entreprise fictive, Vélanor (PDF texte, PDF scanné, PDF en anglais, DOCX, PPTX, XLSX, HTML, Markdown, message vocal MP3). Questions : [corpus/questions.json](../corpus/questions.json), 34 avec réponse et 4 pièges.
