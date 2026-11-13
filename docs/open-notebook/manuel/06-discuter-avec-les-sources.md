@@ -110,4 +110,4 @@ Une **session** est une conversation : chaque carnet peut en garder plusieurs, c
 | Citation affichée comme du texte, sans lien | le modèle a écrit le nom du fichier au lieu de l'identifiant | ouvrir la source à la main |
 
 ---
-*Version décrite : Open Notebook 1.15.1, service LLM central (`chat`), essais du 12 novembre 2026. Détails et preuves : [évaluation](../annexes/A1-qualite-et-performances.md), [rapport d'essais](../annexes/A6-rapport-d-essais.md).*
+*Version décrite : Open Notebook 1.15.1, service LLM central (`chat`), essais du 12 novembre 2026. Détails et preuves : [évaluation](../annexes/A1-evaluation-qualite-et-performances.md), [rapport d'essais](../annexes/A6-rapport-d-essais.md).*

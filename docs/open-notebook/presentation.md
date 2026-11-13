@@ -106,11 +106,11 @@ Temps d'attente : le modèle de réponse écrit environ 14 jetons par seconde, s
 
 Temps d'attente : le modèle écrit environ 68 jetons par seconde. Une question sur neuf documents reçoit sa réponse en quelques secondes ; une question de calcul avec réflexion prend 15 à 40 secondes.
 
-Le détail des mesures et leurs sources est dans l'annexe [A2](annexes/A2-materiel-et-modeles.md).
+Le détail des mesures et leurs sources est dans l'annexe [A2](annexes/A2-choisir-son-materiel-et-ses-modeles.md).
 
 ## Les résultats mesurés
 
-Test sur 38 questions dont la réponse est connue, posées à 9 documents d'une entreprise fictive, avec le modèle `chat` du service central sur carte graphique ; détail dans l'annexe [A1](annexes/A1-qualite-et-performances.md).
+Test sur 38 questions dont la réponse est connue, posées à 9 documents d'une entreprise fictive, avec le modèle `chat` du service central sur carte graphique ; détail dans l'annexe [A1](annexes/A1-evaluation-qualite-et-performances.md).
 
 | Mesure | Résultat |
 |---|---|

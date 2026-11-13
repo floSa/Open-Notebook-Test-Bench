@@ -102,7 +102,7 @@ Les trois bancs font les mêmes six erreurs (le contrat scanné). Le modèle `ch
 - Garder Docling actif : sans lui, le tableau du document Word est perdu (−3 réponses justes sur l'ancienne pile) [Vérifié] ([banc sans Docling](../../../outils/resultats/open-notebook/banc-2026-11-08-defaut-qwen-fullcontent.json)).
 - Mettre les sources utiles en « contenu complet » : un nouveau document n'est envoyé que par son aperçu tant que ce mode n'est pas choisi [Vérifié] (chapitre 04, étape 8).
 - Faire passer les documents scannés par un OCR avant de les ajouter [À tester] avec un outil extérieur.
-- Pour un grand nombre de documents, préférer « Demander », qui ne lit que les passages trouvés, à la conversation, qui envoie tout ([taille de contexte](A2-materiel-et-modeles.md#4-taille-de-contexte-et-volume-de-documents)).
+- Pour un grand nombre de documents, préférer « Demander », qui ne lit que les passages trouvés, à la conversation, qui envoie tout ([taille de contexte](A2-choisir-son-materiel-et-ses-modeles.md#4-taille-de-contexte-et-volume-de-documents)).
 
 ## Dépannage
 

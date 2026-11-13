@@ -35,9 +35,9 @@ Ce manuel apprend à installer et à utiliser Open Notebook 1.15.1, une applicat
 
 | N° | Annexe | Contenu |
 |---|---|---|
-| A1 | [Évaluation : qualité et performances](annexes/A1-qualite-et-performances.md) | banc de 38 questions, réglages qui changent le résultat, préconisations |
-| A2 | [Choisir son matériel et ses modèles](annexes/A2-materiel-et-modeles.md) | configurations minimales sans et avec carte graphique, taille de contexte, temps d'attente |
-| A3 | [Automatiser par l'API et MCP](annexes/A3-api-et-mcp.md) | API REST, exemples exécutés, serveur MCP |
+| A1 | [Évaluation : qualité et performances](annexes/A1-evaluation-qualite-et-performances.md) | banc de 38 questions, réglages qui changent le résultat, préconisations |
+| A2 | [Choisir son matériel et ses modèles](annexes/A2-choisir-son-materiel-et-ses-modeles.md) | configurations minimales sans et avec carte graphique, taille de contexte, temps d'attente |
+| A3 | [Automatiser par l'API et MCP](annexes/A3-automatiser-par-l-api.md) | API REST, exemples exécutés, serveur MCP |
 | A4 | [Exploitation](annexes/A4-exploitation.md) | sauvegarde et restauration, mise à jour, journaux, sécurité, administration |
 | A5 | [Fonctionnement interne](annexes/A5-fonctionnement-interne.md) | architecture, services, ports, notions techniques |
 | A6 | [Rapport d'essais](annexes/A6-rapport-d-essais.md) | méthode, preuves, étiquettes, renvois aux résultats bruts |

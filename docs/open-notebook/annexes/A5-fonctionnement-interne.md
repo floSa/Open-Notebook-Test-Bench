@@ -121,7 +121,7 @@ Dossiers de données, tous sous `donnees/open-notebook/` (ignoré par git) [Sour
 
 ### Pour aller plus loin
 
-- Mémoire au repos le 12 novembre 2026 [Vérifié] ([vérification minimale](../../../outils/resultats/open-notebook/verif-minimale-2026-11-12.json)) : 2 915 Mo pour `rag-open-notebook`, 140 Mo pour la base. Sans Docling, le conteneur de l'application occupait 0,4 Go le 8 novembre 2026, 2,1 Go juste après l'installation de Docling [Vérifié] ([journal](../../../outils/resultats/open-notebook/essai-2026-11-08-docling.log)). L'écart vient donc surtout de Docling [Estimation]. Les besoins en matériel sont détaillés dans [Matériel et modèles](A2-materiel-et-modeles.md).
+- Mémoire au repos le 12 novembre 2026 [Vérifié] ([vérification minimale](../../../outils/resultats/open-notebook/verif-minimale-2026-11-12.json)) : 2 915 Mo pour `rag-open-notebook`, 140 Mo pour la base. Sans Docling, le conteneur de l'application occupait 0,4 Go le 8 novembre 2026, 2,1 Go juste après l'installation de Docling [Vérifié] ([journal](../../../outils/resultats/open-notebook/essai-2026-11-08-docling.log)). L'écart vient donc surtout de Docling [Estimation]. Les besoins en matériel sont détaillés dans [Matériel et modèles](A2-choisir-son-materiel-et-ses-modeles.md).
 - L'API attend la base au démarrage et applique elle-même les migrations de schéma [Source] (`api/main.py`). Le worker lit `SURREAL_NAMESPACE` et `SURREAL_DATABASE` avec un défaut `test`, différent de celui de l'API : sans ces deux variables, les tâches de fond ne sont jamais traitées [Source] (`open_notebook/database/repository.py:59-66`). Le compose officiel et l'override les fixent tous deux à `open_notebook`.
 
 ## 5. Le service de modèles
@@ -149,7 +149,7 @@ Dans Open Notebook, un seul fournisseur « OpenAI Compatible » nommé `llm-cent
 
 ### Pour aller plus loin
 
-- **Réflexion de `chat`** : le modèle raisonne avant de répondre. Le raisonnement compte dans le plafond de jetons de la réponse et allonge le délai [Source] (README de LLM-Service). L'override porte donc le délai d'un appel à 900 s (`ESPERANTO_LLM_TIMEOUT`). L'interface d'Open Notebook ne propose pas de réglage pour couper la réflexion [À tester] ; son effet sur la qualité et les délais est mesuré dans [Qualité et performances](A1-qualite-et-performances.md).
+- **Réflexion de `chat`** : le modèle raisonne avant de répondre. Le raisonnement compte dans le plafond de jetons de la réponse et allonge le délai [Source] (README de LLM-Service). L'override porte donc le délai d'un appel à 900 s (`ESPERANTO_LLM_TIMEOUT`). L'interface d'Open Notebook ne propose pas de réglage pour couper la réflexion [À tester] ; son effet sur la qualité et les délais est mesuré dans [Qualité et performances](A1-evaluation-qualite-et-performances.md).
 - **Ancienne pile** : jusqu'au 9 novembre 2026, les modèles venaient d'Ollama sur CPU (`ollama-central`, qwen3:4b-instruct, bge-m3), puis de vLLM sur GPU (`vllm-central`, Gemma 4 E4B ; `vllm-embed`), et la transcription de `rag-speaches`. Les mesures faites sur cette pile restent des preuves historiques, non comparables telles quelles ([Rapport d'essais](A6-rapport-d-essais.md)).
 
 ## 6. Ce que change l'override
@@ -191,7 +191,7 @@ L'installation part du `docker-compose.yml` officiel au tag v1.15.1 (copie gard�
 ### Pour aller plus loin
 
 - La taille de découpage est lue au démarrage. Les sources déjà indexées gardent leurs passages jusqu'à une reconstruction (`POST /api/embeddings/rebuild`) [Source]. Changer de modèle d'embedding impose aussi cette reconstruction : seuls les vecteurs de même dimension sont comparés [Source] ([synthèse du code](../../../outils/resultats/open-notebook/cadrage-source.md)).
-- Budget de contexte sur l'ancienne pile, pour mémoire : sans GPU, Ollama lisait le prompt à 36 jetons par seconde avec qwen3:4b-instruct au contexte de 16 384 [Vérifié] ([mesures du socle](../../../outils/resultats/socle/mesures-2026-11-08-passe2.json)). Ces chiffres ne valent pas pour `chat` : voir [Matériel et modèles](A2-materiel-et-modeles.md).
+- Budget de contexte sur l'ancienne pile, pour mémoire : sans GPU, Ollama lisait le prompt à 36 jetons par seconde avec qwen3:4b-instruct au contexte de 16 384 [Vérifié] ([mesures du socle](../../../outils/resultats/socle/mesures-2026-11-08-passe2.json)). Ces chiffres ne valent pas pour `chat` : voir [Matériel et modèles](A2-choisir-son-materiel-et-ses-modeles.md).
 
 ## 8. Extraction et Docling
 

@@ -23,6 +23,7 @@ SurfSense passeront le même corpus et les mêmes questions.
 
 ## Sommaire
 
+- [Le parcours](#le-parcours)
 - [Architecture](#architecture)
 - [Démarrage](#démarrage)
 - [Configuration](#configuration)
@@ -30,13 +31,60 @@ SurfSense passeront le même corpus et les mêmes questions.
 - [Tests](#tests)
 - [Structure du projet](#structure-du-projet)
 - [Licences & composants](#licences--composants)
-- [Le parcours](#le-parcours)
 - [Commandes utiles](#commandes-utiles)
 - [Données du banc](#données-du-banc)
 - [Les pièges que ce banc documente](#les-pièges-que-ce-banc-documente)
 - [Résultats](#résultats)
 - [Versions](#versions)
 - [Ressources](#ressources)
+
+## Le parcours
+
+Page d'accueil et sommaire complet : [docs/open-notebook/README.md](docs/open-notebook/README.md).
+
+**Partie 1 — Manuel utilisateur** (à lire dans l'ordre)
+
+| N° | Chapitre | Ce qu'on saura faire |
+|---|---|---|
+| 01 | [Découvrir Open Notebook](docs/open-notebook/manuel/01-decouvrir-open-notebook.md) | dire à quoi sert l'outil, pour qui, ce qu'il demande comme machine, et les mots de base |
+| 02 | [Installer Open Notebook](docs/open-notebook/manuel/02-installer-open-notebook.md) | installer, démarrer, arrêter et désinstaller l'application sous Windows 11 + WSL2 |
+| 03 | [Premiers pas](docs/open-notebook/manuel/03-premiers-pas.md) | se connecter, se repérer dans l'écran, déclarer les modèles d'IA |
+| 04 | [Première question en dix minutes](docs/open-notebook/manuel/04-premiere-question.md) | créer un carnet, ajouter un document, poser une question et ouvrir la citation |
+| 05 | [Ajouter et organiser ses sources](docs/open-notebook/manuel/05-ajouter-et-organiser-les-sources.md) | ajouter fichiers, liens et textes, suivre leur lecture, ranger et supprimer |
+| 06 | [Discuter avec ses sources](docs/open-notebook/manuel/06-discuter-avec-les-sources.md) | choisir ce qui est envoyé au modèle, lire les citations, gérer plusieurs conversations |
+| 07 | [Prendre des notes et transformer les sources](docs/open-notebook/manuel/07-notes-et-transformations.md) | garder des notes, appliquer et créer une transformation |
+| 08 | [Rechercher et demander](docs/open-notebook/manuel/08-rechercher-et-demander.md) | chercher par mots ou par le sens, poser une question à tous les carnets |
+| 09 | [Créer un podcast](docs/open-notebook/manuel/09-creer-un-podcast.md) | régler les voix et le déroulé, générer un épisode et l'écouter |
+| 10 | [Régler l'application](docs/open-notebook/manuel/10-regler-l-application.md) | régler la lecture des documents, les embeddings et les options avancées |
+| 11 | [Cas pratiques](docs/open-notebook/manuel/11-cas-pratiques.md) | mener trois cas réels de bout en bout sur un dossier d'entreprise |
+| 12 | [En cas de problème](docs/open-notebook/manuel/12-en-cas-de-probleme.md) | reconnaître les erreurs rencontrées, leur cause et leur remède |
+| 13 | [Glossaire](docs/open-notebook/manuel/13-glossaire.md) | retrouver le sens des mots de l'interface |
+
+**Partie 2 — Évaluation et compléments**
+
+| N° | Annexe | Contenu |
+|---|---|---|
+| A1 | [Évaluation : qualité et performances](docs/open-notebook/annexes/A1-evaluation-qualite-et-performances.md) | banc de 38 questions, réglages qui changent le résultat, préconisations |
+| A2 | [Choisir son matériel et ses modèles](docs/open-notebook/annexes/A2-choisir-son-materiel-et-ses-modeles.md) | configurations minimales sans et avec carte graphique, temps d'attente |
+| A3 | [Automatiser par l'API et MCP](docs/open-notebook/annexes/A3-automatiser-par-l-api.md) | API REST, exemples exécutés, serveur MCP |
+| A4 | [Exploitation](docs/open-notebook/annexes/A4-exploitation.md) | sauvegarde, restauration, mise à jour, journaux, sécurité |
+| A5 | [Fonctionnement interne](docs/open-notebook/annexes/A5-fonctionnement-interne.md) | architecture, services, ports, override, service central |
+| A6 | [Rapport d'essais](docs/open-notebook/annexes/A6-rapport-d-essais.md) | méthode, preuves, renvois aux résultats bruts |
+| — | [Carte de l'interface](docs/open-notebook/annexes/carte-interface.md) | chaque page, menu et réglage, et le chapitre qui le couvre |
+
+Une présentation d'une page reste disponible : [Open Notebook en bref](docs/open-notebook/presentation.md).
+
+**Parcours conseillés**
+
+| Objectif | Lire |
+|---|---|
+| Savoir si l'outil convient | 01, puis A1 et A2 |
+| Installer et essayer | 01, 02, 03, 04 |
+| Travailler sur ses documents au quotidien | 05, 06, 07, 08, puis 11 |
+| Produire un podcast | 04, 09 |
+| Automatiser | 04, puis A3 |
+| Exploiter et dépanner | 12, A4, A5 |
+| Comparer les solutions | A1, puis le [comparatif](docs/README.md) |
 
 ## Architecture
 
@@ -90,7 +138,7 @@ base et au serveur de synthèse vocale. Tous les ports sont publiés sur
   WSL2, intégration de la distribution activée ; le dépôt dans le système de
   fichiers Linux (`~/mes_projets/...`), pas sous `/mnt/c`. Matériel conseillé,
   sans et avec carte graphique : [chapitre 01](docs/open-notebook/manuel/01-decouvrir-open-notebook.md)
-  et [annexe A2](docs/open-notebook/annexes/A2-materiel-et-modeles.md).
+  et [annexe A2](docs/open-notebook/annexes/A2-choisir-son-materiel-et-ses-modeles.md).
 - Le service LLM central démarré (dépôt LLM-Service, branche `service-llamacpp`).
 - Un fichier `.env` à la racine, copie de [.env.example](.env.example), avec la
   clé `LLM_CENTRAL_KEY` du service (ignoré par git, jamais affiché).
@@ -193,7 +241,7 @@ Routes du service central appelées par
 `/v1/models`, `/v1/chat/completions`, `/v1/embeddings`, `/v1/rerank`,
 `/v1/audio/transcriptions`.
 
-Détail, exemples exécutés et serveur MCP : [annexe A3](docs/open-notebook/annexes/A3-api-et-mcp.md).
+Détail, exemples exécutés et serveur MCP : [annexe A3](docs/open-notebook/annexes/A3-automatiser-par-l-api.md).
 
 ## Tests
 
@@ -293,54 +341,6 @@ Rôle de chaque script : [outils/README.md](outils/README.md).
 | vLLM, Gemma 4 E4B | bancs antérieurs sur carte graphique | Apache License 2.0 ; licence Gemma (Google, usage sous conditions) |
 | **Ce projet** | manuels, scripts, corpus, banc | MIT — Copyright (c) 2026 floSa |
 
-## Le parcours
-
-Page d'accueil et sommaire complet : [docs/open-notebook/README.md](docs/open-notebook/README.md).
-
-**Partie 1 — Manuel utilisateur** (à lire dans l'ordre)
-
-| N° | Chapitre | Ce qu'on saura faire |
-|---|---|---|
-| 01 | [Découvrir Open Notebook](docs/open-notebook/manuel/01-decouvrir-open-notebook.md) | dire à quoi sert l'outil, pour qui, ce qu'il demande comme machine, et les mots de base |
-| 02 | [Installer Open Notebook](docs/open-notebook/manuel/02-installer-open-notebook.md) | installer, démarrer, arrêter et désinstaller l'application sous Windows 11 + WSL2 |
-| 03 | [Premiers pas](docs/open-notebook/manuel/03-premiers-pas.md) | se connecter, se repérer dans l'écran, déclarer les modèles d'IA |
-| 04 | [Première question en dix minutes](docs/open-notebook/manuel/04-premiere-question.md) | créer un carnet, ajouter un document, poser une question et ouvrir la citation |
-| 05 | [Ajouter et organiser ses sources](docs/open-notebook/manuel/05-ajouter-et-organiser-les-sources.md) | ajouter fichiers, liens et textes, suivre leur lecture, ranger et supprimer |
-| 06 | [Discuter avec ses sources](docs/open-notebook/manuel/06-discuter-avec-les-sources.md) | choisir ce qui est envoyé au modèle, lire les citations, gérer plusieurs conversations |
-| 07 | [Prendre des notes et transformer les sources](docs/open-notebook/manuel/07-notes-et-transformations.md) | garder des notes, appliquer et créer une transformation |
-| 08 | [Rechercher et demander](docs/open-notebook/manuel/08-rechercher-et-demander.md) | chercher par mots ou par le sens, poser une question à tous les carnets |
-| 09 | [Créer un podcast](docs/open-notebook/manuel/09-creer-un-podcast.md) | régler les voix et le déroulé, générer un épisode et l'écouter |
-| 10 | [Régler l'application](docs/open-notebook/manuel/10-regler-l-application.md) | régler la lecture des documents, les embeddings et les options avancées |
-| 11 | [Cas pratiques](docs/open-notebook/manuel/11-cas-pratiques.md) | mener trois cas réels de bout en bout sur un dossier d'entreprise |
-| 12 | [En cas de problème](docs/open-notebook/manuel/12-en-cas-de-probleme.md) | reconnaître les erreurs rencontrées, leur cause et leur remède |
-| 13 | [Glossaire](docs/open-notebook/manuel/13-glossaire.md) | retrouver le sens des mots de l'interface |
-
-**Partie 2 — Évaluation et compléments**
-
-| N° | Annexe | Contenu |
-|---|---|---|
-| A1 | [Évaluation : qualité et performances](docs/open-notebook/annexes/A1-qualite-et-performances.md) | banc de 38 questions, réglages qui changent le résultat, préconisations |
-| A2 | [Choisir son matériel et ses modèles](docs/open-notebook/annexes/A2-materiel-et-modeles.md) | configurations minimales sans et avec carte graphique, temps d'attente |
-| A3 | [Automatiser par l'API et MCP](docs/open-notebook/annexes/A3-api-et-mcp.md) | API REST, exemples exécutés, serveur MCP |
-| A4 | [Exploitation](docs/open-notebook/annexes/A4-exploitation.md) | sauvegarde, restauration, mise à jour, journaux, sécurité |
-| A5 | [Fonctionnement interne](docs/open-notebook/annexes/A5-fonctionnement-interne.md) | architecture, services, ports, override, service central |
-| A6 | [Rapport d'essais](docs/open-notebook/annexes/A6-rapport-d-essais.md) | méthode, preuves, renvois aux résultats bruts |
-| — | [Carte de l'interface](docs/open-notebook/annexes/carte-interface.md) | chaque page, menu et réglage, et le chapitre qui le couvre |
-
-Une présentation d'une page reste disponible : [Open Notebook en bref](docs/open-notebook/presentation.md).
-
-**Parcours conseillés**
-
-| Objectif | Lire |
-|---|---|
-| Savoir si l'outil convient | 01, puis A1 et A2 |
-| Installer et essayer | 01, 02, 03, 04 |
-| Travailler sur ses documents au quotidien | 05, 06, 07, 08, puis 11 |
-| Produire un podcast | 04, 09 |
-| Automatiser | 04, puis A3 |
-| Exploiter et dépanner | 12, A4, A5 |
-| Comparer les solutions | A1, puis le [comparatif](docs/README.md) |
-
 ## Commandes utiles
 
 ```
@@ -402,39 +402,25 @@ Tous rencontrés pendant les essais, chacun avec sa preuve dans `outils/resultat
 | 3 | Choisir un autre modèle d'embedding ouvre la confirmation « Changement de modèle d'embedding » : les index de recherche sont à reconstruire | [03](docs/open-notebook/manuel/03-premiers-pas.md) |
 | 4 | « Attribution automatique des défauts » répond « déjà configurés » quand l'ancien modèle par défaut a été supprimé : les cases sont à remplir à la main | [03](docs/open-notebook/manuel/03-premiers-pas.md) |
 | 5 | La transcription audio ignore la Base URL enregistrée pour « OpenAI Compatible » et lit `OPENAI_COMPATIBLE_BASE_URL_STT` : sans cette variable, source audio en échec | [A5](docs/open-notebook/annexes/A5-fonctionnement-interne.md) |
-| 6 | Pas de reranker : Open Notebook 1.15.1 refuse ce type de modèle (« Reranking is out of scope (#1087) »), `rerank` du service central reste inutilisé | [A1](docs/open-notebook/annexes/A1-qualite-et-performances.md) |
-| 7 | La réflexion de `chat` n'est pas réglable dans Open Notebook : certaines réponses dépassent 20 s | [A1](docs/open-notebook/annexes/A1-qualite-et-performances.md) |
+| 6 | Pas de reranker : Open Notebook 1.15.1 refuse ce type de modèle (« Reranking is out of scope (#1087) »), `rerank` du service central reste inutilisé | [A1](docs/open-notebook/annexes/A1-evaluation-qualite-et-performances.md) |
+| 7 | La réflexion de `chat` n'est pas réglable dans Open Notebook : certaines réponses dépassent 20 s | [A1](docs/open-notebook/annexes/A1-evaluation-qualite-et-performances.md) |
 | 8 | OCR des scans inopérant dans l'image 1.15.1, même avec Docling : le contrat scanné reste illisible et la source en échec garde le titre « Processing... » | [05](docs/open-notebook/manuel/05-ajouter-et-organiser-les-sources.md) |
 | 9 | Sans Docling, les tableaux des fichiers Word disparaissent sans message | [10](docs/open-notebook/manuel/10-regler-l-application.md) |
 | 10 | Un worker bloqué après une saturation mémoire laisse les podcasts en attente indéfiniment | [09](docs/open-notebook/manuel/09-creer-un-podcast.md) |
 | 11 | Une citation valide peut couvrir un chiffre faux pris dans un autre document | [11](docs/open-notebook/manuel/11-cas-pratiques.md) |
-| 12 | Serveur MCP tiers : `create_source` en échec | [A3](docs/open-notebook/annexes/A3-api-et-mcp.md) |
+| 12 | Serveur MCP tiers : `create_source` en échec | [A3](docs/open-notebook/annexes/A3-automatiser-par-l-api.md) |
 
 ## Résultats
 
-Banc du 12 novembre 2026 : chat de carnet, documents en contenu complet, `chat`
-du service central (Qwen3.5-4B, réflexion activée, 16 384 jetons), Docling
-actif, carte RTX 4060 Ti 16 Go
-([JSON](outils/resultats/open-notebook/banc-2026-11-12-central-chat.json),
-[tableau](outils/resultats/open-notebook/banc-2026-11-12-central-chat.md)) :
+Banc de 38 questions (34 avec réponse, 4 pièges), modèles du service central : Qwen3.5-4B avec réflexion, bge-m3, bge-reranker-v2-m3.
 
-| Mesure | Résultat |
-|---|---|
-| Réponses justes | 28 / 34 (les 6 erreurs viennent du contrat scanné : 4 questions sur le scan, 2 multi-documents qui en dépendent) |
-| Pièges refusés | 4 / 4 |
-| Bon document cité | 29 |
-| Par type | tableaux 10/10, faits simples 13/13, anglais 2/2, audio 2/2, multi-documents 1/3, scan 0/4 |
-| Temps de réponse | 8,7 s en médiane, 27,9 s au 95e centile |
-| Indexation des 9 documents | 65 s |
-| Mémoire | pic de 4,7 Go pour l'application (Docling) ; carte graphique 8,4 Go sur 16 Go |
+| Réglage | OCR | Recherche | Passages | Reranker | Exactes /34 | Pièges refusés /4 | Médiane | Pic RAM de l'application |
+|---|---|---|---|---|---|---|---|---|
+| défaut = meilleur | aucun (Docling sans OCR) | aucune : sources entières | toutes | aucun | 28 | 4 | 8,7 s | 4,7 Go |
 
-Bancs antérieurs, sur l'ancienne pile et avec d'autres modèles (non comparables
-tels quels) : Ollama sur processeur (qwen3:4b-instruct), 28/34, médiane 7,4 s ;
-vLLM sur carte graphique (Gemma 4 E4B), 28/34, médiane 1,9 s.
+Les 6 erreurs viennent du contrat scanné, illisible : le Docling de l'image 1.15.1 n'a pas de moteur d'OCR (4 questions sur le scan, 2 multi-documents qui en dépendent).
 
-Détail et comparaison des réglages : [annexe A1](docs/open-notebook/annexes/A1-qualite-et-performances.md).
-Méthode et preuves : [annexe A6](docs/open-notebook/annexes/A6-rapport-d-essais.md).
-Bilan complet de la mission : [RAPPORT-open-notebook.md](RAPPORT-open-notebook.md).
+Toutes les variantes : [annexe A1](docs/open-notebook/annexes/A1-evaluation-qualite-et-performances.md). Méthode et preuves : [annexe A6](docs/open-notebook/annexes/A6-rapport-d-essais.md). Bilan : [RAPPORT-open-notebook.md](RAPPORT-open-notebook.md). Comparaison avec les quatre autres solutions : [index de la série](docs/README.md).
 
 ## Versions
 

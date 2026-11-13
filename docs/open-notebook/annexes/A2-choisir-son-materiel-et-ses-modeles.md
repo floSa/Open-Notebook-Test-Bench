@@ -1,7 +1,7 @@
 # A2. Choisir son matériel et ses modèles
 
 > **Objet** : dimensionner une machine pour Open Notebook branché au service LLM central : configurations minimales sans et avec carte graphique, mémoire, taille de contexte, temps d'attente.
-> **Prérequis** : [Découvrir Open Notebook](../manuel/01-decouvrir-open-notebook.md) ; [évaluation](A1-qualite-et-performances.md).
+> **Prérequis** : [Découvrir Open Notebook](../manuel/01-decouvrir-open-notebook.md) ; [évaluation](A1-evaluation-qualite-et-performances.md).
 > **Version décrite** : Open Notebook 1.15.1 ; service LLM central de LLM-Service (branche `service-llamacpp`) : `chat` = Qwen3.5-4B (GGUF, vision, réflexion activée), `embed` = bge-m3 (Q8_0, 1 024 dimensions), `rerank` = bge-reranker-v2-m3 (non utilisé par Open Notebook), `transcribe` = faster-whisper-small ; 16 384 jetons par requête.
 > **Statut des informations** : [Vérifié] mesuré sur la machine d'essai (profil B : Ryzen 5 9600X, 32 Go, RTX 4060 Ti 16 Go), avec renvoi au résultat brut ; [Source] mesures publiées par LLM-Service dans son dépôt (README, section « Mesures », dossiers `mesures/gpu` et `mesures/cpu`, relus le 12 novembre 2026) ; [Estimation] calcul à partir de ces mesures, avec sa base ; [À tester] non essayé.
 > **Précautions** : le profil A (sans carte graphique) n'a pas été mesuré avec le service central sur la machine d'essai : ses chiffres viennent des mesures de LLM-Service en profil `cpu` (même machine B, carte non utilisée) et sont marqués comme tels ; les chiffres du profil A mesurés le 8 novembre portent sur l'ancienne pile (Ollama, qwen3:4b-instruct) et ne se comparent pas tels quels.

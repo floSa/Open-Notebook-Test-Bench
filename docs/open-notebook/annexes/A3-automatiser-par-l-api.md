@@ -146,7 +146,7 @@ Exemple [Testée] :
 bash exemples/open-notebook/04_rechercher.sh "prime d'intéressement"
 ```
 
-`type` vaut `text` (mots) ou `vector` (sens). `minimum_score` (0,2 par défaut) ne s'applique qu'à la recherche vectorielle [Source]. Les différences mesurées sont dans [Qualité et performances](A1-qualite-et-performances.md).
+`type` vaut `text` (mots) ou `vector` (sens). `minimum_score` (0,2 par défaut) ne s'applique qu'à la recherche vectorielle [Source]. Les différences mesurées sont dans [Qualité et performances](A1-evaluation-qualite-et-performances.md).
 
 Sortie du 8 novembre 2026, ancienne pile (bge-m3 servi par Ollama) [Vérifié] ([sortie](../../../exemples/open-notebook/sorties_verifiees.txt)) : en `text`, la note du CSE seule ; en `vector`, la note du CSE en tête (0,57), puis deux autres documents (0,37 et 0,36). Le premier lancement de ce jour-là a échoué sur une apostrophe mal protégée dans le script, corrigée depuis (même fichier). Les scores vectoriels changent avec le service d'embedding (bge-m3 Q8_0 sur llama.cpp) : à rejouer [À tester].
 

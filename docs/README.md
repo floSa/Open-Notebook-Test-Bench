@@ -1,47 +1,100 @@
 # Index de la série
 
+Manuels vérifiés de cinq solutions de RAG local, alternatives auto-hébergées à NotebookLM. Chaque solution a son dépôt `https://github.com/floSa/<Solution>-Test-Bench` ; cette page est identique dans les cinq dépôts.
+
 ## Solutions décrites
 
-| Solution | Version décrite | Date des essais | Machine de test | Langue de l'interface | Manuel |
-|---|---|---|---|---|---|
-| Open Notebook | 1.15.1 | 2026-11-12 | Ryzen 5 9600X, 32 Go, RTX 4060 Ti 16 Go, WSL2 ; modèles du service LLM central (profil `gpu`) | français | [manuel](open-notebook/README.md), [présentation](open-notebook/presentation.md) |
+| Solution | Version décrite | Manuel utilisateur |
+|---|---|---|
+| Open Notebook | 1.15.1 | [Open-Notebook-Test-Bench](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/docs/open-notebook/README.md) |
+| RAGFlow | 1.0.0 | [RAGFlow-Test-Bench](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/docs/ragflow/README.md) |
+| AnythingLLM | 1.19.0 | [AnythingLLM-Test-Bench](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/docs/anythingllm/README.md) |
+| Kotaemon | 0.12.0 | [Kotaemon-Test-Bench](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/docs/kotaemon/README.md) |
+| Open WebUI | 0.13.3 | [OpenWebUI-Test-Bench](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/docs/open-webui/README.md) |
 
-Dépôt de chaque solution : `https://github.com/floSa/<Solution>-Test-Bench` (ici [Open-Notebook-Test-Bench](https://github.com/floSa/Open-Notebook-Test-Bench)).
+Essais : novembre 2026. Machine : Ryzen 5 9600X, RTX 4060 Ti 16 Go, 64 Go de RAM (32 Go attribués à WSL2).
+
+## Modèles utilisés
+
+Les cinq solutions appellent le même service de modèles local (LiteLLM devant llama.cpp et un serveur Whisper), avec les mêmes modèles :
+
+| Rôle | Modèle |
+|---|---|
+| Réponse | Qwen3.5-4B (Q4_K_M), réflexion activée, 16 384 jetons par requête |
+| Embedding | bge-m3 (Q8_0) |
+| Reranker | bge-reranker-v2-m3 (Q8_0) |
+| Transcription audio | faster-whisper-small |
+
+## Services déportables
+
+Un service « déporté » tourne hors du conteneur de la solution et peut être partagé par plusieurs applications. Dans ce banc, le service de modèles ci-dessus est déporté pour toutes ; Docling (lecture des PDF et OCR) l'est pour Open WebUI, dans un conteneur `docling-serve` 1.38.2 à part.
+
+### Lecture des documents scannés (OCR)
+
+Le corpus contient un contrat scanné (PDF image, 4 questions). Sans OCR, il est illisible.
+
+| Solution | OCR utilisé dans le banc | Scan lu | Docling déporté possible | Docling déporté essayé |
+|---|---|---|---|---|
+| Open WebUI | Docling déporté | oui | oui | oui, banc complet |
+| RAGFlow | DeepDoc, l'OCR intégré de RAGFlow | oui | oui (réglage `DOCLING_SERVER_URL`) | non |
+| Kotaemon | Docling, dans le conteneur de Kotaemon | oui | oui (lecteur ajouté au conteneur) | oui, lecture du scan seulement |
+| AnythingLLM | Tesseract, l'OCR intégré d'AnythingLLM | oui | non | sans objet |
+| Open Notebook | Docling, dans le conteneur d'Open Notebook, sans moteur d'OCR dans l'image 1.15.1 | non | non | sans objet |
+
+DeepDoc est le lecteur de documents propre à RAGFlow (OCR, mise en page, tableaux) ; ses modèles sont dans l'image de RAGFlow et ne se déportent pas.
+
+### Audio et reranker
+
+| Solution | Transcription audio | Reranker bge-reranker-v2-m3 branchable | Reranker utilisé dans le meilleur réglage |
+|---|---|---|---|
+| Open WebUI | Whisper déporté | oui | bge-reranker-v2-m3 |
+| RAGFlow | Whisper déporté | oui | aucun (sans gain) |
+| Kotaemon | ne lit pas l'audio | oui | bge-reranker-v2-m3 |
+| AnythingLLM | Whisper déporté | non : seulement son reranker intégré (ms-marco-MiniLM-L-6-v2) | intégré |
+| Open Notebook | Whisper déporté | non : aucune étape de tri | sans objet |
 
 ## Comparatif du banc
 
-Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json)), même corpus fictif, mêmes modèles du service LLM central (`chat` = Qwen3.5-4B, réflexion activée, 16 384 jetons ; `embed` = bge-m3), même machine.
+Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json) : 34 avec réponse, 4 pièges sans réponse dans le corpus), même corpus fictif de 9 documents (dont le PDF scanné et un message vocal), mêmes modèles. Deux lignes par solution : le réglage livré par défaut, puis le meilleur réglage trouvé. Toutes les variantes essayées sont dans l'annexe A1 de chaque manuel.
 
-| Solution | Réglages | Exactes (34 questions avec réponse) | Refus corrects (4 pièges) | Bon document cité | Médiane | p95 | Indexation du corpus | Pic RAM de l'application | Détail |
-|---|---|---|---|---|---|---|---|---|---|
-| Open Notebook 1.15.1 | conversation de carnet, toutes les sources en contenu complet, Docling actif, pas de reranker possible | 28/34 | 4/4 | 29 | 8,7 s | 27,9 s | 65 s | 4,7 Go | [évaluation](open-notebook/annexes/A1-qualite-et-performances.md), [résultat brut](../outils/resultats/open-notebook/banc-2026-11-12-central-chat.json) |
+| Solution | Réglage | OCR | Recherche | Passages | Reranker | Exactes /34 | Pièges refusés /4 | Bon document cité /34 | Médiane | p95 | Pic RAM de l'application | Résultat brut |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Open WebUI | défaut | aucun : scan refusé | vecteurs | 10 | aucun | 28 | 4 | 30 | 60,1 s | 106,0 s | 2,3 Go | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-defaut-sans-rerank.json) |
+| Open WebUI | meilleur | Docling déporté | hybride | 10 | bge-reranker-v2-m3 | 34 | 4 | 34 | 24,0 s ¹ | 86,9 s | 3,6 Go | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-taches.json) |
+| RAGFlow | défaut | DeepDoc | hybride, vecteurs 0,3 | 6 | aucun | 33 | 4 | 34 | 7,8 s | 50,0 s | 5,4 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-defaut.json) |
+| RAGFlow | meilleur | DeepDoc | hybride, vecteurs 0,7 | 8 | aucun | 34 | 4 | 34 | 7,8 s | 56,9 s | 5,1 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8.json) |
+| AnythingLLM | défaut | Tesseract | vecteurs | 4 | aucun | 33 | 3 | 33 | 14,3 s | 27,8 s | 0,9 Go | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-defaut-sans-rerank.json) |
+| AnythingLLM | meilleur | Tesseract | vecteurs | 8 | intégré (MiniLM) | 34 | 4 | 34 | 10,7 s | 37,6 s | 1,6 Go | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-top8-rerank-natif.json) |
+| Kotaemon | défaut | aucun | hybride | 10 | aucun | 25 ² | 4 | 27 | 25,8 s | 38,2 s | 1,9 Go | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-defaut-sans-rerank.json) |
+| Kotaemon | meilleur | Docling dans le conteneur | hybride | 3 | bge-reranker-v2-m3 | 31 | 4 | 32 | 22,0 s | 38,7 s | 1,7 Go | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-docling-rerank-serre-top3.json) |
+| Open Notebook | défaut = meilleur | aucun (Docling sans OCR) | aucune : sources entières | toutes | aucun | 28 | 4 | 29 | 8,7 s | 27,9 s | 4,7 Go | [JSON](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/outils/resultats/open-notebook/banc-2026-11-12-central-chat.json) |
 
-Les 6 erreurs d'Open Notebook viennent toutes du PDF scanné, illisible faute d'OCR opérationnel dans l'image 1.15.1. Les autres solutions de la série seront ajoutées à ce tableau après leurs essais.
+¹ Génération des requêtes de recherche coupée ; laissée active (défaut), la médiane passe à 58 s. ² Le comptage automatique donne 26 : une réponse qui refuse (Q17) y est comptée juste à tort.
 
-### Bancs sur l'ancienne pile (modèles différents, non comparable tel quel)
+Lecture :
 
-| Solution | Service de modèles | Modèle | Exactes | Refus | Médiane | Résultat brut |
-|---|---|---|---|---|---|---|
-| Open Notebook 1.15.1 | Ollama 0.40.15 sur processeur (8 novembre) | qwen3:4b-instruct | 28/34 | 4/4 | 7,4 s | [banc](../outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent-ollama040.json) |
-| Open Notebook 1.15.1 | vLLM sur carte graphique (9 novembre) | Gemma 4 E4B | 28/34 | 4/4 | 1,9 s | [banc](../outils/resultats/open-notebook/banc-2026-11-09-gpu-vllm-docling.json) |
+- Le PDF scanné fait l'essentiel des écarts : les solutions qui le lisent atteignent 34/34 ; les autres perdent ses 4 questions et une ou deux questions multi-documents qui en dépendent.
+- Kotaemon ne lit pas l'audio : 2 questions perdues quel que soit le réglage.
+- La durée vient surtout de la réflexion du modèle et des appels supplémentaires de la solution (génération de requêtes, surlignage des citations). Open WebUI, réflexion coupée, donne 34/34 avec une médiane de 1,3 s ([JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-sans-reflexion.json)).
+- Mémoire : RAGFlow est le plus lourd (environ 5 Go : Elasticsearch, MySQL, MinIO, DeepDoc), AnythingLLM le plus léger (0,9 à 1,6 Go). Le service de modèles, commun aux cinq, n'est pas compté.
 
 ## Parcours de lecture conseillés
 
 | Profil | Parcours |
 |---|---|
-| Découvrir le RAG local | [glossaire](glossaire.md), puis le chapitre « Découvrir » de chaque solution ([Open Notebook](open-notebook/manuel/01-decouvrir-open-notebook.md)) |
-| Installer et essayer rapidement | chapitres 02 à 04 de chaque manuel ([Open Notebook](open-notebook/manuel/02-installer-open-notebook.md)) |
-| Choisir entre solutions | comparatif ci-dessus, puis l'annexe A1 de chaque solution |
+| Découvrir le RAG local | [glossaire](glossaire.md), puis le chapitre 01 « Découvrir » de chaque manuel |
+| Installer et essayer rapidement | chapitres 01 à 04 de chaque manuel |
+| Choisir entre solutions | les tableaux ci-dessus, puis les annexes A1 (qualité et performances) et A2 (matériel et modèles) de chaque manuel |
 
 ## Conventions
 
 | Étiquette | Sens |
 |---|---|
-| [Vérifié] | observé ou mesuré sur la machine d'essai, à la date indiquée ; renvoie à un script et à un résultat brut de `outils/` |
+| [Vérifié] | observé ou mesuré sur la machine d'essai ; renvoie à un script et à un résultat brut de `outils/` |
 | [Source] | lu dans la documentation officielle ou le code source, non essayé |
 | [Estimation] | calcul non mesuré, avec son raisonnement |
 | [À tester] | ni documenté ni essayé |
 | [Testée] | commande exécutée pendant les essais |
 | [Aide] | commande lue dans l'aide, non exécutée |
 
-Les étiquettes ne figurent que dans la partie 2 des manuels (annexes) ; la partie 1 se lit sans elles. Les libellés de l'interface sont cités tels qu'affichés. Les données sont fictives (entreprise Vélanor).
+Les étiquettes ne figurent que dans les annexes (partie 2) ; le manuel (partie 1) se lit sans elles. Les libellés de l'interface sont cités tels qu'affichés. Les données sont fictives (entreprise Vélanor).

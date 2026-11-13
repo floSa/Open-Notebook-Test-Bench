@@ -127,3 +127,10 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 - Fait : relecture novice de la partie 1 par dix sous-agents neufs successifs ; 66 remarques corrigées (dont neuf captures refaites : pastilles décalées par le défilement d'une zone, fenêtres plus hautes que l'écran, icône « Contexte » annotée, modes de contexte côte à côte) ; dixième passage : « Aucune remarque ». Téléchargement du fichier d'origine vérifié (HTTP 200, 53 745 octets).
 - Résultat : `verifier_docs.py` à 0 point ; Open Notebook en marche sur http://127.0.0.1:8502 avec le carnet « Démo Vélanor » et le podcast « Vélanor en bref ».
 - Reste ouvert : bancs « Demander » et « aperçus » complets, exemples et sauvegarde rejoués sur le service central, relecture adversariale des annexes réécrites (voir `RAPPORT-open-notebook.md`).
+
+### 2026-11-13 — Uniformisation de la série
+
+- `docs/README.md` remplacé par l'index commun aux cinq dépôts (Open Notebook, RAGFlow, AnythingLLM, Kotaemon, Open WebUI) : modèles utilisés, services déportables (OCR, audio, reranker), comparatif à deux lignes par solution (défaut, meilleur réglage). Chiffres repris des résultats bruts du 12 et du 13 novembre, aucun nouveau banc.
+- README : section « Résultats » au même format que les autres dépôts, « Le parcours » placé juste après le sommaire.
+- Annexes A1 à A3 renommées comme dans les autres dépôts (`A1-evaluation-qualite-et-performances`, `A2-choisir-son-materiel-et-ses-modeles`, `A3-automatiser-par-l-api`), liens mis à jour.
+- `verifier_docs.py` : 0 point.

@@ -82,4 +82,4 @@ La page ouverte par le lien « Demander et rechercher » s'intitule « Poser une
 | Recherche vectorielle vide après un changement de modèle | index à reconstruire | chapitre [10](10-regler-l-application.md), étapes 3 et 4 |
 
 ---
-*Version décrite : Open Notebook 1.15.1, service LLM central (`chat`, `embed`), essais du 12 novembre 2026. Détails et preuves : [évaluation](../annexes/A1-qualite-et-performances.md), [rapport d'essais](../annexes/A6-rapport-d-essais.md).*
+*Version décrite : Open Notebook 1.15.1, service LLM central (`chat`, `embed`), essais du 12 novembre 2026. Détails et preuves : [évaluation](../annexes/A1-evaluation-qualite-et-performances.md), [rapport d'essais](../annexes/A6-rapport-d-essais.md).*
