@@ -142,3 +142,7 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 ### 2026-11-13 — Index de la série : procédures Docling déporté
 
 - `docs/README.md` : colonne « Procédure dans le manuel » (Open WebUI chapitre 08, RAGFlow chapitre 06, Kotaemon chapitre 05).
+
+### 2026-11-13 — Index de la série : comparatif complété
+
+- Lignes « meilleur, Docling déporté » de RAGFlow et Kotaemon ajoutées au comparatif ; reranker de RAGFlow expliqué (essayé, sans gain) ; « Conventions » renommé « Étiquettes des annexes ».

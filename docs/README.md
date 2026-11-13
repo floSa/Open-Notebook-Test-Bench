@@ -54,28 +54,30 @@ Docling déporté, ce que les bancs du 13 novembre montrent :
 | Solution | Transcription audio | Reranker bge-reranker-v2-m3 branchable | Reranker utilisé dans le meilleur réglage |
 |---|---|---|---|
 | Open WebUI | Whisper déporté | oui | bge-reranker-v2-m3 |
-| RAGFlow | Whisper déporté | oui | aucun (sans gain) |
+| RAGFlow | Whisper déporté | oui | aucun : essayé, même score (34/34), donc laissé de côté |
 | Kotaemon | ne lit pas l'audio | oui | bge-reranker-v2-m3 |
 | AnythingLLM | Whisper déporté | non : seulement son reranker intégré (ms-marco-MiniLM-L-6-v2) | intégré |
 | Open Notebook | Whisper déporté | non : aucune étape de tri | sans objet |
 
 ## Comparatif du banc
 
-Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json) : 34 avec réponse, 4 pièges sans réponse dans le corpus), même corpus fictif de 9 documents (dont le PDF scanné et un message vocal), mêmes modèles. Deux lignes par solution : le réglage livré par défaut, puis le meilleur réglage trouvé. Toutes les variantes essayées sont dans l'annexe A1 de chaque manuel.
+Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json) : 34 avec réponse, 4 pièges sans réponse dans le corpus), même corpus fictif de 9 documents (dont le PDF scanné et un message vocal), mêmes modèles. Deux lignes par solution : le réglage livré par défaut, puis le meilleur réglage trouvé ; une troisième ligne quand le meilleur réglage a été rejoué avec Docling déporté. Toutes les variantes essayées sont dans l'annexe A1 de chaque manuel.
 
 | Solution | Réglage | OCR | Recherche | Passages | Reranker | Exactes /34 | Pièges refusés /4 | Bon document cité /34 | Médiane | p95 | Pic RAM de l'application | Résultat brut |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Open WebUI | défaut | aucun : scan refusé | vecteurs | 10 | aucun | 28 | 4 | 30 | 60,1 s | 106,0 s | 2,3 Go | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-defaut-sans-rerank.json) |
 | Open WebUI | meilleur | Docling déporté | hybride | 10 | bge-reranker-v2-m3 | 34 | 4 | 34 | 24,0 s ¹ | 86,9 s | 3,6 Go | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-taches.json) |
 | RAGFlow | défaut | DeepDoc | hybride, vecteurs 0,3 | 6 | aucun | 33 | 4 | 34 | 7,8 s | 50,0 s | 5,4 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-defaut.json) |
-| RAGFlow | meilleur | DeepDoc | hybride, vecteurs 0,7 | 8 | aucun | 34 | 4 | 34 | 7,8 s | 56,9 s | 5,1 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8.json) |
+| RAGFlow | meilleur | DeepDoc | hybride, vecteurs 0,7 | 8 | aucun ³ | 34 | 4 | 34 | 7,8 s | 56,9 s | 5,1 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8.json) |
+| RAGFlow | meilleur, Docling déporté | Docling déporté | hybride, vecteurs 0,7 | 8 | aucun | 34 | 4 | 34 | 8,1 s | 61,2 s | 7,3 Go, dont 2,5 Go pour Docling | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-13-docling-deporte-vecteurs07-top8.json) |
 | AnythingLLM | défaut | Tesseract | vecteurs | 4 | aucun | 33 | 3 | 33 | 14,3 s | 27,8 s | 0,9 Go | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-defaut-sans-rerank.json) |
 | AnythingLLM | meilleur | Tesseract | vecteurs | 8 | intégré (MiniLM) | 34 | 4 | 34 | 10,7 s | 37,6 s | 1,6 Go | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-top8-rerank-natif.json) |
 | Kotaemon | défaut | aucun | hybride | 10 | aucun | 25 ² | 4 | 27 | 25,8 s | 38,2 s | 1,9 Go | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-defaut-sans-rerank.json) |
 | Kotaemon | meilleur | Docling dans le conteneur | hybride | 3 | bge-reranker-v2-m3 | 31 | 4 | 32 | 22,0 s | 38,7 s | 1,7 Go | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-docling-rerank-serre-top3.json) |
+| Kotaemon | meilleur, Docling déporté | Docling déporté | hybride | 3 | bge-reranker-v2-m3 | 29 ⁴ | 4 | 32 | 18,4 s | 27,3 s | 4,9 Go, dont 2,5 Go pour Docling | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-13-docling-deporte-rerank-serre-top3.json) |
 | Open Notebook | défaut = meilleur | aucun (Docling sans OCR) | aucune : sources entières | toutes | aucun | 28 | 4 | 29 | 8,7 s | 27,9 s | 4,7 Go | [JSON](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/outils/resultats/open-notebook/banc-2026-11-12-central-chat.json) |
 
-¹ Génération des requêtes de recherche coupée ; laissée active (défaut), la médiane passe à 58 s. ² Le comptage automatique donne 26 : une réponse qui refuse (Q17) y est comptée juste à tort.
+¹ Génération des requêtes de recherche coupée ; laissée active (défaut), la médiane passe à 58 s. ² Le comptage automatique donne 26 : une réponse qui refuse (Q17) y est comptée juste à tort. ³ RAGFlow accepte bge-reranker-v2-m3 : essayé sur ce réglage, même score (34/34) et réponses un peu plus lentes, donc laissé de côté. ⁴ Docling déporté relit tous les PDF, le Docling intégré ne relisait que le scan : deux questions sur les tableaux du rapport annuel échouent à cause de ce découpage différent.
 
 Lecture :
 
@@ -92,7 +94,9 @@ Lecture :
 | Installer et essayer rapidement | chapitres 01 à 04 de chaque manuel |
 | Choisir entre solutions | les tableaux ci-dessus, puis les annexes A1 (qualité et performances) et A2 (matériel et modèles) de chaque manuel |
 
-## Conventions
+## Étiquettes des annexes
+
+Dans les annexes de chaque manuel, chaque affirmation porte une étiquette qui dit d'où elle vient :
 
 | Étiquette | Sens |
 |---|---|
