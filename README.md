@@ -141,10 +141,11 @@ base et au serveur de synthèse vocale. Tous les ports sont publiés sur
   et [annexe A2](docs/open-notebook/annexes/A2-choisir-son-materiel-et-ses-modeles.md).
 - Le service LLM central démarré (dépôt LLM-Service, branche `service-llamacpp`).
 - Un fichier `.env` à la racine, copie de [.env.example](.env.example), avec la
-  clé `LLM_CENTRAL_KEY` du service (ignoré par git, jamais affiché).
+  clé `LLM_CENTRAL_KEY` propre au banc, créée par `cle.sh` de LLM-Service (ignoré par git, jamais affiché).
 
 ```bash
-cp .env.example .env                              # puis renseigner LLM_CENTRAL_KEY
+cp .env.example .env
+~/mes_projets/Projet-IA/LLM-Service/scripts/cle.sh creer open-notebook-test-bench --dans "$PWD/.env" --noms LLM_CENTRAL_URL,LLM_CENTRAL_KEY   # clé propre au banc, écrite sans affichage
 outils/communs/llm_central_sante.sh --essai       # le service central répond-il ?
 ~/mes_projets/Projet-IA/LLM-Service/scripts/demarrer.sh   # seulement s'il ne répond pas (ajouter cpu sans carte NVIDIA)
 uv venv --python 3.12 .venv && uv pip install -p .venv reportlab python-docx python-pptx openpyxl pillow pymupdf   # corpus et banc

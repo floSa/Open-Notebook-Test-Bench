@@ -162,3 +162,10 @@ Solution en cours : Open Notebook (`kit/fiches/01-open-notebook.md`).
 ### 2026-11-13 — Index de la série : tableaux de même largeur, ligne Docling
 
 - Tableaux en HTML à largeurs fixes (200 px puis 5 × 150 px), tous de la même largeur. Lecture des PDF : une ligne « Docling » (conteneur, déporté) et une ligne « OCR intégré, autre que Docling » ; Docling expliqué ; ligne « OCR utilisé au banc » retirée (elle est dans le détail du meilleur réglage).
+
+### 2026-11-14 — Clé propre au banc pour LLM-Service
+
+- Fait : clé propre au banc créée dans LLM-Service (nom `open-notebook-test-bench`) et écrite dans `LLM_CENTRAL_KEY` du `.env` par `~/mes_projets/Projet-IA/LLM-Service/scripts/cle.sh creer open-notebook-test-bench --dans <dépôt>/.env --noms LLM_CENTRAL_URL,LLM_CENTRAL_KEY` (procédure : `docs/brancher-une-application.md` de LLM-Service). La clé maîtresse de LLM-Service n'est plus utilisée par ce banc.
+- Essai : `outils/communs/llm_central_sante.sh --essai` avec la nouvelle clé : `models`, `chat`, `embed` (1024 dimensions), `rerank` et `transcribe` répondent ; 4 requêtes comptées sur la clé du banc (`cle.sh lister`).
+- Documentation : `.env.example`, README et chapitre 02 du manuel donnent désormais la commande `cle.sh` au lieu de recopier `LITELLM_MASTER_KEY`. Annexe A4 : messages d'erreur alignés.
+- Conteneurs : aucun ne tournait, aucun relancé ; `OPENAI_COMPATIBLE_API_KEY_STT` prendra la nouvelle clé au prochain lancement par `compose.sh`. Reste à faire à ce lancement : la configuration `llm-central` enregistrée (chiffrée) dans Open Notebook contient encore la clé maîtresse ; relancer `outils/open-notebook/configurer.py` (qui met la configuration à jour) ou la changer dans l'interface (chapitre 03, « Clé API »).

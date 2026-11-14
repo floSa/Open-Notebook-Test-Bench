@@ -38,7 +38,14 @@ outils/communs/diagnostic.sh
 
 **Étape 2. Vérifier que le service LLM central répond**
 *Où* : même terminal.
-Le service central doit tourner avant Open Notebook. Il s'installe à part, depuis son propre dépôt, https://github.com/floSa/LLM-Service, dont le fichier README sert de mode d'emploi (par exemple `git clone https://github.com/floSa/LLM-Service.git ~/mes_projets/Projet-IA/LLM-Service`) ; ce manuel suppose qu'il est installé dans `~/mes_projets/Projet-IA/LLM-Service` (chemin à adapter s'il est ailleurs). Sa clé se range dans le fichier `.env` à la racine du dépôt Open-Notebook-Test-Bench (le dossier de l'étape 0, pas celui de LLM-Service) : y lancer `cp .env.example .env`, puis y recopier, sur la ligne `LLM_CENTRAL_KEY=`, la valeur de `LITELLM_MASTER_KEY` du fichier `.env` du dépôt LLM-Service (`~/mes_projets/Projet-IA/LLM-Service/.env`). Ce fichier n'est jamais publié. La commande suivante liste les modèles du service, puis fait un essai réel de chacun :
+Le service central doit tourner avant Open Notebook. Il s'installe à part, depuis son propre dépôt, https://github.com/floSa/LLM-Service, dont le fichier README sert de mode d'emploi (par exemple `git clone https://github.com/floSa/LLM-Service.git ~/mes_projets/Projet-IA/LLM-Service`) ; ce manuel suppose qu'il est installé dans `~/mes_projets/Projet-IA/LLM-Service` (chemin à adapter s'il est ailleurs). Open Notebook reçoit une clé propre, rangée dans le fichier `.env` à la racine du dépôt Open-Notebook-Test-Bench (le dossier de l'étape 0, pas celui de LLM-Service). Depuis ce dossier :
+
+```bash
+cp .env.example .env
+~/mes_projets/Projet-IA/LLM-Service/scripts/cle.sh creer open-notebook-test-bench --dans "$PWD/.env" --noms LLM_CENTRAL_URL,LLM_CENTRAL_KEY
+```
+
+Le script de LLM-Service crée la clé du banc (nom `open-notebook-test-bench`) et l'écrit, sans l'afficher, sur les lignes `LLM_CENTRAL_URL` et `LLM_CENTRAL_KEY`. La clé maîtresse de LLM-Service (`LITELLM_MASTER_KEY`) ne se recopie jamais ici. Si une clé existe déjà pour ce nom, le script refuse : la révoquer d'abord avec `~/mes_projets/Projet-IA/LLM-Service/scripts/cle.sh revoquer open-notebook-test-bench`. Procédure complète : `docs/brancher-une-application.md` du dépôt LLM-Service. Ce fichier `.env` n'est jamais publié. La commande suivante liste les modèles du service, puis fait un essai réel de chacun :
 
 ```bash
 outils/communs/llm_central_sante.sh --essai
@@ -155,7 +162,7 @@ Le script demande une confirmation (taper `oui`), puis supprime les conteneurs, 
 | Symptôme | Cause | Que faire |
 |---|---|---|
 | « service LLM central injoignable : démarrer LLM-Service » | le service central ne tourne pas | le démarrer (étape 2), puis relancer l'installation |
-| « clé LLM_CENTRAL_KEY absente du .env du dépôt » | fichier `.env` absent ou vide | copier `.env.example` en `.env` et y mettre la clé du service |
+| « clé LLM_CENTRAL_KEY absente du .env du dépôt » | fichier `.env` absent ou vide | copier `.env.example` en `.env` et y écrire la clé du banc avec `cle.sh` (étape 2) |
 | La page ne s'ouvre pas dans le navigateur | conteneurs arrêtés | `outils/open-notebook/demarrer.sh` |
 | L'interface redemande le mot de passe | données du site effacées dans le navigateur | se reconnecter |
 
