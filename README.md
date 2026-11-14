@@ -1,8 +1,8 @@
-# Open Notebook — banc d'essai et manuels vérifiés
+# Open Notebook
 
-**Interroger ses propres documents avec une IA qui cite ses sources, sur sa machine, sans service en ligne : Open Notebook 1.15.1 installé, branché sur un service de modèles local, mesuré sur 38 questions et décrit dans un manuel utilisateur vérifié.**
+Interroger ses propres documents avec une IA qui cite ses sources, sur sa machine, sans service en ligne.
 
-Trois dossiers : `service/` pour lancer Open Notebook, `banc-essai/` pour rejouer les tests, `documentations/` pour lire.
+Ce dépôt contient le service (`service/`, pour lancer Open Notebook sous Docker), le banc d'essai (`banc-essai/`, 38 questions) et la documentation avec le manuel utilisateur (`documentations/`).
 
 ```text
 Open-Notebook-Test-Bench/
